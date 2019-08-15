@@ -37,12 +37,3 @@ A = a0 * np.cos(phi)
 B = -a0 * np.sin(phi)
 Alpha = np.array([A, B])
 S = np.matrix([np.cos(w0 *N )])
-
-#%%
-np.cos(w0 * 7.0)
-
-
-#%%
-w0
-
-#%%
