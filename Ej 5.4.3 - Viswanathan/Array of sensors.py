@@ -1,20 +1,25 @@
 #%% Librerías utilizadas
-%matplotlib qt
+#%matplotlib qt
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from numpy.linalg import inv
+from numpy import dot
 
-def functionJ(z, w):
-    N = len(z)
-    M = len(w)
+
+def functionJ(Z, W):
+    N = len(Z)
+    M = len(W)
     S = np.zeros((N, 2*M),dtype=complex)
     for m in range (0,M):
         for n in range(0, N):
-            S[n, m] = np.cos(n * w[m])
-            S[n, m + 2] = np.sin(n * w[m])
+            S[n, m] = np.cos(n * W[m])
+            S[n, m + 2] = np.sin(n * W[m])
 
-    J = np.dot(np.dot(np.dot(z.transpose(), S), np.linalg.inv(np.dot(S.transpose(), S))), np.dot(S.transpose(), z))
-    
+    #J = np.dot(np.dot(np.dot(Z.transpose(), S), np.linalg.inv(np.dot(S.transpose(), S))), np.dot(S.transpose(), Z))
+    J = dot(Z.transpose(), S)
+    J = dot(J, inv(dot(S.transpose(), S)))
+    J= dot(J,dot(S.transpose(),Z))
     return np.abs(J)
 
 #%%
@@ -33,7 +38,7 @@ theta = np.pi / 7           #DOA
 
 # Definición de ruido
 mean = 0
-std = 0.001
+std = 0.01
 Nu = np.random.normal(mean, std, size=N)
 
 # Defición de señal y array de sensores
@@ -52,7 +57,7 @@ Ts = d * np.sin(theta)/c  #Período de muestreo por la separación de los sensor
 fs = 1 / Ts
 w1 = f1 * np.pi / (fs / 2) #Frecuencia discreta normalizada 1
 w2 = f2 * np.pi / (fs / 2)  #Frecuencia discreta normalizada 2
-w=np.array([w1,w2])
+W=np.array([w1,w2])
 
 
 #%% Definición del vector de muestras Z
@@ -65,20 +70,20 @@ Alpha = np.array([A1,A2,B1,B2])
 S = np.zeros((N, 2*M),dtype=complex)
 for m in range (0,M):
     for n in range(0, N):
-        S[n, m] = np.cos(n * w[m])
-        S[n, m+2] = np.sin(n * w[m])
+        S[n, m] = np.cos(n * W[m])
+        S[n, m+2] = np.sin(n * W[m])
 Z = np.dot(S, Alpha) + Nu
 
 #%% Estimación de w1 y w2
-w1est = np.linspace(w1 - 2, w1 + 2, 5)
-w2est = np.linspace(w2 - 2, w2 + 2, 5)
+w1est = np.linspace(w1 - 1, w1 + 1, 30)
+w2est = np.linspace(w2 - 1, w2 + 1, 30)
 
 J=np.zeros((len(w1est),len(w2est)),dtype=float)
 
 for i in range(0, len(w1est)):
     for j in range(0, len(w2est)):
-        west=np.array([w1est[i],w2est[j]])
-        J[i,j]=functionJ(Z,west)
+        West=np.array([w1est[i],w2est[j]])
+        J[i,j]=functionJ(Z,West)
 
 #%% Ploteo de J
 fig = plt.figure()
