@@ -140,11 +140,11 @@ Alpha_est = inv(dot(S_est.transpose(), S_est))
 Alpha_est = dot(Alpha_est, dot(S_est.transpose(), Z))
 A1_est,A2_est,B1_est,B2_est=Alpha_est[0],Alpha_est[1],Alpha_est[2],Alpha_est[3]
 a1_est = np.sqrt(A1_est ** 2 + B1_est ** 2)
-phi1_est = np.arctan(-B1_est / A1_est)
+phi1_est = np.arctan(-1*B1_est / A1_est)
 if phi1_est < 0:
         phi1_est=phi1_est+np.pi
 a2_est = np.sqrt(A2_est** 2 + B2_est** 2)
-phi2_est = np.arctan(-B2_est / A2_est)
+phi2_est = np.arctan(-1*B2_est / A2_est)
 if phi2_est < 0:
         phi2_est=phi2_est+np.pi
 print("a1_est=" + str(a1_est) + "\tphi1_est=" + str(phi1_est) + "\na2_est=" + str(a2_est) + "\tphi2_est=" + str(phi2_est))
@@ -161,6 +161,3 @@ print("Degree of arrival = "+str(theta_deg_est)+"°")
 var_nu_est = Z - dot(S_est, Alpha_est)
 var_nu_est= np.sqrt(1/N * dot(var_nu_est.transpose(),var_nu_est))
 print("Varianza del ruido = "+str(var_nu_est))
-
-
-#%%
