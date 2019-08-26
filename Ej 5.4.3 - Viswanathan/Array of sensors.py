@@ -154,7 +154,7 @@ theta1_est = np.arcsin(phi1_est / (d * 2 * np.pi * f1_est / c))
 theta2_est = np.arcsin(phi2_est / (d * 2 * np.pi * f2_est / c))
 theta_est = np.average([theta1_est, theta2_est])
 theta_deg_est= theta_est*180/np.pi
-print("Degree of arrival = "+str(theta_deg_est)+"°")
+print("Direction of arrival = "+str(theta_deg_est)+"°")
 
 
 #%% Obtengo la varianza del ruido
