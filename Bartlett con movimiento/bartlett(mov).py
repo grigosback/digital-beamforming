@@ -6,17 +6,11 @@ from mpl_toolkits.mplot3d import Axes3D
 from numpy.linalg import inv
 from numpy import dot
 
-def GaussianNoise(SNR,Ps):
-    mean_nu = 0
-    var_nu = Ps/(10**(SNR/10))
-    std_nu = np.sqrt(var_nu) #sigma_n
-    Nu = np.random.normal(mean_nu, std_nu, size=N)
-    return (Nu,var_nu)
 
 def functionJ(Z, W):
     N = len(Z)
     M = len(W)
-    S = np.zeros((N, 2*M))
+    S = np.zeros((N, 2*M),dtype=complex)
     for m in range (0,M):
         for n in range(0, N):
             S[n, m] = np.cos(n * W[m])
@@ -24,14 +18,8 @@ def functionJ(Z, W):
 
     #J = np.dot(np.dot(np.dot(Z.transpose(), S), np.linalg.inv(np.dot(S.transpose(), S))), np.dot(S.transpose(), Z))
     J = dot(Z.transpose(), S)
-    Sinv = dot(S.transpose(), S)
-    det = np.linalg.det(Sinv)
-    if det < 1:
-        J = 0
-    else:
-        Sinv=inv(Sinv)
-        J = dot(J, Sinv)
-        J= dot(J,dot(S.transpose(),Z))
+    J = dot(J, inv(dot(S.transpose(), S)))
+    J= dot(J,dot(S.transpose(),Z))
     return np.abs(J)
 
 
@@ -50,12 +38,18 @@ M = 2                       #Número de sinusoides
 theta_deg = 60              #DOA en grados
 theta = theta_deg * np.pi / 180           #DOA en radianes
 
+# Definición de ruido
+mean_nu = 0
+var_nu = 0.5
+std_nu = np.sqrt(var_nu)
+Nu = np.random.normal(mean_nu, std_nu, size=N)
+
 # Defición de señal y array de sensores
 f1 = 900 * MHz  #Frecuencia de la señal transmitida 2
 f2 = 1.7 * GHz  #Frecuencia de la señal transmitida 2
 f=np.array([f1,f2])
 a1 = 10  #Amplitud de la señal transmitida 1
-a2 = 20  #Amplitud de la señal transmitida 
+a2 = 20
 a=np.array([a1,a2])
 lambda1 = c / f1  #Longitud de onda de la señal transmitida
 lambda2 = c / f2  #Longitud de onda de la señal transmitida
@@ -70,7 +64,7 @@ w2 = f2 * np.pi / (fs / 2)  #Frecuencia discreta normalizada 2
 W=np.array([w1,w2])
 
 
-#%% Definición del ruido y del vector de muestras Z
+#%% Definición del vector de muestras Z
 Z = np.zeros(N)
 A1 = a1 * np.cos(phi1)
 A2 = a2 * np.cos(phi2)
@@ -82,18 +76,11 @@ for m in range (0,M):
     for n in range(0, N):
         S[n, m] = np.cos(n * W[m])
         S[n, m+2] = np.sin(n * W[m])
-
-SNR=-8
-Z = np.dot(S, Alpha)
-Ps = np.mean(Z ** 2)
-[Nu,var_nu]=GaussianNoise(SNR,Ps)
 Z = np.dot(S, Alpha) + Nu
 
 #%% Estimación de w1 y w2
-#W1_est = np.linspace(w1 - 1, w1 + 1, 50)
-#W2_est = np.linspace(w2 - 1, w2 + 1, 50)
-W1_est = np.linspace(0, np.pi, 100)
-W2_est = np.linspace(0, np.pi, 100)
+W1_est = np.linspace(w1 - 1, w1 + 1, 50)
+W2_est = np.linspace(w2 - 1, w2 + 1, 50)
 
 J=np.zeros((len(W1_est),len(W2_est)))
 
@@ -113,8 +100,7 @@ ax.set_zlabel('J')
 plt.show()
 
 #%% Busco el máximo de la función
-idx=np.unravel_index(np.argmax(J, axis=None), J.shape)
-idx2 = np.where(J == J.max())
+idx = np.where(J == J.max())
 w1_est = W1_est[idx[0]]
 w2_est = W2_est[idx[1]]
 W_est=np.array([w1_est,w2_est])
@@ -134,8 +120,7 @@ for i in range(0, len(W1_est)):
         J[i,j]=functionJ(Z,W_est)
 
 #%%Busco nuevamente el máximo
-idx=np.unravel_index(np.argmax(J, axis=None), J.shape)
-#idx = np.where(J == J.max())
+idx = np.where(J == J.max())
 w1_est = W1_est[idx[0]]
 w2_est = W2_est[idx[1]]
 W_est=np.array([w1_est,w2_est])
@@ -176,9 +161,3 @@ print("Direction of arrival = "+str(theta_deg_est)+"°")
 var_nu_est = Z - dot(S_est, Alpha_est)
 var_nu_est= np.sqrt(1/N * dot(var_nu_est.transpose(),var_nu_est))
 print("Varianza del ruido = "+str(var_nu_est))
-
-
-#%%
-phi1_est / (d * 2 * np.pi * f1_est / c)
-
-#%%
