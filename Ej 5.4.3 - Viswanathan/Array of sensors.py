@@ -181,4 +181,3 @@ print("Varianza del ruido = "+str(var_nu_est))
 #%%
 phi1_est / (d * 2 * np.pi * f1_est / c)
 
-#%%

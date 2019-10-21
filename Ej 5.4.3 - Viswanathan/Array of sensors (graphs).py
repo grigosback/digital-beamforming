@@ -206,11 +206,13 @@ theta_deg = np.array([60,60])  #DOA en grados
 theta = theta_deg * np.pi / 180           #DOA en radianes
 
 # Defición de señal y array de sensores
-f1 = 900 * MHz  #Frecuencia de la señal transmitida 2
+f1 = 900 * MHz  #Frecuencia de la señal transmitida 1
 f2 = 1.7 * GHz  #Frecuencia de la señal transmitida 2
-lambda1 = c / f1  #Longitud de onda de la señal transmitida
-lambda2 = c / f2  #Longitud de onda de la señal transmitida
-d = lambda2 / 2             #Separación entre sensores
+BW = 4 * GHz
+lambda_1 = c / f1  #Longitud de onda de la señal transmitida
+lambda_2 = c / f2  #Longitud de onda de la señal transmitida
+lambda_bw = c/BW
+d = lambda_bw / 2             #Separación entre sensores
 f=np.array([f1,f2])
 a1 = 10  #Amplitud de la señal transmitida 1
 a2 = 20  #Amplitud de la señal transmitida 
