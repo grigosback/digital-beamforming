@@ -1,6 +1,6 @@
 #%% Librerías utilizadas
 from IPython import get_ipython
-#get_ipython().run_line_magic('matplotlib', 'qt')
+get_ipython().run_line_magic('matplotlib', 'qt')
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -14,7 +14,7 @@ style.use('default')
 #%% Definición de funciones
 def doamusic_samples(Fc,s_amp,s_freq,t,t0,d,theta,M,D,SNR):
     # Definición de señales y muestras
-    # Genero la matriz F de tamaño (D,1,N)
+    # Genero la matriz F de tamaño (D,N)
     lambda_c = c / Fc
     K = 2 * np.pi / (lambda_c)
     F = np.asmatrix(np.empty((D, N)))
@@ -122,11 +122,11 @@ ms = 10 ** -3
 c = 3 * 10 ** 8
 km = 10 ** 3
 
-'''#%% Definición de variables
+#%% Definición de variables
 M = 8  # Número de sensores
 D = 3  # Número de señales
 fs = 64 * MHz
-N = 1000 # Número de snapshots
+N = 100 # Número de snapshots
 T = 2 * ms # Tiempo de toma de muestras
 
 theta_deg = np.array([30,90,120])  #DOA en grados
@@ -137,13 +137,14 @@ Fc = np.array([1.5* GHz, 1.5* GHz, 1.5 * GHz]) # Frecuencia de portadora de la s
 lambda_c = c / Fc
 d = lambda_c[0] / 2  #Separación entre sensores
 
-t = np.random.randint(0, int(T * fs), size=N) * 1 / fs  # Vector de tiempos de muestreo (tomas de snapshots)
-s_amp = np.array([10, 20, 30])
+
+s_amp = np.array([30, 30, 30])
 s_freq = np.array([440, 3500, 40000])
 
 SNR = 7
 #%% Generación del vector de muestras X
-X = doamusic_samples(Fc, s_amp, s_freq, t, d, theta, M, D, SNR)
+t = np.random.randint(0, int(T * fs), size=N) * 1 / fs  # Vector de tiempos de muestreo (tomas de snapshots)
+X = doamusic_samples(Fc, s_amp, s_freq, t,0, d, theta, M, D, SNR)
 
 #%%
 #fc_est = np.linspace(1 * GHz, 2 * GHz,num=20)
@@ -151,7 +152,7 @@ X = doamusic_samples(Fc, s_amp, s_freq, t, d, theta, M, D, SNR)
 fc_est = Fc[0]
 K_est = 2 * np.pi * fc_est/c
 theta_est = np.linspace(0, np.pi ,num=1000)
-[P_MU, D_est] = doamusic_estimation(X, K_est, theta_est)
+P_MU = doamusic_estimation(X, K_est, theta_est)
 
 #%%
 plt.figure()
@@ -168,7 +169,7 @@ ax.plot_surface(X, Y, np.abs(P_MU), cmap='viridis')
 ax.set_xlabel(r'$f_{est}$')
 ax.set_ylabel(r'$\theta_{est}$')
 ax.set_zlabel(r'$P_{MU}$')
-plt.show()'''
+plt.show()
 
 #%% Tracking de objeto moviéndose
 # Definición de variables
@@ -200,8 +201,8 @@ SNR = 7
 
 fc_est = Fc
 K_est = 2 * np.pi * fc_est/c
-theta_est = np.linspace(0, np.pi ,num=1000)
-P_MU = np.empty((1000,1000),dtype='complex')
+theta_est = np.linspace(0, np.pi ,num=180)
+P_MU = np.empty((180,1000),dtype='complex')
 #%%
 for i in range (0,theta.size):
     X = doamusic_samples(Fc, s_amp, s_freq, t, Tx_time[i], d, theta[i], M, D, SNR)
