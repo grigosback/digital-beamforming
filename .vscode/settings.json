@@ -1,4 +1,3 @@
 {
     "python.pythonPath": "C:\\Users\\grigo\\Anaconda3\\python.exe",
-    "python.envFile": "${workspaceFolder}/.env",
 }

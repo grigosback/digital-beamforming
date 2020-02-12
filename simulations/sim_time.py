@@ -1,10 +1,19 @@
 #%%
-from initialization import *
-from music import doamusic_estimation
+import sys
+
+sys.path.insert(0, "${workspaceRoot}/algorithms/")
+sys.path.insert(0, "${workspaceRoot}/inits/")
+
+#%%
+from inits.initialization import *
+
+#%%
+from algorithms.music import doamusic_estimation
 from matplotlib import pyplot as plt
 from IPython import get_ipython
 
 get_ipython().run_line_magic("matplotlib", "qt")
+
 
 # %% Test
 s = doamusic_samples(txs, rx, simulation)
@@ -49,3 +58,5 @@ print("Az0 = " + str(tx0.doa.az * 180 / np.pi))
 print("El1 = " + str(tx1.doa.el * 180 / np.pi))
 print("Az1 = " + str(tx1.doa.az * 180 / np.pi))
 
+
+# %%

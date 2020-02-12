@@ -1,6 +1,6 @@
 #%%
-from samples_generator import *
-
+import numpy as np
+from inits.samples_generator import *
 
 #%% Units definition
 kHz = 1e3
