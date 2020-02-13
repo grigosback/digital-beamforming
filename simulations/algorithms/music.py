@@ -1,3 +1,4 @@
+# As seen in "Multiple emitter location and signal parameter estimation"
 #%%
 import numpy as np
 
@@ -6,7 +7,6 @@ def doamusic_estimation(s, a):
     m = s.shape[0]
     # Eigenvalues and eigenvalues of S
     [aval, avec] = np.linalg.eig(s)
-    s0 = np.identity(m)
     p = aval.argsort()
     aval = np.abs(aval[p])
     avec = avec[:, p]

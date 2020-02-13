@@ -1,6 +1,5 @@
 #%%
 import sys
-
 sys.path.insert(0, "${workspaceRoot}/algorithms/")
 sys.path.insert(0, "${workspaceRoot}/inits/")
 
@@ -37,7 +36,6 @@ for ax in range(el.size):
 
 #%% MUSIC test
 p_mu = doamusic_estimation(s, a)
-
 
 # %%
 y = el * 180 / np.pi
