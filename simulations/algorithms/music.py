@@ -26,10 +26,17 @@ def doamusic_estimation(s, a):
 
     # Subspace noise matrix
     en = np.asmatrix(avec[:, 0:q])
-    p_mu = np.empty((a.shape[1], a.shape[2]), dtype=complex)
-    for i in range(p_mu.shape[0]):
-        for j in range(p_mu.shape[1]):
-            a_matrix = np.asmatrix(a[:, i, j])
+    if len(a.shape) == 2:
+        p_mu = np.empty((a.shape[1]), dtype=complex)
+        for i in range(p_mu.size):
+            a_matrix = np.asmatrix(a[:, i])
             a_matrix = a_matrix.T
-            p_mu[i, j] = 1 / (a_matrix.H @ en @ en.H @ a_matrix)
+            p_mu[i] = 1 / (a_matrix.H @ en @ en.H @ a_matrix)
+    else:
+        p_mu = np.empty((a.shape[1], a.shape[2]), dtype=complex)
+        for i in range(p_mu.shape[0]):
+            for j in range(p_mu.shape[1]):
+                a_matrix = np.asmatrix(a[:, i, j])
+                a_matrix = a_matrix.T
+                p_mu[i, j] = 1 / (a_matrix.H @ en @ en.H @ a_matrix)
     return p_mu

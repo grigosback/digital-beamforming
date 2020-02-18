@@ -42,6 +42,10 @@ def doamusic_samples(txs, rx, simulation):
     samples for each element of a  receiver 'rx' for each given transmitters
     'tx'.
     """
+    if str(type(txs)) != "<class 'list'>":
+        txs_list = []
+        txs_list.append(txs)
+        txs = txs_list
     d = len(txs)
     n = simulation.n
     c = 3e8
@@ -57,21 +61,29 @@ def doamusic_samples(txs, rx, simulation):
         f[i, :] = txs[i].s.amp * np.cos(2 * np.pi * txs[i].s.freq * (simulation.t))
 
     a = np.empty((rx.m, d), dtype="complex")
-
-    for i in range(rx.mx):
-        for j in range(rx.my):
+    if rx.mx == 1 or rx.my == 1:
+        for i in range(rx.m):
             for k in range(d):
-                a[rx.mx * j + i, k] = np.e ** (
-                    -1j
-                    * (
-                        i * K[k] * rx.d * np.cos(txs[k].doa.el) * np.cos(txs[k].doa.az)
-                        + j
-                        * K[k]
-                        * rx.d
-                        * np.cos(txs[k].doa.el)
-                        * np.sin(txs[k].doa.az)
+                a[i, k] = np.e ** (1j * i * K[k] * rx.d * np.sin(txs[k].doa.theta))
+    else:
+        for i in range(rx.mx):
+            for j in range(rx.my):
+                for k in range(d):
+                    a[rx.mx * j + i, k] = np.e ** (
+                        -1j
+                        * (
+                            i
+                            * K[k]
+                            * rx.d
+                            * np.cos(txs[k].doa.el)
+                            * np.cos(txs[k].doa.az)
+                            + j
+                            * K[k]
+                            * rx.d
+                            * np.cos(txs[k].doa.el)
+                            * np.sin(txs[k].doa.az)
+                        )
                     )
-                )
 
     ps = 0
 
@@ -82,12 +94,14 @@ def doamusic_samples(txs, rx, simulation):
 
     # x = np.asmatrix(np.empty((rx.m, n), dtype=complex))
     x = np.zeros(rx.m, dtype=complex)
+    x_matrix = np.zeros((rx.m, n), dtype=complex)
     s = np.zeros((rx.m, rx.m), dtype=complex)
 
     for i in range(n):
         x = np.asmatrix(a @ f[:, i] + w[:, i])
         x = x.T
         s = s + (1 / n) * (x @ x.H)
+        x_matrix[:, i] = np.ravel(x)
 
     return s
 
@@ -121,10 +135,11 @@ class PhasedArray:
 
 
 class Simulation:
-    def __init__(self, n, d, fs, sampling_time, snr):
+    def __init__(self, n, d, fs, fc, sampling_time, snr):
         self.n = n  # Number of sampling times
         self.d = d  # Number of transmitters/signals
         self.fs = fs  # Sampling frequency
+        self.fc = fc  # Sampling frequency
         self.t = (
             np.random.randint(0, int(sampling_time * fs), size=n) * 1 / fs
         )  # Random sampling time vector
@@ -137,6 +152,7 @@ class DoA:
         self.el = np.arctan2(r[2], np.sqrt(r[0] ** 2 + r[1] ** 2))
         # self.az = np.arctan2(r[1] / r[0]) * 180 / np.pi
         self.az = np.arctan2(r[1], r[0])
+        self.theta = np.arcsin(r[0] / (np.sqrt(r[0] ** 2 + r[1] ** 2 + r[2] ** 2)))
 
 
 # %%
