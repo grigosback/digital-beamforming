@@ -13,6 +13,7 @@ from PIL import Image, ImageDraw, ImageFilter
 import imageio
 import math
 import matplotlib
+from matplotlib.offsetbox import AnchoredText
 
 # matplotlib.use("Agg")
 
@@ -46,61 +47,119 @@ for ax in range(theta.size):
 s = doamusic_samples(txs, rx, simulation)
 p_mu = doamusic_estimation(s, a)
 
-#%%
-plt.figure()
-plt.plot(theta * 180 / np.pi, np.log10(abs(p_mu)))
-plt.show()
-
 
 #%%
-step = 0.02
-plt.ion()
-fig, ax = plt.subplots(1, 1)
-plt.ylim((0, track[1, :].max() * (1 + 0.3)))
-plt.xlim((track[0, :].min() * 1.1, track[0, :].max() * 1.1))
-# plt.yscale("log")
-line, = ax.plot(track[0, 0], track[1, 0], "o")
-arrow = ax.arrow(0, 0, track[0, 0], track[1, 0], width=1)
-fig.canvas.draw()
-for i in range(p_mu.shape[1]):
-    plt.pause(step)
-    line.set_xdata(track[0, i])
-    line.set_ydata(track[1, i])
-    arrow.set_xy([[0, 0], [track[0, i] * 0.9, track[1, i] * 0.9]])
-    arrow.set_linewidth(10)
-    fig.canvas.draw()
-plt.ioff()
+x_start = np.array([-15, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 1300
+s = Sine_Wave(amp, freq, fc)
+tx0 = Transmitter(x_start, v, t, s)
 
-#%%
+x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 1300
+s = Sine_Wave(amp, freq, fc)
+tx1 = Transmitter(x_start, v, t, s)
+
+x_start = np.array([0, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 1300
+s = Sine_Wave(amp, freq, fc)
+tx2 = Transmitter(x_start, v, t, s)
+
+txs1 = []
+txs1.append(tx0)
+txs1.append(tx1)
+txs1.append(tx2)
+
+x_start = np.array([-15, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 400
+s = Sine_Wave(amp, freq, fc)
+tx0 = Transmitter(x_start, v, t, s)
+
+x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 1300
+s = Sine_Wave(amp, freq, fc)
+tx1 = Transmitter(x_start, v, t, s)
+
+x_start = np.array([0, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 3300
+s = Sine_Wave(amp, freq, fc)
+tx2 = Transmitter(x_start, v, t, s)
+
+txs2 = []
+txs2.append(tx0)
+txs2.append(tx1)
+txs2.append(tx2)
 
 
 # %%
-def image_array(i):
-    n = 1000  # Snapshots number
-    d = len(txs)  # Number of signals/transmitters
-    fs = 64 * MHz  # Sampling frequency
-    fc = rx.fc
-    sampling_time = 5 * ms  # Sampling time
-    snr = -13  # Signal-to-noise ratio in dB
+def image_array(snr):
+    print(snr)
     simulation = Simulation(n, d, fs, fc, sampling_time, snr)
 
-    s = doamusic_samples(txs, rx, simulation)
-    p_mu = doamusic_estimation(s, a)
+    s1 = doamusic_samples(txs1, rx, simulation)
+    p_mu1 = doamusic_estimation(s1, a)
+    s2 = doamusic_samples(txs2, rx, simulation)
+    p_mu2 = doamusic_estimation(s2, a)
 
-    fig, ax = plt.subplots(figsize=(16, 9), frameon=False)
-    # ax.grid()
-    ax.set_ylim((p_mu.min(), p_mu.max()))
-    # ax.set_yscale("log")
-    ax.set_ylabel(r"$|P_{MU}|$", size=15)
-    ax.set_xlabel(r"$\theta$ [°]")
-    ax.set_xticks([-75, -45, -25, 0, 25, 45, 75])
-    ax.set_yticks([])
-    ax.plot(theta * 180 / np.pi, p_mu)
+    fig, axs = plt.subplots(1, 2, figsize=(20, 9), frameon=False, dpi=200)
+    for ax in axs:
+        ax.set_yscale("log")
+        ax.set_ylabel(r"$|P_{MU}|$", size=15)
+        ax.set_xlabel(r"$\theta$ [°]")
+        ax.set_xticks([-75, -45, -25, 0, 25, 45, 75])
+        ax.set_yticks([])
+        ax.minorticks_off()
 
-    idx = np.argmax(p_mu)
-    ax.plot((0, 0), (0, p_mu.max()), linestyle="--", color="r", linewidth=2)
-    ax.plot((45, 45), (0, p_mu.max()), linestyle="--", color="r", linewidth=2)
-    ax.plot((-45, -45), (0, p_mu.max()), linestyle="--", color="r", linewidth=2)
+        at = AnchoredText(
+            "SNR = %i dB" % (snr), prop=dict(size=15), frameon=True, loc="upper right"
+        )
+        at.patch.set_boxstyle("round,pad=0.,rounding_size=0.2")
+        ax.add_artist(at)
+
+    axs[0].plot((0, 0), (0, p_mu1.max() * 1.05), linestyle="--", color="r", linewidth=2)
+    axs[0].plot(
+        (45, 45), (0, p_mu1.max() * 1.05), linestyle="--", color="r", linewidth=2
+    )
+    axs[0].plot(
+        (-45, -45), (0, p_mu1.max() * 1.05), linestyle="--", color="r", linewidth=2
+    )
+    axs[0].set_ylim((p_mu1.min(), p_mu1.max() * 1.05))
+    axs[0].plot(theta * 180 / np.pi, p_mu1)
+    axs[0].set_title("Señales coherentes", size=20)
+
+    axs[1].plot((0, 0), (0, p_mu2.max() * 1.05), linestyle="--", color="r", linewidth=2)
+    axs[1].plot(
+        (45, 45), (0, p_mu2.max() * 1.05), linestyle="--", color="r", linewidth=2
+    )
+    axs[1].plot(
+        (-45, -45), (0, p_mu2.max() * 1.05), linestyle="--", color="r", linewidth=2
+    )
+    axs[1].set_ylim((p_mu2.min(), p_mu2.max() * 1.05))
+    axs[1].plot(theta * 180 / np.pi, p_mu2)
+    axs[1].set_title("Señales no coherentes", size=20)
 
     fig.canvas.draw()  # draw the canvas, cache the renderer
     image = np.frombuffer(fig.canvas.tostring_rgb(), dtype="uint8")
@@ -110,47 +169,44 @@ def image_array(i):
 
 
 #%%
+snr = np.linspace(10, -10, 21)
+#%%
+
 kwargs_write = {"fps": 10.0, "quantizer": "nq"}
-imageio.mimsave("./sim_tracking.gif", [image_array(i) for i in range(n_time)], fps=10)
+imageio.mimsave("./sim_music_snr.gif", [image_array(snr_i) for snr_i in snr], fps=1)
 
 
 #%%
-n = 1000  # Snapshots number
-d = len(txs)  # Number of signals/transmitters
-fs = 64 * MHz  # Sampling frequency
-fc = rx.fc
-sampling_time = 5 * ms  # Sampling time
-snr = 0  # Signal-to-noise ratio in dB
-simulation = Simulation(n, d, fs, fc, sampling_time, snr)
-
-s = doamusic_samples(txs, rx, simulation)
-p_mu = doamusic_estimation(s, a)
+x_start = np.array([-15, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+amp = 10
+freq = 400
+s = Sine_Wave(amp, freq, fc)
+tx = Transmitter(x_start, v, t, s)
 
 
-fig, ax = plt.subplots(figsize=(16, 9), frameon=False)
-# ax.grid()
-ax.set_ylim((p_mu.min(), p_mu.max() * 1.05))
-ax.set_yscale("log")
-ax.set_ylabel(r"$|P_{MU}|$", size=15)
-ax.set_xlabel(r"$\theta$ [°]")
-ax.set_xticks([-75, -45, -25, 0, 25, 45, 75])
-ax.set_yticks([])
-ax.plot(theta * 180 / np.pi, p_mu)
-
-idx = np.argmax(p_mu)
-ax.plot((0, 0), (0, p_mu.max() * 1.05), linestyle="--", color="r", linewidth=2)
-ax.plot((45, 45), (0, p_mu.max() * 1.05), linestyle="--", color="r", linewidth=2)
-ax.plot((-45, -45), (0, p_mu.max() * 1.05), linestyle="--", color="r", linewidth=2)
-# ax.annotate(
-#    "%.2f°" % (theta[idx] * 180 / np.pi),
-#    xy=(theta[idx] * 180 / np.pi + 3, 10 ** 3),
-#    size=15,
-# )
-
-fig.canvas.draw()  # draw the canvas, cache the renderer
-# image = np.frombuffer(fig.canvas.tostring_rgb(), dtype="uint8")
-# image = image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+#%%
+snr = np.linspace(10, -20, 100)
+n_error = 10
+error_array = np.zeros(len(snr))
+for i in range(len(snr)):
+    error = 0
+    for j in range(n_error):
+        simulation = Simulation(n, d, fs, fc, sampling_time, snr[i])
+        s = doamusic_samples(tx, rx, simulation)
+        p_mu = doamusic_estimation(s, a)
+        idx = np.argmax(p_mu)
+        theta_est = theta[idx]
+        error = error + (1 / n_error) * (theta_est - tx.doa.theta) ** 2
+    error_array[i] = error
 
 
 # %%
+plt.figure()
+plt.plot(snr, error_array)
+plt.yscale("log")
+plt.show()
 
+# %%

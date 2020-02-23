@@ -140,26 +140,6 @@ plt.ioff()
 #%%
 
 # %%
-dir(arrow)
-
-# %%
-help(arrow._linewidth)
-
-# %%
-arrow.set_linewidth(1)
-# %%
-dir(ab)
-
-# %%
-help(ab.update_positions)
-
-# %%
-ab.xy = (track[0, 0], track[1, 0])
-
-# %%
-ab.set_position
-
-# %%
 def image_array(i):
     print(i)
     tx = Transmitter(x_start, v, t_array[i], sine)
@@ -176,8 +156,8 @@ def image_array(i):
     ax[0].annotate(
         "", xy=(0, 0), xytext=(10, 0), arrowprops=dict(arrowstyle="<-", linewidth=3)
     )
-    ax[0].annotate("x [m]", xy=(9.5, 0.5))
-    ax[0].annotate("z [m]", xy=(0.5, 13.5))
+    ax[0].annotate("x", xy=(9.5, 0.5))
+    ax[0].annotate("z", xy=(0.5, 13.5))
 
     ax[1].set_ylim((p_mu.min(), p_mu.max()))
     ax[1].set_yscale("log")

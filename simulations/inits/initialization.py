@@ -16,7 +16,7 @@ v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
 amp = 10
-freq = 1300
+freq = 400
 s = Sine_Wave(amp, freq, fc)
 tx0 = Transmitter(x_start, v, t, s)
 
@@ -34,7 +34,7 @@ v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
 amp = 10
-freq = 1300
+freq = 3300
 s = Sine_Wave(amp, freq, fc)
 tx2 = Transmitter(x_start, v, t, s)
 
