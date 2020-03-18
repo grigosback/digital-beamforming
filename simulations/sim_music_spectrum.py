@@ -11,14 +11,16 @@ from matplotlib.offsetbox import TextArea, DrawingArea, OffsetImage, AnnotationB
 
 import time
 
-# matplotlib.use("Agg")
-# get_ipython().run_line_magic("matplotlib", "qt")
+import matplotlib
+
+matplotlib.use("Agg")
+get_ipython().run_line_magic("matplotlib", "qt")
 
 
 #%% 1D
-n_theta = 200
+"""n_theta = 200
 theta = np.linspace(-np.pi / 2, np.pi / 2, num=n_theta)
-lambda_c = c / simulation.fc
+lambda_c = c / rx.fc
 k = 2 * np.pi / (lambda_c)
 
 #%%
@@ -42,8 +44,8 @@ plt.xlabel(r"$\theta$ [°]", size=20)
 plt.ylim(p_mu.min() * 0.9, p_mu.max() * 1.1)
 plt.ylabel("$|P_{MU}|$", size=20)
 plt.grid()
-plt.savefig("sim_music_spectrum1d.png", dpi=200, bbox_inches="tight")
-plt.show()
+# plt.savefig("sim_music_spectrum1d.png", dpi=200, bbox_inches="tight")
+plt.show()"""
 
 #%% 2D
 # %% Transmitter definition
@@ -53,8 +55,8 @@ t = 0
 fc = 436 * MHz
 amp = 10
 freq = 400
-s = Sine_Wave(amp, freq, fc)
-tx0 = Transmitter(x_start, v, t, s)
+s = Sine_Wave(amp, freq)
+tx0 = Transmitter(x_start, v, t, fc, s)
 
 x_start = np.array([15, 15, 30])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
@@ -62,8 +64,8 @@ t = 0
 fc = 436 * MHz
 amp = 10
 freq = 1300
-s = Sine_Wave(amp, freq, fc)
-tx1 = Transmitter(x_start, v, t, s)
+s = Sine_Wave(amp, freq)
+tx1 = Transmitter(x_start, v, t, fc, s)
 
 x_start = np.array([0, 15, 15])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
@@ -71,8 +73,8 @@ t = 0
 fc = 436 * MHz
 amp = 10
 freq = 3300
-s = Sine_Wave(amp, freq, fc)
-tx2 = Transmitter(x_start, v, t, s)
+s = Sine_Wave(amp, freq)
+tx2 = Transmitter(x_start, v, t, fc, s)
 
 txs = []
 txs.append(tx0)
@@ -83,7 +85,7 @@ txs.append(tx2)
 mx = 4  # Number of sensors in direction X
 my = 4  # Number of sensors in direction Y
 origin = np.array([0, 0, 0])  # Axis origin
-rx = PhasedArray(mx, my, txs[0].s.fc, origin)
+rx = PhasedArray(mx, my, txs[0].fc, origin)
 # %%
 if rx.mx == 1 or rx.my == 1:
     theta = np.linspace(-np.pi / 2, np.pi / 2, num=100)
@@ -105,7 +107,7 @@ else:
         for ay in range(az.size):
             for i in range(rx.mx):
                 for j in range(0, rx.my):
-                    a[rx.mx * j + i, ax, ay] = np.e ** (
+                    a[rx.mx * i + j, ax, ay] = np.e ** (
                         -1j
                         * (
                             i * k * rx.d * np.cos(el[ax]) * np.cos(az[ay])
@@ -116,6 +118,7 @@ else:
 
 # %%
 s = doamusic_samples(txs, rx, simulation)
+#%%
 p_mu = doamusic_estimation(s, a)
 
 # %%
@@ -130,7 +133,7 @@ plt.imshow(
 )
 plt.ylabel(r"Elevation [°]", size=20)
 plt.xlabel(r"Azimuth [°]", size=20)
-#plt.savefig("sim_music_spectrum2d.png", dpi=200, bbox_inches="tight")
+# plt.savefig("sim_music_spectrum2d.png", dpi=200, bbox_inches="tight")
 plt.show()
 
 print("El0 = " + str(tx0.doa.el * 180 / np.pi))
@@ -148,7 +151,7 @@ for i in range(1, 21):
     mx = i  # Number of sensors in direction X
     my = i  # Number of sensors in direction Y
     origin = np.array([0, 0, 0])  # Axis origin
-    rx = PhasedArray(mx, my, txs[0].s.fc, origin)
+    rx = PhasedArray(mx, my, txs[0].fc, origin)
 
     if rx.mx == 1 or rx.my == 1:
         theta = np.linspace(-np.pi / 2, np.pi / 2, num=100)
@@ -170,7 +173,7 @@ for i in range(1, 21):
             for ay in range(az.size):
                 for i in range(rx.mx):
                     for j in range(0, rx.my):
-                        a[rx.mx * j + i, ax, ay] = np.e ** (
+                        a[rx.mx * i + j, ax, ay] = np.e ** (
                             -1j
                             * (
                                 i * k * rx.d * np.cos(el[ax]) * np.cos(az[ay])

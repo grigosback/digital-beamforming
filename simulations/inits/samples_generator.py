@@ -23,8 +23,10 @@ def gaussiannoise(snr, ps, m, n):
     """
     mean_w = 0
     var_w = ps / (10 ** (snr / 10))
-    std_w = np.sqrt(var_w)
-    w = np.random.normal(mean_w, std_w, size=(m, n))
+    std_w = np.sqrt(var_w / 2)
+    w_re = np.random.normal(mean_w, std_w, size=(m, n))
+    w_im = np.random.normal(mean_w, std_w, size=(m, n))
+    w = w_re + 1j * w_im
     return w
 
 
@@ -52,7 +54,7 @@ def doamusic_samples(txs, rx, simulation):
     lambda_c = np.empty(d)
 
     for i in range(d):
-        lambda_c[i] = c / txs[i].s.fc
+        lambda_c[i] = c / txs[i].fc
 
     K = 2 * np.pi / (lambda_c)
     f = np.empty((d, n))
@@ -66,24 +68,39 @@ def doamusic_samples(txs, rx, simulation):
             for k in range(d):
                 a[i, k] = np.e ** (1j * i * K[k] * rx.d * np.sin(txs[k].doa.theta))
     else:
-        for i in range(rx.mx):
+        beta = np.empty((rx.mx, 1), dtype=complex)
+        gamma = np.empty((rx.my, 1), dtype=complex)
+
+        for k in range(d):
+            [beta_k, gamma_k] = [
+                np.e
+                ** (1j * K[k] * rx.d * np.cos(txs[k].doa.el) * np.cos(txs[k].doa.az)),
+                np.e
+                ** (1j * K[k] * rx.d * np.cos(txs[k].doa.el) * np.sin(txs[k].doa.az)),
+            ]
+            for i in range(rx.mx):
+                beta[i] = beta_k ** (-i)
+
             for j in range(rx.my):
-                for k in range(d):
-                    a[rx.mx * j + i, k] = np.e ** (
-                        -1j
-                        * (
-                            i
-                            * K[k]
-                            * rx.d
-                            * np.cos(txs[k].doa.el)
-                            * np.cos(txs[k].doa.az)
-                            + j
-                            * K[k]
-                            * rx.d
-                            * np.cos(txs[k].doa.el)
-                            * np.sin(txs[k].doa.az)
-                        )
-                    )
+                gamma[j] = gamma_k ** (-j)
+
+            a[:, k] = np.kron(beta, gamma).ravel()
+
+        """a[rx.my * j + i, k] = np.e ** (
+            -1j
+            * (
+                i
+                * K[k]
+                * rx.d
+                * np.cos(txs[k].doa.el)
+                * np.cos(txs[k].doa.az)
+                + j
+                * K[k]
+                * rx.d
+                * np.cos(txs[k].doa.el)
+                * np.sin(txs[k].doa.az)
+            )
+        )"""
 
     ps = 0
 
@@ -103,22 +120,22 @@ def doamusic_samples(txs, rx, simulation):
         s = s + (1 / n) * (x @ x.H)
         x_matrix[:, i] = np.ravel(x)
 
-    return s
+    return [s, x_matrix]
 
 
 #%%
 class Sine_Wave:
-    def __init__(self, amp, freq, fc):
+    def __init__(self, amp, freq):
         self.amp = amp  # Sine signal amplitude
         self.freq = freq  # Sine signal frequency
-        self.fc = fc  # Carrier frequency
 
 
 class Transmitter:
-    def __init__(self, x_start, v, t, s):
+    def __init__(self, x_start, v, t, fc, s):
         self.s = s
         self.r = transmitter_pos(x_start, v, t)  # Transmitter position in time t
         self.doa = DoA(self.r)  #
+        self.fc = fc  # Carrier frequency
 
 
 class PhasedArray:
@@ -139,7 +156,6 @@ class Simulation:
         self.n = n  # Number of sampling times
         self.d = d  # Number of transmitters/signals
         self.fs = fs  # Sampling frequency
-        self.fc = fc  # Sampling frequency
         self.t = (
             np.random.randint(0, int(sampling_time * fs), size=n) * 1 / fs
         )  # Random sampling time vector

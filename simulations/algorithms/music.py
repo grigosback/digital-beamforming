@@ -24,7 +24,7 @@ def doamusic_estimation(s, a):
             q += 1
     d = m - q
 
-    # Subspace noise matrix
+    # Noise subspace matrix
     en = np.asmatrix(avec[:, 0:q])
     if len(a.shape) == 2:
         p_mu = np.empty((a.shape[1]), dtype=complex)
