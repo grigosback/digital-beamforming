@@ -57,4 +57,3 @@ fc = rx.fc
 sampling_time = 5 * ms  # Sampling time
 snr = 7  # Signal-to-noise ratio in dB
 simulation = Simulation(n, d, fs, fc, sampling_time, snr)
-
