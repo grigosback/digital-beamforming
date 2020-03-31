@@ -10,33 +10,39 @@ ms = 1e-3
 c = 3e8
 km = 1e3
 
+
 # %% Transmitter definition
-x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
-v = np.array([1, 0, 0])  # Transmitter velocity in m/s
-t = 0
-fc = 436 * MHz
+fs = 64 * MHz  # Sampling frequency
+t_max = 5 * ms  # Sampling time
+
+
 amp = 10
 freq = 40000
-s = Sine_Wave(amp, freq)
-tx0 = Transmitter(x_start, v, t, fc, s)
-
+x = Sine_Wave(amp, freq, fs, t_max)
 x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
+tx0 = Transmitter(x_start, v, t, fc, x.data)
+
+
 amp = 10
 freq = 1300
-s = Sine_Wave(amp, freq)
-tx1 = Transmitter(x_start, v, t, fc, s)
+x = Sine_Wave(amp, freq, fs, t_max)
+x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
+v = np.array([1, 0, 0])  # Transmitter velocity in m/s
+t = 0
+fc = 436 * MHz
+tx1 = Transmitter(x_start, v, t, fc, x.data)
 
+amp = 10
+freq = 3300
+x = Sine_Wave(amp, freq, fs, t_max)
 x_start = np.array([0, 0, 15])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
-amp = 10
-freq = 3300
-s = Sine_Wave(amp, freq)
-tx2 = Transmitter(x_start, v, t, fc, s)
+tx2 = Transmitter(x_start, v, t, fc, x.data)
 
 txs = []
 txs.append(tx0)
@@ -52,8 +58,5 @@ rx = PhasedArray(mx, my, txs[0].fc, origin)
 #%% Simulation parameters
 n = 124  # Snapshots number
 d = len(txs)  # Number of signals/transmitters
-fs = 64 * MHz  # Sampling frequency
-fc = rx.fc
-sampling_time = 5 * ms  # Sampling time
 snr = 7  # Signal-to-noise ratio in dB
-simulation = Simulation(n, d, fs, fc, sampling_time, snr)
+simulation = Simulation(n, d, snr)

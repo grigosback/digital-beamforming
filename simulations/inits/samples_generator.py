@@ -38,7 +38,7 @@ def transmitter_pos(x_start, v, t):
     return r
 
 
-def doamusic_samples(txs, rx, simulation):
+def doamusic_samples(txs, rx, simulation, rs=True):
     """
     This function generates a matrix with size (rx.m,simulation.n) with the
     samples for each element of a  receiver 'rx' for each given transmitters
@@ -59,8 +59,13 @@ def doamusic_samples(txs, rx, simulation):
     K = 2 * np.pi / (lambda_c)
     f = np.empty((d, n))
 
-    for i in range(d):
-        f[i, :] = txs[i].s.amp * np.cos(2 * np.pi * txs[i].s.freq * (simulation.t))
+    if rs:
+        for i in range(d):
+            # f[i, :] = txs[i].s.amp * np.cos(2 * np.pi * txs[i].s.freq * (simulation.t))
+            f[i, :] = txs[i].x.data[np.random.randint(0, txs[i].x.data.size, size=n)]
+    else:
+        for i in range(d):
+            f[i, :] = txs[i].x.data[: txs[i].x.data.size / n :]
 
     a = np.empty((rx.m, d), dtype="complex")
     if rx.mx == 1 or rx.my == 1:
@@ -105,7 +110,8 @@ def doamusic_samples(txs, rx, simulation):
     ps = 0
 
     for i in range(d):
-        ps = ps + (txs[i].s.amp ** 2) / 2  # Signal power
+        # ps = ps + (txs[i].s.amp ** 2) / 2  # Signal power
+        ps = ps + (txs[i].x.data.max() ** 2) / 2  # Signal power
 
     w = gaussiannoise(simulation.snr, ps, rx.m, simulation.n)
 
@@ -125,14 +131,32 @@ def doamusic_samples(txs, rx, simulation):
 
 #%%
 class Sine_Wave:
-    def __init__(self, amp, freq):
+    def __init__(self, amp, freq, fs, t_max):
         self.amp = amp  # Sine signal amplitude
         self.freq = freq  # Sine signal frequency
+        self.fs = fs  # Sampling frequency
+        n = int(t_max * fs)
+        t = np.arange(n) / fs  # Sampling time vector
+        self.t = t
+        data = amp * np.cos(2 * np.pi * freq * (t))
+        data = data / max(data)
+        self.data = data
+
+
+class Signal:
+    def __init__(self, fs, data):
+        self.fs = fs  # Sampling frequency
+        n = data.size
+        t = np.arange(n) / fs  # Sampling time vector
+        self.t = t
+        data = data - np.average(data)
+        data = data / max(data)
+        self.data = data
 
 
 class Transmitter:
-    def __init__(self, x_start, v, t, fc, s):
-        self.s = s
+    def __init__(self, x_start, v, t, fc, x):
+        self.x = x
         self.r = transmitter_pos(x_start, v, t)  # Transmitter position in time t
         self.doa = DoA(self.r)  #
         self.fc = fc  # Carrier frequency
@@ -152,13 +176,9 @@ class PhasedArray:
 
 
 class Simulation:
-    def __init__(self, n, d, fs, fc, sampling_time, snr):
+    def __init__(self, n, d, snr):
         self.n = n  # Number of sampling times
         self.d = d  # Number of transmitters/signals
-        self.fs = fs  # Sampling frequency
-        self.t = (
-            np.random.randint(0, int(sampling_time * fs), size=n) * 1 / fs
-        )  # Random sampling time vector
         self.snr = snr
 
 
@@ -169,9 +189,3 @@ class DoA:
         # self.az = np.arctan2(r[1] / r[0]) * 180 / np.pi
         self.az = np.arctan2(r[1], r[0])
         self.theta = np.arcsin(r[0] / (np.sqrt(r[0] ** 2 + r[1] ** 2 + r[2] ** 2)))
-
-
-# %%
-# s = doamusic_samples(txs, rx, simulation)
-
-#%%
