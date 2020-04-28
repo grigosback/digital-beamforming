@@ -38,7 +38,7 @@ def transmitter_pos(x_start, v, t):
     return r
 
 
-def doamusic_samples(txs, rx, simulation, rs=True):
+def doamusic_samples(txs, rx, simulation, n=[]):
     """
     This function generates a matrix with size (rx.m,simulation.n) with the
     samples for each element of a  receiver 'rx' for each given transmitters
@@ -49,7 +49,8 @@ def doamusic_samples(txs, rx, simulation, rs=True):
         txs_list.append(txs)
         txs = txs_list
     d = len(txs)
-    n = simulation.n
+    if n == []:
+        n = txs[0].x.data.size
     c = 3e8
     lambda_c = np.empty(d)
 
@@ -59,13 +60,9 @@ def doamusic_samples(txs, rx, simulation, rs=True):
     K = 2 * np.pi / (lambda_c)
     f = np.empty((d, n))
 
-    if rs:
-        for i in range(d):
-            # f[i, :] = txs[i].s.amp * np.cos(2 * np.pi * txs[i].s.freq * (simulation.t))
-            f[i, :] = txs[i].x.data[np.random.randint(0, txs[i].x.data.size, size=n)]
-    else:
-        for i in range(d):
-            f[i, :] = txs[i].x.data[: txs[i].x.data.size / n :]
+    for i in range(d):
+        # f[i, :] = txs[i].s.amp * np.cos(2 * np.pi * txs[i].s.freq * (simulation.t))
+        f[i, :] = txs[i].x.data[0:n]
 
     a = np.empty((rx.m, d), dtype="complex")
     if rx.mx == 1 or rx.my == 1:
@@ -113,7 +110,7 @@ def doamusic_samples(txs, rx, simulation, rs=True):
         # ps = ps + (txs[i].s.amp ** 2) / 2  # Signal power
         ps = ps + (txs[i].x.data.max() ** 2) / 2  # Signal power
 
-    w = gaussiannoise(simulation.snr, ps, rx.m, simulation.n)
+    w = gaussiannoise(simulation.snr, ps, rx.m, n)
 
     # x = np.asmatrix(np.empty((rx.m, n), dtype=complex))
     x = np.zeros(rx.m, dtype=complex)
@@ -126,7 +123,7 @@ def doamusic_samples(txs, rx, simulation, rs=True):
         s = s + (1 / n) * (x @ x.H)
         x_matrix[:, i] = np.ravel(x)
 
-    return [s, x_matrix]
+    return s, x_matrix
 
 
 #%%
