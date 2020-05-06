@@ -134,3 +134,6 @@ def carrieresprit_estimation(x, fs, d=1):
     for i in range(d_aux):
         fc[i] = abs(np.angle(phi[i]) * fs / (2 * np.pi))
         return fc
+
+
+# %%

@@ -18,7 +18,7 @@ t_max = 5 * ms  # Sampling time
 
 amp = 10
 freq = 40000
-x = Sine_Wave(amp, freq, fs, t_max)
+x = Sine_Wave(amp, freq, fs, t_max, 1, 0)
 x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
@@ -28,7 +28,7 @@ tx0 = Transmitter(x_start, v, t, fc, x.data)
 
 amp = 10
 freq = 1300
-x = Sine_Wave(amp, freq, fs, t_max)
+x = Sine_Wave(amp, freq, fs, t_max, 1, 0)
 x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
@@ -37,7 +37,7 @@ tx1 = Transmitter(x_start, v, t, fc, x.data)
 
 amp = 10
 freq = 3300
-x = Sine_Wave(amp, freq, fs, t_max)
+x = Sine_Wave(amp, freq, fs, t_max, 1, 0)
 x_start = np.array([0, 0, 15])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0

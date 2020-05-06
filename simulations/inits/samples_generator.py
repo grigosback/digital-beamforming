@@ -1,6 +1,7 @@
 # This script returns an array of signals for each element of a given URA
 #%% Libraries
 import numpy as np
+from modules.ramdom_sampler import *
 
 #%% Functions declaration
 def phasedarray_gen(mx, my, d, origin):
@@ -38,7 +39,7 @@ def transmitter_pos(x_start, v, t):
     return r
 
 
-def doamusic_samples(txs, rx, simulation, n=[]):
+def doa_samplesgen(txs, rx, simulation, n=[]):
     """
     This function generates a matrix with size (rx.m,simulation.n) with the
     samples for each element of a  receiver 'rx' for each given transmitters
@@ -128,12 +129,16 @@ def doamusic_samples(txs, rx, simulation, n=[]):
 
 #%%
 class Sine_Wave:
-    def __init__(self, amp, freq, fs, t_max):
+    def __init__(self, amp, freq, fs, t_max, n_rs, rs=1):
         self.amp = amp  # Sine signal amplitude
         self.freq = freq  # Sine signal frequency
         self.fs = fs  # Sampling frequency
         n = int(t_max * fs)
         t = np.arange(n) / fs  # Sampling time vector
+        if rs == 1:
+            idx = np.random.choice(n, n_rs, replace=False)
+            idx.sort()
+            t = t[idx]
         self.t = t
         data = amp * np.cos(2 * np.pi * freq * (t))
         data = data / max(data)

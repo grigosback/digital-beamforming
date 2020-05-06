@@ -93,7 +93,7 @@ n = 1000  # Snapshots number
 d = len(txs)  # Number of signals/transmitters
 simulation = Simulation(n, d, snr)
 
-#%%
+#%% Carrier Est vs SNR
 error_array = np.zeros(snr_array.size)
 fc_est = np.zeros(snr_array.size)
 for i in range(snr_array.size):
@@ -101,7 +101,7 @@ for i in range(snr_array.size):
     error = 0
     snr = snr_array[i]
     simulation = Simulation(n, d, snr)
-    _, x = doamusic_samples(txs, rx, simulation)
+    _, x = doa_samplesgen(txs, rx, simulation)
     x_rs, idx = random_sampler(x, simulation.n)
     doa = doaesprit_estimation(x_rs, rx, [], simulation.d)
     print(np.degrees(doa))
@@ -116,26 +116,6 @@ for i in range(snr_array.size):
     error_array[i] = error / (fc_rem) ** 2
     print(error_array[i])
 
-
-#%%
-plt.figure(figsize=(16, 9), dpi=100)
-plt.grid()
-plt.plot(snr_array, fc_est)
-plt.plot([snr_array[0], snr_array[-1]], [[fc_rem], [fc_rem]], color="r", linestyle="--")
-plt.xlabel("SNR [dB]")
-plt.ylabel(r"$f_c$ [Hz]")
-plt.legend([r"$\hat{f_c}$", r"$f_c$"])
-plt.savefig("images/sim_esprit_carrierest_error.png", dpi=200, bbox_inches="tight")
-plt.show()
-
-#%%
-plt.figure(figsize=(16, 9), dpi=100)
-plt.grid()
-plt.plot(snr_array, error_array * 100)
-plt.xlabel("SNR [dB]")
-plt.ylabel(r"ECM [%]")
-plt.savefig("images/sim_esprit_carrierest_fc.png", dpi=200, bbox_inches="tight")
-plt.show()
 #%%
 plt.figure(figsize=(16, 9), dpi=100)
 plt.subplot(211)
@@ -154,23 +134,50 @@ plt.savefig("images/sim_esprit_carrierest.png", dpi=200, bbox_inches="tight")
 plt.show()
 
 # %%
-_, x = doamusic_samples(txs, rx, simulation)
-#%%
+#%% Carrier Est vs M
+m_array = np.array([4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 125, 150, 175, 200])
+error_array = np.zeros(m_array.size)
+fc_est = np.zeros(m_array.size)
+snr = -5
+simulation = Simulation(n, d, snr)
+_, x = doa_samplesgen(txs, rx, simulation)
 x_rs, idx = random_sampler(x, simulation.n)
 doa = doaesprit_estimation(x_rs, rx, [], simulation.d)
 print(np.degrees(doa))
-
-# %%
 x_beamformer = beamformer(x, rx, doa, fc)
 
-# %%
-m = 30
-x_rs, _ = random_sampler(x_beamformer, simulation.n, m)
-print(abs(carrieresprit_estimation(x_rs, fs1)))
+for i in range(m_array.size):
+    n_error = 20
+    error = 0
+    m = m_array[i]
+    for j in range(n_error):
+        x_rs, _ = random_sampler(x_beamformer, simulation.n, m)
+        fc_est[i] = carrieresprit_estimation(x_rs, fs1)
+        error = error + (1 / n_error) * (fc_rem - fc_est[i]) ** 2
+        print(fc_est[i])
+    # print(error)
+    error_array[i] = error / (fc_rem) ** 2
+    print(error_array[i])
 
 # %%
+plt.figure(figsize=(16, 9), dpi=100)
+plt.subplot(211)
+plt.grid()
+plt.plot(m_array, fc_est)
+plt.plot([m_array[0], m_array[-1]], [[fc_rem], [fc_rem]], color="r", linestyle="--")
+plt.xlabel("M")
+plt.ylabel(r"$f_c$ [Hz]")
+plt.legend([r"$\hat{f_c}$", r"$f_c$"])
+plt.subplot(212)
+plt.grid()
+plt.plot(m_array, error_array * 100)
+plt.xlabel("M")
+plt.yscale("Log")
+plt.ylabel(r"Error [%]")
+plt.savefig("images/sim_esprit_carrierest_vs_m.png", dpi=200, bbox_inches="tight")
+plt.show()
 
 # %%
-error_array
+tx0.x.data
 
 # %%
