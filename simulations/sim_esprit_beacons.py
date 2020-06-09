@@ -1,33 +1,33 @@
-#%%
+# %%
+from scipy.io import wavfile
+import time
+import matplotlib
+from scipy import signal
+from matplotlib import pyplot as plt
+from modules.ramdom_sampler import *
+from modules.beamformer import *
+from algorithms.esprit import carrieresprit_estimation
+from algorithms.esprit import doaesprit_estimation
+from algorithms.music import doamusic_estimation
+from inits.initialization import *
 import sys
 
 sys.path.insert(0, "${workspaceRoot}/algorithms/")
 sys.path.insert(0, "${workspaceRoot}/inits/")
 sys.path.insert(0, "${workspaceRoot}/modules/")
 
-from inits.initialization import *
-from algorithms.music import doamusic_estimation
-from algorithms.esprit import doaesprit_estimation
-from algorithms.esprit import carrieresprit_estimation
-from modules.beamformer import *
-from modules.ramdom_sampler import *
-from matplotlib import pyplot as plt
-import matplotlib
-import time
-from scipy.io import wavfile
-
 
 matplotlib.use("Agg")
 get_ipython().run_line_magic("matplotlib", "qt")
 
-#%%
+# %%
 # Transmitter definition
 fs0, data0 = wavfile.read("../beacons/aistechsat3.wav")
 fs1, data1 = wavfile.read("../beacons/gomx-1.wav")
 fs2, data2 = wavfile.read("../beacons/beesat_9.wav")
 
-data0 = data0[0 : min([data0.size, data1.size])]
-data1 = data1[0 : min([data0.size, data1.size])]
+data0 = data0[0: min([data0.size, data1.size])]
+data1 = data1[0: min([data0.size, data1.size])]
 
 # Oversample
 factor = 10
@@ -58,7 +58,8 @@ tx0 = Transmitter(x_start, v, t, fc, x_raw)
 
 
 x_raw = Signal(fs1, data1)
-x_start = np.array([15, 15, 36.74234614])  # Start coordinate for the transmitter in m
+# Start coordinate for the transmitter in m
+x_start = np.array([15, 15, 36.74234614])
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
@@ -85,12 +86,12 @@ simulation = Simulation(n, d, snr)
 
 [s, x] = doa_samplesgen(txs, rx, simulation)
 
-#%%
+# %%
 # x_rs, _ = random_sampler(x, simulation.n)
 doa = doaesprit_estimation(x, rx)
 print(np.degrees(doa))
 x_beamformer = beamformer(x, rx, doa, fc)
-#%%
+# %%
 
 # %% Plot temporal
 plt.figure()
@@ -119,11 +120,11 @@ N = int((len(x_beamformer) - M + 1))
 x_windowed = np.zeros((M, N))
 
 for i in range(N):
-    x_windowed[:, i] = x_beamformer[i : i + M]
+    x_windowed[:, i] = x_beamformer[i: i + M]
 
-#%%
+# %%
 x_windowed.shape
-#%%
+# %%
 carrieresprit_estimation(x_windowed, fs1)
 
 
@@ -136,20 +137,19 @@ N = simulation.n
 x_windowed = np.zeros((M, N))
 
 for i in range(N):
-    x_windowed[:, i] = x_beamformer_rs[i : i + M]
+    x_windowed[:, i] = x_beamformer_rs[i: i + M]
 
-#%%
+# %%
 carrieresprit_estimation(x_windowed, fs1)
 
 ###############################################################################
-#%%
+# %%
 # Transmitter definition
 fs0, data0 = wavfile.read("../beacons/gomx-1.wav")
 
-# data0 = data0[0 : min([data0.size, data1.size])]
-
 x_raw = Signal(fs0, data0)
-x_start = np.array([15, 15, 36.74234614])  # Start coordinate for the transmitter in m
+# Start coordinate for the transmitter in m
+x_start = np.array([15, 15, 36.74234614])
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
@@ -169,18 +169,26 @@ rx = PhasedArray(mx, my, txs[0].fc, origin)
 # Simulation parameters
 n = 1000  # Snapshots number
 d = len(txs)  # Number of signals/transmitters
-snr = 1  # SNR in dB
+snr = -1  # SNR in dB
 simulation = Simulation(n, d, snr)
 
 [s, x] = doa_samplesgen(txs, rx, simulation)
 
-#%%
+# %%
 x_rs, _ = random_sampler(x, simulation.n)
 doa = doaesprit_estimation(x_rs, rx, k=[], d=1)
 print(np.degrees(doa))
 x_beamformer = beamformer(x, rx, doa, fc)
 
-#%%
+# %% LPF
+fc = 10 * kHz
+wn = fc / (fs0 / 2)  # frecuencia normalizada del filtro
+order = 4
+[b, a] = signal.butter(order, wn)
+x_beamformer = signal.lfilter(b, a, x_beamformer)
+
+
+# %%
 # scaled = np.int16(x_beamformer / np.max(np.abs(x_beamformer)) * 32767)
 scaled = np.real(x_beamformer / np.max(np.abs(x_beamformer)))
 wavfile.write("../beacons/gomx-1_beamformer.wav", fs0, scaled)
