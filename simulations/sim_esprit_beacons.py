@@ -26,8 +26,8 @@ fs0, data0 = wavfile.read("../beacons/aistechsat3.wav")
 fs1, data1 = wavfile.read("../beacons/gomx-1.wav")
 fs2, data2 = wavfile.read("../beacons/beesat_9.wav")
 
-data0 = data0[0: min([data0.size, data1.size])]
-data1 = data1[0: min([data0.size, data1.size])]
+data0 = data0[0 : min([data0.size, data1.size])]
+data1 = data1[0 : min([data0.size, data1.size])]
 
 # Oversample
 factor = 10
@@ -120,7 +120,7 @@ N = int((len(x_beamformer) - M + 1))
 x_windowed = np.zeros((M, N))
 
 for i in range(N):
-    x_windowed[:, i] = x_beamformer[i: i + M]
+    x_windowed[:, i] = x_beamformer[i : i + M]
 
 # %%
 x_windowed.shape
@@ -137,7 +137,7 @@ N = simulation.n
 x_windowed = np.zeros((M, N))
 
 for i in range(N):
-    x_windowed[:, i] = x_beamformer_rs[i: i + M]
+    x_windowed[:, i] = x_beamformer_rs[i : i + M]
 
 # %%
 carrieresprit_estimation(x_windowed, fs1)
@@ -216,5 +216,6 @@ plt.show()
 
 # %%
 np.real(x_beamformer / np.max(np.abs(x_beamformer)))
+
 
 # %%
