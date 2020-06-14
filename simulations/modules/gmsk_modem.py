@@ -1,12 +1,6 @@
 # %%
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib
 from scipy.signal import hilbert
-import scipy.signal as signal
-
-matplotlib.use("Agg")
-get_ipython().run_line_magic("matplotlib", "qt")
 
 #%%
 def gmsk_modulator(x, Rb, nc, h, fs, alpha=0.5, msk=1):
@@ -69,51 +63,6 @@ def instfreq(signal, fs):
     instantaneous_phase = np.unwrap(np.angle(analytic_signal))
     instantaneous_frequency = np.diff(instantaneous_phase) / (2.0 * np.pi) * fs
     return instantaneous_frequency
-
-
-# %%
-x = np.array([1, 1, 0, 1, 0, 0, 0])
-# x = np.array([1, 0, 1, 0, 1, 0, 1])
-# x = np.random.randint(2, size=100)
-# x = np.arange(10)%2
-Rb = 4800
-fs = 100 * Rb
-# nc = 3
-nc = 4
-h = 1 / 2
-fc = nc * Rb / 4
-f1 = fc + h * Rb / 2
-f2 = fc - h * Rb / 2
-
-s, t = gmsk_modulator(x, Rb, nc, h, fs)
-s_filtered, _ = gmsk_modulator(x, Rb, nc, h, fs, 0.5, 0)
-
-plt.figure()
-plt.plot(t, s)
-plt.plot(t, s_filtered)
-plt.xticks(np.arange(len(x)) / Rb)
-plt.yticks([-1, 0, 1])
-plt.grid()
-plt.show()
-
-# %%
-# x = np.array([1, 1, 0, 1, 0, 0, 0])
-x = np.random.randint(2, size=1000000)
-# x = np.arange(10)%2
-
-Rb = 4800
-fs = 10 * Rb
-# nc = 3
-nc = 4
-h = 1 / 2
-
-s, t = gmsk_modulator(x, Rb, nc, h, fs)
-s_filtered, _ = gmsk_modulator(x, Rb, nc, h, fs, 0.5, 0)
-
-x_det = gmsk_detector(s_filtered, fs, Rb, nc)
-
-n_errors = np.cumsum(np.abs(x - x_det))[-1]
-print(n_errors)
 
 
 # %%
