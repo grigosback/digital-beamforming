@@ -39,23 +39,20 @@ class randomsampler_py_cc(gr.decim_block):
             out_sig=[(numpy.complex64, int(vlen))],
             decim=int(decimation),
         )
-        self.vlen = int(vlen)  # Number of elements in array
+        self.vlen = int(vlen)  # Number of elements in input vectors.
         self.decimation = int(decimation)  # Decimation factor
-        self.set_relative_rate(1.0 / decimation)
+        self.set_relative_rate(1.0 / decimation)  # Set output rate
 
     def work(self, input_items, output_items):
         in0 = input_items[0]
         out = output_items[0]
 
-        # print("in0 shape=", len(in0), ",", len(in0[0]))
-        # print("out shape=", len(out), ",", len(out[0]))
-
-        idx = sample(range(len(in0)), len(out))
-        idx.sort()
-        print("in0=", in0)
-        print("idx=", idx)
+        idx = sample(range(len(in0)), len(out))  # Generates random indexes
+        idx.sort()  # Sorts indexes from least to greatest
+        # print("in0=", in0)
+        # print("idx=", idx)
 
         out = in0[idx]
-        print("out", out)
+        # print("out=", out)
 
         return len(output_items[0])
