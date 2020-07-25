@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \documentclass[12pt,papel,twoside]{ibtesis}
+% \documentclass[12pt,papel,singlespace,oneside]{ibtesis}
+% \documentclass[12pt,papel,preprint,singlespace,oneside]{ibtesis}
+
+\documentclass[screen,pagebackref]{ibtesis}
+% Antes acá estaba
+% \documentclass[12pt,screen,twoside,pagebackref]{ibtesis}
+
+
+%%%%%%%%%%%%%%%%%%%%% Paquetes extra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Por conveniencia: aqu\'{\i} puede cargar todos los paquetes y definir los comandos 
+% que necesite
+\usepackage{ibextra}
+%\usepackage{hyphen-spanis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Informacion sobre la tesis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Conformación digital de haz para recepción de señales satelitales}
+\author{Lucas Mariano Grigolato}
+\director{Dr. Santiago Hernández}
+\codirector{Ing. Nicolás Catalano}
+\carrera{Proyecto Integrador de la Carrera de Ingeniería en Telecomunicaciones}
+\grado{Estudiante}
+\laboratorio{Departamento de Ingeniería en Telecomunicaciones\\Centro Atómico Bariloche}
+\jurado{Ing. Roberto Costantini\\ 
+Dr. Damián Dellavale Clara}
+\palabrasclave{formato de Tesis, Lineamientos de escritura, Instituto Balseiro}
+\keywords{Thesis format, Templates, Instituto Balseiro}
+% Si queremos poner la fecha manualmente:
+% \date{Diciembre de 2099}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\titlepagefalse % Si no quiere compilar la portada descomente esta linea
+%\includeonly{apendices} % Compilar s\'{o}lo estos archivos 
+\graphicspath{{figs/}} % Lugar donde encontrar las figuras generales (se puede poner uno en cada cap{\'{\i}}tulo)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% Dentro del environment 'preliminary' va:
+% la dedicatoria, resumen, abstract, indices
+
+\begin{preliminary}
+
+% Escriba su dedicatoria
+\dedicatoria{
+A Gordon Freeman
+}
+
+%%% \'{I}ndices %%%%
+
+\begin{abreviaturas}
+                                %Abreviaturas
+\end{abreviaturas}
+
+\tableofcontents                %\'{I}ndice
+
+\listoffigures                  %Figuras
+
+\listoftables                   %Tablas
+
+\include{Capitulos/Abstract}
+
+\end{preliminary}
+
+
+\include{Capitulos/Introduccion}
+\include{Capitulos/ConformacionDeHaz}
+\include{Capitulos/MuestreoAleatorio}
+\include{Capitulos/MachineLearning}
+\include{Capitulos/GNURadio}
+
+
+\appendix
+\include{Capitulos/Ap_XX}
+
+\begin{biblio}
+\bibliography{mibib}
+\end{biblio}
+
+
+\begin{postliminary}
+
+\begin{seccion}{Publicaciones asociadas}
+  \begin{enumerate}
+  \item Mi primer aviso en la revista \textbf{ABC}, 1996
+  \item Mi segunda publicaci\'{o}n en la revista \textbf{ABC}, 1997
+  \end{enumerate}
+\end{seccion}
+
+\begin{seccion}{Agradecimientos}
+A todos los que se lo merecen, por merecerlo
+\end{seccion}
+
+\end{postliminary}
+
+\end{document}
+

@@ -1,0 +1,28 @@
+id: beamforming_deinterleaver_py_cc
+label: deinterleaver_py_cc
+category: "[beamforming]"
+
+templates:
+  imports: import beamforming
+  make: beamforming.deinterleaver_py_cc(${sequence})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as \$keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+parameters:
+  - id: sequence
+    label: Sequence
+    dtype: int_vector
+inputs:
+  - label: in
+    domain: stream
+    dtype: complex
+    vlen: ${ len(sequence) }
+outputs:
+  - label: out
+    domain: stream
+    dtype: complex
+    vlen: ${ len(sequence) }
+file_format: 1

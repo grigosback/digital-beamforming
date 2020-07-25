@@ -4,7 +4,7 @@ import time
 import matplotlib
 from scipy import signal
 from matplotlib import pyplot as plt
-from modules.ramdom_sampler import *
+from modules.random_sampler import *
 from modules.beamformer import *
 from algorithms.esprit import carrieresprit_estimation
 from algorithms.esprit import doaesprit_estimation

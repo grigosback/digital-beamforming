@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%% Paquetes extra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% M\'{a}s informaci\'{o}n en http://en.wikibooks.org/wiki/LaTeX/Internationalization
+% \usepackage[utf8x]{inputenc} % Usado para ingresar acentos y s\'{\i}mbolos por teclado
+% \usepackage[latin-1]{inputenc} % Usado para ingresar acentos y s\'{\i}mbolos por teclado
+%\usepackage[T1]{fontenc} % font encoding
+
+% \usepackage{latexsym,amsfonts,amssymb,bbm} % S\'{\i}mbolos matem\'{a}ticos
+%\usepackage{multirow,multicol,booktabs} % Entornos varios para tablas
+%\usepackage{subfig} % Subfiguras y subtablas
+
+% Existen tres tama\~{n}os standard para las figuras, s\'{o}lo por conveniencia
+% Estos son los tama\~{n}os por default. Descomentar y cambiar seg\'{u}n la necesidad
+%\setlength{\imsizeL}{0.9\textwidth}
+%\setlength{\imsize}{0.7\textwidth}
+%\setlength{\imsizeS}{0.5\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Estilo de la bibliograf\'{\i}a %%%%%%%%%%%%%%%%%%%%%%
+\usepackage[nonamebreak,sort&compress]{natbib}
+\setcitestyle{numbers,square,comma}
+\bibliographystyle{ibtesis}
+
+%%%%%%%%%%%%%%%%%%%% Nomenclatura %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[noprefix,notintoc,spanish]{nomencl} % Para armar la tabla de abreviaturas (ver wiki del CAB)
+%\makenomenclature
+%
+%\renewcommand{\nompreamble}{%
+%Unidades m\'{a}s comunes, s{\'{\i}}mbolos, abreviaturas y siglas
+%utilizadas. Se incluye la p\'{a}gina con una descripci\'{o}n m\'{a}s detallada cuando sea
+%pertinente.\\ \\
+%}
+%\renewcommand{\pagedeclaration}[1]{,~#1}
+%\setlength{\nomitemsep}{-0.5\parsep}
+%
+%\newcommand\listofabbr{%
+%   \if@twocolumn
+%     \@restonecoltrue\onecolumn
+%   \else
+%      \@restonecolfalse
+%   \fi
+%   \cleardoublepage
+%   \phantomsection
+%   \addcontentsline{toc}{chapter}{\nomname}%
+%   \@mkboth{\MakeUppercase\nomname}{\MakeUppercase\nomname}%
+%   \printnomenclature[2.5cm]%
+%   \if@restonecol\twocolumn\fi}
+%
+%\newcommand{\abbr}[3]{\phantomsection\label{abbr:#1}\nomenclature[#1 ]{#2}{#3}}
+%\newcommand{\abbrp}[3]{\phantomsection\label{abbr:#1}\nomenclature[#1 ]{#2}{#3, \pageref{abbr:#1}}}
+
+%%%%%%%%%%%%% Definici\'{o}n de nuevos comandos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Secciones (equivalentes a los normales de latex, pero facilitan el labeling/referencia
+%\newcommand{\chap}[2]{\chapter{#1\label{cap:#2}}}
+%\newcommand{\sect}[2]{\section{#1\label{sec:#2}}}
+%\newcommand{\ssect}[2]{\subsection{#1\label{ssec:#2}}}
+%\newcommand{\sssect}[2]{\subsubsection{#1\label{sssec:#2}}}
+%\newcommand{\appen}[2]{\chapter{#1\label{apen:#2}}}
+%\newcommand{\refcap}[1]{Cap.~\ref{cap:#1}}
+%\newcommand{\refsec}[1]{Sec.~\ref{sec:#1}}
+%\newcommand{\refapen}[1]{Ap\'{e}ndice~\ref{apen:#1}}
+
+% Ecuaciones (para agregar labels y referencias f\'{a}cil)
+%\newcommand{\eq}[2]{%           %Entorno equation con label
+% \begin{equation}%
+% #1 \label{eq:#2}%
+% \end{equation}}
+%\newcommand{\eqp}[3]{%          %Igual que el anterior, agregando signo de puntuaci\'{o}n
+% \eq{#1 \hspace{0.3cm} \textrm{#2}}{#3}}
+%\newcommand{\eqnn}[1]{%
+% \begin{equation*}%          %Entorno equation sin n\'{u}mero
+% #1 \nonumber%
+% \end{equation*}}
+%\newcommand{\eqpnn}[2]{%        %Igual que el anterior, agregando signo de puntuaci\'{o}n
+% \eqnn{#1 \hspace{0.3cm} \textrm{#2}}}
+%\newcommand{\subeq}[2]{%        %Entorno subequations con label
+% \begin{subequations}%
+% #1 \label{eq:#2}%
+% \end{subequations}}
+%\newcommand{\refec}[1]{Ec.~(\ref{eq:#1})}   %Para referirse a las ecuaciones definidas con los entornos anteriores
+%\newcommand{\refeq}[1]{(\ref{eq:#1})}
+%\newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}     %Derivadas parciales
+%\newcommand{\parcialconst}[3]{\left.\parcial{#1}{#2}\right|_{#3}}
+
+% Tablas y Figuras (para simplificar el llamado y no olvidarse de nada)
+%\newcommand{\Figinsert}[6]{%             %Inserta una figura: #1 es el nombre del archivo, el label queda fig:#1
+% \begin{figure}[!#6]%                                      #2 es el ancho de la figura, #3 el \'{a}ngulo de giro
+% \begin{center}%                                           #4 es el caption, #5 es el caption corto para el {\'{\i}}ndice
+% \includegraphics*[width=#2,angle=#3]{#1}%                 #6 es el lugar (b,t,h,etc.)
+% \end{center}%
+% \vspace{-3ex}%
+% \caption[#5]{#4 \label{fig:#1}}%
+% \end{figure}}
+%\newcommand{\Tabinsert}[5]{%             %Inserta una tabla: el label queda tab:#1
+% \begin{table}[!#5]%                                      #2 es el contenido de la tabla (tabular)
+% \begin{center}%                                          #3 es el caption, #4 es el caption corto para el {\'{\i}}ndice
+% #2%                                                      #5 es el lugar (b,t,h,etc.)
+% \end{center}%
+% \vspace{-3ex}%  
+% \caption[#4]{#3 \label{tab:#1}}%
+% \end{table}}
+%\newcommand{\reffig}[1]{Fig.~\ref{fig:#1}}      %Para referirse a las tablas y figuras definidas con los entornos anteriores
+%\newcommand{\reftab}[1]{Tabla~\ref{tab:#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

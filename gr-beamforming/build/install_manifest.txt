@@ -1,0 +1,13 @@
+/usr/local/lib/cmake/beamforming/beamformingConfig.cmake
+/usr/local/include/beamforming/api.h
+/usr/local/lib/python3/dist-packages/beamforming/__init__.py
+/usr/local/lib/python3/dist-packages/beamforming/deinterleaver_py_cc.py
+/usr/local/lib/python3/dist-packages/beamforming/randomsampler_py_cc.py
+/usr/local/lib/python3/dist-packages/beamforming/__init__.pyc
+/usr/local/lib/python3/dist-packages/beamforming/deinterleaver_py_cc.pyc
+/usr/local/lib/python3/dist-packages/beamforming/randomsampler_py_cc.pyc
+/usr/local/lib/python3/dist-packages/beamforming/__init__.pyo
+/usr/local/lib/python3/dist-packages/beamforming/deinterleaver_py_cc.pyo
+/usr/local/lib/python3/dist-packages/beamforming/randomsampler_py_cc.pyo
+/usr/local/share/gnuradio/grc/blocks/beamforming_deinterleaver_py_cc.block.yml
+/usr/local/share/gnuradio/grc/blocks/beamforming_randomsampler_py_cc.block.yml

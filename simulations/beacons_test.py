@@ -8,15 +8,18 @@ matplotlib.use("Agg")
 get_ipython().run_line_magic("matplotlib", "qt")
 
 #%%
-fs, x = wavfile.read("../beacons/beesat_9.wav")
+fs, x = wavfile.read("../beacons/gomx-1.wav")
 t = np.arange(len(x)) / fs
 X = np.fft.fftshift(np.fft.fft(x))
 f = np.fft.fftshift(np.fft.fftfreq(len(x), 1 / fs))
 
 # %%
 plt.figure()
+plt.subplot(211)
 plt.grid()
-plt.plot(t, x)
+plt.plot(t, np.real(x))
+plt.subplot(212)
+plt.plot(t, np.imag(x))
 plt.xlabel("Tiempo [s]")
 plt.ylabel("x(t)")
 plt.show()

@@ -13,7 +13,7 @@ from modules.gmsk_modem import *
 matplotlib.use("Agg")
 get_ipython().run_line_magic("matplotlib", "qt")
 
-
+#%%
 def lpfilter(x, fs, f_lp):
     n = len(x)
     f = np.fft.fftfreq(n, 1 / fs)
@@ -58,22 +58,23 @@ def gmsk_detector(y, fs, Rb, nc):
 
 
 # %%
-# x = np.array([1, 1, 0, 1, 0, 0, 0])
+x = np.tile(np.array([1, 1, 1, 1, 0, 0, 0, 0]), 10)
 # x = np.array([1, 0, 1, 0, 1, 0, 1])
-x = np.random.randint(2, size=100)
+# x = np.random.randint(2, size=100)
 # x = np.arange(10)%2
 Rb = 4800
 fs = 100 * Rb
 # nc = 3
 nc = 4
 h = 1 / 2
-alpha = 0.3
+alpha = 0.5
 fc = nc * Rb / 4
 f1 = fc + h * Rb / 2
 f2 = fc - h * Rb / 2
 
 s_msk, t = gmsk_modulator(x, Rb, nc, h, fs, 0.3)
 s_gmsk, _ = gmsk_modulator(x, Rb, nc, h, fs, alpha, 0)
+f = np.fft.fftshift(np.fft.fftfreq(len(s_gmsk), 1 / fs))
 
 plt.figure()
 plt.plot(t, s_msk)
@@ -83,20 +84,34 @@ plt.yticks([-1, 0, 1])
 plt.grid()
 plt.show()
 
+#%%
 plt.figure()
-plt.plot(np.abs(np.fft.fftshift(np.fft.fft(s_msk))))
-plt.plot(np.abs(np.fft.fftshift(np.fft.fft(s_gmsk))))
+plt.plot(f, np.abs(np.fft.fftshift(np.fft.fft(s_msk))))
+plt.plot(f, np.abs(np.fft.fftshift(np.fft.fft(s_gmsk))))
 plt.grid()
 plt.show()
 
 #%%
 
 #%%
-I = s_msk * np.cos(2 * np.pi * fc * t)
-Q = s_msk * np.sin(2 * np.pi * fc * t)
+I = s_gmsk * np.cos(2 * np.pi * fc * t)
+Q = s_gmsk * np.sin(2 * np.pi * fc * t)
 f = np.fft.fftshift(np.fft.fftfreq(len(I), 1 / fs))
 I = lpfilter(I, fs, fc)
 Q = lpfilter(Q, fs, fc)
+
+plt.figure()
+plt.subplot(211)
+plt.plot(t, I)
+plt.grid()
+plt.subplot(212)
+plt.plot(t, Q)
+# plt.xticks(np.arange(len(x)) / Rb)
+# plt.yticks([-1, 0, 1])
+plt.grid()
+plt.show()
+
+#%%
 
 plt.figure()
 plt.subplot(211)
