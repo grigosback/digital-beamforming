@@ -27,7 +27,8 @@ from random import sample
 
 class randomsampler_py_cc(gr.decim_block):
     """
-    docstring for block randomsampler_py_cc
+    This block receives N vector of complex numbers and outputs N/Decimation
+    vector of complexs by random choice.
     """
 
     def __init__(self, vlen, decimation):

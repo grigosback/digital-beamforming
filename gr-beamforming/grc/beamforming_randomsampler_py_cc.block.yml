@@ -16,7 +16,7 @@ parameters:
     label: Decimation
     dtype: int
   - id: vlen
-    label: Vector Length
+    label: Vec Length
     dtype: int
 #  - id: n
 #    label: OutputSamplesNumber
