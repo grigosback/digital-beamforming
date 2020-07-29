@@ -34,6 +34,8 @@ except ImportError:
 # import any pure python here
 from .deinterleaver_py_cc import deinterleaver_py_cc
 from .randomsampler_py_cc import randomsampler_py_cc
+from .doaesprit_py_cf import doaesprit_py_cf
+from .phasedarray_py_cc import phasedarray_py_cc
 
 
 #

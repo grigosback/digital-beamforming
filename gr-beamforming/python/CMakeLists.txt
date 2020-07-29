@@ -33,7 +33,9 @@ GR_PYTHON_INSTALL(
     FILES
     __init__.py
     deinterleaver_py_cc.py
-    randomsampler_py_cc.py DESTINATION ${GR_PYTHON_DIR}/beamforming
+    randomsampler_py_cc.py
+    doaesprit_py_cf.py
+    phasedarray_py_cc.py DESTINATION ${GR_PYTHON_DIR}/beamforming
 )
 
 ########################################################################
@@ -44,3 +46,5 @@ include(GrTest)
 set(GR_TEST_TARGET_DEPS gnuradio-beamforming)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
 GR_ADD_TEST(qa_randomsampler_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_randomsampler_py_cc.py)
+GR_ADD_TEST(qa_doaesprit_py_cf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_doaesprit_py_cf.py)
+GR_ADD_TEST(qa_phasedarray_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_phasedarray_py_cc.py)

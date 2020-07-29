@@ -1,7 +1,7 @@
 # This script returns an array of signals for each element of a given URA
 #%% Libraries
 import numpy as np
-from modules.ramdom_sampler import *
+from modules.random_sampler import *
 
 #%% Functions declaration
 def phasedarray_gen(mx, my, d, origin):
@@ -65,7 +65,7 @@ def doa_samplesgen(txs, rx, simulation, n=[]):
         # f[i, :] = txs[i].s.amp * np.cos(2 * np.pi * txs[i].s.freq * (simulation.t))
         f[i, :] = txs[i].x.data[0:n]
 
-    a = np.empty((rx.m, d), dtype="complex")
+    a = np.empty((rx.m, d), dtype=complex)
     if rx.mx == 1 or rx.my == 1:
         for i in range(rx.m):
             for k in range(d):

@@ -1,0 +1,109 @@
+options:
+  parameters:
+    author: grigosback
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: phasedarray_test
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: beamforming_phasedarray_py_cc_0
+  id: beamforming_phasedarray_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fc: 436e6
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: '4'
+    my: '4'
+    phi: '60'
+    theta: '30'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [657, 222]
+    rotation: 0
+    state: true
+- name: blocks_vector_sink_x_0
+  id: blocks_vector_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    reserve_items: '1024'
+    type: complex
+    vlen: '16'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [968, 264]
+    rotation: 0
+    state: true
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'False'
+    tags: '[]'
+    type: complex
+    vector: range(10)
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [297, 242]
+    rotation: 0
+    state: true
+
+connections:
+- [beamforming_phasedarray_py_cc_0, '0', blocks_vector_sink_x_0, '0']
+- [blocks_vector_source_x_0, '0', beamforming_phasedarray_py_cc_0, '0']
+
+metadata:
+  file_format: 1

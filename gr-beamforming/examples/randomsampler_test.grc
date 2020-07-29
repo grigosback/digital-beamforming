@@ -44,13 +44,13 @@ blocks:
     coordinate: [184, 12]
     rotation: 0
     state: enabled
-- name: beamforming_randomsampler_py_cc_0
+- name: beamforming_randomsampler_py_cc_0_0
   id: beamforming_randomsampler_py_cc
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    decimation: '2'
+    decimation: '8'
     maxoutbuf: '0'
     minoutbuf: '0'
     vlen: '4'
@@ -58,46 +58,26 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [833, 120]
+    coordinate: [815, 288]
     rotation: 0
     state: true
-- name: blocks_file_sink_0
-  id: blocks_file_sink
+- name: blocks_complex_to_real_0
+  id: blocks_complex_to_real
   parameters:
     affinity: ''
     alias: ''
-    append: 'False'
     comment: ''
-    file: /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gr-beamforming/examples/output.txt
-    type: complex
-    unbuffered: 'False'
-    vlen: '4'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1176, 137]
+    coordinate: [1270, 300]
     rotation: 0
     state: true
-- name: blocks_file_sink_0_0
-  id: blocks_file_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    append: 'False'
-    comment: ''
-    file: /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gr-beamforming/examples/in.txt
-    type: complex
-    unbuffered: 'False'
-    vlen: '4'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [904, 317]
-    rotation: 0
-    state: true
-- name: blocks_float_to_complex_0
+- name: blocks_float_to_complex_0_0
   id: blocks_float_to_complex
   parameters:
     affinity: ''
@@ -110,10 +90,10 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [389, 95]
+    coordinate: [410, 284]
     rotation: 0
     state: true
-- name: blocks_stream_to_vector_0
+- name: blocks_stream_to_vector_0_0
   id: blocks_stream_to_vector
   parameters:
     affinity: ''
@@ -128,10 +108,10 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [582, 239]
+    coordinate: [615, 300]
     rotation: 0
     state: true
-- name: blocks_throttle_0
+- name: blocks_throttle_0_0
   id: blocks_throttle
   parameters:
     affinity: ''
@@ -147,10 +127,10 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [212, 205]
+    coordinate: [210, 295]
     rotation: 0
     state: true
-- name: blocks_vector_source_x_0
+- name: blocks_vector_source_x_0_0
   id: blocks_vector_source_x
   parameters:
     affinity: ''
@@ -158,26 +138,368 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    repeat: 'False'
+    repeat: 'True'
     tags: '[]'
     type: float
-    vector: range(80)
+    vector: range(1024)
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [109, 308]
+    coordinate: [5, 279]
+    rotation: 0
+    state: true
+- name: blocks_vector_to_stream_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '4'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1053, 300]
+    rotation: 0
+    state: true
+- name: qtgui_number_sink_0_0_0
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'True'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '10000'
+    min: '0'
+    name: '"Output stream"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1329, 570]
+    rotation: 0
+    state: true
+- name: qtgui_number_sink_0_0_0_0
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'True'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '10000'
+    min: '0'
+    name: '"Input stream"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [591, 527]
+    rotation: 0
+    state: true
+- name: qtgui_time_sink_x_0_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'True'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'False'
+    grid: 'False'
+    gui_hint: ''
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '"Input stream"'
+    nconnections: '1'
+    size: '1024'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 438]
+    rotation: 0
+    state: true
+- name: qtgui_time_sink_x_0_0_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'True'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: ''
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '"Output stream"'
+    nconnections: '1'
+    size: '1024'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1323, 467]
     rotation: 0
     state: true
 
 connections:
-- [beamforming_randomsampler_py_cc_0, '0', blocks_file_sink_0, '0']
-- [blocks_float_to_complex_0, '0', blocks_stream_to_vector_0, '0']
-- [blocks_stream_to_vector_0, '0', beamforming_randomsampler_py_cc_0, '0']
-- [blocks_stream_to_vector_0, '0', blocks_file_sink_0_0, '0']
-- [blocks_throttle_0, '0', blocks_float_to_complex_0, '0']
-- [blocks_vector_source_x_0, '0', blocks_throttle_0, '0']
+- [beamforming_randomsampler_py_cc_0_0, '0', blocks_vector_to_stream_0, '0']
+- [blocks_complex_to_real_0, '0', qtgui_number_sink_0_0_0, '0']
+- [blocks_complex_to_real_0, '0', qtgui_time_sink_x_0_0_0, '0']
+- [blocks_float_to_complex_0_0, '0', blocks_stream_to_vector_0_0, '0']
+- [blocks_stream_to_vector_0_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
+- [blocks_throttle_0_0, '0', blocks_float_to_complex_0_0, '0']
+- [blocks_throttle_0_0, '0', qtgui_number_sink_0_0_0_0, '0']
+- [blocks_throttle_0_0, '0', qtgui_time_sink_x_0_0, '0']
+- [blocks_vector_source_x_0_0, '0', blocks_throttle_0_0, '0']
+- [blocks_vector_to_stream_0, '0', blocks_complex_to_real_0, '0']
 
 metadata:
   file_format: 1

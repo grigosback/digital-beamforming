@@ -1,0 +1,426 @@
+options:
+  parameters:
+    author: grigosback
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: doaesprit_test
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: DoA Esprit Estimation - Test
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: phi
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Azimut Angle
+    min_len: '200'
+    orient: Qt.Horizontal
+    rangeType: float
+    start: '-180'
+    step: '1'
+    stop: '180'
+    value: '50'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [463, 452]
+    rotation: 0
+    state: true
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '48000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: theta
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: Elevation Angle
+    min_len: '200'
+    orient: Qt.Horizontal
+    rangeType: float
+    start: '-90'
+    step: '1'
+    stop: '90'
+    value: '45'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [698, 454]
+    rotation: 0
+    state: true
+- name: analog_random_source_x_0
+  id: analog_random_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    max: '2'
+    maxoutbuf: '0'
+    min: '0'
+    minoutbuf: '0'
+    num_samps: '1000'
+    repeat: 'True'
+    type: short
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [60, 542]
+    rotation: 0
+    state: true
+- name: beamforming_doaesprit_py_cf_0
+  id: beamforming_doaesprit_py_cf
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decimation: '128'
+    fc: fc
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    n: n
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [863, 209]
+    rotation: 0
+    state: true
+- name: beamforming_phasedarray_py_cc_0
+  id: beamforming_phasedarray_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fc: fc
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    phi: phi
+    theta: theta
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [307, 137]
+    rotation: 0
+    state: true
+- name: beamforming_randomsampler_py_cc_0_0
+  id: beamforming_randomsampler_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decimation: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: mx*my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [682, 122]
+    rotation: 0
+    state: true
+- name: blocks_short_to_char_0
+  id: blocks_short_to_char
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [47, 379]
+    rotation: 0
+    state: true
+- name: blocks_throttle_0
+  id: blocks_throttle
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: complex
+    vlen: mx*my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [528, 228]
+    rotation: 0
+    state: true
+- name: digital_gmsk_mod_0
+  id: digital_gmsk_mod
+  parameters:
+    affinity: ''
+    alias: ''
+    bt: '0.35'
+    comment: ''
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_symbol: '16'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [33, 191]
+    rotation: 0
+    state: true
+- name: fc
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Carrier frequency
+    short_id: ''
+    type: eng_float
+    value: 436e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [561, 8]
+    rotation: 0
+    state: true
+- name: mx
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# elements in x'
+    short_id: ''
+    type: intx
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [274, 6]
+    rotation: 0
+    state: true
+- name: my
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# elements in y'
+    short_id: ''
+    type: intx
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [418, 7]
+    rotation: 0
+    state: true
+- name: n
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# impinging signals'
+    short_id: ''
+    type: intx
+    value: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [706, 9]
+    rotation: 0
+    state: true
+- name: qtgui_number_sink_0
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'True'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '90'
+    min: '-90'
+    name: '"Elevation"'
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1196, 122]
+    rotation: 0
+    state: true
+- name: qtgui_number_sink_0_0
+  id: qtgui_number_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    autoscale: 'True'
+    avg: '0'
+    color1: ("black", "black")
+    color10: ("black", "black")
+    color2: ("black", "black")
+    color3: ("black", "black")
+    color4: ("black", "black")
+    color5: ("black", "black")
+    color6: ("black", "black")
+    color7: ("black", "black")
+    color8: ("black", "black")
+    color9: ("black", "black")
+    comment: ''
+    factor1: '1'
+    factor10: '1'
+    factor2: '1'
+    factor3: '1'
+    factor4: '1'
+    factor5: '1'
+    factor6: '1'
+    factor7: '1'
+    factor8: '1'
+    factor9: '1'
+    graph_type: qtgui.NUM_GRAPH_HORIZ
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    max: '180'
+    min: '-180'
+    name: Azimut
+    nconnections: '1'
+    type: float
+    unit1: ''
+    unit10: ''
+    unit2: ''
+    unit3: ''
+    unit4: ''
+    unit5: ''
+    unit6: ''
+    unit7: ''
+    unit8: ''
+    unit9: ''
+    update_time: '0.10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1195, 321]
+    rotation: 0
+    state: true
+
+connections:
+- [analog_random_source_x_0, '0', blocks_short_to_char_0, '0']
+- [beamforming_doaesprit_py_cf_0, '0', qtgui_number_sink_0, '0']
+- [beamforming_doaesprit_py_cf_0, '1', qtgui_number_sink_0_0, '0']
+- [beamforming_phasedarray_py_cc_0, '0', blocks_throttle_0, '0']
+- [beamforming_randomsampler_py_cc_0_0, '0', beamforming_doaesprit_py_cf_0, '0']
+- [blocks_short_to_char_0, '0', digital_gmsk_mod_0, '0']
+- [blocks_throttle_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
+- [digital_gmsk_mod_0, '0', beamforming_phasedarray_py_cc_0, '0']
+
+metadata:
+  file_format: 1

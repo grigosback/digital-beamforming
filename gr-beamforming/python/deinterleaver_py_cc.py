@@ -45,5 +45,6 @@ class deinterleaver_py_cc(gr.sync_block):
 
         for i, j in enumerate(self.sequence):
             out[:, j] = in0[:, i]
+        print("out=", out)
 
         return len(output_items[0])

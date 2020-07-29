@@ -35,24 +35,24 @@ class randomsampler_py_cc(gr.decim_block):
         gr.decim_block.__init__(
             self,
             name="randomsampler_py_cc",
-            in_sig=[(numpy.complex64, int(vlen))],
-            out_sig=[(numpy.complex64, int(vlen))],
-            decim=int(decimation),
+            in_sig=[(numpy.complex64, vlen)],
+            out_sig=[(numpy.complex64, vlen)],
+            decim=decimation,
         )
-        self.vlen = int(vlen)  # Number of elements in input vectors.
-        self.decimation = int(decimation)  # Decimation factor
+        self.vlen = vlen  # Number of elements in input vectors.
+        self.decimation = decimation  # Decimation factor
         self.set_relative_rate(1.0 / decimation)  # Set output rate
 
     def work(self, input_items, output_items):
         in0 = input_items[0]
         out = output_items[0]
 
-        idx = sample(range(len(in0)), len(out))  # Generates random indexes
+        idx = sample(range(in0.shape[0]), out.shape[0])  # Generates random indexes
         idx.sort()  # Sorts indexes from least to greatest
         # print("in0=", in0)
         # print("idx=", idx)
 
-        out = in0[idx]
+        out[:] = in0[idx]
         # print("out=", out)
 
         return len(output_items[0])

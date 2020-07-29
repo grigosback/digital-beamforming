@@ -1,6 +1,6 @@
 id: beamforming_deinterleaver_py_cc
-label: deinterleaver_py_cc
-category: "[beamforming]"
+label: Deinterleaver
+category: "[Beamforming]"
 
 templates:
   imports: import beamforming

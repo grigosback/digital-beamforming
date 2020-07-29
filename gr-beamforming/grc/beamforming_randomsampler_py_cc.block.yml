@@ -1,6 +1,6 @@
 id: beamforming_randomsampler_py_cc
-label: randomsampler_py_cc
-category: "[beamforming]"
+label: Random Sampler
+category: "[Beamforming]"
 
 templates:
   imports: import beamforming
