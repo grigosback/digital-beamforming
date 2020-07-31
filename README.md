@@ -1,2 +1,2 @@
 # digital-beamforming
-Digital beamforming for satellite signals reception
+Digital beamformer for the reception of signals from Low Earth Orbit (LEO) satellites
