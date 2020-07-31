@@ -89,12 +89,20 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self._theta_range = Range(-90, 90, 1, 45, 200)
+        self._theta_range = Range(0, 90, 1, 45, 200)
         self._theta_win = RangeWidget(self._theta_range, self.set_theta, 'Elevation Angle', "counter_slider", float)
-        self.top_grid_layout.addWidget(self._theta_win)
+        self.top_grid_layout.addWidget(self._theta_win, 0, 0, 1, 1)
+        for r in range(0, 1):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self._phi_range = Range(-180, 180, 1, 50, 200)
         self._phi_win = RangeWidget(self._phi_range, self.set_phi, 'Azimut Angle', "counter_slider", float)
-        self.top_grid_layout.addWidget(self._phi_win)
+        self.top_grid_layout.addWidget(self._phi_win, 2, 0, 1, 1)
+        for r in range(2, 3):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_number_sink_0_0 = qtgui.number_sink(
             gr.sizeof_float,
             0,
@@ -124,9 +132,13 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.qtgui_number_sink_0_0.set_unit(i, units[i])
             self.qtgui_number_sink_0_0.set_factor(i, factor[i])
 
-        self.qtgui_number_sink_0_0.enable_autoscale(True)
+        self.qtgui_number_sink_0_0.enable_autoscale(False)
         self._qtgui_number_sink_0_0_win = sip.wrapinstance(self.qtgui_number_sink_0_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_number_sink_0_0_win)
+        self.top_grid_layout.addWidget(self._qtgui_number_sink_0_0_win, 3, 0, 1, 1)
+        for r in range(3, 4):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_number_sink_0 = qtgui.number_sink(
             gr.sizeof_float,
             0,
@@ -146,7 +158,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             1, 1, 1, 1, 1]
 
         for i in range(1):
-            self.qtgui_number_sink_0.set_min(i, -90)
+            self.qtgui_number_sink_0.set_min(i, 0)
             self.qtgui_number_sink_0.set_max(i, 90)
             self.qtgui_number_sink_0.set_color(i, colors[i][0], colors[i][1])
             if len(labels[i]) == 0:
@@ -156,9 +168,13 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.qtgui_number_sink_0.set_unit(i, units[i])
             self.qtgui_number_sink_0.set_factor(i, factor[i])
 
-        self.qtgui_number_sink_0.enable_autoscale(True)
+        self.qtgui_number_sink_0.enable_autoscale(False)
         self._qtgui_number_sink_0_win = sip.wrapinstance(self.qtgui_number_sink_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_number_sink_0_win)
+        self.top_grid_layout.addWidget(self._qtgui_number_sink_0_win, 1, 0, 1, 1)
+        for r in range(1, 2):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self.digital_gmsk_mod_0 = digital.gmsk_mod(
             samples_per_symbol=16,
             bt=0.35,
@@ -219,6 +235,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
 
     def set_theta(self, theta):
         self.theta = theta
+        self.beamforming_phasedarray_py_cc_0.set_elevation(self.theta)
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -232,6 +249,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
 
     def set_phi(self, phi):
         self.phi = phi
+        self.beamforming_phasedarray_py_cc_0.set_azimut(self.phi)
 
 
 def argument_parser():

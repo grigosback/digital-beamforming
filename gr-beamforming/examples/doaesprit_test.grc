@@ -36,7 +36,7 @@ blocks:
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: ''
+    gui_hint: 2,0,1,1
     label: Azimut Angle
     min_len: '200'
     orient: Qt.Horizontal
@@ -69,12 +69,12 @@ blocks:
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: ''
+    gui_hint: 0,0,1,1
     label: Elevation Angle
     min_len: '200'
     orient: Qt.Horizontal
     rangeType: float
-    start: '-90'
+    start: '0'
     step: '1'
     stop: '90'
     value: '45'
@@ -290,7 +290,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    autoscale: 'True'
+    autoscale: 'False'
     avg: '0'
     color1: ("black", "black")
     color10: ("black", "black")
@@ -314,7 +314,7 @@ blocks:
     factor8: '1'
     factor9: '1'
     graph_type: qtgui.NUM_GRAPH_HORIZ
-    gui_hint: ''
+    gui_hint: 1,0,1,1
     label1: ''
     label10: ''
     label2: ''
@@ -326,7 +326,7 @@ blocks:
     label8: ''
     label9: ''
     max: '90'
-    min: '-90'
+    min: '0'
     name: '"Elevation"'
     nconnections: '1'
     type: float
@@ -353,7 +353,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    autoscale: 'True'
+    autoscale: 'False'
     avg: '0'
     color1: ("black", "black")
     color10: ("black", "black")
@@ -377,7 +377,7 @@ blocks:
     factor8: '1'
     factor9: '1'
     graph_type: qtgui.NUM_GRAPH_HORIZ
-    gui_hint: ''
+    gui_hint: 3,0,1,1
     label1: ''
     label10: ''
     label2: ''

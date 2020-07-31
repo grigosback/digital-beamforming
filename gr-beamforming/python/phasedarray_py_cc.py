@@ -48,26 +48,51 @@ class phasedarray_py_cc(gr.sync_block):
         self.d = self.lambdac / 2  # Separation distance between elements
 
         self.a = np.empty((self.m, 1), dtype=np.complex64)
-        if self.mx == 1 or self.my == 1:
-            for a_i in self.a:
-                a_i = np.e ** (1j * i * self.k * self.d * np.sin(self.theta))
-        else:
-            beta = np.empty((self.mx, 1), dtype=np.complex64)
-            gamma = np.empty((self.my, 1), dtype=np.complex64)
 
-            beta_k = np.e ** (
-                1j * self.k * self.d * np.cos(self.theta) * np.cos(self.phi)
-            )
-            gamma_k = np.e ** (
-                1j * self.k * self.d * np.cos(self.theta) * np.sin(self.phi)
-            )
-            for i in range(self.mx):
-                beta[i] = beta_k ** (-i)
+        self.beta = np.empty((self.mx, 1), dtype=np.complex64)
+        self.gamma = np.empty((self.my, 1), dtype=np.complex64)
 
-            for i in range(self.my):
-                gamma[i] = gamma_k ** (-i)
+        beta_k = np.e ** (1j * self.k * self.d * np.cos(self.theta) * np.cos(self.phi))
+        gamma_k = np.e ** (1j * self.k * self.d * np.cos(self.theta) * np.sin(self.phi))
+        for i in range(self.mx):
+            self.beta[i] = beta_k ** (-i)
 
-            self.a = np.kron(beta, gamma).ravel()
+        for i in range(self.my):
+            self.gamma[i] = gamma_k ** (-i)
+
+        self.a = np.kron(self.beta, self.gamma).ravel()
+
+    def set_elevation(self, theta):
+        self.theta = np.radians(theta)  # Elevation angle
+
+        self.beta = np.empty((self.mx, 1), dtype=np.complex64)
+        self.gamma = np.empty((self.my, 1), dtype=np.complex64)
+
+        beta_k = np.e ** (1j * self.k * self.d * np.cos(self.theta) * np.cos(self.phi))
+        gamma_k = np.e ** (1j * self.k * self.d * np.cos(self.theta) * np.sin(self.phi))
+        for i in range(self.mx):
+            self.beta[i] = beta_k ** (-i)
+
+        for i in range(self.my):
+            self.gamma[i] = gamma_k ** (-i)
+
+        self.a = np.kron(self.beta, self.gamma).ravel()
+
+    def set_azimut(self, phi):
+        self.phi = np.radians(phi)  # Azimut angle
+
+        self.beta = np.empty((self.mx, 1), dtype=np.complex64)
+        self.gamma = np.empty((self.my, 1), dtype=np.complex64)
+
+        beta_k = np.e ** (1j * self.k * self.d * np.cos(self.theta) * np.cos(self.phi))
+        gamma_k = np.e ** (1j * self.k * self.d * np.cos(self.theta) * np.sin(self.phi))
+        for i in range(self.mx):
+            self.beta[i] = beta_k ** (-i)
+
+        for i in range(self.my):
+            self.gamma[i] = gamma_k ** (-i)
+
+        self.a = np.kron(self.beta, self.gamma).ravel()
 
     def work(self, input_items, output_items):
         in0 = input_items[0]

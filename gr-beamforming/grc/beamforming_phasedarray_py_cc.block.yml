@@ -5,6 +5,9 @@ category: "[Beamforming]"
 templates:
   imports: import beamforming
   make: beamforming.phasedarray_py_cc(${mx}, ${my}, ${theta}, ${phi}, ${fc})
+  callbacks:
+    - set_elevation(${theta})
+    - set_azimut(${phi})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
