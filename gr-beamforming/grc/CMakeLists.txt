@@ -21,5 +21,6 @@ install(FILES
     beamforming_deinterleaver_py_cc.block.yml
     beamforming_randomsampler_py_cc.block.yml
     beamforming_doaesprit_py_cf.block.yml
-    beamforming_phasedarray_py_cc.block.yml DESTINATION share/gnuradio/grc/blocks
+    beamforming_phasedarray_py_cc.block.yml
+    beamforming_beamformer_py_cc.block.yml DESTINATION share/gnuradio/grc/blocks
 )

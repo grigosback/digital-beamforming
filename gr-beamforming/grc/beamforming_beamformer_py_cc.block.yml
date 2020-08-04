@@ -1,14 +1,10 @@
-id: beamforming_phasedarray_py_cc
-label: Phased Array Emulator
+id: beamforming_beamformer_py_cc
+label: Beamformer
 category: "[Beamforming]"
 
 templates:
   imports: import beamforming
-  make: beamforming.phasedarray_py_cc(${mx}, ${my}, ${theta}, ${phi}, ${fc}, ${noise})
-  callbacks:
-    - set_elevation(${theta})
-    - set_azimut(${phi})
-    - set_noise(${noise})
+  make: beamforming.beamformer_py_cc(${mx}, ${my}, ${fc}, ${theta_start}, ${phi_start}, ${inputs_per_angle})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -19,21 +15,26 @@ parameters:
   - id: mx
     label: Elements in x
     dtype: int
+    default: 4
   - id: my
     label: Elements in y
     dtype: int
-  - id: theta
-    label: Elevation angle [°]
-    dtype: float
-  - id: phi
-    label: Azimut angle [°]
-    dtype: float
+    default: 4
   - id: fc
     label: Carrier frequency
     dtype: float
-  - id: noise
-    label: Noise Voltage
+    default: 436e6
+  - id: theta_start
+    label: Initial Elevation Angle
     dtype: float
+    default: 0
+  - id: phi_start
+    label: Initial Azimut Angle
+    dtype: float
+    default: 0
+  - id: inputs_per_angle
+    label: Inputs samples per angle estimation
+    dtype: int
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:
@@ -46,13 +47,21 @@ inputs:
   - label: in
     domain: stream
     dtype: complex
+    vlen: ${mx*my}
+  - label: elevation
+    domain: stream
+    dtype: float
+    vlen: 1
+  - label: azimut
+    domain: stream
+    dtype: float
     vlen: 1
 
 outputs:
   - label: out
     domain: stream
     dtype: complex
-    vlen: ${mx*my}
+    vlen: 1
 
 #  'file_format' specifies the version of the GRC yml format used in the file
 #  and should usually not be changed.

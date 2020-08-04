@@ -32,6 +32,27 @@ options:
     state: enabled
 
 blocks:
+- name: noise
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: 4,0,1,1
+    label: Noise Voltage
+    min_len: '200'
+    orient: Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.001'
+    stop: '10'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [751, 700]
+    rotation: 0
+    state: true
 - name: phi
   id: variable_qtgui_range
   parameters:
@@ -50,7 +71,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [463, 452]
+    coordinate: [379, 696]
     rotation: 0
     state: true
 - name: samp_rate
@@ -83,29 +104,52 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [698, 454]
+    coordinate: [560, 699]
     rotation: 0
     state: true
-- name: analog_random_source_x_0
-  id: analog_random_source_x
+- name: analog_sig_source_x_0
+  id: analog_sig_source_x
   parameters:
     affinity: ''
     alias: ''
+    amp: '1'
     comment: ''
-    max: '2'
+    freq: '1000'
     maxoutbuf: '0'
-    min: '0'
     minoutbuf: '0'
-    num_samps: '1000'
-    repeat: 'True'
-    type: short
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: complex
+    waveform: analog.GR_COS_WAVE
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [60, 542]
+    coordinate: [330, 158]
     rotation: 0
     state: true
+- name: beamforming_beamformer_py_cc_0
+  id: beamforming_beamformer_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fc: fc
+    inputs_per_angle: 8*128
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    phi_start: '0'
+    theta_start: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1115, 565]
+    rotation: 0
+    state: enabled
 - name: beamforming_doaesprit_py_cf_0
   id: beamforming_doaesprit_py_cf
   parameters:
@@ -123,7 +167,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [863, 209]
+    coordinate: [838, 339]
     rotation: 0
     state: true
 - name: beamforming_phasedarray_py_cc_0
@@ -137,13 +181,14 @@ blocks:
     minoutbuf: '0'
     mx: mx
     my: my
+    noise: noise
     phi: phi
     theta: theta
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [307, 137]
+    coordinate: [361, 327]
     rotation: 0
     state: true
 - name: beamforming_randomsampler_py_cc_0_0
@@ -160,25 +205,98 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [682, 122]
+    coordinate: [605, 359]
     rotation: 0
     state: true
-- name: blocks_short_to_char_0
-  id: blocks_short_to_char
+- name: blocks_file_sink_0
+  id: blocks_file_sink
   parameters:
     affinity: ''
     alias: ''
+    append: 'False'
     comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
+    file: /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gr-beamforming/examples/files/sink.txt
+    type: byte
+    unbuffered: 'False'
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [47, 379]
+    coordinate: [1640, 382]
     rotation: 0
-    state: true
+    state: disabled
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gr-beamforming/examples/files/source.txt
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'True'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [121, 125]
+    rotation: 0
+    state: disabled
+- name: blocks_message_debug_0
+  id: blocks_message_debug
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1205, 321]
+    rotation: 0
+    state: disabled
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [999, 454]
+    rotation: 0
+    state: disabled
+- name: blocks_probe_rate_0
+  id: blocks_probe_rate
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '0.15'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mintime: '500.0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [841, 307]
+    rotation: 0
+    state: disabled
 - name: blocks_throttle_0
   id: blocks_throttle
   parameters:
@@ -190,14 +308,36 @@ blocks:
     minoutbuf: '0'
     samples_per_second: samp_rate
     type: complex
-    vlen: mx*my
+    vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [528, 228]
+    coordinate: [749, 141]
     rotation: 0
     state: true
+- name: digital_gmsk_demod_0
+  id: digital_gmsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_error: '0.0'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.5'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '2'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1400, 362]
+    rotation: 0
+    state: disabled
 - name: digital_gmsk_mod_0
   id: digital_gmsk_mod
   parameters:
@@ -208,15 +348,15 @@ blocks:
     log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
-    samples_per_symbol: '16'
+    samples_per_symbol: '2'
     verbose: 'False'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [33, 191]
+    coordinate: [393, 133]
     rotation: 0
-    state: true
+    state: disabled
 - name: fc
   id: parameter
   parameters:
@@ -345,9 +485,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1196, 122]
+    coordinate: [1216, 317]
     rotation: 0
-    state: true
+    state: enabled
 - name: qtgui_number_sink_0_0
   id: qtgui_number_sink
   parameters:
@@ -408,19 +548,264 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1195, 321]
+    coordinate: [1215, 427]
+    rotation: 0
+    state: enabled
+- name: qtgui_time_sink_x_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: 6,0,1,1
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '1'
+    size: '512'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1478, 589]
+    rotation: 0
+    state: true
+- name: qtgui_time_sink_x_0_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: 5,0,1,1
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '1'
+    size: '512'
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [908, 192]
+    rotation: 0
+    state: true
+- name: zeromq_pub_sink_0
+  id: zeromq_pub_sink
+  parameters:
+    address: tcp://127.0.0.1:50001
+    affinity: ''
+    alias: ''
+    comment: ''
+    hwm: '-1'
+    pass_tags: 'False'
+    timeout: '100'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1052, 98]
+    rotation: 0
+    state: true
+- name: zeromq_sub_source_0
+  id: zeromq_sub_source
+  parameters:
+    address: tcp://127.0.0.1:50001
+    affinity: ''
+    alias: ''
+    comment: ''
+    hwm: '-1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pass_tags: 'False'
+    timeout: '100'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [84, 352]
     rotation: 0
     state: true
 
 connections:
-- [analog_random_source_x_0, '0', blocks_short_to_char_0, '0']
+- [analog_sig_source_x_0, '0', blocks_throttle_0, '0']
+- [beamforming_beamformer_py_cc_0, '0', blocks_null_sink_0, '0']
+- [beamforming_beamformer_py_cc_0, '0', blocks_probe_rate_0, '0']
+- [beamforming_beamformer_py_cc_0, '0', digital_gmsk_demod_0, '0']
+- [beamforming_beamformer_py_cc_0, '0', qtgui_time_sink_x_0, '0']
+- [beamforming_doaesprit_py_cf_0, '0', beamforming_beamformer_py_cc_0, '1']
 - [beamforming_doaesprit_py_cf_0, '0', qtgui_number_sink_0, '0']
+- [beamforming_doaesprit_py_cf_0, '1', beamforming_beamformer_py_cc_0, '2']
 - [beamforming_doaesprit_py_cf_0, '1', qtgui_number_sink_0_0, '0']
-- [beamforming_phasedarray_py_cc_0, '0', blocks_throttle_0, '0']
+- [beamforming_phasedarray_py_cc_0, '0', beamforming_beamformer_py_cc_0, '0']
+- [beamforming_phasedarray_py_cc_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
 - [beamforming_randomsampler_py_cc_0_0, '0', beamforming_doaesprit_py_cf_0, '0']
-- [blocks_short_to_char_0, '0', digital_gmsk_mod_0, '0']
-- [blocks_throttle_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
-- [digital_gmsk_mod_0, '0', beamforming_phasedarray_py_cc_0, '0']
+- [blocks_file_source_0, '0', digital_gmsk_mod_0, '0']
+- [blocks_probe_rate_0, rate, blocks_message_debug_0, print]
+- [blocks_throttle_0, '0', qtgui_time_sink_x_0_0, '0']
+- [blocks_throttle_0, '0', zeromq_pub_sink_0, '0']
+- [digital_gmsk_demod_0, '0', blocks_file_sink_0, '0']
+- [digital_gmsk_mod_0, '0', blocks_throttle_0, '0']
+- [zeromq_sub_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
 
 metadata:
   file_format: 1

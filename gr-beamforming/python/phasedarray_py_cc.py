@@ -29,7 +29,7 @@ class phasedarray_py_cc(gr.sync_block):
     
     """
 
-    def __init__(self, mx, my, theta, phi, fc):
+    def __init__(self, mx, my, theta, phi, fc, noise):
         gr.sync_block.__init__(
             self,
             name="phasedarray_py_cc",
@@ -61,6 +61,10 @@ class phasedarray_py_cc(gr.sync_block):
             self.gamma[i] = gamma_k ** (-i)
 
         self.a = np.kron(self.beta, self.gamma).ravel()
+        self.noise = noise
+
+    def set_noise(self, noise):
+        self.noise = noise
 
     def set_elevation(self, theta):
         self.theta = np.radians(theta)  # Elevation angle
@@ -94,6 +98,20 @@ class phasedarray_py_cc(gr.sync_block):
 
         self.a = np.kron(self.beta, self.gamma).ravel()
 
+    def gaussiannoise(self, noise_voltage, m):
+        """
+        This function receives a signal power value 'ps' and a signal-to-noise
+        ratio 'snr' and returns a matrix 'w' with size (m,n) corresponding to a 
+        white gaussian noise with mean 0 and variance 'ps / (10 ** (snr / 10))'
+        """
+        mean_w = 0
+        var_w = noise_voltage
+        std_w = np.sqrt(var_w / 2)
+        w_re = np.random.normal(mean_w, std_w, size=m)
+        w_im = np.random.normal(mean_w, std_w, size=m)
+        w = w_re + 1j * w_im
+        return w
+
     def work(self, input_items, output_items):
         in0 = input_items[0]
         out = output_items[0]
@@ -101,8 +119,11 @@ class phasedarray_py_cc(gr.sync_block):
         n = in0.shape[0]  # Number of input samples
 
         for i in range(n):
-            out[i] = self.a * in0[i]
-            # print("out[", i, "]=", out[i])
+            if self.noise != 0:
+                w = self.gaussiannoise(self.noise, self.m)
+            else:
+                w = np.zeros(self.m, dtype=np.complex64)
+            out[i] = self.a * in0[i] + w
 
         return len(output_items[0])
 
