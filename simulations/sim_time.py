@@ -15,27 +15,33 @@ import time
 get_ipython().run_line_magic("matplotlib", "qt")
 
 #%%
+# Simulation parameters
+n = 124  # Snapshots number
+d = 1  # Number of signals/transmitters
+snr = 7  # SNR in dB
+simulation = Simulation(n, d, snr)
+
 # Transmitter definition
 x_start = np.array([15, 15, 36.74234614])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
 amp = 10
-freq = 40000
-s = Sine_Wave(amp, freq)
+freq = 1300
+fs = 48 * kHz  # Sampling frequency
+t_max = 1  # Sampling time
+s = Sine_Wave(amp, freq, fs, t_max, n)
 tx0 = Transmitter(x_start, v, t, fc, s)
 
 txs = []
 txs.append(tx0)
 
-# Simulation parameters
-n = 124  # Snapshots number
-d = len(txs)  # Number of signals/transmitters
-fs = 64 * MHz  # Sampling frequency
-fc = rx.fc
-sampling_time = 5 * ms  # Sampling time
-snr = 7  # SNR in dB
-simulation = Simulation(n, d, fs, fc, sampling_time, snr)
+# Phased array definition
+mx = 4  # Number of sensors in direction X
+my = 4  # Number of sensors in direction Y
+origin = np.array([0, 0, 0])  # Axis origin
+rx = PhasedArray(mx, my, txs[0].fc, origin)
+
 
 #%%
 N = 20
@@ -56,7 +62,7 @@ for L in range(N):
     origin = np.array([0, 0, 0])  # Axis origin
     rx = PhasedArray(mx, my, txs[0].fc, origin)
 
-    [s, x] = doamusic_samples(txs, rx, simulation)
+    [s, x] = doa_samplesgen(txs, rx, simulation)
 
     el_music = np.linspace(0, np.pi / 2, num=200)
     az_music = np.linspace(-np.pi, np.pi, num=200)
@@ -94,12 +100,18 @@ plt.grid()
 plt.plot(m_array, time_music_array)
 plt.plot(m_array, time_esprit_array)
 plt.legend(["MUSIC", "ESPRIT"])
+plt.yscale("log")
 plt.xlabel("M")
 plt.ylabel(r"Tiempo [s]")
-plt.savefig("images/sim_time.png", dpi=200, bbox_inches="tight")
+plt.savefig("images/sim_time.png", dpi=100, bbox_inches="tight")
 plt.show()
 
 # %% Only ESPRIT
+N = 35
+time_esprit_array = np.zeros(N)
+el_esprit_est = np.zeros(N)
+az_esprit_est = np.zeros(N)
+m_array = np.zeros(N)
 for L in range(N):
     print(L)
     # Phased array definition
@@ -108,7 +120,7 @@ for L in range(N):
     origin = np.array([0, 0, 0])  # Axis origin
     rx = PhasedArray(mx, my, txs[0].fc, origin)
 
-    [s, x] = doamusic_samples(txs, rx, simulation)
+    [s, x] = doa_samplesgen(txs, rx, simulation)
 
     start = time.time()
     [az_esprit_est[L], el_esprit_est[L]] = np.degrees(doaesprit_estimation(x, rx))
@@ -121,10 +133,11 @@ plt.figure(figsize=(16, 9), dpi=100)
 plt.grid()
 # plt.plot(m_array, time_music_array)
 plt.plot(m_array, time_esprit_array)
-plt.title("ESPRIT")
+plt.legend(["ESPRIT"])
 plt.xlabel("M")
+plt.yscale("log")
 plt.ylabel(r"Tiempo [s]")
-plt.savefig("images/sim_esprit_time.png", dpi=200, bbox_inches="tight")
+plt.savefig("images/sim_esprit_time.png", dpi=100, bbox_inches="tight")
 plt.show()
 
 #%%

@@ -15,6 +15,8 @@ Reallocating 'name_of_file' (item size: 1) to 30 items.
 A level-1 auxiliary file: Capitulos/MachineLearning.aux
 Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: Capitulos/GNURadio.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+A level-1 auxiliary file: Capitulos/FPGA.aux
 Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: Capitulos/Ap_XX.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
@@ -22,7 +24,7 @@ I found no \citation commands---while reading file PI_Grigolato.aux
 Database file #1: mibib.bib
 You've used 0 entries,
             2634 wiz_defined-function locations,
-            1033 strings with 9398 characters,
+            1034 strings with 9416 characters,
 and the built_in function-call counts, 22 in all, are:
 = -- 0
 > -- 0

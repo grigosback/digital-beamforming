@@ -10,7 +10,7 @@ from algorithms.music import doamusic_estimation
 from algorithms.esprit import doaesprit_estimation
 from algorithms.esprit import carrieresprit_estimation
 from modules.beamformer import *
-from modules.ramdom_sampler import *
+from modules.random_sampler import *
 from matplotlib import pyplot as plt
 import matplotlib
 import time

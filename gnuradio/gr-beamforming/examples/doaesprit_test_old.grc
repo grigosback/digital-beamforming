@@ -107,6 +107,26 @@ blocks:
     coordinate: [560, 699]
     rotation: 0
     state: true
+- name: analog_random_source_x_0
+  id: analog_random_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    max: '255'
+    maxoutbuf: '0'
+    min: '0'
+    minoutbuf: '0'
+    num_samps: '1000'
+    repeat: 'True'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [95, 151]
+    rotation: 0
+    state: true
 - name: analog_sig_source_x_0
   id: analog_sig_source_x
   parameters:
@@ -126,9 +146,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [330, 158]
+    coordinate: [266, 135]
     rotation: 0
-    state: true
+    state: disabled
 - name: beamforming_beamformer_py_cc_0
   id: beamforming_beamformer_py_cc
   parameters:
@@ -147,7 +167,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1115, 565]
+    coordinate: [1098, 616]
     rotation: 0
     state: enabled
 - name: beamforming_doaesprit_py_cf_0
@@ -313,7 +333,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [749, 141]
+    coordinate: [581, 172]
     rotation: 0
     state: true
 - name: digital_gmsk_demod_0
@@ -357,6 +377,25 @@ blocks:
     coordinate: [393, 133]
     rotation: 0
     state: disabled
+- name: digital_gmsk_mod_1
+  id: digital_gmsk_mod
+  parameters:
+    affinity: ''
+    alias: ''
+    bt: '0.35'
+    comment: ''
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_symbol: '2'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [338, 165]
+    rotation: 0
+    state: true
 - name: fc
   id: parameter
   parameters:
@@ -423,6 +462,86 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [706, 9]
+    rotation: 0
+    state: true
+- name: qtgui_freq_sink_x_0
+  id: qtgui_freq_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    ctrlpanel: 'False'
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: 7,0,1,1
+    label: Relative Gain
+    label1: ''
+    label10: ''''''
+    label2: ''''''
+    label3: ''''''
+    label4: ''''''
+    label5: ''''''
+    label6: ''''''
+    label7: ''''''
+    label8: ''''''
+    label9: ''''''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    showports: 'False'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_tag: '""'
+    type: complex
+    units: dB
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    wintype: firdes.WIN_BLACKMAN_hARRIS
+    ymax: '10'
+    ymin: '-140'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1487, 436]
     rotation: 0
     state: true
 - name: qtgui_number_sink_0
@@ -645,7 +764,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1478, 589]
+    coordinate: [1527, 663]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -742,7 +861,33 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [908, 192]
+    coordinate: [821, 213]
+    rotation: 0
+    state: true
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: channel
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [828, 135]
+    rotation: 0
+    state: true
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: channel
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [160, 368]
     rotation: 0
     state: true
 - name: zeromq_pub_sink_0
@@ -761,9 +906,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1052, 98]
+    coordinate: [814, 117]
     rotation: 0
-    state: true
+    state: disabled
 - name: zeromq_sub_source_0
   id: zeromq_sub_source
   parameters:
@@ -784,13 +929,15 @@ blocks:
     bus_structure: null
     coordinate: [84, 352]
     rotation: 0
-    state: true
+    state: disabled
 
 connections:
+- [analog_random_source_x_0, '0', digital_gmsk_mod_1, '0']
 - [analog_sig_source_x_0, '0', blocks_throttle_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', blocks_null_sink_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', blocks_probe_rate_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', digital_gmsk_demod_0, '0']
+- [beamforming_beamformer_py_cc_0, '0', qtgui_freq_sink_x_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', qtgui_time_sink_x_0, '0']
 - [beamforming_doaesprit_py_cf_0, '0', beamforming_beamformer_py_cc_0, '1']
 - [beamforming_doaesprit_py_cf_0, '0', qtgui_number_sink_0, '0']
@@ -802,9 +949,12 @@ connections:
 - [blocks_file_source_0, '0', digital_gmsk_mod_0, '0']
 - [blocks_probe_rate_0, rate, blocks_message_debug_0, print]
 - [blocks_throttle_0, '0', qtgui_time_sink_x_0_0, '0']
+- [blocks_throttle_0, '0', virtual_sink_0, '0']
 - [blocks_throttle_0, '0', zeromq_pub_sink_0, '0']
 - [digital_gmsk_demod_0, '0', blocks_file_sink_0, '0']
 - [digital_gmsk_mod_0, '0', blocks_throttle_0, '0']
+- [digital_gmsk_mod_1, '0', blocks_throttle_0, '0']
+- [virtual_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
 - [zeromq_sub_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
 
 metadata:

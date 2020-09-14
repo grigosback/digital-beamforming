@@ -1,0 +1,493 @@
+options:
+  parameters:
+    author: grigosback
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: no_gui
+    hier_block_src_path: '.:'
+    id: bercurve_generator
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: BER Curve Generator
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: bps
+  id: variable
+  parameters:
+    comment: ''
+    value: const.bits_per_symbol()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [870, 16]
+    rotation: 0
+    state: true
+- name: const
+  id: variable_constellation
+  parameters:
+    comment: ''
+    const_points: '[-1-1j, -1+1j, 1+1j, 1-1j]'
+    dims: '1'
+    precision: '8'
+    rot_sym: '4'
+    soft_dec_lut: None
+    sym_map: '[0, 1, 3, 2]'
+    type: bpsk
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [943, 15]
+    rotation: 0
+    state: true
+- name: packet_len
+  id: variable
+  parameters:
+    comment: ''
+    value: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1629, 61]
+    rotation: 0
+    state: true
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: analog_random_source_x_0
+  id: analog_random_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    max: const.arity()
+    maxoutbuf: '0'
+    min: '0'
+    minoutbuf: '0'
+    num_samps: int(1e2)
+    repeat: 'False'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [78, 167]
+    rotation: 0
+    state: true
+- name: beamforming_beamformer_py_cc_0
+  id: beamforming_beamformer_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fc: fc
+    inputs_per_angle: 8*128
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    phi_start: '0'
+    theta_start: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1298, 569]
+    rotation: 0
+    state: enabled
+- name: beamforming_doaesprit_py_cf_0
+  id: beamforming_doaesprit_py_cf
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decimation: '128'
+    fc: fc
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    n: n
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [975, 348]
+    rotation: 0
+    state: true
+- name: beamforming_phasedarray_py_cc_0
+  id: beamforming_phasedarray_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    fc: fc
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    noise: noise
+    phi: phi
+    theta: theta
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [498, 336]
+    rotation: 0
+    state: true
+- name: beamforming_randomsampler_py_cc_0_0
+  id: beamforming_randomsampler_py_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decimation: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: mx*my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [742, 368]
+    rotation: 0
+    state: true
+- name: blocks_packed_to_unpacked_xx_0
+  id: blocks_packed_to_unpacked_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    bits_per_chunk: bps
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [386, 260]
+    rotation: 0
+    state: true
+- name: blocks_unpacked_to_packed_xx_0
+  id: blocks_unpacked_to_packed_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    bits_per_chunk: bps
+    comment: ''
+    endianness: gr.GR_MSB_FIRST
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1968, 602]
+    rotation: 0
+    state: true
+- name: blocks_vector_sink_x_0
+  id: blocks_vector_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    reserve_items: '128'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2230, 581]
+    rotation: 0
+    state: true
+- name: blocks_vector_sink_x_0_0
+  id: blocks_vector_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    reserve_items: '128'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 315]
+    rotation: 0
+    state: true
+- name: blocks_vector_sink_x_0_1
+  id: blocks_vector_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    reserve_items: '128'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2386, 469]
+    rotation: 0
+    state: true
+- name: digital_chunks_to_symbols_xx_0
+  id: digital_chunks_to_symbols_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    dimension: '1'
+    in_type: byte
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    out_type: complex
+    symbol_table: const.points()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [648, 190]
+    rotation: 0
+    state: true
+- name: digital_constellation_decoder_cb_0
+  id: digital_constellation_decoder_cb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: const.base()
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1666, 600]
+    rotation: 0
+    state: true
+- name: fc
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Carrier frequency
+    short_id: ''
+    type: eng_float
+    value: 436e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [565, 13]
+    rotation: 0
+    state: true
+- name: fec_ber_bf_0
+  id: fec_ber_bf
+  parameters:
+    affinity: ''
+    alias: ''
+    berlimit: '-7.0'
+    berminerrors: '100'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    test_mode: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2130, 431]
+    rotation: 0
+    state: true
+- name: mx
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# elements in x'
+    short_id: ''
+    type: intx
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [278, 11]
+    rotation: 0
+    state: true
+- name: my
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# elements in y'
+    short_id: ''
+    type: intx
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [422, 12]
+    rotation: 0
+    state: true
+- name: n
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# impinging signals'
+    short_id: ''
+    type: intx
+    value: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [710, 14]
+    rotation: 0
+    state: true
+- name: noise
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Noise Voltage
+    short_id: ''
+    type: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1102, 13]
+    rotation: 0
+    state: true
+- name: phi
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Azimut Angle
+    short_id: ''
+    type: ''
+    value: '50'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1234, 15]
+    rotation: 0
+    state: true
+- name: theta
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Elevation Angle
+    short_id: ''
+    type: ''
+    value: '45'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1375, 12]
+    rotation: 0
+    state: true
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: channel
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1005, 187]
+    rotation: 0
+    state: true
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: channel
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [297, 377]
+    rotation: 0
+    state: true
+
+connections:
+- [analog_random_source_x_0, '0', blocks_packed_to_unpacked_xx_0, '0']
+- [analog_random_source_x_0, '0', blocks_vector_sink_x_0_0, '0']
+- [analog_random_source_x_0, '0', fec_ber_bf_0, '0']
+- [beamforming_beamformer_py_cc_0, '0', digital_constellation_decoder_cb_0, '0']
+- [beamforming_doaesprit_py_cf_0, '0', beamforming_beamformer_py_cc_0, '1']
+- [beamforming_doaesprit_py_cf_0, '1', beamforming_beamformer_py_cc_0, '2']
+- [beamforming_phasedarray_py_cc_0, '0', beamforming_beamformer_py_cc_0, '0']
+- [beamforming_phasedarray_py_cc_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
+- [beamforming_randomsampler_py_cc_0_0, '0', beamforming_doaesprit_py_cf_0, '0']
+- [blocks_packed_to_unpacked_xx_0, '0', digital_chunks_to_symbols_xx_0, '0']
+- [blocks_unpacked_to_packed_xx_0, '0', blocks_vector_sink_x_0, '0']
+- [blocks_unpacked_to_packed_xx_0, '0', fec_ber_bf_0, '1']
+- [digital_chunks_to_symbols_xx_0, '0', virtual_sink_0, '0']
+- [digital_constellation_decoder_cb_0, '0', blocks_unpacked_to_packed_xx_0, '0']
+- [fec_ber_bf_0, '0', blocks_vector_sink_x_0_1, '0']
+- [virtual_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
+
+metadata:
+  file_format: 1

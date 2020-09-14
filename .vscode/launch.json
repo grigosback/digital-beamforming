@@ -2,14 +2,12 @@
     // Use IntelliSense para saber los atributos posibles.
     // Mantenga el puntero para ver las descripciones de los existentes atributos.
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        }
-    ]
+    "version": "3.8.0",
+    "configurations": [{
+        "name": "Python: Archivo actual",
+        "type": "python3",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal"
+    }]
 }

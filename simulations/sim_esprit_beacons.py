@@ -22,14 +22,16 @@ get_ipython().run_line_magic("matplotlib", "qt")
 
 # %%
 # Transmitter definition
-fs0, data0 = wavfile.read("../beacons/aistechsat3.wav")
+# fs0, data0 = wavfile.read("../beacons/aistechsat3.wav")
 fs1, data1 = wavfile.read("../beacons/gomx-1.wav")
-fs2, data2 = wavfile.read("../beacons/beesat_9.wav")
+# fs2, data2 = wavfile.read("../beacons/beesat_9.wav")
+fs0, data0 = wavfile.read("../beacons/beesat_9.wav")
 
 data0 = data0[0 : min([data0.size, data1.size])]
 data1 = data1[0 : min([data0.size, data1.size])]
+# data1 = data1[60000:]
 
-# Oversample
+"""# Oversample
 factor = 10
 fs0 = fs0 * factor
 fs1 = fs1 * factor
@@ -45,9 +47,9 @@ t0 = np.arange(len(data0)) / fs0
 data0 = data0 * np.cos(2 * np.pi * fc * t0)
 t1 = np.arange(len(data1)) / fs1
 data1 = data1 * np.cos(2 * np.pi * fc * t1)
-
-data0, _ = random_sampler(data0, 1000, 1)
-data1, _ = random_sampler(data1, 1000, 1)
+"""
+# data0, _ = random_sampler(data0, 1000, 1)
+# data1, _ = random_sampler(data1, 1000, 1)
 
 x_raw = Signal(fs0, data0)
 x_start = np.array([15, 0, 15])  # Start coordinate for the transmitter in m
@@ -85,21 +87,24 @@ snr = 0  # SNR in dB
 simulation = Simulation(n, d, snr)
 
 [s, x] = doa_samplesgen(txs, rx, simulation)
-
+x_rs, _ = random_sampler(x, 1024, 1)
 # %%
 # x_rs, _ = random_sampler(x, simulation.n)
-doa = doaesprit_estimation(x, rx)
+doa = doaesprit_estimation(x_rs, rx)
 print(np.degrees(doa))
 x_beamformer = beamformer(x, rx, doa, fc)
 # %%
 
 # %% Plot temporal
-plt.figure()
+plt.figure(figsize=(16, 9), dpi=100)
 plt.grid()
 plt.plot(txs[0].x.t, txs[0].x.data)
 plt.plot(txs[0].x.t, x_beamformer)
 plt.xlabel("Tiempo [s]")
 plt.ylabel("x(t)")
+plt.xlim(1, 1.01)
+plt.legend(["GOMX-1", "Salida Beamformer"])
+plt.savefig("./images/sim_esprit_beacons.png", dpi=100, bbox_inches="tight")
 plt.show()
 
 

@@ -60,16 +60,16 @@ class beamformer_py_cc(gr.basic_block):
 
     def general_work(self, input_items, output_items):
         in0 = input_items[0]
-        if input_items[1] != 0:
-            theta = np.radians(input_items[1])
-            self.theta_start = theta
+        if input_items[1] != 0:  # chequeo si hay entradas de ángulo de elevación
+            theta = np.radians(input_items[1])  # asigno la entrada a la variable theta
+            self.theta_start = theta  # guardo el ángulo en una variable para seguir usándola en próximas ejecuciones del work
         else:
-            theta = self.theta_start
-        if input_items[2] != 0:
-            phi = np.radians(input_items[2])
-            self.phi_start = phi
+            theta = self.theta_start  # si no hay entradas uso el ángulo guardado
+        if input_items[2] != 0:  # chequeo si hay entradas de ángulo de azimut
+            phi = np.radians(input_items[2])  # asigno la entrada a la variable phi
+            self.phi_start = phi  # guardo el ángulo en una variable para seguir usándola en próximas ejecuciones del work
         else:
-            phi = self.phi_start
+            phi = self.phi_start  # si no hay entradas uso el ángulo guardado
         out = output_items[0]
         n = out.size
 

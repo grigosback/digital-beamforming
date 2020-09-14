@@ -47,7 +47,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [248, 8]
+    coordinate: [304, 10]
     rotation: 0
     state: enabled
 - name: Const_PLD
@@ -65,7 +65,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [408, 8]
+    coordinate: [559, 13]
     rotation: 0
     state: enabled
 - name: dec
@@ -88,7 +88,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [728, 8]
+    coordinate: [1062, 6]
     rotation: 0
     state: enabled
 - name: dec_hdr
@@ -139,7 +139,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [592, 12]
+    coordinate: [859, 1]
     rotation: 0
     state: enabled
 - name: enc_hdr
@@ -302,7 +302,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [629, 491]
+    coordinate: [708, 474]
     rotation: 0
     state: enabled
 - name: blocks_file_source_0_0
@@ -354,7 +354,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [368, 500]
+    coordinate: [433, 507]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_tagged_stream_0_0
@@ -522,7 +522,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1448, 24]
+    coordinate: [1314, 14]
     rotation: 0
     state: enabled
 - name: virtual_source_0

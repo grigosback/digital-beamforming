@@ -8,18 +8,24 @@ import matplotlib
 
 sys.path.insert(0, "${workspaceRoot}/algorithms/")
 sys.path.insert(0, "${workspaceRoot}/inits/")
-# matplotlib.use("Agg")
-# get_ipython().run_line_magic("matplotlib", "qt")
+matplotlib.use("Agg")
+get_ipython().run_line_magic("matplotlib", "qt")
 
 #%%
+# Simulation parameters
+n = 1024  # Snapshots number
+d = 1  # Number of signals/transmitters
+
 # Transmitter definition
 x_start = np.array([15, 15, 36.74234614])  # Start coordinate for the transmitter in m
 v = np.array([1, 0, 0])  # Transmitter velocity in m/s
 t = 0
 fc = 436 * MHz
 amp = 10
-freq = 40000
-s = Sine_Wave(amp, freq)
+freq = 1300
+fs = 48 * kHz  # Sampling frequency
+t_max = 1  # Sampling time
+s = Sine_Wave(amp, freq, fs, t_max, n)
 tx0 = Transmitter(x_start, v, t, fc, s)
 
 txs = []
@@ -30,13 +36,6 @@ mx = 4  # Number of sensors in direction X
 my = 4  # Number of sensors in direction Y
 origin = np.array([0, 0, 0])  # Axis origin
 rx = PhasedArray(mx, my, txs[0].fc, origin)
-
-# Simulation parameters
-n = 124  # Snapshots number
-d = len(txs)  # Number of signals/transmitters
-fs = 64 * MHz  # Sampling frequency
-fc = rx.fc
-sampling_time = 5 * ms  # Sampling time
 
 
 # %%
@@ -57,8 +56,8 @@ for ax in range(el_music.size):
                 )
 
 # %%
-# snr_array = np.linspace(-5, 15, 21)
-snr_array = np.linspace(0, 10, 11)
+snr_array = np.linspace(-5, 15, 21)
+# snr_array = np.linspace(0, 10, 11)
 el_music_est = np.zeros(snr_array.size)
 az_music_est = np.zeros(snr_array.size)
 el_esprit_est = np.zeros(snr_array.size)
@@ -70,15 +69,17 @@ error_el_esprit = np.zeros(snr_array.size)
 n_error = 10
 
 for i in range(snr_array.size):
+    print("SNR = ", snr_array[i], " dB")
     for j in range(n_error):
         snr = snr_array[i]
-        simulation = Simulation(n, d, fs, fc, sampling_time, snr)
-        [s, x] = doamusic_samples(txs, rx, simulation)
+        simulation = Simulation(n, d, snr)
+        [s, x] = doa_samplesgen(txs, rx, simulation)
         p_mu = doamusic_estimation(s, a)
         idx = np.unravel_index(np.argmax(p_mu, axis=None), p_mu.shape)
         el_music_est[i] = np.degrees(el_music[idx[0]])
         az_music_est[i] = np.degrees(az_music[idx[1]])
         [az_esprit_est[i], el_esprit_est[i]] = np.degrees(doaesprit_estimation(x, rx))
+
         error_az_music[i] = (
             error_az_music[i]
             + (1 / n_error) * (az_music_est[i] - np.degrees(txs[0].doa.az)) ** 2
@@ -131,24 +132,25 @@ plt.ylabel(r"Azimut [°]")
 plt.ylim(40, 50)
 plt.show()
 # %%
-plt.figure()
+plt.figure(figsize=(16, 9), dpi=100)
 plt.subplot(211)
 plt.grid()
-plt.plot(snr_array, error_el_music * 100 / np.degrees(txs[0].doa.el))
-plt.plot(snr_array, error_el_esprit * 100 / np.degrees(txs[0].doa.el))
+plt.plot(snr_array, error_el_music ** 0.5 * 100 / np.degrees(txs[0].doa.el))
+plt.plot(snr_array, error_el_esprit ** 0.5 * 100 / np.degrees(txs[0].doa.el))
 plt.legend(["MUSIC", "ESPRIT"])
 plt.xlabel("SNR")
-plt.ylim(0, 3)
+plt.ylim(0, 0.5)
 plt.ylabel(r"Error porcentual elevación [%]")
 
 plt.subplot(212)
 plt.grid()
-plt.plot(snr_array, error_az_music * 100 / np.degrees(txs[0].doa.az))
-plt.plot(snr_array, error_az_esprit * 100 / np.degrees(txs[0].doa.az))
+plt.plot(snr_array, error_az_music ** 0.5 * 100 / np.degrees(txs[0].doa.az))
+plt.plot(snr_array, error_az_esprit ** 0.5 * 100 / np.degrees(txs[0].doa.az))
 plt.legend(["MUSIC", "ESPRIT"])
 plt.xlabel("SNR")
 plt.ylabel(r"Error porcentual azimut [%]")
-plt.ylim(0, 3)
+plt.ylim(0, 2)
+plt.savefig("./images/sim_snr.png", dpi=100, bbox_inches="tight")
 plt.show()
 # %%
 error_az_music * 100 / np.degrees(txs[0].doa.az)
