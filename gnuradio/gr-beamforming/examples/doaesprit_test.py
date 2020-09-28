@@ -34,6 +34,7 @@ import signal
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
+from gnuradio import zeromq
 from gnuradio.qtgui import Range, RangeWidget
 import beamforming
 from gnuradio import qtgui
@@ -85,7 +86,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         self.const = const = digital.constellation_qpsk().base()
         self.theta = theta = 45
         self.samp_rate = samp_rate = 48000
-        self.phi = phi = 50
+        self.phi = phi = 70
         self.noise = noise = 0
         self.bps = bps = const.bits_per_symbol()
 
@@ -99,7 +100,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self._phi_range = Range(-180, 180, 1, 50, 200)
+        self._phi_range = Range(-180, 180, 1, 70, 200)
         self._phi_win = RangeWidget(self._phi_range, self.set_phi, 'Azimut Angle', "counter_slider", float)
         self.top_grid_layout.addWidget(self._phi_win, 2, 0, 1, 1)
         for r in range(2, 3):
@@ -113,6 +114,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
+        self.zeromq_req_msg_source_0 = zeromq.req_msg_source('tcp://127.0.0.1:5558', 100)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
             128, #size
             samp_rate, #samp_rate
@@ -349,21 +351,20 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         self.beamforming_randomsampler_py_cc_0_0 = beamforming.randomsampler_py_cc(mx*my,8)
         self.beamforming_phasedarray_py_cc_0 = beamforming.phasedarray_py_cc(mx, my, theta, phi, fc, noise)
         self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(128, mx, my, fc, n)
-        self.beamforming_beamformer_py_cc_0 = beamforming.beamformer_py_cc(mx, my, fc, 0, 0, 8*128)
+        self.beamforming_beamformer_0 = beamforming.beamformer(mx, my)
 
 
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.beamforming_beamformer_py_cc_0, 0), (self.digital_constellation_decoder_cb_0, 0))
-        self.connect((self.beamforming_beamformer_py_cc_0, 0), (self.qtgui_const_sink_x_0, 0))
-        self.connect((self.beamforming_beamformer_py_cc_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.beamforming_doaesprit_py_cf_0, 0), (self.beamforming_beamformer_py_cc_0, 1))
-        self.connect((self.beamforming_doaesprit_py_cf_0, 1), (self.beamforming_beamformer_py_cc_0, 2))
+        self.msg_connect((self.zeromq_req_msg_source_0, 'out'), (self.beamforming_beamformer_0, 'doa_port'))
+        self.connect((self.beamforming_beamformer_0, 0), (self.digital_constellation_decoder_cb_0, 0))
+        self.connect((self.beamforming_beamformer_0, 0), (self.qtgui_const_sink_x_0, 0))
+        self.connect((self.beamforming_beamformer_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.beamforming_doaesprit_py_cf_0, 0), (self.qtgui_number_sink_0, 0))
         self.connect((self.beamforming_doaesprit_py_cf_0, 1), (self.qtgui_number_sink_0_0, 0))
-        self.connect((self.beamforming_phasedarray_py_cc_0, 0), (self.beamforming_beamformer_py_cc_0, 0))
+        self.connect((self.beamforming_phasedarray_py_cc_0, 0), (self.beamforming_beamformer_0, 0))
         self.connect((self.beamforming_phasedarray_py_cc_0, 0), (self.beamforming_randomsampler_py_cc_0_0, 0))
         self.connect((self.beamforming_randomsampler_py_cc_0_0, 0), (self.beamforming_doaesprit_py_cf_0, 0))
         self.connect((self.blocks_file_source_0_0, 0), (self.blocks_throttle_0, 0))

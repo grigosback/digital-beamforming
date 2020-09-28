@@ -36,7 +36,8 @@ GR_PYTHON_INSTALL(
     randomsampler_py_cc.py
     doaesprit_py_cf.py
     phasedarray_py_cc.py
-    beamformer_py_cc.py DESTINATION ${GR_PYTHON_DIR}/beamforming
+    beamformer_py_cc.py
+    vector_noise_source_py_cc.py DESTINATION ${GR_PYTHON_DIR}/beamforming
 )
 
 ########################################################################
@@ -50,3 +51,5 @@ GR_ADD_TEST(qa_randomsampler_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_D
 GR_ADD_TEST(qa_doaesprit_py_cf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_doaesprit_py_cf.py)
 GR_ADD_TEST(qa_phasedarray_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_phasedarray_py_cc.py)
 GR_ADD_TEST(qa_beamformer_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_beamformer_py_cc.py)
+GR_ADD_TEST(qa_vector_noise_source_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_vector_noise_source_py_cc.py)
+GR_ADD_TEST(qa_beamformer ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_beamformer.py)

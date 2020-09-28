@@ -8,5 +8,8 @@
 %include "beamforming_swig_doc.i"
 
 %{
+#include "beamforming/beamformer.h"
 %}
 
+%include "beamforming/beamformer.h"
+GR_SWIG_BLOCK_MAGIC2(beamforming, beamformer);

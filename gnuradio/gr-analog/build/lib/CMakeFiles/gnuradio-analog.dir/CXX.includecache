@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/analog/api.h
+gnuradio/attributes.h
+-
+
+../include/analog/vectornoise_source.h
+analog/api.h
+-
+gnuradio/sync_block.h
+-
+
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-analog/lib/vectornoise_source_impl.cc
+config.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-analog/lib/config.h
+gnuradio/io_signature.h
+-
+vectornoise_source_impl.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-analog/lib/vectornoise_source_impl.h
+
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-analog/lib/vectornoise_source_impl.h
+analog/vectornoise_source.h
+-
+gnuradio/random.h
+-
+

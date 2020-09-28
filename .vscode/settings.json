@@ -63,11 +63,15 @@
     "cinttypes": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "cfenv": "cpp"
   },
   "python.analysis.extraPaths": [
     "simulations",
-    "gr-beamforming",
-    "gr-satellites-3.3.0"
+    "gnuradio",
+    "gnuradio/gr-satellites",
+    "gnuradio/gr-beamforming",
+    "gnuradio/gr-leo",
+    "/usr/local/lib/python3/dist-packages/"
   ]
 }

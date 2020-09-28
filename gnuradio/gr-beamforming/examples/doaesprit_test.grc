@@ -137,28 +137,6 @@ blocks:
     coordinate: [560, 699]
     rotation: 0
     state: true
-- name: analog_sig_source_x_0
-  id: analog_sig_source_x
-  parameters:
-    affinity: ''
-    alias: ''
-    amp: '1'
-    comment: ''
-    freq: '1000'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    offset: '0'
-    phase: '0'
-    samp_rate: samp_rate
-    type: complex
-    waveform: analog.GR_COS_WAVE
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [266, 135]
-    rotation: 0
-    state: disabled
 - name: beamforming_beamformer_py_cc_0
   id: beamforming_beamformer_py_cc
   parameters:
@@ -238,24 +216,6 @@ blocks:
     coordinate: [605, 359]
     rotation: 0
     state: true
-- name: blocks_file_sink_0
-  id: blocks_file_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    append: 'False'
-    comment: ''
-    file: /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gr-beamforming/examples/files/sink.txt
-    type: byte
-    unbuffered: 'False'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1640, 382]
-    rotation: 0
-    state: disabled
 - name: blocks_file_sink_0_0
   id: blocks_file_sink
   parameters:
@@ -274,28 +234,6 @@ blocks:
     coordinate: [1565, 762]
     rotation: 0
     state: true
-- name: blocks_file_source_0
-  id: blocks_file_source
-  parameters:
-    affinity: ''
-    alias: ''
-    begin_tag: pmt.PMT_NIL
-    comment: ''
-    file: /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gr-beamforming/examples/files/source.txt
-    length: '0'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    offset: '0'
-    repeat: 'True'
-    type: byte
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [121, 125]
-    rotation: 0
-    state: disabled
 - name: blocks_file_source_0_0
   id: blocks_file_source
   parameters:
@@ -318,36 +256,6 @@ blocks:
     coordinate: [12, 158]
     rotation: 0
     state: true
-- name: blocks_message_debug_0
-  id: blocks_message_debug
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1205, 321]
-    rotation: 0
-    state: disabled
-- name: blocks_null_sink_0
-  id: blocks_null_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    bus_structure_sink: '[[0,],]'
-    comment: ''
-    num_inputs: '1'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [999, 454]
-    rotation: 0
-    state: disabled
 - name: blocks_packed_to_unpacked_xx_0
   id: blocks_packed_to_unpacked_xx
   parameters:
@@ -367,25 +275,6 @@ blocks:
     coordinate: [315, 246]
     rotation: 0
     state: true
-- name: blocks_probe_rate_0
-  id: blocks_probe_rate
-  parameters:
-    affinity: ''
-    alias: ''
-    alpha: '0.15'
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    mintime: '500.0'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [841, 307]
-    rotation: 0
-    state: disabled
 - name: blocks_throttle_0
   id: blocks_throttle
   parameters:
@@ -460,47 +349,6 @@ blocks:
     coordinate: [992, 758]
     rotation: 0
     state: true
-- name: digital_gmsk_demod_0
-  id: digital_gmsk_demod
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    freq_error: '0.0'
-    gain_mu: '0.175'
-    log: 'False'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    mu: '0.5'
-    omega_relative_limit: '0.005'
-    samples_per_symbol: '2'
-    verbose: 'False'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1400, 362]
-    rotation: 0
-    state: disabled
-- name: digital_gmsk_mod_0
-  id: digital_gmsk_mod
-  parameters:
-    affinity: ''
-    alias: ''
-    bt: '0.35'
-    comment: ''
-    log: 'False'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    samples_per_symbol: '2'
-    verbose: 'False'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [393, 133]
-    rotation: 0
-    state: disabled
 - name: fc
   id: parameter
   parameters:
@@ -1087,52 +935,9 @@ blocks:
     coordinate: [160, 368]
     rotation: 0
     state: true
-- name: zeromq_pub_sink_0
-  id: zeromq_pub_sink
-  parameters:
-    address: tcp://127.0.0.1:50001
-    affinity: ''
-    alias: ''
-    comment: ''
-    hwm: '-1'
-    pass_tags: 'False'
-    timeout: '100'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [814, 117]
-    rotation: 0
-    state: disabled
-- name: zeromq_sub_source_0
-  id: zeromq_sub_source
-  parameters:
-    address: tcp://127.0.0.1:50001
-    affinity: ''
-    alias: ''
-    comment: ''
-    hwm: '-1'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    pass_tags: 'False'
-    timeout: '100'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [84, 352]
-    rotation: 0
-    state: disabled
 
 connections:
-- [beamforming_beamformer_py_cc_0, '0', blocks_null_sink_0, '0']
-- [beamforming_beamformer_py_cc_0, '0', blocks_probe_rate_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', digital_constellation_decoder_cb_0, '0']
-- [beamforming_beamformer_py_cc_0, '0', digital_gmsk_demod_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', qtgui_const_sink_x_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', qtgui_freq_sink_x_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', qtgui_time_sink_x_0, '0']
@@ -1143,18 +948,14 @@ connections:
 - [beamforming_phasedarray_py_cc_0, '0', beamforming_beamformer_py_cc_0, '0']
 - [beamforming_phasedarray_py_cc_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
 - [beamforming_randomsampler_py_cc_0_0, '0', beamforming_doaesprit_py_cf_0, '0']
-- [blocks_file_source_0, '0', digital_gmsk_mod_0, '0']
 - [blocks_file_source_0_0, '0', blocks_throttle_0, '0']
 - [blocks_packed_to_unpacked_xx_0, '0', digital_chunks_to_symbols_xx_0, '0']
-- [blocks_probe_rate_0, rate, blocks_message_debug_0, print]
 - [blocks_throttle_0, '0', blocks_packed_to_unpacked_xx_0, '0']
 - [blocks_unpacked_to_packed_xx_0, '0', blocks_file_sink_0_0, '0']
 - [digital_chunks_to_symbols_xx_0, '0', qtgui_time_sink_x_0_0, '0']
 - [digital_chunks_to_symbols_xx_0, '0', virtual_sink_0, '0']
 - [digital_constellation_decoder_cb_0, '0', blocks_unpacked_to_packed_xx_0, '0']
-- [digital_gmsk_demod_0, '0', blocks_file_sink_0, '0']
 - [virtual_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
-- [zeromq_sub_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
 
 metadata:
   file_format: 1

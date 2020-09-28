@@ -23,5 +23,5 @@
 ########################################################################
 install(FILES
     api.h
-    DESTINATION include/beamforming
+    beamformer.h DESTINATION include/beamforming
 )

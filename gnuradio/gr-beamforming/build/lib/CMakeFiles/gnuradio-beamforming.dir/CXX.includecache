@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/beamforming/api.h
+gnuradio/attributes.h
+-
+
+../include/beamforming/beamformer.h
+beamforming/api.h
+-
+gnuradio/sync_block.h
+-
+
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.cc
+config.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/config.h
+gnuradio/io_signature.h
+-
+beamformer_impl.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.h
+math.h
+-
+iostream
+-
+
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.h
+beamforming/beamformer.h
+-
+volk/volk.h
+-
+

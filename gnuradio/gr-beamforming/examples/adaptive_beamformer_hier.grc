@@ -1,7 +1,7 @@
 options:
   parameters:
     author: grigosback
-    category: '[Beamforming]'
+    category: '[GRC Hier Blocks]'
     cmake_opt: ''
     comment: ''
     copyright: ''
@@ -137,7 +137,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1557, 11]
+    coordinate: [1434, 12]
     rotation: 0
     state: true
 - name: fc
@@ -222,7 +222,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1256, 10]
+    coordinate: [1133, 11]
     rotation: 0
     state: true
 - name: pad_sink_0
@@ -280,23 +280,6 @@ blocks:
     coordinate: [1010, 11]
     rotation: 0
     state: true
-- name: phi_0
-  id: parameter
-  parameters:
-    alias: ''
-    comment: ''
-    hide: none
-    label: Azimut angle
-    short_id: ''
-    type: eng_float
-    value: '50'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1135, 10]
-    rotation: 0
-    state: true
 - name: rs_decimation
   id: parameter
   parameters:
@@ -311,7 +294,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1386, 9]
+    coordinate: [1263, 10]
     rotation: 0
     state: true
 - name: theta

@@ -95,7 +95,7 @@ blocks:
     start: '-180'
     step: '1'
     stop: '180'
-    value: '50'
+    value: '70'
     widget: counter_slider
   states:
     bus_sink: false
@@ -137,6 +137,23 @@ blocks:
     coordinate: [194, 651]
     rotation: 0
     state: true
+- name: beamforming_beamformer_0
+  id: beamforming_beamformer
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 709]
+    rotation: 0
+    state: true
 - name: beamforming_beamformer_py_cc_0
   id: beamforming_beamformer_py_cc
   parameters:
@@ -157,7 +174,7 @@ blocks:
     bus_structure: null
     coordinate: [1070, 555]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: beamforming_doaesprit_py_cf_0
   id: beamforming_doaesprit_py_cf
   parameters:
@@ -961,8 +978,28 @@ blocks:
     coordinate: [799, 563]
     rotation: 0
     state: true
+- name: zeromq_req_msg_source_0
+  id: zeromq_req_msg_source
+  parameters:
+    address: tcp://127.0.0.1:5558
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    timeout: '100'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [676, 750]
+    rotation: 0
+    state: enabled
 
 connections:
+- [beamforming_beamformer_0, '0', digital_constellation_decoder_cb_0, '0']
+- [beamforming_beamformer_0, '0', qtgui_const_sink_x_0, '0']
+- [beamforming_beamformer_0, '0', qtgui_time_sink_x_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', digital_constellation_decoder_cb_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', qtgui_const_sink_x_0, '0']
 - [beamforming_beamformer_py_cc_0, '0', qtgui_freq_sink_x_0, '0']
@@ -982,7 +1019,9 @@ connections:
 - [digital_chunks_to_symbols_xx_0, '0', virtual_sink_0, '0']
 - [digital_constellation_decoder_cb_0, '0', blocks_unpacked_to_packed_xx_0, '0']
 - [virtual_source_0, '0', beamforming_phasedarray_py_cc_0, '0']
+- [virtual_source_0_0, '0', beamforming_beamformer_0, '0']
 - [virtual_source_0_0, '0', beamforming_beamformer_py_cc_0, '0']
+- [zeromq_req_msg_source_0, out, beamforming_beamformer_0, doa_port]
 
 metadata:
   file_format: 1

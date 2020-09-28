@@ -22,9 +22,8 @@
 # Setup library
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
-
 list(APPEND beamforming_sources
-)
+    beamformer_impl.cc )
 
 set(beamforming_sources "${beamforming_sources}" PARENT_SCOPE)
 if(NOT beamforming_sources)
@@ -33,7 +32,7 @@ if(NOT beamforming_sources)
 endif(NOT beamforming_sources)
 
 add_library(gnuradio-beamforming SHARED ${beamforming_sources})
-target_link_libraries(gnuradio-beamforming gnuradio::gnuradio-runtime)
+target_link_libraries(gnuradio-beamforming gnuradio::gnuradio-runtime Volk::volk)
 target_include_directories(gnuradio-beamforming
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
     PUBLIC $<INSTALL_INTERFACE:include>

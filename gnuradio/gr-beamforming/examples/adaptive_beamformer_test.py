@@ -187,7 +187,6 @@ class adaptive_beamformer_test(gr.top_block, Qt.QWidget):
             n=1,
             noise=0.1,
             phi=50,
-            phi_0=50,
             rs_decimation=8,
             theta=30,
         )
