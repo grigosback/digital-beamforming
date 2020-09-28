@@ -47,7 +47,7 @@ namespace gr
                          gr::io_signature::make(1, 1, sizeof(gr_complex))),
           d_mx(mx), d_my(my), d_vlen(mx * my)
     {
-      std::cout << "Init started\n";
+      //std::cout << "Init started\n";
       d_alignment = volk_get_alignment();
       d_aux = (lv_32fc_t *)volk_malloc(sizeof(lv_32fc_t) * d_vlen, d_alignment);
       d_a = (lv_32fc_t *)volk_malloc(sizeof(lv_32fc_t) * d_vlen, d_alignment);
@@ -65,7 +65,7 @@ namespace gr
       set_doa(M_PI / 2, 0);
       message_port_register_in(pmt::mp("doa_port"));
       set_msg_handler(pmt::mp("doa_port"), [this](pmt::pmt_t msg) { this->set_doa_msg(msg); });
-      std::cout << "Init finished\n";
+      //std::cout << "Init finished\n";
     }
 
     void beamformer_impl::set_doa_msg(pmt::pmt_t msg)
@@ -106,7 +106,7 @@ namespace gr
 
     void beamformer_impl::set_stearing_vector()
     {
-      std::cout << "Updating stearing vector\n";
+      //std::cout << "Updating stearing vector\n";
       for (int i = 0; i < d_mx; i++)
       {
         for (int j = 0; j < d_my; j++)
@@ -118,7 +118,7 @@ namespace gr
           //printf("a[%d] = %lf + j %lf\n", (i * 4 + j), d_a_k.real(), d_a_k.imag());
         }
       }
-      std::cout << "Stearing vector updated with last element = " << d_a[15] << "\n";
+      //std::cout << "Stearing vector updated with last element = " << d_a[15] << "\n";
     }
 
     void beamformer_impl::set_doa(float theta, float phi)
@@ -126,7 +126,7 @@ namespace gr
       d_theta = theta;
       d_phi = phi;
       set_stearing_vector();
-      printf("theta = %lf, phi = %lf\n", d_theta, d_phi);
+      //printf("theta = %lf, phi = %lf\n", d_theta, d_phi);
     }
 
     /*
