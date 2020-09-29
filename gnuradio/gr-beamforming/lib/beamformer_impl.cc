@@ -24,8 +24,7 @@
 
 #include <gnuradio/io_signature.h>
 #include "beamformer_impl.h"
-#include <math.h>
-#include <iostream>
+//#include <iostream>
 
 namespace gr
 {
@@ -146,7 +145,6 @@ namespace gr
       //std::cout << "Entering for\n";
       for (int i = 0; i < noutput_items; i++)
       {
-
         volk_32fc_x2_multiply_32fc(&d_aux[0], &in[i * d_vlen], &d_a[0], d_vlen);
         volk_32fc_32f_dot_prod_32fc(&out[i], &d_aux[0], &d_ones[0], d_vlen);
         out[i].real(out[i].real() / d_vlen);

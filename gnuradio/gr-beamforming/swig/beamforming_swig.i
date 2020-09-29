@@ -9,7 +9,13 @@
 
 %{
 #include "beamforming/beamformer.h"
+#include "beamforming/phasedarray.h"
+#include "beamforming/doaesprit.h"
 %}
 
 %include "beamforming/beamformer.h"
 GR_SWIG_BLOCK_MAGIC2(beamforming, beamformer);
+%include "beamforming/phasedarray.h"
+GR_SWIG_BLOCK_MAGIC2(beamforming, phasedarray);
+%include "beamforming/doaesprit.h"
+GR_SWIG_BLOCK_MAGIC2(beamforming, doaesprit);

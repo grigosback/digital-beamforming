@@ -209,6 +209,33 @@ beamformer_impl.cc.s:
 	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/beamformer_impl.cc.s
 .PHONY : beamformer_impl.cc.s
 
+phasedarray_impl.o: phasedarray_impl.cc.o
+
+.PHONY : phasedarray_impl.o
+
+# target to build an object file
+phasedarray_impl.cc.o:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.o
+.PHONY : phasedarray_impl.cc.o
+
+phasedarray_impl.i: phasedarray_impl.cc.i
+
+.PHONY : phasedarray_impl.i
+
+# target to preprocess a source file
+phasedarray_impl.cc.i:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.i
+.PHONY : phasedarray_impl.cc.i
+
+phasedarray_impl.s: phasedarray_impl.cc.s
+
+.PHONY : phasedarray_impl.s
+
+# target to generate assembly for a file
+phasedarray_impl.cc.s:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.s
+.PHONY : phasedarray_impl.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -226,6 +253,9 @@ help:
 	@echo "... beamformer_impl.o"
 	@echo "... beamformer_impl.i"
 	@echo "... beamformer_impl.s"
+	@echo "... phasedarray_impl.o"
+	@echo "... phasedarray_impl.i"
+	@echo "... phasedarray_impl.s"
 .PHONY : help
 
 

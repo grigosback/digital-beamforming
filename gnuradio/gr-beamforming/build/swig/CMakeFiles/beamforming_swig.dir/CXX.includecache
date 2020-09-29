@@ -16,6 +16,12 @@ beamforming/api.h
 gnuradio/sync_block.h
 -
 
+../include/beamforming/phasedarray.h
+beamforming/api.h
+-
+gnuradio/sync_block.h
+-
+
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx
 math.h
 -
@@ -57,6 +63,8 @@ limits.h
 -
 beamforming/beamformer.h
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming/beamformer.h
+beamforming/phasedarray.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming/phasedarray.h
 float.h
 -
 math.h

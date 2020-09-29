@@ -6,3 +6,8 @@ lib/CMakeFiles/gnuradio-beamforming.dir/beamformer_impl.cc.o: ../include/beamfor
 lib/CMakeFiles/gnuradio-beamforming.dir/beamformer_impl.cc.o: ../lib/beamformer_impl.cc
 lib/CMakeFiles/gnuradio-beamforming.dir/beamformer_impl.cc.o: ../lib/beamformer_impl.h
 
+lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.o: ../include/beamforming/api.h
+lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.o: ../include/beamforming/phasedarray.h
+lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.o: ../lib/phasedarray_impl.cc
+lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.o: ../lib/phasedarray_impl.h
+

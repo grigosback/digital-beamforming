@@ -18,39 +18,38 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_BEAMFORMING_BEAMFORMER_H
-#define INCLUDED_BEAMFORMING_BEAMFORMER_H
+#ifndef INCLUDED_BEAMFORMING_DOAESPRIT_H
+#define INCLUDED_BEAMFORMING_DOAESPRIT_H
 
 #include <beamforming/api.h>
 #include <gnuradio/sync_block.h>
 
-namespace gr
-{
-  namespace beamforming
-  {
+namespace gr {
+  namespace beamforming {
 
     /*!
      * \brief <+description of block+>
      * \ingroup beamforming
      *
      */
-    class BEAMFORMING_API beamformer : virtual public gr::sync_block
+    class BEAMFORMING_API doaesprit : virtual public gr::sync_block
     {
-    public:
-      typedef boost::shared_ptr<beamformer> sptr;
+     public:
+      typedef boost::shared_ptr<doaesprit> sptr;
 
       /*!
-       * \brief Return a shared_ptr to a new instance of beamforming::beamformer.
+       * \brief Return a shared_ptr to a new instance of beamforming::doaesprit.
        *
-       * To avoid accidental use of raw pointers, beamforming::beamformer's
+       * To avoid accidental use of raw pointers, beamforming::doaesprit's
        * constructor is in a private implementation
-       * class. beamforming::beamformer::make is the public interface for
+       * class. beamforming::doaesprit::make is the public interface for
        * creating new instances.
        */
-      static sptr make(unsigned int mx, unsigned int my);
+      static sptr make(unsigned int mx, unsigned int my, float fc, unsigned int spa);
     };
 
   } // namespace beamforming
 } // namespace gr
 
-#endif /* INCLUDED_BEAMFORMING_BEAMFORMER_H */
+#endif /* INCLUDED_BEAMFORMING_DOAESPRIT_H */
+

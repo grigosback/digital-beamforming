@@ -1,6 +1,7 @@
 /usr/local/lib/cmake/beamforming/beamformingConfig.cmake
 /usr/local/include/beamforming/api.h
 /usr/local/include/beamforming/beamformer.h
+/usr/local/include/beamforming/phasedarray.h
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-beamforming.so.v1.0-compat-xxx-xunknown
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-beamforming.so.1.0.0git
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-beamforming.so
@@ -41,3 +42,4 @@
 /usr/local/share/gnuradio/grc/blocks/beamforming_beamformer_py_cc.block.yml
 /usr/local/share/gnuradio/grc/blocks/beamforming_vector_noise_source_py_cc.block.yml
 /usr/local/share/gnuradio/grc/blocks/beamforming_beamformer.block.yml
+/usr/local/share/gnuradio/grc/blocks/beamforming_phasedarray.block.yml

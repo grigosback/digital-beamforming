@@ -18,8 +18,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_BEAMFORMING_BEAMFORMER_H
-#define INCLUDED_BEAMFORMING_BEAMFORMER_H
+#ifndef INCLUDED_BEAMFORMING_PHASEDARRAY_H
+#define INCLUDED_BEAMFORMING_PHASEDARRAY_H
 
 #include <beamforming/api.h>
 #include <gnuradio/sync_block.h>
@@ -34,23 +34,25 @@ namespace gr
      * \ingroup beamforming
      *
      */
-    class BEAMFORMING_API beamformer : virtual public gr::sync_block
+    class BEAMFORMING_API phasedarray : virtual public gr::sync_block
     {
     public:
-      typedef boost::shared_ptr<beamformer> sptr;
+      typedef boost::shared_ptr<phasedarray> sptr;
 
       /*!
-       * \brief Return a shared_ptr to a new instance of beamforming::beamformer.
+       * \brief Return a shared_ptr to a new instance of beamforming::phasedarray.
        *
-       * To avoid accidental use of raw pointers, beamforming::beamformer's
+       * To avoid accidental use of raw pointers, beamforming::phasedarray's
        * constructor is in a private implementation
-       * class. beamforming::beamformer::make is the public interface for
+       * class. beamforming::phasedarray::make is the public interface for
        * creating new instances.
        */
-      static sptr make(unsigned int mx, unsigned int my);
+      static sptr make(unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error);
+      virtual void set_elevation(float theta) = 0;
+      virtual void set_azimuth(float phi) = 0;
     };
 
   } // namespace beamforming
 } // namespace gr
 
-#endif /* INCLUDED_BEAMFORMING_BEAMFORMER_H */
+#endif /* INCLUDED_BEAMFORMING_PHASEDARRAY_H */

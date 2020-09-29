@@ -395,5 +395,339 @@ _beamforming_swig.beamformer_sptr_swigregister(beamformer_sptr)
 beamformer_sptr.__repr__ = lambda self: "<gr_block %s (%d)>" % (self.name(), self.unique_id())
 beamformer = beamformer.make;
 
+class phasedarray(object):
+    r"""Proxy of C++ gr::beamforming::phasedarray class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    @staticmethod
+    def make(mx: "unsigned int", my: "unsigned int", theta: "float", phi: "float", fc: "float", element_separation: "float", element_error: "float") -> "gr::beamforming::phasedarray::sptr":
+        r"""make(unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error) -> phasedarray_sptr"""
+        return _beamforming_swig.phasedarray_make(mx, my, theta, phi, fc, element_separation, element_error)
+
+    def set_elevation(self, theta: "float") -> "void":
+        r"""set_elevation(phasedarray self, float theta)"""
+        return _beamforming_swig.phasedarray_set_elevation(self, theta)
+
+    def set_azimuth(self, phi: "float") -> "void":
+        r"""set_azimuth(phasedarray self, float phi)"""
+        return _beamforming_swig.phasedarray_set_azimuth(self, phi)
+    __swig_destroy__ = _beamforming_swig.delete_phasedarray
+
+# Register phasedarray in _beamforming_swig:
+_beamforming_swig.phasedarray_swigregister(phasedarray)
+
+def phasedarray_make(mx: "unsigned int", my: "unsigned int", theta: "float", phi: "float", fc: "float", element_separation: "float", element_error: "float") -> "gr::beamforming::phasedarray::sptr":
+    r"""phasedarray_make(unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error) -> phasedarray_sptr"""
+    return _beamforming_swig.phasedarray_make(mx, my, theta, phi, fc, element_separation, element_error)
+
+class phasedarray_sptr(object):
+    r"""Proxy of C++ boost::shared_ptr< gr::beamforming::phasedarray > class."""
+
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        r"""
+        __init__(phasedarray_sptr self) -> phasedarray_sptr
+        __init__(phasedarray_sptr self, phasedarray p) -> phasedarray_sptr
+        """
+        _beamforming_swig.phasedarray_sptr_swiginit(self, _beamforming_swig.new_phasedarray_sptr(*args))
+
+    def __deref__(self) -> "gr::beamforming::phasedarray *":
+        r"""__deref__(phasedarray_sptr self) -> phasedarray"""
+        return _beamforming_swig.phasedarray_sptr___deref__(self)
+    __swig_destroy__ = _beamforming_swig.delete_phasedarray_sptr
+
+    def make(self, mx: "unsigned int", my: "unsigned int", theta: "float", phi: "float", fc: "float", element_separation: "float", element_error: "float") -> "gr::beamforming::phasedarray::sptr":
+        r"""make(phasedarray_sptr self, unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error) -> phasedarray_sptr"""
+        return _beamforming_swig.phasedarray_sptr_make(self, mx, my, theta, phi, fc, element_separation, element_error)
+
+    def set_elevation(self, theta: "float") -> "void":
+        r"""set_elevation(phasedarray_sptr self, float theta)"""
+        return _beamforming_swig.phasedarray_sptr_set_elevation(self, theta)
+
+    def set_azimuth(self, phi: "float") -> "void":
+        r"""set_azimuth(phasedarray_sptr self, float phi)"""
+        return _beamforming_swig.phasedarray_sptr_set_azimuth(self, phi)
+
+    def history(self) -> "unsigned int":
+        r"""history(phasedarray_sptr self) -> unsigned int"""
+        return _beamforming_swig.phasedarray_sptr_history(self)
+
+    def declare_sample_delay(self, *args) -> "void":
+        r"""
+        declare_sample_delay(phasedarray_sptr self, int which, int delay)
+        declare_sample_delay(phasedarray_sptr self, unsigned int delay)
+        """
+        return _beamforming_swig.phasedarray_sptr_declare_sample_delay(self, *args)
+
+    def sample_delay(self, which: "int") -> "unsigned int":
+        r"""sample_delay(phasedarray_sptr self, int which) -> unsigned int"""
+        return _beamforming_swig.phasedarray_sptr_sample_delay(self, which)
+
+    def set_output_multiple(self, multiple: "int") -> "void":
+        r"""set_output_multiple(phasedarray_sptr self, int multiple)"""
+        return _beamforming_swig.phasedarray_sptr_set_output_multiple(self, multiple)
+
+    def output_multiple(self) -> "int":
+        r"""output_multiple(phasedarray_sptr self) -> int"""
+        return _beamforming_swig.phasedarray_sptr_output_multiple(self)
+
+    def relative_rate(self) -> "double":
+        r"""relative_rate(phasedarray_sptr self) -> double"""
+        return _beamforming_swig.phasedarray_sptr_relative_rate(self)
+
+    def relative_rate_i(self) -> "uint64_t":
+        r"""relative_rate_i(phasedarray_sptr self) -> uint64_t"""
+        return _beamforming_swig.phasedarray_sptr_relative_rate_i(self)
+
+    def relative_rate_d(self) -> "uint64_t":
+        r"""relative_rate_d(phasedarray_sptr self) -> uint64_t"""
+        return _beamforming_swig.phasedarray_sptr_relative_rate_d(self)
+
+    def start(self) -> "bool":
+        r"""start(phasedarray_sptr self) -> bool"""
+        return _beamforming_swig.phasedarray_sptr_start(self)
+
+    def stop(self) -> "bool":
+        r"""stop(phasedarray_sptr self) -> bool"""
+        return _beamforming_swig.phasedarray_sptr_stop(self)
+
+    def nitems_read(self, which_input: "unsigned int") -> "uint64_t":
+        r"""nitems_read(phasedarray_sptr self, unsigned int which_input) -> uint64_t"""
+        return _beamforming_swig.phasedarray_sptr_nitems_read(self, which_input)
+
+    def nitems_written(self, which_output: "unsigned int") -> "uint64_t":
+        r"""nitems_written(phasedarray_sptr self, unsigned int which_output) -> uint64_t"""
+        return _beamforming_swig.phasedarray_sptr_nitems_written(self, which_output)
+
+    def set_log_level(self, level: "std::string") -> "void":
+        r"""set_log_level(phasedarray_sptr self, std::string level)"""
+        return _beamforming_swig.phasedarray_sptr_set_log_level(self, level)
+
+    def log_level(self) -> "std::string":
+        r"""log_level(phasedarray_sptr self) -> std::string"""
+        return _beamforming_swig.phasedarray_sptr_log_level(self)
+
+    def max_noutput_items(self) -> "int":
+        r"""max_noutput_items(phasedarray_sptr self) -> int"""
+        return _beamforming_swig.phasedarray_sptr_max_noutput_items(self)
+
+    def set_max_noutput_items(self, m: "int") -> "void":
+        r"""set_max_noutput_items(phasedarray_sptr self, int m)"""
+        return _beamforming_swig.phasedarray_sptr_set_max_noutput_items(self, m)
+
+    def unset_max_noutput_items(self) -> "void":
+        r"""unset_max_noutput_items(phasedarray_sptr self)"""
+        return _beamforming_swig.phasedarray_sptr_unset_max_noutput_items(self)
+
+    def is_set_max_noutput_items(self) -> "bool":
+        r"""is_set_max_noutput_items(phasedarray_sptr self) -> bool"""
+        return _beamforming_swig.phasedarray_sptr_is_set_max_noutput_items(self)
+
+    def set_min_noutput_items(self, m: "int") -> "void":
+        r"""set_min_noutput_items(phasedarray_sptr self, int m)"""
+        return _beamforming_swig.phasedarray_sptr_set_min_noutput_items(self, m)
+
+    def min_noutput_items(self) -> "int":
+        r"""min_noutput_items(phasedarray_sptr self) -> int"""
+        return _beamforming_swig.phasedarray_sptr_min_noutput_items(self)
+
+    def max_output_buffer(self, i: "int") -> "long":
+        r"""max_output_buffer(phasedarray_sptr self, int i) -> long"""
+        return _beamforming_swig.phasedarray_sptr_max_output_buffer(self, i)
+
+    def set_max_output_buffer(self, *args) -> "void":
+        r"""
+        set_max_output_buffer(phasedarray_sptr self, long max_output_buffer)
+        set_max_output_buffer(phasedarray_sptr self, int port, long max_output_buffer)
+        """
+        return _beamforming_swig.phasedarray_sptr_set_max_output_buffer(self, *args)
+
+    def min_output_buffer(self, i: "int") -> "long":
+        r"""min_output_buffer(phasedarray_sptr self, int i) -> long"""
+        return _beamforming_swig.phasedarray_sptr_min_output_buffer(self, i)
+
+    def set_min_output_buffer(self, *args) -> "void":
+        r"""
+        set_min_output_buffer(phasedarray_sptr self, long min_output_buffer)
+        set_min_output_buffer(phasedarray_sptr self, int port, long min_output_buffer)
+        """
+        return _beamforming_swig.phasedarray_sptr_set_min_output_buffer(self, *args)
+
+    def pc_noutput_items(self) -> "float":
+        r"""pc_noutput_items(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_noutput_items(self)
+
+    def pc_noutput_items_avg(self) -> "float":
+        r"""pc_noutput_items_avg(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_noutput_items_avg(self)
+
+    def pc_noutput_items_var(self) -> "float":
+        r"""pc_noutput_items_var(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_noutput_items_var(self)
+
+    def pc_nproduced(self) -> "float":
+        r"""pc_nproduced(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_nproduced(self)
+
+    def pc_nproduced_avg(self) -> "float":
+        r"""pc_nproduced_avg(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_nproduced_avg(self)
+
+    def pc_nproduced_var(self) -> "float":
+        r"""pc_nproduced_var(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_nproduced_var(self)
+
+    def pc_input_buffers_full(self, *args) -> "std::vector< float,std::allocator< float > >":
+        r"""
+        pc_input_buffers_full(phasedarray_sptr self, int which) -> float
+        pc_input_buffers_full(phasedarray_sptr self) -> pmt_vector_float
+        """
+        return _beamforming_swig.phasedarray_sptr_pc_input_buffers_full(self, *args)
+
+    def pc_input_buffers_full_avg(self, *args) -> "std::vector< float,std::allocator< float > >":
+        r"""
+        pc_input_buffers_full_avg(phasedarray_sptr self, int which) -> float
+        pc_input_buffers_full_avg(phasedarray_sptr self) -> pmt_vector_float
+        """
+        return _beamforming_swig.phasedarray_sptr_pc_input_buffers_full_avg(self, *args)
+
+    def pc_input_buffers_full_var(self, *args) -> "std::vector< float,std::allocator< float > >":
+        r"""
+        pc_input_buffers_full_var(phasedarray_sptr self, int which) -> float
+        pc_input_buffers_full_var(phasedarray_sptr self) -> pmt_vector_float
+        """
+        return _beamforming_swig.phasedarray_sptr_pc_input_buffers_full_var(self, *args)
+
+    def pc_output_buffers_full(self, *args) -> "std::vector< float,std::allocator< float > >":
+        r"""
+        pc_output_buffers_full(phasedarray_sptr self, int which) -> float
+        pc_output_buffers_full(phasedarray_sptr self) -> pmt_vector_float
+        """
+        return _beamforming_swig.phasedarray_sptr_pc_output_buffers_full(self, *args)
+
+    def pc_output_buffers_full_avg(self, *args) -> "std::vector< float,std::allocator< float > >":
+        r"""
+        pc_output_buffers_full_avg(phasedarray_sptr self, int which) -> float
+        pc_output_buffers_full_avg(phasedarray_sptr self) -> pmt_vector_float
+        """
+        return _beamforming_swig.phasedarray_sptr_pc_output_buffers_full_avg(self, *args)
+
+    def pc_output_buffers_full_var(self, *args) -> "std::vector< float,std::allocator< float > >":
+        r"""
+        pc_output_buffers_full_var(phasedarray_sptr self, int which) -> float
+        pc_output_buffers_full_var(phasedarray_sptr self) -> pmt_vector_float
+        """
+        return _beamforming_swig.phasedarray_sptr_pc_output_buffers_full_var(self, *args)
+
+    def pc_work_time(self) -> "float":
+        r"""pc_work_time(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_work_time(self)
+
+    def pc_work_time_avg(self) -> "float":
+        r"""pc_work_time_avg(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_work_time_avg(self)
+
+    def pc_work_time_var(self) -> "float":
+        r"""pc_work_time_var(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_work_time_var(self)
+
+    def pc_work_time_total(self) -> "float":
+        r"""pc_work_time_total(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_work_time_total(self)
+
+    def pc_throughput_avg(self) -> "float":
+        r"""pc_throughput_avg(phasedarray_sptr self) -> float"""
+        return _beamforming_swig.phasedarray_sptr_pc_throughput_avg(self)
+
+    def set_processor_affinity(self, mask: "std::vector< int,std::allocator< int > > const &") -> "void":
+        r"""set_processor_affinity(phasedarray_sptr self, std::vector< int,std::allocator< int > > const & mask)"""
+        return _beamforming_swig.phasedarray_sptr_set_processor_affinity(self, mask)
+
+    def unset_processor_affinity(self) -> "void":
+        r"""unset_processor_affinity(phasedarray_sptr self)"""
+        return _beamforming_swig.phasedarray_sptr_unset_processor_affinity(self)
+
+    def processor_affinity(self) -> "std::vector< int,std::allocator< int > >":
+        r"""processor_affinity(phasedarray_sptr self) -> std::vector< int,std::allocator< int > >"""
+        return _beamforming_swig.phasedarray_sptr_processor_affinity(self)
+
+    def active_thread_priority(self) -> "int":
+        r"""active_thread_priority(phasedarray_sptr self) -> int"""
+        return _beamforming_swig.phasedarray_sptr_active_thread_priority(self)
+
+    def thread_priority(self) -> "int":
+        r"""thread_priority(phasedarray_sptr self) -> int"""
+        return _beamforming_swig.phasedarray_sptr_thread_priority(self)
+
+    def set_thread_priority(self, priority: "int") -> "int":
+        r"""set_thread_priority(phasedarray_sptr self, int priority) -> int"""
+        return _beamforming_swig.phasedarray_sptr_set_thread_priority(self, priority)
+
+    def name(self) -> "std::string":
+        r"""name(phasedarray_sptr self) -> std::string"""
+        return _beamforming_swig.phasedarray_sptr_name(self)
+
+    def symbol_name(self) -> "std::string":
+        r"""symbol_name(phasedarray_sptr self) -> std::string"""
+        return _beamforming_swig.phasedarray_sptr_symbol_name(self)
+
+    def input_signature(self) -> "gr::io_signature::sptr":
+        r"""input_signature(phasedarray_sptr self) -> io_signature_sptr"""
+        return _beamforming_swig.phasedarray_sptr_input_signature(self)
+
+    def output_signature(self) -> "gr::io_signature::sptr":
+        r"""output_signature(phasedarray_sptr self) -> io_signature_sptr"""
+        return _beamforming_swig.phasedarray_sptr_output_signature(self)
+
+    def unique_id(self) -> "long":
+        r"""unique_id(phasedarray_sptr self) -> long"""
+        return _beamforming_swig.phasedarray_sptr_unique_id(self)
+
+    def to_basic_block(self) -> "gr::basic_block_sptr":
+        r"""to_basic_block(phasedarray_sptr self) -> basic_block_sptr"""
+        return _beamforming_swig.phasedarray_sptr_to_basic_block(self)
+
+    def check_topology(self, ninputs: "int", noutputs: "int") -> "bool":
+        r"""check_topology(phasedarray_sptr self, int ninputs, int noutputs) -> bool"""
+        return _beamforming_swig.phasedarray_sptr_check_topology(self, ninputs, noutputs)
+
+    def alias(self) -> "std::string":
+        r"""alias(phasedarray_sptr self) -> std::string"""
+        return _beamforming_swig.phasedarray_sptr_alias(self)
+
+    def set_block_alias(self, name: "std::string") -> "void":
+        r"""set_block_alias(phasedarray_sptr self, std::string name)"""
+        return _beamforming_swig.phasedarray_sptr_set_block_alias(self, name)
+
+    def _post(self, which_port: "swig_pmt_ptr", msg: "swig_pmt_ptr") -> "void":
+        r"""_post(phasedarray_sptr self, swig_pmt_ptr which_port, swig_pmt_ptr msg)"""
+        return _beamforming_swig.phasedarray_sptr__post(self, which_port, msg)
+
+    def message_ports_in(self) -> "pmt::pmt_t":
+        r"""message_ports_in(phasedarray_sptr self) -> swig_pmt_ptr"""
+        return _beamforming_swig.phasedarray_sptr_message_ports_in(self)
+
+    def message_ports_out(self) -> "pmt::pmt_t":
+        r"""message_ports_out(phasedarray_sptr self) -> swig_pmt_ptr"""
+        return _beamforming_swig.phasedarray_sptr_message_ports_out(self)
+
+    def message_subscribers(self, which_port: "swig_pmt_ptr") -> "pmt::pmt_t":
+        r"""message_subscribers(phasedarray_sptr self, swig_pmt_ptr which_port) -> swig_pmt_ptr"""
+        return _beamforming_swig.phasedarray_sptr_message_subscribers(self, which_port)
+
+# Register phasedarray_sptr in _beamforming_swig:
+_beamforming_swig.phasedarray_sptr_swigregister(phasedarray_sptr)
+
+
+phasedarray_sptr.__repr__ = lambda self: "<gr_block %s (%d)>" % (self.name(), self.unique_id())
+phasedarray = phasedarray.make;
+
 
 

@@ -23,5 +23,7 @@
 ########################################################################
 install(FILES
     api.h
-    beamformer.h DESTINATION include/beamforming
+    beamformer.h
+    phasedarray.h
+    doaesprit.h DESTINATION include/beamforming
 )

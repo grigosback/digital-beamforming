@@ -3,6 +3,7 @@
 
 swig/CMakeFiles/beamforming_swig.dir/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx.o: ../include/beamforming/api.h
 swig/CMakeFiles/beamforming_swig.dir/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx.o: ../include/beamforming/beamformer.h
+swig/CMakeFiles/beamforming_swig.dir/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx.o: ../include/beamforming/phasedarray.h
 swig/CMakeFiles/beamforming_swig.dir/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx.o: swig/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx
 swig/CMakeFiles/beamforming_swig.dir/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx.o: /usr/include/python3.8/Python.h
 swig/CMakeFiles/beamforming_swig.dir/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx.o: /usr/include/python3.8/abstract.h

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-beamforming.dir/beamformer_impl.cc.o"
+  "CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.o"
   "libgnuradio-beamforming.pdb"
   "libgnuradio-beamforming.so"
   "libgnuradio-beamforming.so.1.0.0git"

@@ -53,3 +53,5 @@ GR_ADD_TEST(qa_phasedarray_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR
 GR_ADD_TEST(qa_beamformer_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_beamformer_py_cc.py)
 GR_ADD_TEST(qa_vector_noise_source_py_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_vector_noise_source_py_cc.py)
 GR_ADD_TEST(qa_beamformer ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_beamformer.py)
+GR_ADD_TEST(qa_phasedarray ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_phasedarray.py)
+GR_ADD_TEST(qa_doaesprit ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_doaesprit.py)

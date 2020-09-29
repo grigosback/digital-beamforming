@@ -18,10 +18,10 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_BEAMFORMING_BEAMFORMER_IMPL_H
-#define INCLUDED_BEAMFORMING_BEAMFORMER_IMPL_H
+#ifndef INCLUDED_BEAMFORMING_PHASEDARRAY_IMPL_H
+#define INCLUDED_BEAMFORMING_PHASEDARRAY_IMPL_H
 
-#include <beamforming/beamformer.h>
+#include <beamforming/phasedarray.h>
 #include <volk/volk.h>
 #include <math.h>
 
@@ -30,43 +30,39 @@ namespace gr
   namespace beamforming
   {
 
-    class beamformer_impl : public beamformer
+    class phasedarray_impl : public phasedarray
     {
     private:
       unsigned int d_mx;
       unsigned int d_my;
       unsigned int d_vlen;
-      //      unsigned int d_c;
-      //      float d_lambda;
-      //      float d_distance;
-      //      float d_k;
-      //float d_fc;
       float d_theta;
       float d_phi;
+      float d_fc;
+      float d_element_separation;
+      float d_element_error;
+      float d_c;
+      float d_k;
+      unsigned int d_alignment;
       gr_complex d_a_k;
       lv_32fc_t *d_a;
-      lv_32fc_t *d_aux;
-      float *d_ones;
-      unsigned int d_alignment;
-
-      gr_vector_float d_doa;
 
     public:
-      beamformer_impl(unsigned int mx, unsigned int my);
-      ~beamformer_impl();
+      phasedarray_impl(unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error);
+      ~phasedarray_impl();
 
       // Where all the action really happens
       int work(
           int noutput_items,
           gr_vector_const_void_star &input_items,
           gr_vector_void_star &output_items);
-
-      void set_doa(float theta, float phi);
-      void set_doa_msg(pmt::pmt_t msg);
+      float deg2radians(float angle);
       void set_stearing_vector();
+      void set_elevation(float theta);
+      void set_azimuth(float phi);
     };
 
   } // namespace beamforming
 } // namespace gr
 
-#endif /* INCLUDED_BEAMFORMING_BEAMFORMER_IMPL_H */
+#endif /* INCLUDED_BEAMFORMING_PHASEDARRAY_IMPL_H */

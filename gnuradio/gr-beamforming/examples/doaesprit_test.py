@@ -107,13 +107,6 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self._noise_range = Range(0, 10, 0.001, 0, 200)
-        self._noise_win = RangeWidget(self._noise_range, self.set_noise, 'Noise Voltage', "counter_slider", float)
-        self.top_grid_layout.addWidget(self._noise_win, 4, 0, 1, 1)
-        for r in range(4, 5):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
         self.zeromq_req_msg_source_0 = zeromq.req_msg_source('tcp://127.0.0.1:5558', 100)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
             128, #size
@@ -339,6 +332,13 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
+        self._noise_range = Range(0, 10, 0.001, 0, 200)
+        self._noise_win = RangeWidget(self._noise_range, self.set_noise, 'Noise Voltage', "counter_slider", float)
+        self.top_grid_layout.addWidget(self._noise_win, 4, 0, 1, 1)
+        for r in range(4, 5):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(const.base())
         self.digital_chunks_to_symbols_xx_0 = digital.chunks_to_symbols_bc(const.points(), 1)
         self.blocks_unpacked_to_packed_xx_0 = blocks.unpacked_to_packed_bb(bps, gr.GR_MSB_FIRST)
@@ -349,7 +349,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         self.blocks_file_sink_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/grigosback/Documents/GNURadio/examples/sink.txt', False)
         self.blocks_file_sink_0_0.set_unbuffered(False)
         self.beamforming_randomsampler_py_cc_0_0 = beamforming.randomsampler_py_cc(mx*my,8)
-        self.beamforming_phasedarray_py_cc_0 = beamforming.phasedarray_py_cc(mx, my, theta, phi, fc, noise)
+        self.beamforming_phasedarray_0 = beamforming.phasedarray(mx, my, theta, phi, 436e6, (299792458/(2*fc)), 0)
         self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(128, mx, my, fc, n)
         self.beamforming_beamformer_0 = beamforming.beamformer(mx, my)
 
@@ -364,14 +364,14 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         self.connect((self.beamforming_beamformer_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.beamforming_doaesprit_py_cf_0, 0), (self.qtgui_number_sink_0, 0))
         self.connect((self.beamforming_doaesprit_py_cf_0, 1), (self.qtgui_number_sink_0_0, 0))
-        self.connect((self.beamforming_phasedarray_py_cc_0, 0), (self.beamforming_beamformer_0, 0))
-        self.connect((self.beamforming_phasedarray_py_cc_0, 0), (self.beamforming_randomsampler_py_cc_0_0, 0))
+        self.connect((self.beamforming_phasedarray_0, 0), (self.beamforming_beamformer_0, 0))
+        self.connect((self.beamforming_phasedarray_0, 0), (self.beamforming_randomsampler_py_cc_0_0, 0))
         self.connect((self.beamforming_randomsampler_py_cc_0_0, 0), (self.beamforming_doaesprit_py_cf_0, 0))
         self.connect((self.blocks_file_source_0_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_packed_to_unpacked_xx_0, 0), (self.digital_chunks_to_symbols_xx_0, 0))
         self.connect((self.blocks_throttle_0, 0), (self.blocks_packed_to_unpacked_xx_0, 0))
         self.connect((self.blocks_unpacked_to_packed_xx_0, 0), (self.blocks_file_sink_0_0, 0))
-        self.connect((self.digital_chunks_to_symbols_xx_0, 0), (self.beamforming_phasedarray_py_cc_0, 0))
+        self.connect((self.digital_chunks_to_symbols_xx_0, 0), (self.beamforming_phasedarray_0, 0))
         self.connect((self.digital_chunks_to_symbols_xx_0, 0), (self.qtgui_time_sink_x_0_0, 0))
         self.connect((self.digital_constellation_decoder_cb_0, 0), (self.blocks_unpacked_to_packed_xx_0, 0))
 
@@ -415,7 +415,7 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
 
     def set_theta(self, theta):
         self.theta = theta
-        self.beamforming_phasedarray_py_cc_0.set_elevation(self.theta)
+        self.beamforming_phasedarray_0.set_elevation(self.theta)
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -431,14 +431,13 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
 
     def set_phi(self, phi):
         self.phi = phi
-        self.beamforming_phasedarray_py_cc_0.set_azimut(self.phi)
+        self.beamforming_phasedarray_0.set_azimuth(self.phi)
 
     def get_noise(self):
         return self.noise
 
     def set_noise(self, noise):
         self.noise = noise
-        self.beamforming_phasedarray_py_cc_0.set_noise(self.noise)
 
     def get_bps(self):
         return self.bps

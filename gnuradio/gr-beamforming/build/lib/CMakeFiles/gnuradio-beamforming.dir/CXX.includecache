@@ -10,27 +10,25 @@
 gnuradio/attributes.h
 -
 
-../include/beamforming/beamformer.h
+../include/beamforming/phasedarray.h
 beamforming/api.h
 -
 gnuradio/sync_block.h
 -
 
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.cc
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/phasedarray_impl.cc
 config.h
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/config.h
 gnuradio/io_signature.h
 -
-beamformer_impl.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.h
-math.h
--
-iostream
--
+phasedarray_impl.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/phasedarray_impl.h
 
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.h
-beamforming/beamformer.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/phasedarray_impl.h
+beamforming/phasedarray.h
 -
 volk/volk.h
+-
+math.h
 -
 
