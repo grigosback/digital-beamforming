@@ -9,6 +9,8 @@ Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: Capitulos/Introduccion.aux
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: Capitulos/ConformacionDeHaz.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: Capitulos/Sistema.aux
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: Capitulos/MuestreoAleatorio.aux
 Reallocating 'name_of_file' (item size: 1) to 30 items.
@@ -24,7 +26,7 @@ I found no \citation commands---while reading file PI_Grigolato.aux
 Database file #1: mibib.bib
 You've used 0 entries,
             2634 wiz_defined-function locations,
-            1034 strings with 9416 characters,
+            1035 strings with 9437 characters,
 and the built_in function-call counts, 22 in all, are:
 = -- 0
 > -- 0

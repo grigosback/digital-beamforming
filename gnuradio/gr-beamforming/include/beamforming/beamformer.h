@@ -47,7 +47,7 @@ namespace gr
        * class. beamforming::beamformer::make is the public interface for
        * creating new instances.
        */
-      static sptr make(unsigned int mx, unsigned int my);
+      static sptr make(unsigned int mx, unsigned int my, unsigned int idx);
     };
 
   } // namespace beamforming

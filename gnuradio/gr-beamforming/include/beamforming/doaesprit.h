@@ -24,8 +24,10 @@
 #include <beamforming/api.h>
 #include <gnuradio/sync_block.h>
 
-namespace gr {
-  namespace beamforming {
+namespace gr
+{
+  namespace beamforming
+  {
 
     /*!
      * \brief <+description of block+>
@@ -34,7 +36,7 @@ namespace gr {
      */
     class BEAMFORMING_API doaesprit : virtual public gr::sync_block
     {
-     public:
+    public:
       typedef boost::shared_ptr<doaesprit> sptr;
 
       /*!
@@ -45,11 +47,10 @@ namespace gr {
        * class. beamforming::doaesprit::make is the public interface for
        * creating new instances.
        */
-      static sptr make(unsigned int mx, unsigned int my, float fc, unsigned int spa);
+      static sptr make(unsigned int mx, unsigned int my, float fc, float element_separation, unsigned int spa);
     };
 
   } // namespace beamforming
 } // namespace gr
 
 #endif /* INCLUDED_BEAMFORMING_DOAESPRIT_H */
-

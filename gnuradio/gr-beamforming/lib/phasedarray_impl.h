@@ -24,6 +24,7 @@
 #include <beamforming/phasedarray.h>
 #include <volk/volk.h>
 #include <math.h>
+#include <gnuradio/random.h>
 
 namespace gr
 {
@@ -41,11 +42,14 @@ namespace gr
       float d_fc;
       float d_element_separation;
       float d_element_error;
+      float d_random_phase_x;
+      float d_random_phase_y;
       float d_c;
       float d_k;
       unsigned int d_alignment;
       gr_complex d_a_k;
       lv_32fc_t *d_a;
+      gr::random d_rng;
 
     public:
       phasedarray_impl(unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error);
@@ -60,6 +64,7 @@ namespace gr
       void set_stearing_vector();
       void set_elevation(float theta);
       void set_azimuth(float phi);
+      void set_element_error(float element_error);
     };
 
   } // namespace beamforming

@@ -4874,6 +4874,50 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_vectornoise_source_set_ampl(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  gr::analog::vectornoise_source *arg1 = (gr::analog::vectornoise_source *) 0 ;
+  float arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  float val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"ampl",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:vectornoise_source_set_ampl", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gr__analog__vectornoise_source, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "vectornoise_source_set_ampl" "', argument " "1"" of type '" "gr::analog::vectornoise_source *""'"); 
+  }
+  arg1 = reinterpret_cast< gr::analog::vectornoise_source * >(argp1);
+  ecode2 = SWIG_AsVal_float(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "vectornoise_source_set_ampl" "', argument " "2"" of type '" "float""'");
+  } 
+  arg2 = static_cast< float >(val2);
+  {
+    try {
+      (arg1)->set_ampl(arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_delete_vectornoise_source(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   gr::analog::vectornoise_source *arg1 = (gr::analog::vectornoise_source *) 0 ;
@@ -5115,6 +5159,50 @@ SWIGINTERN PyObject *_wrap_vectornoise_source_sptr_make(PyObject *SWIGUNUSEDPARM
     
   }
   resultobj = SWIG_NewPointerObj((new gr::analog::vectornoise_source::sptr(static_cast< const gr::analog::vectornoise_source::sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr__analog__vectornoise_source_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_vectornoise_source_sptr_set_ampl(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr::analog::vectornoise_source > *arg1 = (boost::shared_ptr< gr::analog::vectornoise_source > *) 0 ;
+  float arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  float val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char * kwnames[] = {
+    (char *)"self",  (char *)"ampl",  NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args, kwargs, "OO:vectornoise_source_sptr_set_ampl", kwnames, &obj0, &obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr__analog__vectornoise_source_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "vectornoise_source_sptr_set_ampl" "', argument " "1"" of type '" "boost::shared_ptr< gr::analog::vectornoise_source > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr::analog::vectornoise_source > * >(argp1);
+  ecode2 = SWIG_AsVal_float(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "vectornoise_source_sptr_set_ampl" "', argument " "2"" of type '" "float""'");
+  } 
+  arg2 = static_cast< float >(val2);
+  {
+    try {
+      (*arg1)->set_ampl(arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -8186,6 +8274,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "high_res_timer_tps", _wrap_high_res_timer_tps, METH_NOARGS, "high_res_timer_tps() -> gr::high_res_timer_type"},
 	 { "high_res_timer_epoch", _wrap_high_res_timer_epoch, METH_NOARGS, "high_res_timer_epoch() -> gr::high_res_timer_type"},
 	 { "vectornoise_source_make", (PyCFunction)(void(*)(void))_wrap_vectornoise_source_make, METH_VARARGS|METH_KEYWORDS, "vectornoise_source_make(float ampl, unsigned int vlen) -> vectornoise_source_sptr"},
+	 { "vectornoise_source_set_ampl", (PyCFunction)(void(*)(void))_wrap_vectornoise_source_set_ampl, METH_VARARGS|METH_KEYWORDS, "vectornoise_source_set_ampl(vectornoise_source self, float ampl)"},
 	 { "delete_vectornoise_source", _wrap_delete_vectornoise_source, METH_O, "delete_vectornoise_source(vectornoise_source self)"},
 	 { "vectornoise_source_swigregister", vectornoise_source_swigregister, METH_O, NULL},
 	 { "new_vectornoise_source_sptr", _wrap_new_vectornoise_source_sptr, METH_VARARGS, "\n"
@@ -8195,6 +8284,7 @@ static PyMethodDef SwigMethods[] = {
 	 { "vectornoise_source_sptr___deref__", _wrap_vectornoise_source_sptr___deref__, METH_O, "vectornoise_source_sptr___deref__(vectornoise_source_sptr self) -> vectornoise_source"},
 	 { "delete_vectornoise_source_sptr", _wrap_delete_vectornoise_source_sptr, METH_O, "delete_vectornoise_source_sptr(vectornoise_source_sptr self)"},
 	 { "vectornoise_source_sptr_make", (PyCFunction)(void(*)(void))_wrap_vectornoise_source_sptr_make, METH_VARARGS|METH_KEYWORDS, "vectornoise_source_sptr_make(vectornoise_source_sptr self, float ampl, unsigned int vlen) -> vectornoise_source_sptr"},
+	 { "vectornoise_source_sptr_set_ampl", (PyCFunction)(void(*)(void))_wrap_vectornoise_source_sptr_set_ampl, METH_VARARGS|METH_KEYWORDS, "vectornoise_source_sptr_set_ampl(vectornoise_source_sptr self, float ampl)"},
 	 { "vectornoise_source_sptr_history", _wrap_vectornoise_source_sptr_history, METH_O, "vectornoise_source_sptr_history(vectornoise_source_sptr self) -> unsigned int"},
 	 { "vectornoise_source_sptr_declare_sample_delay", _wrap_vectornoise_source_sptr_declare_sample_delay, METH_VARARGS, "\n"
 		"vectornoise_source_sptr_declare_sample_delay(vectornoise_source_sptr self, int which, int delay)\n"

@@ -29,12 +29,14 @@ import beamforming
 import math
 import numpy
 import pylab
+import matplotlib.pyplot as plt
 
 
 class lilacsat1_ber_simulation(gr.top_block):
     def __init__(
         self,
         EbN0=0,
+        element_error=0,
         esprit_decimation=128,
         fc=436e6,
         mx=4,
@@ -50,6 +52,7 @@ class lilacsat1_ber_simulation(gr.top_block):
         # Parameters
         ##################################################
         self.EbN0 = EbN0
+        self.element_error = element_error
         self.esprit_decimation = esprit_decimation
         self.fc = fc
         self.mx = mx
@@ -63,7 +66,7 @@ class lilacsat1_ber_simulation(gr.top_block):
         # Variables
         ##################################################
         self.sps = sps = 5
-        self.N_BITS = N_BITS = 1e6
+        self.N_BITS = N_BITS = 1e5
         self.samp_rate = samp_rate = 32000
         self.noise_voltage = noise_voltage = 1.0 / math.sqrt(
             1 / float(sps) * 10 ** (float(EbN0) / 10)
@@ -115,18 +118,16 @@ class lilacsat1_ber_simulation(gr.top_block):
         self.blocks_head_0 = blocks.head(gr.sizeof_char * 1, int(N_BITS))
         self.blocks_and_const_xx_0 = blocks.and_const_bb(1)
         self.blocks_add_xx_0 = blocks.add_vcc(mx * my)
-        self.beamforming_randomsampler_py_cc_0_0 = beamforming.randomsampler_py_cc(
+        self.beamforming_randomsampler_0 = beamforming.randomsampler(
             mx * my, rs_decimation
         )
-        self.beamforming_phasedarray_py_cc_0 = beamforming.phasedarray_py_cc(
-            mx, my, theta, phi, fc, 0
+        self.beamforming_phasedarray_0 = beamforming.phasedarray(
+            mx, my, theta, phi, fc, (299792458 / (2 * fc)), element_error
         )
         self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(
-            128, mx, my, fc, n
+            mx, my, fc, (299792458 / (2 * fc)), n, 128
         )
-        self.beamforming_beamformer_py_cc_0 = beamforming.beamformer_py_cc(
-            mx, my, fc, 0, 0, 8 * 128
-        )
+        self.beamforming_beamformer_0 = beamforming.beamformer(mx, my)
         self.analog_vectornoise_source_0 = analog.vectornoise_source(
             noise_voltage, mx * my
         )
@@ -134,32 +135,21 @@ class lilacsat1_ber_simulation(gr.top_block):
         ##################################################
         # Connections
         ##################################################
+        self.msg_connect(
+            (self.beamforming_doaesprit_py_cf_0, "doa_port"),
+            (self.beamforming_beamformer_0, "doa_port"),
+        )
         self.connect((self.analog_vectornoise_source_0, 0), (self.blocks_add_xx_0, 1))
         self.connect(
-            (self.beamforming_beamformer_py_cc_0, 0),
-            (self.blocks_multiply_const_vxx_1, 0),
+            (self.beamforming_beamformer_0, 0), (self.blocks_multiply_const_vxx_1, 0)
         )
+        self.connect((self.beamforming_phasedarray_0, 0), (self.blocks_add_xx_0, 0))
         self.connect(
-            (self.beamforming_doaesprit_py_cf_0, 0),
-            (self.beamforming_beamformer_py_cc_0, 1),
-        )
-        self.connect(
-            (self.beamforming_doaesprit_py_cf_0, 1),
-            (self.beamforming_beamformer_py_cc_0, 2),
-        )
-        self.connect(
-            (self.beamforming_phasedarray_py_cc_0, 0), (self.blocks_add_xx_0, 0)
-        )
-        self.connect(
-            (self.beamforming_randomsampler_py_cc_0_0, 0),
+            (self.beamforming_randomsampler_0, 0),
             (self.beamforming_doaesprit_py_cf_0, 0),
         )
-        self.connect(
-            (self.blocks_add_xx_0, 0), (self.beamforming_beamformer_py_cc_0, 0)
-        )
-        self.connect(
-            (self.blocks_add_xx_0, 0), (self.beamforming_randomsampler_py_cc_0_0, 0)
-        )
+        self.connect((self.blocks_add_xx_0, 0), (self.beamforming_beamformer_0, 0))
+        self.connect((self.blocks_add_xx_0, 0), (self.beamforming_randomsampler_0, 0))
         self.connect((self.blocks_and_const_xx_0, 0), (self.blocks_uchar_to_float_0, 0))
         self.connect((self.blocks_head_0, 0), (self.digital_scrambler_bb_0, 0))
         self.connect(
@@ -192,9 +182,7 @@ class lilacsat1_ber_simulation(gr.top_block):
         self.connect(
             (self.digital_scrambler_bb_0, 0), (self.digital_diff_encoder_bb_0, 0)
         )
-        self.connect(
-            (self.fir_filter_xxx_0, 0), (self.beamforming_phasedarray_py_cc_0, 0)
-        )
+        self.connect((self.fir_filter_xxx_0, 0), (self.beamforming_phasedarray_0, 0))
         self.connect(
             (self.lilacsat1_ber_bpsk_0, 0), (self.digital_diff_decoder_bb_0, 0)
         )
@@ -207,6 +195,13 @@ class lilacsat1_ber_simulation(gr.top_block):
         self.set_noise_voltage(
             1.0 / math.sqrt(1 / float(self.sps) * 10 ** (float(self.EbN0) / 10))
         )
+
+    def get_element_error(self):
+        return self.element_error
+
+    def set_element_error(self, element_error):
+        self.element_error = element_error
+        self.beamforming_phasedarray_0.set_element_error(self.element_error)
 
     def get_esprit_decimation(self):
         return self.esprit_decimation
@@ -243,7 +238,7 @@ class lilacsat1_ber_simulation(gr.top_block):
 
     def set_phi(self, phi):
         self.phi = phi
-        self.beamforming_phasedarray_py_cc_0.set_azimut(self.phi)
+        self.beamforming_phasedarray_0.set_azimuth(self.phi)
 
     def get_rs_decimation(self):
         return self.rs_decimation
@@ -256,7 +251,7 @@ class lilacsat1_ber_simulation(gr.top_block):
 
     def set_theta(self, theta):
         self.theta = theta
-        self.beamforming_phasedarray_py_cc_0.set_elevation(self.theta)
+        self.beamforming_phasedarray_0.set_elevation(self.theta)
 
     def get_sps(self):
         return self.sps
@@ -286,6 +281,7 @@ class lilacsat1_ber_simulation(gr.top_block):
 
     def set_noise_voltage(self, noise_voltage):
         self.noise_voltage = noise_voltage
+        self.analog_vectornoise_source_0.set_ampl(self.noise_voltage)
 
     def get_intdump_decim(self):
         return self.intdump_decim
@@ -416,10 +412,11 @@ def berawgn(EbN0):
     return 0.5 * erfc(math.sqrt(10 ** (float(EbN0) / 10)))
 
 
-def simulate_ber(EbN0):
+def simulate_ber(EbN0, element_error):
     """ All the work's done here: create flow graph, run, read out BER """
     print("Eb/N0 = %d dB" % EbN0)
-    fg = lilacsat1_ber_simulation(EbN0)
+    print("element error = ", element_error, "%")
+    fg = lilacsat1_ber_simulation(EbN0, element_error)
     fg.run()
     data = fg.blocks_vector_sink_x_0.data()
     print("noise=", fg.noise_voltage)
@@ -429,20 +426,59 @@ def simulate_ber(EbN0):
 
 
 if __name__ == "__main__":
-    EbN0_min = -3
-    EbN0_max = 0
+    EbN0_min = -10
+    EbN0_max = 1
     EbN0_range = range(EbN0_min, EbN0_max + 1)
+    element_error_range = [0, 1, 5, 10, 15, 20]
     ber_theory = [berawgn(x) for x in EbN0_range]
     print("Simulating uncoded BPSK...")
-    ber_simu_bpsk = [simulate_ber(x) for x in EbN0_range]
+    ber_simu_bpsk = numpy.empty((len(EbN0_range), len(element_error_range)))
+    for i in range(len(element_error_range)):
+        ber_simu_bpsk[:, i] = [
+            simulate_ber(x, element_error_range[i]) for x in EbN0_range
+        ]
 
+    plt.figure(figsize=(16, 9), dpi=100)
+    plt.grid()
+    for i in range(len(element_error_range)):
+        plt.plot(EbN0_range, ber_simu_bpsk[:, i])
+    plt.title("BER Simulation")
+    plt.xlabel(r"$\frac{E_b}{N_0}$ [dB]")
+    plt.ylabel(r"BER")
+    plt.legend(
+        [
+            r"$\sigma^2_d=0\%$",
+            r"$\sigma^2_d=1\%$",
+            r"$\sigma^2_d=5\%$",
+            r"$\sigma^2_d=10\%$",
+            r"$\sigma^2_d=15\%$",
+            r"$\sigma^2_d=20\%$",
+        ]
+    )
+    plt.yscale("log")
+    plt.savefig("ber_simulation.png", dpi=200, bbox_inches="tight")
+    plt.show()
+
+    """
     f = pylab.figure()
     s = f.add_subplot(1, 1, 1)
-    s.semilogy(EbN0_range, ber_theory, "g-.", label="Theoretical uncoded BPSK")
-    s.semilogy(EbN0_range, ber_simu_bpsk, "b-o", label="Simulated uncoded BPSK")
+    # s.semilogy(EbN0_range, ber_theory, "g-.")
+    # s.semilogy(EbN0_range, ber_simu_bpsk, "b-o", label="Simulated uncoded BPSK")
+    for i in range(len(element_error_range)):
+        s.semilogy(EbN0_range, ber_simu_bpsk[:, i])
     s.set_title("BER Simulation")
-    s.set_xlabel("Eb/N0 (dB)")
+    s.set_xlabel("Eb/N0 [dB]")
     s.set_ylabel("BER")
-    s.legend()
+    s.legend(
+        [
+            r"$\sigma^2_d=0\%$",
+            r"$\sigma^2_d=1\%$",
+            r"$\sigma^2_d=5\%$",
+            r"$\sigma^2_d=10\%$",
+            r"$\sigma^2_d=15\%$",
+            r"$\sigma^2_d=20\%$",
+        ]
+    )
     s.grid()
-    pylab.show()
+    pylab.show()"""
+

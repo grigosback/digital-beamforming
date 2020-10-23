@@ -22,45 +22,82 @@
 
 import numpy as np
 from gnuradio import gr
+import pmt
 
 
-class doaesprit_py_cf(gr.decim_block):
+class doaesprit_py_cf(gr.basic_block):
     """
     docstring for block doaesprit_py_cf
     """
 
-    def __init__(self, decimation, mx, my, fc, n=1):
-        gr.decim_block.__init__(
-            self,
-            name="doaesprit_py_cf",
-            in_sig=[(np.complex64, mx * my)],
-            out_sig=[np.float32, np.float32],
-            decim=decimation,
+    def __init__(
+        self, mx, my, fc, element_separation, n=1, spd=128, file_name="eigenvalues.csv",
+    ):
+        gr.basic_block.__init__(
+            self, name="doaesprit_py_cf", in_sig=[(np.complex64, mx * my)], out_sig=[],
         )
         c = 299792458  # c_0 [m/s]
-        self.decimation = decimation  # Decimation factor
-        self.set_relative_rate(1.0 / decimation)  # Set output rate
         self.mx = mx  # Number of elements in direction x
         self.my = my  # Number of elements in direction y
         self.m = mx * my  # Number of elements in array
         self.fc = fc  # Carrier frequency
-        self.lambdac = c / fc  # Carrier wavelength
-        self.k = 2 * np.pi / self.lambdac  # Wavenumber
-        self.d = self.lambdac / 2  # Separation distance between elements
+        self.k = 2 * np.pi * fc / c  # Wavenumber
+        self.d = element_separation  # Separation distance between elements
         self.n = n  # Number of receive signals
-        self.u1_x = np.zeros(((mx - 1) * my, n), dtype=np.complex64)
-        self.u2_x = np.zeros(((mx - 1) * my, n), dtype=np.complex64)
-        self.u1_y = np.zeros(((my - 1) * mx, n), dtype=np.complex64)
-        self.u2_y = np.zeros(((my - 1) * mx, n), dtype=np.complex64)
+        self.spd = spd  # Snapshots per DoA
+        self.file_name = file_name  # File output name
+        self.theta = np.pi / 2
+        self.phi = 0
+        self.u1_x = np.empty(((mx - 1) * my, n), dtype=np.complex64)
+        self.u2_x = np.empty(((mx - 1) * my, n), dtype=np.complex64)
+        self.u1_y = np.empty(((my - 1) * mx, n), dtype=np.complex64)
+        self.u2_y = np.empty(((my - 1) * mx, n), dtype=np.complex64)
+        self.message_port_register_in(pmt.intern("signal_number_port"))
+        self.message_port_register_out(pmt.intern("doa_port"))
+        self.set_msg_handler(
+            pmt.intern("signal_number_port"), self.set_signal_number_msg
+        )
 
-    def work(self, input_items, output_items):
+    def forecast(self, noutput_items, ninput_items_required):
+        # setup size of input_items[i] for work call
+        ninput_items_required[0] = self.spd
+
+    def set_signal_number_msg(self, msg):
+        if pmt.is_pair(msg):
+            key = pmt.car(msg)
+            val = pmt.cdr(msg)
+            if pmt.eq(key, pmt.string_to_symbol("signal_number_msg")):
+                if pmt.is_integer(val):
+                    self.n = pmt.to_long(val)
+                else:
+                    print("DoA Esprit: Not an integer")
+            else:
+                print("DoA Esprit: Key not 'signal_number_msg'")
+        else:
+            print("DoA Esprit: Not a tuple")
+
+    def general_work(self, input_items, output_items):
         in0 = input_items[0]
-        out0 = output_items[0]
-        out1 = output_items[1]
 
         # Singular value decomposition of matrix "X"
-        [u, s, v] = np.linalg.svd(in0.T)
+        [u, s, _] = np.linalg.svd(in0.T)
         us = u[:, 0 : self.n]
+
+        # Eigenvalue classification
+        s = abs(s)
+        snr_aval = 10 * np.log10(s[0] / s[-1])
+        data = np.zeros((self.m, 3))
+
+        with open(
+            "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/machine_learning/"
+            + self.file_name,
+            "a",
+        ) as fd:
+            for i in range(self.m):
+                if i < self.n:
+                    fd.write(str(s[i]) + ", " + str(snr_aval) + ", 1\n")
+                else:
+                    fd.write(str(s[i]) + ", " + str(snr_aval) + ", 0\n")
 
         for i in range(self.n):
             us_aux = us[:, i].reshape(self.mx, self.my)
@@ -73,9 +110,7 @@ class doaesprit_py_cf(gr.decim_block):
             )
             self.u2_y[:, i] = us_aux[:, 1 : self.my].reshape((self.my - 1) * self.mx)
 
-        [uu_x, ss_x, vv_x] = np.linalg.svd(
-            np.append(self.u1_x, self.u2_x, axis=1), full_matrices=False
-        )
+        [_, _, vv_x] = np.linalg.svd(np.append(self.u1_x, self.u2_x, axis=1))
         vv_x = vv_x.T
 
         vv12_x = vv_x[0 : self.n, self.n : 2 * self.n]
@@ -83,9 +118,9 @@ class doaesprit_py_cf(gr.decim_block):
 
         # Calculate the engenvalues of Psi
         psi_x = -vv12_x @ np.linalg.inv(vv22_x)
-        [phi_x, psi_avec] = np.linalg.eig(psi_x)
+        [phi_x, _] = np.linalg.eig(psi_x)
 
-        [uu_y, ss_y, vv_y] = np.linalg.svd(
+        [_, _, vv_y] = np.linalg.svd(
             np.append(self.u1_y, self.u2_y, axis=1), full_matrices=False
         )
         vv_y = vv_y.T
@@ -95,23 +130,28 @@ class doaesprit_py_cf(gr.decim_block):
 
         # Calculate the engenvalues of Psi
         psi_y = -vv12_y @ np.linalg.inv(vv22_y)
-        [phi_y, psi_avec] = np.linalg.eig(psi_y)
+        [phi_y, _] = np.linalg.eig(psi_y)
 
-        # DOA estimation
-        phi = np.degrees(np.arctan2(np.angle(phi_y), np.angle(phi_x)))
-
-        theta = np.degrees(
-            np.arccos(
-                np.sqrt(
-                    (np.angle(phi_x) ** 2 + np.angle(phi_y) ** 2)
-                    / ((self.k * self.d) ** 2)
-                )
+        for i in range(self.n):
+            arg = (np.angle(phi_x[i]) ** 2 + np.angle(phi_y[i]) ** 2) / (
+                (self.k * self.d) ** 2
             )
-        )
-        # print("theta=", theta)
-        # print("phi=", phi)
-        # print("out.shape=", out0.shape)
-        out0[:] = theta
-        out1[:] = phi
-        return len(output_items[0])
-
+            if abs(arg) > 1:
+                # print("DoA Esprit: Arg in arccos greater than 1 for i=%.2lf" % i)
+                if i == (self.n - 1):
+                    self.consume(0, self.spd)
+                    return 0
+            else:
+                # DOA estimation
+                self.phi = np.arctan2(np.angle(phi_y[i]), np.angle(phi_x[i]))
+                self.theta = np.arccos(np.sqrt(arg))
+                doa = pmt.make_f32vector(3, 0.0)
+                # print("doa=(", theta, ",", phi, ")")
+                pmt.f32vector_set(doa, 0, float(self.theta))
+                # print("doa_msg=", doa)
+                pmt.f32vector_set(doa, 1, float(self.phi))
+                pmt.f32vector_set(doa, 2, float(i))
+                doa_msg = pmt.cons(pmt.to_pmt("doa_msg"), doa)
+                self.message_port_pub(pmt.intern("doa_port"), doa_msg)
+        self.consume(0, self.spd)
+        return 0

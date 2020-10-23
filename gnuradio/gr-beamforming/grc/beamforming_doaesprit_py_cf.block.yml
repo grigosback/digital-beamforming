@@ -4,7 +4,7 @@ category: "[Beamforming]"
 
 templates:
   imports: import beamforming
-  make: beamforming.doaesprit_py_cf(${decimation}, ${mx}, ${my}, ${fc}, ${n})
+  make: beamforming.doaesprit_py_cf(${mx}, ${my}, ${fc}, ${element_separation}, ${n}, ${spd}, ${file_name})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -15,18 +15,33 @@ parameters:
   - id: mx
     label: Elements in x
     dtype: int
+    default: 4
   - id: my
     label: Elements in y
     dtype: int
+    default: 4
   - id: fc
     label: Carrier frequency
     dtype: float
+    default: 436e6
   - id: n
     label: Number of impinging signals
     dtype: int
-  - id: decimation
-    label: Decimation
+    default: 1
+    optional: 1
+  - id: element_separation
+    label: Element separation distance
+    dtype: float
+    default: (299792458/(2*fc))
+  - id: spd
+    label: Snapshots per DoA
     dtype: int
+    default: 128
+  - id: file_name
+    label: Output File Name
+    dtype: string
+    default: "eigenvalues.csv"
+    optional: 1
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:
@@ -40,16 +55,14 @@ inputs:
     domain: stream
     dtype: complex
     vlen: ${mx*my}
+  - label: signal_number_port
+    domain: message
+    optional: 1
 
 outputs:
-  - label: elevation
-    domain: stream
-    dtype: float
-    vlen: 1
-  - label: azimut
-    domain: stream
-    dtype: float
-    vlen: 1
+  - label: doa_port
+    domain: message
+    optional: 1
 
 #  'file_format' specifies the version of the GRC yml format used in the file
 #  and should usually not be changed.

@@ -48,6 +48,7 @@ namespace gr
        * creating new instances.
        */
       static sptr make(float ampl, unsigned int vlen);
+      virtual void set_ampl(float ampl) = 0;
     };
 
   } // namespace analog

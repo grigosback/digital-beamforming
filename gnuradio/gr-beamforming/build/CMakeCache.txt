@@ -537,9 +537,9 @@ FIND_PACKAGE_MESSAGE_DETAILS_MPLIB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libgmpxx.
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.5()]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython3.8.so][/usr/include/python3.8][v3.8.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython3.8.so][/usr/include/python3.8][v3.8.5()]
 //Details about finding SWIG
 FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/usr/bin/swig4.0][/usr/share/swig4.0][v()]
 //Details about finding VOLK

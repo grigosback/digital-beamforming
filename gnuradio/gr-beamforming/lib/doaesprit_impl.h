@@ -23,28 +23,37 @@
 
 #include <beamforming/doaesprit.h>
 
-namespace gr {
-  namespace beamforming {
+namespace gr
+{
+  namespace beamforming
+  {
 
     class doaesprit_impl : public doaesprit
     {
-     private:
-      // Nothing to declare in this block.
+    private:
+      unsigned int d_mx;
+      unsigned int d_my;
+      unsigned int d_vlen;
+      unsigned int d_spa;
+      float d_theta;
+      float d_phi;
+      float d_fc;
+      float d_element_separation;
+      float d_c;
+      float d_k;
 
-     public:
-      doaesprit_impl(unsigned int mx, unsigned int my, float fc, unsigned int spa);
+    public:
+      doaesprit_impl(unsigned int mx, unsigned int my, float fc, float element_separation, unsigned int spa);
       ~doaesprit_impl();
 
       // Where all the action really happens
       int work(
-              int noutput_items,
-              gr_vector_const_void_star &input_items,
-              gr_vector_void_star &output_items
-      );
+          int noutput_items,
+          gr_vector_const_void_star &input_items,
+          gr_vector_void_star &output_items);
     };
 
   } // namespace beamforming
 } // namespace gr
 
 #endif /* INCLUDED_BEAMFORMING_DOAESPRIT_IMPL_H */
-

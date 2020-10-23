@@ -50,6 +50,7 @@ namespace gr
       static sptr make(unsigned int mx, unsigned int my, float theta, float phi, float fc, float element_separation, float element_error);
       virtual void set_elevation(float theta) = 0;
       virtual void set_azimuth(float phi) = 0;
+      virtual void set_element_error(float element_error) = 0;
     };
 
   } // namespace beamforming

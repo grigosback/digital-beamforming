@@ -4,6 +4,8 @@ label: Vector Noise Source
 templates:
   imports: import analog
   make: analog.vectornoise_source(${ampl}, ${vlen})
+  callbacks:
+    - set_ampl(${ampl})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:

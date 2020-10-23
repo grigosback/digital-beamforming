@@ -209,6 +209,33 @@ beamformer_impl.cc.s:
 	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/beamformer_impl.cc.s
 .PHONY : beamformer_impl.cc.s
 
+doaesprit_impl.o: doaesprit_impl.cc.o
+
+.PHONY : doaesprit_impl.o
+
+# target to build an object file
+doaesprit_impl.cc.o:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/doaesprit_impl.cc.o
+.PHONY : doaesprit_impl.cc.o
+
+doaesprit_impl.i: doaesprit_impl.cc.i
+
+.PHONY : doaesprit_impl.i
+
+# target to preprocess a source file
+doaesprit_impl.cc.i:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/doaesprit_impl.cc.i
+.PHONY : doaesprit_impl.cc.i
+
+doaesprit_impl.s: doaesprit_impl.cc.s
+
+.PHONY : doaesprit_impl.s
+
+# target to generate assembly for a file
+doaesprit_impl.cc.s:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/doaesprit_impl.cc.s
+.PHONY : doaesprit_impl.cc.s
+
 phasedarray_impl.o: phasedarray_impl.cc.o
 
 .PHONY : phasedarray_impl.o
@@ -236,6 +263,33 @@ phasedarray_impl.cc.s:
 	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/phasedarray_impl.cc.s
 .PHONY : phasedarray_impl.cc.s
 
+randomsampler_impl.o: randomsampler_impl.cc.o
+
+.PHONY : randomsampler_impl.o
+
+# target to build an object file
+randomsampler_impl.cc.o:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/randomsampler_impl.cc.o
+.PHONY : randomsampler_impl.cc.o
+
+randomsampler_impl.i: randomsampler_impl.cc.i
+
+.PHONY : randomsampler_impl.i
+
+# target to preprocess a source file
+randomsampler_impl.cc.i:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/randomsampler_impl.cc.i
+.PHONY : randomsampler_impl.cc.i
+
+randomsampler_impl.s: randomsampler_impl.cc.s
+
+.PHONY : randomsampler_impl.s
+
+# target to generate assembly for a file
+randomsampler_impl.cc.s:
+	cd "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build" && $(MAKE) -f lib/CMakeFiles/gnuradio-beamforming.dir/build.make lib/CMakeFiles/gnuradio-beamforming.dir/randomsampler_impl.cc.s
+.PHONY : randomsampler_impl.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,9 +307,15 @@ help:
 	@echo "... beamformer_impl.o"
 	@echo "... beamformer_impl.i"
 	@echo "... beamformer_impl.s"
+	@echo "... doaesprit_impl.o"
+	@echo "... doaesprit_impl.i"
+	@echo "... doaesprit_impl.s"
 	@echo "... phasedarray_impl.o"
 	@echo "... phasedarray_impl.i"
 	@echo "... phasedarray_impl.s"
+	@echo "... randomsampler_impl.o"
+	@echo "... randomsampler_impl.i"
+	@echo "... randomsampler_impl.s"
 .PHONY : help
 
 

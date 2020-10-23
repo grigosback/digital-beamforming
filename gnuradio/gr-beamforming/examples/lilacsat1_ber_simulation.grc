@@ -180,70 +180,68 @@ blocks:
     coordinate: [558, 353]
     rotation: 0
     state: true
-- name: beamforming_beamformer_py_cc_0
-  id: beamforming_beamformer_py_cc
+- name: beamforming_beamformer_0
+  id: beamforming_beamformer
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    fc: fc
-    inputs_per_angle: 8*128
     maxoutbuf: '0'
     minoutbuf: '0'
     mx: mx
     my: my
-    phi_start: '0'
-    theta_start: '0'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1560, 210]
+    coordinate: [1584, 246]
     rotation: 0
-    state: enabled
+    state: true
 - name: beamforming_doaesprit_py_cf_0
   id: beamforming_doaesprit_py_cf
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    decimation: '128'
+    element_separation: (299792458/(2*fc))
     fc: fc
     maxoutbuf: '0'
     minoutbuf: '0'
     mx: mx
     my: my
     n: n
+    spd: '128'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1180, 234]
+    coordinate: [1180, 233]
     rotation: 0
     state: true
-- name: beamforming_phasedarray_py_cc_0
-  id: beamforming_phasedarray_py_cc
+- name: beamforming_phasedarray_0
+  id: beamforming_phasedarray
   parameters:
     affinity: ''
     alias: ''
     comment: ''
+    element_error: element_error
+    element_separation: (299792458/(2*fc))
     fc: fc
     maxoutbuf: '0'
     minoutbuf: '0'
     mx: mx
     my: my
-    noise: '0'
     phi: phi
     theta: theta
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [558, 210]
+    coordinate: [506, 180]
     rotation: 0
     state: true
-- name: beamforming_randomsampler_py_cc_0_0
-  id: beamforming_randomsampler_py_cc
+- name: beamforming_randomsampler_0
+  id: beamforming_randomsampler
   parameters:
     affinity: ''
     alias: ''
@@ -256,7 +254,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [967, 258]
+    coordinate: [913, 161]
     rotation: 0
     state: true
 - name: blocks_add_xx_0
@@ -556,6 +554,23 @@ blocks:
     coordinate: [325, 116]
     rotation: 0
     state: true
+- name: element_error
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Element Separation Error [%]
+    short_id: ''
+    type: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1175, 69]
+    rotation: 0
+    state: true
 - name: esprit_decimation
   id: parameter
   parameters:
@@ -814,12 +829,11 @@ blocks:
 
 connections:
 - [analog_vectornoise_source_0, '0', blocks_add_xx_0, '1']
-- [beamforming_beamformer_py_cc_0, '0', blocks_multiply_const_vxx_1, '0']
-- [beamforming_doaesprit_py_cf_0, '0', beamforming_beamformer_py_cc_0, '1']
-- [beamforming_doaesprit_py_cf_0, '1', beamforming_beamformer_py_cc_0, '2']
-- [beamforming_phasedarray_py_cc_0, '0', blocks_add_xx_0, '0']
-- [beamforming_randomsampler_py_cc_0_0, '0', beamforming_doaesprit_py_cf_0, '0']
-- [blocks_add_xx_0, '0', beamforming_randomsampler_py_cc_0_0, '0']
+- [beamforming_beamformer_0, '0', blocks_multiply_const_vxx_1, '0']
+- [beamforming_doaesprit_py_cf_0, doa_port, beamforming_beamformer_0, doa_port]
+- [beamforming_phasedarray_0, '0', blocks_add_xx_0, '0']
+- [beamforming_randomsampler_0, '0', beamforming_doaesprit_py_cf_0, '0']
+- [blocks_add_xx_0, '0', beamforming_randomsampler_0, '0']
 - [blocks_add_xx_0, '0', virtual_sink_0_0, '0']
 - [blocks_and_const_xx_0, '0', blocks_uchar_to_float_0, '0']
 - [blocks_head_0, '0', digital_scrambler_bb_0, '0']
@@ -836,9 +850,9 @@ connections:
 - [digital_diff_decoder_bb_0, '0', digital_descrambler_bb_0, '0']
 - [digital_diff_encoder_bb_0, '0', blocks_pack_k_bits_bb_0, '0']
 - [digital_scrambler_bb_0, '0', digital_diff_encoder_bb_0, '0']
-- [fir_filter_xxx_0, '0', beamforming_phasedarray_py_cc_0, '0']
+- [fir_filter_xxx_0, '0', beamforming_phasedarray_0, '0']
 - [lilacsat1_ber_bpsk_0, '0', digital_diff_decoder_bb_0, '0']
-- [virtual_source_0_0, '0', beamforming_beamformer_py_cc_0, '0']
+- [virtual_source_0_0, '0', beamforming_beamformer_0, '0']
 
 metadata:
   file_format: 1

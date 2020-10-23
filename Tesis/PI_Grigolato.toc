@@ -12,17 +12,26 @@
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Conformación de haz}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Conceptos generales}{3}{section.2.1}%
-\contentsline {chapter}{\numberline {3}Muestreo aleatorio}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Conceptos generales}{5}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Machine Learning aplicado a la clasificación de autovalores}{7}{chapter.4}%
+\contentsline {section}{\numberline {2.2}Algoritmos de estimación de dirección de arribo.}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}El algoritmo MUSIC}{3}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}El algoritmo ESPRIT}{3}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Errores en la estimación de dirección de arribo}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Detalles del sistema}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Esquema de bloques}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Muestreador aleatorio}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Estimador de dirección de arribo}{5}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Conformador de haz}{5}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Muestreo aleatorio}{7}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Conceptos generales}{7}{section.4.1}%
-\contentsline {chapter}{\numberline {5}GNU Radio}{9}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Machine Learning aplicado a la clasificación de autovalores}{9}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Conceptos generales}{9}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Implementación de módulos}{9}{section.5.2}%
-\contentsline {section}{\numberline {5.3}El módulo gr-satellites}{9}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Implementación en FPGA}{11}{chapter.6}%
+\contentsline {chapter}{\numberline {6}GNU Radio}{11}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Conceptos generales}{11}{section.6.1}%
-\contentsline {chapter}{\numberline {A}Apéndice I}{13}{appendix.Alph1}%
-\contentsline {chapter}{Bibliograf{\'{\i }}a}{15}{section*.13}%
-\contentsline {chapter}{Publicaciones asociadas}{17}{section*.15}%
-\contentsline {chapter}{Agradecimientos}{19}{section*.17}%
+\contentsline {section}{\numberline {6.2}Implementación de módulos}{11}{section.6.2}%
+\contentsline {section}{\numberline {6.3}El módulo gr-satellites}{11}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Implementación en FPGA}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conceptos generales}{13}{section.7.1}%
+\contentsline {chapter}{\numberline {A}Apéndice I}{15}{appendix.Alph1}%
+\contentsline {chapter}{Bibliograf{\'{\i }}a}{17}{section*.13}%
+\contentsline {chapter}{Publicaciones asociadas}{19}{section*.15}%
+\contentsline {chapter}{Agradecimientos}{21}{section*.17}%

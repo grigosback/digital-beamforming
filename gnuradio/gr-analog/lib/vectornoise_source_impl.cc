@@ -54,6 +54,11 @@ namespace gr
     {
     }
 
+    void vectornoise_source_impl::set_ampl(float ampl)
+    {
+      d_ampl = ampl / sqrtf(2.0f);
+    }
+
     int
     vectornoise_source_impl::work(int noutput_items,
                                   gr_vector_const_void_star &input_items,

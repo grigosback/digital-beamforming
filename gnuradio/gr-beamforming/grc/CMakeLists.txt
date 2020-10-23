@@ -23,8 +23,8 @@ install(FILES
     beamforming_doaesprit_py_cf.block.yml
     beamforming_phasedarray_py_cc.block.yml
     beamforming_beamformer_py_cc.block.yml
-    beamforming_vector_noise_source_py_cc.block.yml
     beamforming_beamformer.block.yml
     beamforming_phasedarray.block.yml
-    beamforming_doaesprit.block.yml DESTINATION share/gnuradio/grc/blocks
+    beamforming_doaesprit.block.yml
+    beamforming_randomsampler.block.yml DESTINATION share/gnuradio/grc/blocks
 )

@@ -25,7 +25,8 @@ include(GrPlatform) #define LIB_SUFFIX
 list(APPEND beamforming_sources
     beamformer_impl.cc
     phasedarray_impl.cc
-    doaesprit_impl.cc )
+    doaesprit_impl.cc
+    randomsampler_impl.cc )
 
 set(beamforming_sources "${beamforming_sources}" PARENT_SCOPE)
 if(NOT beamforming_sources)

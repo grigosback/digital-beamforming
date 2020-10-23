@@ -4,7 +4,7 @@ category: "[Beamforming]"
 
 templates:
   imports: import beamforming
-  make: beamforming.beamformer(${mx}, ${my})
+  make: beamforming.beamformer(${mx}, ${my}, ${idx})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -20,6 +20,10 @@ parameters:
     label: Elements in y
     dtype: int
     default: 4
+  - id: idx
+    label: Beamformer index
+    default: 0
+    dtype: int
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:
@@ -35,6 +39,7 @@ inputs:
     vlen: ${mx*my}
   - id: doa_port
     domain: message
+    optional: 1
 
 outputs:
   - label: out

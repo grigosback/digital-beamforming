@@ -134,6 +134,8 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Introduccion.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
@@ -204,6 +206,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
 OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmss10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
 OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
@@ -222,6 +226,9 @@ OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\dig
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
 OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
@@ -251,6 +258,8 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Introduccion.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
@@ -273,3 +282,5 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmssbx10.pfb

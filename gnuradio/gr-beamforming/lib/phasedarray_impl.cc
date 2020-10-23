@@ -43,8 +43,16 @@ namespace gr
         : gr::sync_block("phasedarray",
                          gr::io_signature::make(1, 1, sizeof(gr_complex)),
                          gr::io_signature::make(1, 1, sizeof(gr_complex) * mx * my)),
-          d_mx(mx), d_my(my), d_vlen(mx * my), d_theta(deg2radians(theta)), d_phi(deg2radians(phi)), d_fc(fc), d_element_separation(element_separation), d_element_error(element_error)
+          d_mx(mx), d_my(my), d_vlen(mx * my), d_theta(deg2radians(theta)), d_phi(deg2radians(phi)), d_fc(fc), d_element_separation(element_separation), d_element_error(element_error / 100)
     {
+      if (d_element_error >= 1)
+      {
+        d_element_error = 1;
+      }
+      else if (d_element_error <= 0)
+      {
+        d_element_error = 0;
+      }
       d_c = 299792458;
       d_k = (2 * M_PI * fc) / d_c;
       d_alignment = volk_get_alignment();
@@ -71,9 +79,13 @@ namespace gr
       {
         for (int j = 0; j < d_my; j++)
         {
-          d_a_k.real(cos(-1.f * d_k * d_element_separation * cos(d_theta) * (i * cos(d_phi) + j * sin(d_phi))));
-          d_a_k.imag(sin(-1.f * d_k * d_element_separation * cos(d_theta) * (i * cos(d_phi) + j * sin(d_phi))));
+          d_random_phase_x = d_element_error * d_rng.gasdev();
+          d_random_phase_y = d_element_error * d_rng.gasdev();
+          d_a_k.real(cos(-1.f * d_k * cos(d_theta) * (d_element_separation * (i * cos(d_phi) + j * sin(d_phi)) + d_random_phase_x * (cos(d_phi) + sin(d_phi)))));
+          d_a_k.imag(sin(-1.f * d_k * cos(d_theta) * (d_element_separation * (i * cos(d_phi) + j * sin(d_phi)) + d_random_phase_y * (cos(d_phi) + sin(d_phi)))));
           d_a[i * d_mx + j] = d_a_k;
+          //std::cout << "d_random_phase_x[" << (i * d_mx + j) << "] = " << d_random_phase_x << "\n";
+          //std::cout << "d_random_phase_y[" << (i * d_mx + j) << "] = " << d_random_phase_y << "\n";
           //std::cout << "a[" << (i * 4 + j) << "] = " << d_a_k.real() << " + j " << d_a_k.imag() << "\n";
           //printf("a[%d] = %lf + j %lf\n", (i * 4 + j), d_a_k.real(), d_a_k.imag());
         }
@@ -89,6 +101,20 @@ namespace gr
     void phasedarray_impl::set_azimuth(float phi)
     {
       d_phi = deg2radians(phi);
+      set_stearing_vector();
+    }
+    void phasedarray_impl::set_element_error(float element_error)
+    {
+      d_element_error = element_error / 100;
+      if (d_element_error >= 1)
+      {
+        d_element_error = 1;
+      }
+      else if (d_element_error <= 0)
+      {
+        d_element_error = 0;
+      }
+      //std::cout << "element error = " << d_element_error << "\n";
       set_stearing_vector();
     }
 

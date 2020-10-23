@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "/usr/bin/python3",
+  "python.pythonPath": "C:\\Users\\grigo\\anaconda3\\python.exe",
   "python.envFile": "${workspaceFolder}/.env",
   "files.associations": {
     "cctype": "cpp",
@@ -64,7 +64,11 @@
     "typeindex": "cpp",
     "typeinfo": "cpp",
     "variant": "cpp",
-    "cfenv": "cpp"
+    "cfenv": "cpp",
+    "unordered_set": "cpp",
+    "hash_map": "cpp",
+    "future": "cpp",
+    "valarray": "cpp"
   },
   "python.analysis.extraPaths": [
     "simulations",

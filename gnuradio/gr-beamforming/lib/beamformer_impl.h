@@ -36,6 +36,7 @@ namespace gr
       unsigned int d_mx;
       unsigned int d_my;
       unsigned int d_vlen;
+      unsigned int d_idx;
       //      unsigned int d_c;
       //      float d_lambda;
       //      float d_distance;
@@ -52,7 +53,7 @@ namespace gr
       gr_vector_float d_doa;
 
     public:
-      beamformer_impl(unsigned int mx, unsigned int my);
+      beamformer_impl(unsigned int mx, unsigned int my, unsigned int idx);
       ~beamformer_impl();
 
       // Where all the action really happens

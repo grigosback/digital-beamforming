@@ -25,5 +25,6 @@ install(FILES
     api.h
     beamformer.h
     phasedarray.h
-    doaesprit.h DESTINATION include/beamforming
+    doaesprit.h
+    randomsampler.h DESTINATION include/beamforming
 )

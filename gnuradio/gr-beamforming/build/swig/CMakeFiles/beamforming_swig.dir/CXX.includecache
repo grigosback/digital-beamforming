@@ -16,10 +16,22 @@ beamforming/api.h
 gnuradio/sync_block.h
 -
 
+../include/beamforming/doaesprit.h
+beamforming/api.h
+-
+gnuradio/sync_block.h
+-
+
 ../include/beamforming/phasedarray.h
 beamforming/api.h
 -
 gnuradio/sync_block.h
+-
+
+../include/beamforming/randomsampler.h
+beamforming/api.h
+-
+gnuradio/sync_decimator.h
 -
 
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming_swigPYTHON_wrap.cxx
@@ -65,6 +77,10 @@ beamforming/beamformer.h
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming/beamformer.h
 beamforming/phasedarray.h
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming/phasedarray.h
+beamforming/doaesprit.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming/doaesprit.h
+beamforming/randomsampler.h
+/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/build/swig/CMakeFiles/beamforming_swig.dir/beamforming/randomsampler.h
 float.h
 -
 math.h

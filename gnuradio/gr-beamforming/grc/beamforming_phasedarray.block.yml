@@ -8,6 +8,7 @@ templates:
   callbacks:
     - set_elevation(${theta})
     - set_azimuth(${phi})
+    - set_element_error(${element_error})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -40,7 +41,7 @@ parameters:
     dtype: float
     default: (299792458/(2*fc))
   - id: element_error
-    label: Element location error
+    label: Element location error [%]
     dtype: float
     default: 0
 

@@ -32,19 +32,19 @@ namespace gr
   {
 
     beamformer::sptr
-    beamformer::make(unsigned int mx, unsigned int my)
+    beamformer::make(unsigned int mx, unsigned int my, unsigned int idx)
     {
-      return gnuradio::get_initial_sptr(new beamformer_impl(mx, my));
+      return gnuradio::get_initial_sptr(new beamformer_impl(mx, my, idx));
     }
 
     /*
      * The private constructor
      */
-    beamformer_impl::beamformer_impl(unsigned int mx, unsigned int my)
+    beamformer_impl::beamformer_impl(unsigned int mx, unsigned int my, unsigned int idx)
         : gr::sync_block("beamformer",
                          gr::io_signature::make(1, 1, sizeof(gr_complex) * mx * my),
                          gr::io_signature::make(1, 1, sizeof(gr_complex))),
-          d_mx(mx), d_my(my), d_vlen(mx * my)
+          d_mx(mx), d_my(my), d_vlen(mx * my), d_idx(idx)
     {
       //std::cout << "Init started\n";
       d_alignment = volk_get_alignment();
@@ -73,18 +73,22 @@ namespace gr
       {
         pmt::pmt_t key = pmt::car(msg);
         pmt::pmt_t val = pmt::cdr(msg);
-        if (pmt::eq(key, pmt::string_to_symbol("doa")))
+        if (pmt::eq(key, pmt::string_to_symbol("doa_msg")))
         {
           if (pmt::is_f32vector(val))
           {
             d_doa = pmt::f32vector_elements(val);
-            if (d_doa.size() == 2)
+            if (d_doa.size() == 3)
             {
-              set_doa(d_doa[0], d_doa[1]);
+              if (int(d_doa[2]) == d_idx)
+              {
+                set_doa(d_doa[0], d_doa[1]);
+                //std::cout << "theta = " << d_doa[0] << ", phi = " << d_doa[1] << "";
+              }
             }
             else
             {
-              printf("Beamformer: Vector length different than 2");
+              printf("Beamformer: Vector length different than 3");
             }
           }
           else
@@ -94,7 +98,7 @@ namespace gr
         }
         else
         {
-          printf("Beamformer: Key not DoA");
+          printf("Beamformer: Key not 'doa_msg'");
         }
       }
       else
@@ -159,4 +163,4 @@ namespace gr
     }
 
   } /* namespace beamforming */
-} /* namespace gr */
+} // namespace gr

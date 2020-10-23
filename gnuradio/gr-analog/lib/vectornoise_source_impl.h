@@ -39,6 +39,7 @@ namespace gr
     public:
       vectornoise_source_impl(float ampl, unsigned int vlen);
       ~vectornoise_source_impl();
+      void set_ampl(float ampl);
 
       // Where all the action really happens
       int work(

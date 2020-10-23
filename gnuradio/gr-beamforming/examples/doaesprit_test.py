@@ -34,9 +34,10 @@ import signal
 from argparse import ArgumentParser
 from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
-from gnuradio import zeromq
 from gnuradio.qtgui import Range, RangeWidget
+import analog
 import beamforming
+import numpy
 from gnuradio import qtgui
 
 class doaesprit_test(gr.top_block, Qt.QWidget):
@@ -85,9 +86,10 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         ##################################################
         self.const = const = digital.constellation_qpsk().base()
         self.theta = theta = 45
-        self.samp_rate = samp_rate = 48000
+        self.samp_rate = samp_rate = 150000
         self.phi = phi = 70
-        self.noise = noise = 0
+        self.noise_voltage = noise_voltage = 0
+        self.element_separation = element_separation = 0
         self.bps = bps = const.bits_per_symbol()
 
         ##################################################
@@ -107,7 +109,20 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self.zeromq_req_msg_source_0 = zeromq.req_msg_source('tcp://127.0.0.1:5558', 100)
+        self._noise_voltage_range = Range(0, 10, 0.001, 0, 200)
+        self._noise_voltage_win = RangeWidget(self._noise_voltage_range, self.set_noise_voltage, 'Noise Voltage', "counter_slider", float)
+        self.top_grid_layout.addWidget(self._noise_voltage_win, 4, 0, 1, 1)
+        for r in range(4, 5):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
+        self._element_separation_range = Range(0, 10, 0.01, 0, 200)
+        self._element_separation_win = RangeWidget(self._element_separation_range, self.set_element_separation, 'Element separation distance [%', "counter_slider", float)
+        self.top_grid_layout.addWidget(self._element_separation_win, 5, 0, 1, 1)
+        for r in range(5, 6):
+            self.top_grid_layout.setRowStretch(r, 1)
+        for c in range(0, 1):
+            self.top_grid_layout.setColumnStretch(c, 1)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
             128, #size
             samp_rate, #samp_rate
@@ -157,8 +172,8 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_0_win, 5, 0, 1, 1)
-        for r in range(5, 6):
+        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_0_win, 6, 0, 1, 1)
+        for r in range(6, 7):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
@@ -211,80 +226,8 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 6, 0, 1, 1)
-        for r in range(6, 7):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
-        self.qtgui_number_sink_0_0 = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1
-        )
-        self.qtgui_number_sink_0_0.set_update_time(0.10)
-        self.qtgui_number_sink_0_0.set_title('Azimut')
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.qtgui_number_sink_0_0.set_min(i, -180)
-            self.qtgui_number_sink_0_0.set_max(i, 180)
-            self.qtgui_number_sink_0_0.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.qtgui_number_sink_0_0.set_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_number_sink_0_0.set_label(i, labels[i])
-            self.qtgui_number_sink_0_0.set_unit(i, units[i])
-            self.qtgui_number_sink_0_0.set_factor(i, factor[i])
-
-        self.qtgui_number_sink_0_0.enable_autoscale(False)
-        self._qtgui_number_sink_0_0_win = sip.wrapinstance(self.qtgui_number_sink_0_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_number_sink_0_0_win, 3, 0, 1, 1)
-        for r in range(3, 4):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
-        self.qtgui_number_sink_0 = qtgui.number_sink(
-            gr.sizeof_float,
-            0,
-            qtgui.NUM_GRAPH_HORIZ,
-            1
-        )
-        self.qtgui_number_sink_0.set_update_time(0.10)
-        self.qtgui_number_sink_0.set_title("Elevation")
-
-        labels = ['', '', '', '', '',
-            '', '', '', '', '']
-        units = ['', '', '', '', '',
-            '', '', '', '', '']
-        colors = [("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"),
-            ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black"), ("black", "black")]
-        factor = [1, 1, 1, 1, 1,
-            1, 1, 1, 1, 1]
-
-        for i in range(1):
-            self.qtgui_number_sink_0.set_min(i, 0)
-            self.qtgui_number_sink_0.set_max(i, 90)
-            self.qtgui_number_sink_0.set_color(i, colors[i][0], colors[i][1])
-            if len(labels[i]) == 0:
-                self.qtgui_number_sink_0.set_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_number_sink_0.set_label(i, labels[i])
-            self.qtgui_number_sink_0.set_unit(i, units[i])
-            self.qtgui_number_sink_0.set_factor(i, factor[i])
-
-        self.qtgui_number_sink_0.enable_autoscale(False)
-        self._qtgui_number_sink_0_win = sip.wrapinstance(self.qtgui_number_sink_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_number_sink_0_win, 1, 0, 1, 1)
-        for r in range(1, 2):
+        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 7, 0, 1, 1)
+        for r in range(7, 8):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
@@ -327,46 +270,45 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
             self.qtgui_const_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_const_sink_x_0_win = sip.wrapinstance(self.qtgui_const_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_const_sink_x_0_win, 7, 0, 1, 1)
-        for r in range(7, 8):
+        self.top_grid_layout.addWidget(self._qtgui_const_sink_x_0_win, 8, 0, 1, 1)
+        for r in range(8, 9):
             self.top_grid_layout.setRowStretch(r, 1)
         for c in range(0, 1):
             self.top_grid_layout.setColumnStretch(c, 1)
-        self._noise_range = Range(0, 10, 0.001, 0, 200)
-        self._noise_win = RangeWidget(self._noise_range, self.set_noise, 'Noise Voltage', "counter_slider", float)
-        self.top_grid_layout.addWidget(self._noise_win, 4, 0, 1, 1)
-        for r in range(4, 5):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(0, 1):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        self.digital_probe_mpsk_snr_est_c_0 = digital.probe_mpsk_snr_est_c(0, 10000, 0.001)
         self.digital_constellation_decoder_cb_0 = digital.constellation_decoder_cb(const.base())
         self.digital_chunks_to_symbols_xx_0 = digital.chunks_to_symbols_bc(const.points(), 1)
         self.blocks_unpacked_to_packed_xx_0 = blocks.unpacked_to_packed_bb(bps, gr.GR_MSB_FIRST)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_char*1, samp_rate,True)
         self.blocks_packed_to_unpacked_xx_0 = blocks.packed_to_unpacked_bb(bps, gr.GR_MSB_FIRST)
+        self.blocks_message_debug_0 = blocks.message_debug()
         self.blocks_file_source_0_0 = blocks.file_source(gr.sizeof_char*1, '/home/grigosback/Documents/GNURadio/examples/source.txt', True, 0, 0)
         self.blocks_file_source_0_0.set_begin_tag(pmt.PMT_NIL)
         self.blocks_file_sink_0_0 = blocks.file_sink(gr.sizeof_char*1, '/home/grigosback/Documents/GNURadio/examples/sink.txt', False)
         self.blocks_file_sink_0_0.set_unbuffered(False)
-        self.beamforming_randomsampler_py_cc_0_0 = beamforming.randomsampler_py_cc(mx*my,8)
-        self.beamforming_phasedarray_0 = beamforming.phasedarray(mx, my, theta, phi, 436e6, (299792458/(2*fc)), 0)
-        self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(128, mx, my, fc, n)
+        self.blocks_add_xx_0 = blocks.add_vcc(mx*my)
+        self.beamforming_randomsampler_0 = beamforming.randomsampler(mx*my, 8)
+        self.beamforming_phasedarray_0 = beamforming.phasedarray(mx, my, theta, phi, 436e6, (299792458/(2*fc)), element_separation)
+        self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(mx, my, fc, (299792458/(2*fc)), n, 128, 'eigenvalues_1')
         self.beamforming_beamformer_0 = beamforming.beamformer(mx, my)
+        self.analog_vectornoise_source_0 = analog.vectornoise_source(noise_voltage, mx*my)
 
 
 
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.zeromq_req_msg_source_0, 'out'), (self.beamforming_beamformer_0, 'doa_port'))
+        self.msg_connect((self.beamforming_doaesprit_py_cf_0, 'doa_port'), (self.beamforming_beamformer_0, 'doa_port'))
+        self.msg_connect((self.digital_probe_mpsk_snr_est_c_0, 'snr'), (self.blocks_message_debug_0, 'print'))
+        self.connect((self.analog_vectornoise_source_0, 0), (self.blocks_add_xx_0, 1))
         self.connect((self.beamforming_beamformer_0, 0), (self.digital_constellation_decoder_cb_0, 0))
+        self.connect((self.beamforming_beamformer_0, 0), (self.digital_probe_mpsk_snr_est_c_0, 0))
         self.connect((self.beamforming_beamformer_0, 0), (self.qtgui_const_sink_x_0, 0))
         self.connect((self.beamforming_beamformer_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.beamforming_doaesprit_py_cf_0, 0), (self.qtgui_number_sink_0, 0))
-        self.connect((self.beamforming_doaesprit_py_cf_0, 1), (self.qtgui_number_sink_0_0, 0))
-        self.connect((self.beamforming_phasedarray_0, 0), (self.beamforming_beamformer_0, 0))
-        self.connect((self.beamforming_phasedarray_0, 0), (self.beamforming_randomsampler_py_cc_0_0, 0))
-        self.connect((self.beamforming_randomsampler_py_cc_0_0, 0), (self.beamforming_doaesprit_py_cf_0, 0))
+        self.connect((self.beamforming_phasedarray_0, 0), (self.blocks_add_xx_0, 0))
+        self.connect((self.beamforming_randomsampler_0, 0), (self.beamforming_doaesprit_py_cf_0, 0))
+        self.connect((self.blocks_add_xx_0, 0), (self.beamforming_beamformer_0, 0))
+        self.connect((self.blocks_add_xx_0, 0), (self.beamforming_randomsampler_0, 0))
         self.connect((self.blocks_file_source_0_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_packed_to_unpacked_xx_0, 0), (self.digital_chunks_to_symbols_xx_0, 0))
         self.connect((self.blocks_throttle_0, 0), (self.blocks_packed_to_unpacked_xx_0, 0))
@@ -433,11 +375,19 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         self.phi = phi
         self.beamforming_phasedarray_0.set_azimuth(self.phi)
 
-    def get_noise(self):
-        return self.noise
+    def get_noise_voltage(self):
+        return self.noise_voltage
 
-    def set_noise(self, noise):
-        self.noise = noise
+    def set_noise_voltage(self, noise_voltage):
+        self.noise_voltage = noise_voltage
+        self.analog_vectornoise_source_0.set_ampl(self.noise_voltage)
+
+    def get_element_separation(self):
+        return self.element_separation
+
+    def set_element_separation(self, element_separation):
+        self.element_separation = element_separation
+        self.beamforming_phasedarray_0.set_element_error(self.element_separation)
 
     def get_bps(self):
         return self.bps

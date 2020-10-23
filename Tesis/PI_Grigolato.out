@@ -7,17 +7,26 @@
 \BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 7
 \BOOKMARK [0][-]{chapter.2}{Conformaci\363n de haz}{}% 8
 \BOOKMARK [1][-]{section.2.1}{Conceptos generales}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Muestreo aleatorio}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Conceptos generales}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Machine Learning aplicado a la clasificaci\363n de autovalores}{}% 12
-\BOOKMARK [1][-]{section.4.1}{Conceptos generales}{chapter.4}% 13
-\BOOKMARK [0][-]{chapter.5}{GNU Radio}{}% 14
-\BOOKMARK [1][-]{section.5.1}{Conceptos generales}{chapter.5}% 15
-\BOOKMARK [1][-]{section.5.2}{Implementaci\363n de m\363dulos}{chapter.5}% 16
-\BOOKMARK [1][-]{section.5.3}{El m\363dulo gr-satellites}{chapter.5}% 17
-\BOOKMARK [0][-]{chapter.6}{Implementaci\363n en FPGA}{}% 18
-\BOOKMARK [1][-]{section.6.1}{Conceptos generales}{chapter.6}% 19
-\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice I}{}% 20
-\BOOKMARK [0][-]{section*.13}{Bibliograf\355a}{}% 21
-\BOOKMARK [0][-]{section*.15}{Publicaciones asociadas}{}% 22
-\BOOKMARK [0][-]{section*.17}{Agradecimientos}{}% 23
+\BOOKMARK [1][-]{section.2.2}{Algoritmos de estimaci\363n de direcci\363n de arribo.}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{El algoritmo MUSIC}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{El algoritmo ESPRIT}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Errores en la estimaci\363n de direcci\363n de arribo}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Detalles del sistema}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Esquema de bloques}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Muestreador aleatorio}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Estimador de direcci\363n de arribo}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{Conformador de haz}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Muestreo aleatorio}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Conceptos generales}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Machine Learning aplicado a la clasificaci\363n de autovalores}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Conceptos generales}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{GNU Radio}{}% 23
+\BOOKMARK [1][-]{section.6.1}{Conceptos generales}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.2}{Implementaci\363n de m\363dulos}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.3}{El m\363dulo gr-satellites}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Implementaci\363n en FPGA}{}% 27
+\BOOKMARK [1][-]{section.7.1}{Conceptos generales}{chapter.7}% 28
+\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice I}{}% 29
+\BOOKMARK [0][-]{section*.13}{Bibliograf\355a}{}% 30
+\BOOKMARK [0][-]{section*.15}{Publicaciones asociadas}{}% 31
+\BOOKMARK [0][-]{section*.17}{Agradecimientos}{}% 32

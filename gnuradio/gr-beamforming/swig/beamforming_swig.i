@@ -11,6 +11,7 @@
 #include "beamforming/beamformer.h"
 #include "beamforming/phasedarray.h"
 #include "beamforming/doaesprit.h"
+#include "beamforming/randomsampler.h"
 %}
 
 %include "beamforming/beamformer.h"
@@ -19,3 +20,5 @@ GR_SWIG_BLOCK_MAGIC2(beamforming, beamformer);
 GR_SWIG_BLOCK_MAGIC2(beamforming, phasedarray);
 %include "beamforming/doaesprit.h"
 GR_SWIG_BLOCK_MAGIC2(beamforming, doaesprit);
+%include "beamforming/randomsampler.h"
+GR_SWIG_BLOCK_MAGIC2(beamforming, randomsampler);

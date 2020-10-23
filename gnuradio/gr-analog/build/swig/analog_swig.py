@@ -83,13 +83,17 @@ class vectornoise_source(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
 
     def __init__(self, *args, **kwargs):
-        raise AttributeError("No constructor defined")
+        raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
 
     @staticmethod
     def make(ampl: "float", vlen: "unsigned int") -> "gr::analog::vectornoise_source::sptr":
         r"""make(float ampl, unsigned int vlen) -> vectornoise_source_sptr"""
         return _analog_swig.vectornoise_source_make(ampl, vlen)
+
+    def set_ampl(self, ampl: "float") -> "void":
+        r"""set_ampl(vectornoise_source self, float ampl)"""
+        return _analog_swig.vectornoise_source_set_ampl(self, ampl)
     __swig_destroy__ = _analog_swig.delete_vectornoise_source
 
 # Register vectornoise_source in _analog_swig:
@@ -120,6 +124,10 @@ class vectornoise_source_sptr(object):
     def make(self, ampl: "float", vlen: "unsigned int") -> "gr::analog::vectornoise_source::sptr":
         r"""make(vectornoise_source_sptr self, float ampl, unsigned int vlen) -> vectornoise_source_sptr"""
         return _analog_swig.vectornoise_source_sptr_make(self, ampl, vlen)
+
+    def set_ampl(self, ampl: "float") -> "void":
+        r"""set_ampl(vectornoise_source_sptr self, float ampl)"""
+        return _analog_swig.vectornoise_source_sptr_set_ampl(self, ampl)
 
     def history(self) -> "unsigned int":
         r"""history(vectornoise_source_sptr self) -> unsigned int"""

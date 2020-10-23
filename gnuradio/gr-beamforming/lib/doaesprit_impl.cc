@@ -25,25 +25,29 @@
 #include <gnuradio/io_signature.h>
 #include "doaesprit_impl.h"
 
-namespace gr {
-  namespace beamforming {
+namespace gr
+{
+  namespace beamforming
+  {
 
     doaesprit::sptr
-    doaesprit::make(unsigned int mx, unsigned int my, float fc, unsigned int spa)
+    doaesprit::make(unsigned int mx, unsigned int my, float fc, float element_separation, unsigned int spa)
     {
-      return gnuradio::get_initial_sptr
-        (new doaesprit_impl(mx, my, fc, spa));
+      return gnuradio::get_initial_sptr(new doaesprit_impl(mx, my, fc, element_separation, spa));
     }
-
 
     /*
      * The private constructor
      */
-    doaesprit_impl::doaesprit_impl(unsigned int mx, unsigned int my, float fc, unsigned int spa)
-      : gr::sync_block("doaesprit",
-              gr::io_signature::make(<+MIN_IN+>, <+MAX_IN+>, sizeof(<+ITYPE+>)),
-              gr::io_signature::make(0, 0, 0))
-    {}
+    doaesprit_impl::doaesprit_impl(unsigned int mx, unsigned int my, float fc, float element_separation, unsigned int spa)
+        : gr::sync_block("doaesprit",
+                         gr::io_signature::make(1, 1, sizeof(gr_complex) * mx * my),
+                         gr::io_signature::make(0, 0, 0)),
+          d_mx(mx), d_my(my), d_vlen(mx * my), d_fc(fc), d_spa(spa)
+    {
+      d_c = 299792458;
+      d_k = (2 * M_PI * fc) / d_c;
+    }
 
     /*
      * Our virtual destructor.
@@ -54,10 +58,10 @@ namespace gr {
 
     int
     doaesprit_impl::work(int noutput_items,
-        gr_vector_const_void_star &input_items,
-        gr_vector_void_star &output_items)
+                         gr_vector_const_void_star &input_items,
+                         gr_vector_void_star &output_items)
     {
-      const <+ITYPE+> *in = (const <+ITYPE+> *) input_items[0];
+      const gr_complex *in = (const gr_complex *)input_items[0];
 
       // Do <+signal processing+>
 
@@ -67,4 +71,3 @@ namespace gr {
 
   } /* namespace beamforming */
 } /* namespace gr */
-
