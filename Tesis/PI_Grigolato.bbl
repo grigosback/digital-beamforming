@@ -1,5 +1,59 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
+
+\bibitem{bib:estacionterrena_cordoba}
+Kulichevsky, J.
+\newblock {Antenas de la CONAE en la Estacion Terrena del Centro Espacial
+  Teófilo Tabanera}.
+\newblock
+  \url{https://es.wikipedia.org/wiki/Estaci\%C3\%B3n_Terrena_C\%C3\%B3rdoba},
+  11 2010.
+
+\bibitem{bib:Balanis_p303}
+Balanis, C.~A.
+\newblock N-element linear array: Uniform amplitude and spacing.
+\newblock \underline{En}: {Antenna Theory: Analysis and Design}, p\'ag. 303.
+  John Wiley \& Sons Ltd., 2016.
+
+\bibitem{bib:MaralBousquet_p32}
+Gérard~Maral, M.~B.
+\newblock Motion of the earth about the sun.
+\newblock \underline{En}: Z.~Sun (ed.) {Satellite Communications Systems},
+  p\'ag.~32. John Wiley \& Sons Ltd., 2009.
+
+\bibitem{bib:2decadesp69}
+Hamid~Krim, M.~V.
+\newblock Two decades of array singal processing research: the parametric
+  approach.
+\newblock \emph{{IEEE Signal Processing Magazine}}, \textbf{13}, 69, 1996.
+
+\bibitem{bib:2decadesp70}
+Hamid~Krim, M.~V.
+\newblock {Two Decades of Array Singal Processing Research: the parametric
+  approach}.
+\newblock \emph{{IEEE Signal Processing Magazine}}, \textbf{13}, 70, 1996.
+
+\bibitem{bib:steiskalp107-108}
+Steyskal, H.
+\newblock {Digital Beamforming Antennas, an introduction}.
+\newblock \emph{Microwave Journal}, p\'ags. 107--108, 1987.
+
+\bibitem{bib:digitalantennasp6}
+Weiß, M.
+\newblock {Digital Antennas}.
+\newblock \emph{{NATO Research and Technology Organisation}}, p\'ag.~6, 2009.
+
+\bibitem{bib:phahandbook_p1}
+Mailloux, R.~J.
+\newblock {Geometry of GSO Links}.
+\newblock \underline{En}: {Phased Array Antenna Handbook}, p\'ag.~1. Artech
+  House, INC, 2005.
+
+\bibitem{Ucasmartantennas_p193}
+Panayiotis~Ioannides, C. A.~B.
+\newblock {Uniform circular arrays for smart antennas}.
+\newblock \emph{{IEEE Antennas and Propagation Magazine}}, \textbf{47}, 193,
+  2005.
 
 \end{thebibliography}

@@ -12,6 +12,9 @@
 % Por conveniencia: aqu\'{\i} puede cargar todos los paquetes y definir los comandos 
 % que necesite
 \usepackage{ibextra}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{subcaption}
 %\usepackage{hyphen-spanis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Informacion sobre la tesis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,8 +25,8 @@
 \carrera{Proyecto Integrador de la Carrera de Ingeniería en Telecomunicaciones}
 \grado{Estudiante}
 \laboratorio{Departamento de Ingeniería en Telecomunicaciones\\Centro Atómico Bariloche}
-\jurado{Ing. Roberto Costantini\\ 
-Dr. Damián Dellavale Clara}
+\jurado{Ing. Roberto Costantini (INVAP - Instituto Balseiro)\\ 
+Dr. Damián Dellavale Clara (CONICET - Instituto Balseiro)}
 \palabrasclave{formato de Tesis, Lineamientos de escritura, Instituto Balseiro}
 \keywords{Thesis format, Templates, Instituto Balseiro}
 % Si queremos poner la fecha manualmente:
@@ -43,57 +46,71 @@ Dr. Damián Dellavale Clara}
 
 \begin{preliminary}
 
-  % Escriba su dedicatoria
-  \dedicatoria{
-    A Gordon Freeman
-  }
+    % Escriba su dedicatoria
+    \dedicatoria{
+        A Gordon Freeman
+    }
 
-  %%% \'{I}ndices %%%%
+    %%% \'{I}ndices %%%%
 
-  \begin{abreviaturas}
-    %Abreviaturas
-  \end{abreviaturas}
+    \begin{abreviaturas}
+        \begin{itemize}
+            \item SNR: Signal to Noise Ratio - Relación Señal a Ruido.
+            \item DBF: Digital Beamforming/Beamformer - Conformación/Conformador Digital de Haz.
+            \item DOA: Direction Of Arrival - Dirección de arribo.
+            \item FPGA: Field-Programmable Gate Array - Arreglo de compuertas programables.
+            \item MUSIC: Multiple Signal Classification.
+            \item ALU: Arreglo Lineal Uniforme.
+            \item ACU: Arreglo Circular Uniforme.
+            \item ARU: Arreglo Rectangular Uniforme.
+            \item LEO: Low Earth Orbit - Baja órbita.
+        \end{itemize}
 
-  \tableofcontents                %\'{I}ndice
+    \end{abreviaturas}
 
-  \listoffigures                  %Figuras
+    \tableofcontents                %\'{I}ndice
 
-  \listoftables                   %Tablas
+    \listoffigures                  %Figuras
 
-  \include{Capitulos/Abstract}
+    \listoftables                   %Tablas
+
+    \include{Capitulos/Abstract}
 
 \end{preliminary}
 
 
 \include{Capitulos/Introduccion}
 \include{Capitulos/ConformacionDeHaz}
+\include{Capitulos/Algoritmos_DOA}
 \include{Capitulos/Sistema}
 \include{Capitulos/MuestreoAleatorio}
 \include{Capitulos/MachineLearning}
 \include{Capitulos/GNURadio}
+\include{Capitulos/Resultados}
 \include{Capitulos/FPGA}
+\include{Capitulos/Futuro}
 
 
 \appendix
 \include{Capitulos/Ap_XX}
 
 \begin{biblio}
-  \bibliography{mibib}
+    \bibliography{mibib}
 \end{biblio}
 
 
 \begin{postliminary}
 
-  \begin{seccion}{Publicaciones asociadas}
-    \begin{enumerate}
-      \item Mi primer aviso en la revista \textbf{ABC}, 1996
-      \item Mi segunda publicaci\'{o}n en la revista \textbf{ABC}, 1997
-    \end{enumerate}
-  \end{seccion}
+    \begin{seccion}{Publicaciones asociadas}
+        \begin{enumerate}
+            \item Mi primer aviso en la revista \textbf{ABC}, 1996
+            \item Mi segunda publicaci\'{o}n en la revista \textbf{ABC}, 1997
+        \end{enumerate}
+    \end{seccion}
 
-  \begin{seccion}{Agradecimientos}
-    A todos los que se lo merecen, por merecerlo
-  \end{seccion}
+    \begin{seccion}{Agradecimientos}
+        A todos los que se lo merecen, por merecerlo
+    \end{seccion}
 
 \end{postliminary}
 

@@ -5,28 +5,46 @@
 \BOOKMARK [0][-]{section*.9}{Resumen}{}% 5
 \BOOKMARK [0][-]{section*.11}{Abstract}{}% 6
 \BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 7
-\BOOKMARK [0][-]{chapter.2}{Conformaci\363n de haz}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Conceptos generales}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Algoritmos de estimaci\363n de direcci\363n de arribo.}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.1}{El algoritmo MUSIC}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.2}{El algoritmo ESPRIT}{section.2.2}% 12
-\BOOKMARK [1][-]{section.2.3}{Errores en la estimaci\363n de direcci\363n de arribo}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Detalles del sistema}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Esquema de bloques}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{Muestreador aleatorio}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.3}{Estimador de direcci\363n de arribo}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Conformador de haz}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{Muestreo aleatorio}{}% 19
-\BOOKMARK [1][-]{section.4.1}{Conceptos generales}{chapter.4}% 20
-\BOOKMARK [0][-]{chapter.5}{Machine Learning aplicado a la clasificaci\363n de autovalores}{}% 21
-\BOOKMARK [1][-]{section.5.1}{Conceptos generales}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter.6}{GNU Radio}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Conceptos generales}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.2}{Implementaci\363n de m\363dulos}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.3}{El m\363dulo gr-satellites}{chapter.6}% 26
-\BOOKMARK [0][-]{chapter.7}{Implementaci\363n en FPGA}{}% 27
-\BOOKMARK [1][-]{section.7.1}{Conceptos generales}{chapter.7}% 28
-\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice I}{}% 29
-\BOOKMARK [0][-]{section*.13}{Bibliograf\355a}{}% 30
-\BOOKMARK [0][-]{section*.15}{Publicaciones asociadas}{}% 31
-\BOOKMARK [0][-]{section*.17}{Agradecimientos}{}% 32
+\BOOKMARK [1][-]{subsection.1.0.1}{Objetivos de proyecto}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Conformaci\363n de haz}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Introducci\363n}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Clasificaci\363n de conformadores de haz}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Arreglos de antenas en fase}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{Tipos de arreglos}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Problema a resolver}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Algoritmos de estimaci\363n de direcci\363n de arribo.}{}% 15
+\BOOKMARK [1][-]{section.3.1}{El algoritmo MUSIC}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{Algoritmo}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{El algoritmo ESPRIT}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Algoritmo}{section.3.2}% 19
+\BOOKMARK [1][-]{section.3.3}{Comparaciones}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Detalles del sistema}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Esquema de bloques}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Muestreador aleatorio}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Estimador de direcci\363n de arribo}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.4}{Conformador de haz}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Muestreo aleatorio}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Conceptos generales}{chapter.5}% 27
+\BOOKMARK [0][-]{chapter.6}{Machine Learning aplicado a la clasificaci\363n de autovalores}{}% 28
+\BOOKMARK [1][-]{section.6.1}{Conceptos generales}{chapter.6}% 29
+\BOOKMARK [0][-]{chapter.7}{GNU Radio}{}% 30
+\BOOKMARK [1][-]{section.7.1}{Conceptos generales}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.2}{Implementaci\363n de m\363dulos}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.3}{El m\363dulo gr-satellites}{chapter.7}% 33
+\BOOKMARK [0][-]{chapter.8}{Resultados obtenidos}{}% 34
+\BOOKMARK [1][-]{section.8.1}{Tasa de error de bit}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.2}{Errores en la ubicaci\363n de elementos del arreglo}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.3}{Requerimientos de procesamiento}{chapter.8}% 37
+\BOOKMARK [0][-]{chapter.9}{Implementaci\363n en FPGA}{}% 38
+\BOOKMARK [1][-]{section.9.1}{Conceptos generales}{chapter.9}% 39
+\BOOKMARK [0][-]{chapter.10}{Trabajo a futuro}{}% 40
+\BOOKMARK [1][-]{section.10.1}{Innovaci\363n en la estimaci\363n}{chapter.10}% 41
+\BOOKMARK [1][-]{section.10.2}{Interfaz con el sistema de adquisici\363n}{chapter.10}% 42
+\BOOKMARK [1][-]{section.10.3}{Empaquetamiento}{chapter.10}% 43
+\BOOKMARK [1][-]{section.10.4}{Medici\363n del patr\363n de radiaci\363n del arreglo}{chapter.10}% 44
+\BOOKMARK [1][-]{section.10.5}{Interferencias destructivas}{chapter.10}% 45
+\BOOKMARK [1][-]{section.10.6}{Smart Beamforming}{chapter.10}% 46
+\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice I}{}% 47
+\BOOKMARK [0][-]{section*.25}{Bibliograf\355a}{}% 48
+\BOOKMARK [0][-]{section*.27}{Publicaciones asociadas}{}% 49
+\BOOKMARK [0][-]{section*.29}{Agradecimientos}{}% 50

@@ -5,6 +5,18 @@
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representación de un enlace punto a punto utilizando antenas parabólicas, indicando sus correspondientes patrones de radiación junto con sus lóbulos principales y secundarios.\relax }}{3}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Antenas parabólicas móviles de la estación terrena perteneciente al Centro Espacial Teófilo Tabanera \cite {bib:estacionterrena_cordoba}.\relax }}{4}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sistema de coordenadas horizontales para comunicaciones satelitales.\relax }}{5}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Frente de onda plano arribando a un arreglo lineal de antenas. Se indica en rojo el elemento de referencia, en el cual se considera que la señal arribante tiene fase nula.\relax }}{5}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Clasificación de conformadores de haz según cómo manipulan la señal recibida.\relax }}{8}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Arreglo lineal uniforme.\relax }}{10}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Arreglo circular uniforme.\relax }}{11}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Arreglo rectangular uniforme.\relax }}{12}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Esquema del problema a resolver.\relax }}{13}{figure.caption.24}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

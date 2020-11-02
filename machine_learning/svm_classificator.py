@@ -1,4 +1,5 @@
 #%%
+from matplotlib import markers
 import numpy as np
 from numpy import loadtxt
 import random
@@ -16,7 +17,7 @@ def polynomial_parameters(
     x_val,
     y_val,
     degree_array=(np.arange(6) + 2),
-    c_array=np.array([0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 50, 100, 200]),
+    c_array=np.array([0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 50]),
 ):
     error_min = 1
     for i in range(c_array.size):
@@ -27,14 +28,16 @@ def polynomial_parameters(
             predictions = clf.predict(x_val)
             error = np.mean((predictions != y_val).astype(int))
             print(
-                "c = %.2lf, degree = %.2lf, error = %.6lf"
+                "C = %.2lf, degree = %.2lf, error = %.6lf"
                 % (c_array[i], degree_array[j], error)
             )
-            if error <= error_min:
+            if error < error_min:
                 c = c_array[i]
                 degree = degree_array[j]
                 error_min = error
-    return c, degree
+    print("Final parameters: C = %.2lf, degree = %.2lf" % (c, degree))
+    clf = svm.SVC(kernel="poly", degree=degree, C=c).fit(x_train, y_train)
+    return clf
 
 
 def rbf_parameters(
@@ -42,8 +45,8 @@ def rbf_parameters(
     y_train,
     x_val,
     y_val,
-    c_array=np.array([0.01, 0.03, 0.1, 0.3, 0.7, 1, 3, 10, 30, 50, 100, 200, 300]),
-    gamma_array=np.array([0.01, 0.03, 0.1, 0.3, 0.7, 1, 3, 10, 30, 50, 100, 200, 300]),
+    c_array=np.array([0.01, 0.03, 0.1, 0.3, 0.7, 1, 3, 10, 30, 50]),
+    gamma_array=np.array([0.01, 0.03, 0.1, 0.3, 0.7, 1, 3, 10, 30, 50]),
 ):
     error_min = 1
     for i in range(c_array.size):
@@ -54,14 +57,34 @@ def rbf_parameters(
             predictions = clf.predict(x_val)
             error = np.mean((predictions != y_val).astype(int))
             print(
-                "c = %.2lf, gamma = %.2lf, error = %.6lf"
+                "C = %.2lf, gamma = %.2lf, error = %.6lf"
                 % (c_array[i], gamma_array[j], error)
             )
-            if error <= error_min:
+            if error < error_min:
                 c = c_array[i]
                 gamma = gamma_array[j]
                 error_min = error
-    return c, gamma
+    print("Final parameters: C = %.2lf, gamma = %.2lf" % (c, gamma))
+    clf = svm.SVC(kernel="rbf", gamma=gamma, C=c).fit(x_train, y_train)
+    return clf
+
+
+def model_accuracy(clf, x_train, y_train, x_val, y_val, x_test, y_test, x_full, y_full):
+    prediction_train = clf.predict(x_train)
+    error_train = np.mean((prediction_train != y_train).astype(int))
+    print("Accuracy on training set =  %.2lf" % ((1 - error_train) * 100))
+    prediction_val = clf.predict(x_val)
+    error_val = np.mean((prediction_val != y_val).astype(int))
+    print("Accuracy on cross-validation set =  %.2lf" % ((1 - error_val) * 100))
+    prediction_test = clf.predict(x_test)
+    error_test = np.mean((prediction_test != y_test).astype(int))
+    print("Accuracy on test set =  %.2lf" % ((1 - error_test) * 100))
+    prediction_all = clf.predict(x_all)
+    error_all = np.mean((prediction_all != y_all).astype(int))
+    print("Accuracy on all set =  %.2lf" % ((1 - error_all) * 100))
+    prediction_full = clf.predict(x_full)
+    error_full = np.mean((prediction_full != y_full).astype(int))
+    print("Accuracy on full set =  %.2lf" % ((1 - error_full) * 100))
 
 
 def plot_decision_boundary(x, y, clf, h=0.2):
@@ -73,17 +96,17 @@ def plot_decision_boundary(x, y, clf, h=0.2):
     xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
     z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
     z = z.reshape(xx.shape)
-    plt.contourf(xx, yy, z, cmap=plt.cm.coolwarm, alpha=0.8)
 
     # Plot also the training points
+    plt.figure(figsize=(16, 9), dpi=200)
+    plt.contourf(xx, yy, z, cmap=plt.cm.coolwarm, alpha=0.8)
     plt.scatter(x[:, 0], x[:, 1], c=y, cmap=plt.cm.coolwarm)
-    plt.xlabel("Sepal length")
-    plt.ylabel("Sepal width")
+    plt.xlabel(r"$\lambda$")
+    plt.ylabel(r"$\frac{\lambda_{max}}{\lambda_{min}}$")
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
     plt.xticks(())
     plt.yticks(())
-
     plt.show()
 
 
@@ -110,7 +133,7 @@ data_full = loadtxt("eigenvalues6.csv", delimiter=",")
 np.random.shuffle(data_full)
 data_1 = data_full[data_full[:, 2] == 1]
 data_0 = data_full[data_full[:, 2] == 0]
-data = np.append(data_0[0:1000], data_1[0:1000], axis=0)
+data = np.append(data_0[0:2000], data_1[0:2000], axis=0)
 np.random.shuffle(data)
 x_all, mu, sigma = feature_scaling(data[:, 0:2])
 y_all = data[:, 2]
@@ -127,48 +150,14 @@ x_full, _, _ = feature_scaling(data_full[:, 0:2], mu, sigma)
 y_full = data_full[:, 2]
 
 #%% Polynomial
-c, degree = polynomial_parameters(x_train, y_train, x_val, y_val)
-clf = svm.SVC(kernel="poly", degree=degree, C=c).fit(x_train, y_train)
-
+clf = polynomial_parameters(x_train, y_train, x_val, y_val)
 #%%
-prediction_train = clf.predict(x_train)
-error_train = np.mean((prediction_train != y_train).astype(int))
-print("Accuracy on training set =  %.2lf" % ((1 - error_train) * 100))
-prediction_val = clf.predict(x_val)
-error_val = np.mean((prediction_val != y_val).astype(int))
-print("Accuracy on cross-validation set =  %.2lf" % ((1 - error_val) * 100))
-prediction_test = clf.predict(x_test)
-error_test = np.mean((prediction_test != y_test).astype(int))
-print("Accuracy on test set =  %.2lf" % ((1 - error_test) * 100))
-prediction_all = clf.predict(x_all)
-error_all = np.mean((prediction_all != y_all).astype(int))
-print("Accuracy on all set =  %.2lf" % ((1 - error_all) * 100))
-plot_decision_boundary(x_train, y_train, clf, h=0.01)
-prediction_full = clf.predict(x_full)
-error_full = np.mean((prediction_full != y_full).astype(int))
-print("Accuracy on full set =  %.2lf" % ((1 - error_full) * 100))
-# plot_decision_boundary(x_full, y_full, clf, h=0.01)
+model_accuracy(clf, x_train, y_train, x_val, y_val, x_test, y_test, x_full, y_full)
+plot_decision_boundary(x_full, y_full, clf, h=0.01)
 
 # %% RBF
-c, gamma = rbf_parameters(x_train, y_train, x_val, y_val)
-clf = svm.SVC(kernel="rbf", gamma=gamma, C=c).fit(x_train, y_train)
+clf = rbf_parameters(x_train, y_train, x_val, y_val)
+#%%
+model_accuracy(clf, x_train, y_train, x_val, y_val, x_test, y_test, x_full, y_full)
+plot_decision_boundary(x_full, y_full, clf, h=0.01)
 
-# %%
-prediction_train = clf.predict(x_train)
-error_train = np.mean((prediction_train != y_train).astype(int))
-print("Accuracy on training set =  %.2lf" % ((1 - error_train) * 100))
-prediction_val = clf.predict(x_val)
-error_val = np.mean((prediction_val != y_val).astype(int))
-print("Accuracy on cross-validation set =  %.2lf" % ((1 - error_val) * 100))
-prediction_test = clf.predict(x_test)
-error_test = np.mean((prediction_test != y_test).astype(int))
-print("Accuracy on test set =  %.2lf" % ((1 - error_test) * 100))
-prediction_all = clf.predict(x_all)
-error_all = np.mean((prediction_all != y_all).astype(int))
-print("Accuracy on all set =  %.2lf" % ((1 - error_all) * 100))
-plot_decision_boundary(x_train, y_train, clf, h=0.01)
-prediction_full = clf.predict(x_full)
-error_full = np.mean((prediction_full != y_full).astype(int))
-print("Accuracy on full set =  %.2lf" % ((1 - error_full) * 100))
-# plot_decision_boundary(x_full, y_full, clf, h=0.01)
-# %%

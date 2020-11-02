@@ -4,19 +4,65 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:beamforming}{{2}{3}{Conformación de haz}{chapter.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Conceptos generales}{3}{section.2.1}\protected@file@percent }
-\newlabel{sec:beamforming_congen}{{2.1}{3}{Conceptos generales}{section.2.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Algoritmos de estimación de dirección de arribo.}{3}{section.2.2}\protected@file@percent }
-\newlabel{sec:beamforming_algoritmos}{{2.2}{3}{Algoritmos de estimación de dirección de arribo}{section.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}El algoritmo MUSIC}{3}{subsection.2.2.1}\protected@file@percent }
-\newlabel{sec:beamforming_MUSIC}{{2.2.1}{3}{El algoritmo MUSIC}{subsection.2.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}El algoritmo ESPRIT}{3}{subsection.2.2.2}\protected@file@percent }
-\newlabel{sec:beamforming_ESPRIT}{{2.2.2}{3}{El algoritmo ESPRIT}{subsection.2.2.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Errores en la estimación de dirección de arribo}{3}{section.2.3}\protected@file@percent }
-\newlabel{sec:beamforming_errores}{{2.3}{3}{Errores en la estimación de dirección de arribo}{section.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introducción}{3}{section.2.1}\protected@file@percent }
+\newlabel{subc:beamforming_intro}{{2.1}{3}{Introducción}{section.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Representación de un enlace punto a punto utilizando antenas parabólicas, indicando sus correspondientes patrones de radiación junto con sus lóbulos principales y secundarios.\relax }}{3}{figure.caption.13}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:beamforming_antenasorientadas}{{2.1}{3}{Representación de un enlace punto a punto utilizando antenas parabólicas, indicando sus correspondientes patrones de radiación junto con sus lóbulos principales y secundarios.\relax }{figure.caption.13}{}}
+\citation{bib:estacionterrena_cordoba}
+\citation{bib:estacionterrena_cordoba}
+\citation{bib:Balanis_p303}
+\citation{bib:MaralBousquet_p32}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Antenas parabólicas móviles de la estación terrena perteneciente al Centro Espacial Teófilo Tabanera \cite  {bib:estacionterrena_cordoba}.\relax }}{4}{figure.caption.14}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:estacionterrena_cordoba}{{4}{2.2}{figure.caption.14}}}
+\newlabel{fig:beamforming_cordoba}{{2.2}{4}{Antenas parabólicas móviles de la estación terrena perteneciente al Centro Espacial Teófilo Tabanera \cite {bib:estacionterrena_cordoba}.\relax }{figure.caption.14}{}}
+\@writefile{brf}{\backcite{bib:Balanis_p303}{{4}{2.1}{figure.caption.14}}}
+\@writefile{brf}{\backcite{bib:MaralBousquet_p32}{{4}{2.1}{figure.caption.14}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Sistema de coordenadas horizontales para comunicaciones satelitales.\relax }}{5}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:beamforming_lookangles}{{2.3}{5}{Sistema de coordenadas horizontales para comunicaciones satelitales.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Frente de onda plano arribando a un arreglo lineal de antenas. Se indica en rojo el elemento de referencia, en el cual se considera que la señal arribante tiene fase nula.\relax }}{5}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:beamforming_caso1d}{{2.4}{5}{Frente de onda plano arribando a un arreglo lineal de antenas. Se indica en rojo el elemento de referencia, en el cual se considera que la señal arribante tiene fase nula.\relax }{figure.caption.16}{}}
+\citation{bib:2decadesp69}
+\citation{bib:2decadesp70}
+\@writefile{brf}{\backcite{bib:2decadesp69}{{6}{2.1}{equation.2.1.1}}}
+\@writefile{brf}{\backcite{bib:2decadesp70}{{6}{2.1}{equation.2.1.3}}}
+\newlabel{eq:beamforming_sample_ula_iso}{{2.4}{6}{Introducción}{equation.2.1.4}{}}
+\citation{bib:steiskalp107-108}
+\citation{bib:digitalantennasp6}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Clasificación de conformadores de haz}{7}{section.2.2}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:steiskalp107-108}{{7}{2.2}{section.2.2}}}
+\@writefile{brf}{\backcite{bib:digitalantennasp6}{{7}{2.2}{figure.caption.17}}}
+\newlabel{fig:beamforming_analogbeamformer}{{2.5a}{8}{Conformador de haz analógico.\relax }{figure.caption.17}{}}
+\newlabel{sub@fig:beamforming_analogbeamformer}{{a}{8}{Conformador de haz analógico.\relax }{figure.caption.17}{}}
+\newlabel{fig:beamforming_digitalbeamformer}{{2.5b}{8}{Conformador digital de haz.\relax }{figure.caption.17}{}}
+\newlabel{sub@fig:beamforming_digitalbeamformer}{{b}{8}{Conformador digital de haz.\relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Clasificación de conformadores de haz según cómo manipulan la señal recibida.\relax }}{8}{figure.caption.17}\protected@file@percent }
+\citation{bib:phahandbook_p1}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Arreglos de antenas en fase}{9}{section.2.3}\protected@file@percent }
+\newlabel{subc:beamforming_phasedarrays}{{2.3}{9}{Arreglos de antenas en fase}{section.2.3}{}}
+\@writefile{brf}{\backcite{bib:phahandbook_p1}{{9}{2.3}{section.2.3}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Tipos de arreglos}{9}{subsection.2.3.1}\protected@file@percent }
+\newlabel{subc:beamforming_phasedarraystipos}{{2.3.1}{9}{Tipos de arreglos}{subsection.2.3.1}{}}
+\newlabel{eq:beamforming_stearingvector}{{2.6}{9}{Tipos de arreglos}{equation.2.3.6}{}}
+\citation{Ucasmartantennas_p193}
+\@writefile{toc}{\contentsline {subsubsection}{Arreglo lineal uniforme}{10}{section*.18}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Arreglo lineal uniforme.\relax }}{10}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:beamforming_ula}{{2.6}{10}{Arreglo lineal uniforme.\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Arreglo circular uniforme}{10}{section*.20}\protected@file@percent }
+\@writefile{brf}{\backcite{Ucasmartantennas_p193}{{10}{2.3.1}{section*.20}}}
+\newlabel{eq:beamforming_k}{{2.8}{10}{Arreglo circular uniforme}{equation.2.3.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Arreglo circular uniforme.\relax }}{11}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:beamforming_uca}{{2.7}{11}{Arreglo circular uniforme.\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Arreglo rectangular uniforme.\relax }}{12}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:beamforming_ura}{{2.8}{12}{Arreglo rectangular uniforme.\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Arreglo rectangular uniforme}{12}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Problema a resolver}{13}{section.2.4}\protected@file@percent }
+\newlabel{subc:beamforming_problem}{{2.4}{13}{Problema a resolver}{section.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Esquema del problema a resolver.\relax }}{13}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:beamforming_problem}{{2.9}{13}{Esquema del problema a resolver.\relax }{figure.caption.24}{}}
 \@setckpt{Capitulos/ConformacionDeHaz}{
-\setcounter{page}{4}
-\setcounter{equation}{0}
+\setcounter{page}{15}
+\setcounter{equation}{13}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -25,12 +71,12 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{2}
-\setcounter{section}{3}
+\setcounter{section}{4}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{9}
 \setcounter{table}{0}
 \setcounter{caption@flags}{0}
 \setcounter{continuedfloat}{0}
@@ -38,7 +84,9 @@
 \setcounter{cp@cntr}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{13}
+\setcounter{bookmark@seq@number}{14}
 \setcounter{NAT@ctr}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
 \setcounter{section@level}{1}
 }
