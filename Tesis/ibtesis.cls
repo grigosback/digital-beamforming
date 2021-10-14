@@ -433,7 +433,7 @@
 \newlength{\imsizeS}\setlength{\imsizeS}{0.5\textwidth}
 
 \addto\captionsspanish{
-\def\nomname{\'{I}ndice de s{\'{\i}}mbolos}
+\def\nomname{\'{I}ndice de siglas y acrónimos}
 \def\contentsname{\'{I}ndice de contenidos}
 \def\listfigurename{\'{I}ndice de figuras}
 \def\listtablename{\'{I}ndice de tablas}
@@ -441,7 +441,7 @@
 \def\tablename{Tabla}
 \def\abstractname{Resumen}
 \def\abstractnameeng{Abstract}
-\def\bibname{Bibliograf{\'{\i}}a}}
+\def\bibname{Referencias}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput
 

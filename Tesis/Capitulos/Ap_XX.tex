@@ -1,9 +1,44 @@
-\chapter{Apéndice I}\label{C:ap1}
+\chapter{Obtención de ángulos de arribo en ESPRIT}\label{AP:esprit_angles}
 %\chapterquote{Negociemos Don Inodoro}{Fernando de la R\'{u}a, 2001}
-\graphicspath{{figs/}}
+%\graphicspath{{figs/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Considerando una elección de subarreglos como el de la Figura \ref{fig:doaest_esprit2d} y el sistema de coordenadas definido en la Figura \ref{fig:beamforming_ura}, los fasores $\phi_x$ y $\phi_y$ obtenidos mediante ESPRIT valen:
 
+\begin{equation}
+    \begin{aligned}
+        \phi_x & = e^{-jk\delta\cos\theta \cos\varphi}  \\
+        \phi_y & = e^{-jk\delta\cos\theta \sin \varphi}
+    \end{aligned}
+\end{equation}
+
+Quedándonos con la fase de estas expresiones tenemos:
+
+\begin{equation}
+    \begin{aligned}
+        \angle\phi_x & = k\delta\cos\theta \cos\varphi  \\
+        \angle\phi_y & = k\delta\cos\theta \sin \varphi
+    \end{aligned}
+\end{equation}
+
+Dividiendo $\angle\phi_y$ con $\angle\phi_x$ se tiene:
+
+\begin{equation}
+    \frac{\angle\phi_y}{\angle\phi_x} = \frac{\sin\varphi}{\cos \varphi} = \tan\varphi
+\end{equation}
+por ende de aquí puede obtenerse $\varphi$ haciendo:
+\begin{equation}
+    \varphi = \arctan2(\angle\phi_y,\angle\phi_x)
+\end{equation}
+
+Para obtener $\theta$ se procede haciendo:
+\begin{align}
+    (\angle\phi_x)^2 + (\angle\phi_y)^2 & = k^2 \delta^2 \cos^2 \theta \underbrace{\left(\cos^2 \varphi + \sin^2 \varphi \right)}_1\nonumber \\
+    (\angle\phi_x)^2 + (\angle\phi_y)^2 & = k^2 \delta^2 \cos^2 \theta\nonumber                                                              \\
+    \cos^2 \theta                       & = \frac{(\angle\phi_x)^2 + (\angle\phi_y)^2}{k^2 \delta^2}\nonumber                                \\
+    \cos \theta                         & = \sqrt{\frac{(\angle\phi_x)^2 + (\angle\phi_y)^2}{k^2 \delta^2}}\nonumber                         \\
+    \theta                              & = \arccos\left(\sqrt{\frac{(\angle\phi_x)^2 + (\angle\phi_y)^2}{k^2 \delta^2}} \right)
+\end{align}
 
 %%% Local Variables: 
 %%% mode: latex

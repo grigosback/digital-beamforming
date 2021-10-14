@@ -1,24 +1,24 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.25)  2 NOV 2020 03:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  24 DEC 2020 12:28
 entering extended mode
 **"d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/PI_Grigolato.tex"
 ("d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/PI_Grigolato.tex"
-LaTeX2e <2020-10-01> patch level 1
-L3 programming layer <2020-10-05> xparse <2020-03-03> ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibtesis.cls"
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-12-07> xparse <2020-03-03> ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibtesis.cls"
 Document Class: ibtesis 2010/10/25 v0.8 (a4 paper) IB - UnCuyo
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\book.cls"
 Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\bk10.clo"
 File: bk10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count175
-\c@chapter=\count176
-\c@section=\count177
-\c@subsection=\count178
-\c@subsubsection=\count179
-\c@paragraph=\count180
-\c@subparagraph=\count181
-\c@figure=\count182
-\c@table=\count183
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -27,16 +27,16 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
  ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )) ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2020/10/06 3.50 The Babel package
+Package: babel 2020/10/27 3.51 The Babel package
  ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2020/10/06 3.50 Babel common definitions
-\babel@savecnt=\count184
+File: babel.def 2020/10/27 3.51 Babel common definitions
+\babel@savecnt=\count186
 \U@D=\dimen139
 \l@babelnohyphens=\language83
  ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count185
+\bbl@dirlevel=\count187
 
 *************************************
 * Local config file bblopts.cfg used
@@ -54,7 +54,7 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/babel-spanish\spanish.ldf"
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 \es@quottoks=\toks15
-\es@quotdepth=\count186
+\es@quotdepth=\count188
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
@@ -62,9 +62,9 @@ Package babel Info: Making > an active character on input line 707.
 )) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
-Package: caption 2020/09/12 v3.5b Customizing captions (AR)
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty"
-Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
  ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
@@ -78,8 +78,8 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \caption@hangindent=\dimen146
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count187
-\c@continuedfloat=\count188
+\c@caption@flags=\count189
+\c@continuedfloat=\count190
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/yafoot\fnpos.sty"
 Package: fnpos 2018/09/03 v1.1 
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
@@ -99,13 +99,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count189
+\inf@bad=\count191
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count190
-\leftroot@=\count191
+\uproot@=\count192
+\leftroot@=\count193
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count192
-\DOTSCASE@=\count193
+\classnum@=\count194
+\DOTSCASE@=\count195
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -114,15 +114,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen149
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count194
-\c@MaxMatrixCols=\count195
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
 \dotsspace@=\muskip16
-\c@parentequation=\count196
-\dspbrk@lvl=\count197
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
 \tag@help=\toks18
-\row@=\count198
-\column@=\count199
-\maxfields@=\count266
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
 \andhelp@=\toks19
 \eqnshift@=\dimen150
 \alignsep@=\dimen151
@@ -177,28 +177,28 @@ Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@O@orf=\skip60
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/changepage\changepage.sty"
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count267
-\cp@tempcnt=\count268
+\c@cp@cntr=\count269
+\cp@tempcnt=\count270
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count269
-\calc@Bcount=\count270
+\calc@Acount=\count271
+\calc@Bcount=\count272
 \calc@Adimen=\dimen158
 \calc@Bdimen=\dimen159
 \calc@Askip=\skip61
 \calc@Bskip=\skip62
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count271
+\calc@Ccount=\count273
 \calc@Cskip=\skip63
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
  ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count272
-\Gm@cntv=\count273
-\c@Gm@tempcnt=\count274
+\Gm@cnth=\count274
+\Gm@cntv=\count275
+\c@Gm@tempcnt=\count276
 \Gm@bindingoffset=\dimen160
 \Gm@wd@mp=\dimen161
 \Gm@odd@mp=\dimen162
@@ -241,8 +241,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen168
-\Hy@linkcounter=\count275
-\Hy@pagecounter=\count276
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -252,7 +252,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/etexcmds\etexcmds.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count277
+\Hy@SavedSpaceFactor=\count279
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -274,7 +274,7 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 ))
-\c@Hy@tempcnt=\count278
+\c@Hy@tempcnt=\count280
  ("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -284,7 +284,7 @@ LaTeX Info: Redefining \url on input line 5076.
  ("C:\Program Files\MiKTeX 2.9\tex/generic/bitset\bitset.sty"
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count279
+\Fld@menulength=\count281
 \Field@Width=\dimen170
 \Fld@charsize=\dimen171
 Package hyperref Info: Hyper figures OFF on input line 6347.
@@ -300,15 +300,15 @@ LaTeX Info: Redefining \pageref on input line 6421.
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
 with kernel methods
 )
-\Hy@abspage=\count280
-\c@Item=\count281
-\c@Hfootnote=\count282
+\Hy@abspage=\count282
+\c@Item=\count283
+\c@Hfootnote=\count284
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-\Fld@listcount=\count283
-\c@bookmark@seq@number=\count284
+\Fld@listcount=\count285
+\c@bookmark@seq@number=\count286
 \Hy@SectionHShift=\skip64
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 81.
@@ -321,65 +321,86 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip68
 \bibsep=\skip69
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count285
-)) ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
-Package: subcaption 2020/08/23 v1.3g Sub-captions (AR)
-\c@subfigure=\count286
-\c@subtable=\count287
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
-File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count288
-\l__pdf_internal_box=\box49
-) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.aux"
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Abstract.aux"
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Introduccion.aux"
-LaTeX Info: Redefining \. on input line 4.
-LaTeX Info: Redefining \% on input line 4.
-) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/ConformacionDeHaz.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Algoritmos_DOA.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Sistema.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MuestreoAleatorio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MachineLearning.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/GNURadio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Resultados.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/FPGA.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Futuro.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Ap_XX.aux"))
-\openout1 = `PI_Grigolato.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen172
-\caption@adjustwidth@linewidth=\dimen173
-Package caption Info: hyperref package is loaded.
-Package caption Info: End \AtBeginDocument code.
- ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
-\scratchdimen=\dimen174
-\scratchbox=\box50
-\nofMPsegments=\count290
-\nofMParguments=\count291
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count292
-\MPscratchDim=\dimen175
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
-\everyMPtoPDFconversion=\toks24
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+\c@NAT@ctr=\count287
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/xurl\xurl.sty"
+Package: xurl 2020/01/24 v 0.09 modify URL breaks
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count288
+\c@subtable=\count289
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/cancel\cancel.sty"
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def"
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count290
+\lst@gtempboxa=\box49
+\lst@token=\toks23
+\lst@length=\count291
+\lst@currlwidth=\dimen172
+\lst@column=\count292
+\lst@pos=\count293
+\lst@lostspace=\dimen173
+\lst@width=\dimen174
+\lst@newlines=\count294
+\lst@lineno=\count295
+\lst@maxwidth=\dimen175
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count296
+\lst@skipnumbers=\count297
+\lst@framebox=\box50
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen176
+\WF@size=\dimen177
+\c@WF@wrappedlines=\count298
+\WF@box=\box51
+\WF@everypar=\toks24
+Package: wrapfig 2003/01/31  v 3.6
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\lscape.sty"
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\rotating.sty"
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count299
+\rotFPtop=\skip70
+\rotFPbot=\skip71
+\rot@float@box=\box52
+\rot@mess@toks=\toks25
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf.sty"
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
@@ -388,6 +409,62 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count300
+\l__pdf_internal_box=\box53
+) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.aux"
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Abstract.aux"
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Introduccion.aux"
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/ConformacionDeHaz.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Algoritmos_DOA.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MuestreoAleatorio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MachineLearning.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Sistema.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/GNURadio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Futuro.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Conclusiones.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Ap_XX.aux"))
+\openout1 = `PI_Grigolato.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen178
+\caption@adjustwidth@linewidth=\dimen179
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count301
+\scratchdimen=\dimen180
+\scratchbox=\box54
+\nofMPsegments=\count302
+\nofMParguments=\count303
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count304
+\MPscratchDim=\dimen181
+\MPnumerator=\count305
+\makeMPintoPDFobject=\count306
+\everyMPtoPDFconversion=\toks27
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -424,7 +501,7 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 42.
+Package hyperref Info: Link coloring ON on input line 52.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("C:\Program Files\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
@@ -432,17 +509,25 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count295
+\c@section@level=\count307
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
  ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.out") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.out")
 \@outlinefile=\write3
 \openout3 = `PI_Grigolato.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 42.
- [1
+Package backref Info: ** backref set up for natbib ** on input line 52.
+\c@lstlisting=\count308
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
 
 
 
@@ -469,8 +554,8 @@ LaTeX Info: Redefining \% on input line 11.
 \tf@toc=\write4
 \openout4 = `PI_Grigolato.toc'.
 
-LaTeX Info: Redefining \. on input line 73.
-LaTeX Info: Redefining \% on input line 73.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
  [8] ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -478,14 +563,22 @@ LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
-)
+LaTeX Font Info:    Trying to load font information for U+euf on input line 19.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [9
+
+
+]
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+ [10])
 \tf@lof=\write5
 \openout5 = `PI_Grigolato.lof'.
 
- [9
-
-
-] [10
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
+ [11] [12
 
 ] ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lot"
 LaTeX Info: Redefining \. on input line 1.
@@ -498,39 +591,35 @@ LaTeX Info: Redefining \% on input line 5.
 \tf@lot=\write6
 \openout6 = `PI_Grigolato.lot'.
 
- [11
+ [13
 
 ]
 \openout2 = `Capitulos/Abstract.aux'.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Abstract.tex" [12
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Abstract.tex" [14
 
 
-] [13
-
-] [14
-
-]
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
- [15
-
+] [15
 
 ] [16
 
 ]
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+ [17
+
+
+] [18
+
+]
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 )
 \openout2 = `Capitulos/Introduccion.aux'.
 
  ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Introduccion.tex"
 Cap\'{\i }tulo 1.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5.
-
-) [1
+[1
 
 
 
@@ -538,200 +627,722 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 ]
+<images/01-Introducción/ciaa.png, id=613, 298.86656pt x 194.22563pt>
+File: images/01-Introducción/ciaa.png Graphic file (type png)
+<use images/01-Introducción/ciaa.png>
+Package pdftex.def Info: images/01-Introducción/ciaa.png  used on input line 31.
+(pdftex.def)             Requested size: 216.10109pt x 140.441pt.
+<images/01-Introducción/ad.png, id=614, 295.1025pt x 220.57407pt>
+File: images/01-Introducción/ad.png Graphic file (type png)
+<use images/01-Introducción/ad.png>
+Package pdftex.def Info: images/01-Introducción/ad.png  used on input line 38.
+(pdftex.def)             Requested size: 216.10109pt x 161.52594pt.
+)
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [2]
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [3 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/01-Introducción/ciaa.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/01-Introducción/ad.png>]
 \openout2 = `Capitulos/ConformacionDeHaz.aux'.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/ConformacionDeHaz.tex" [2
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/ConformacionDeHaz.tex" [4
 
 
 
 
 ]
 Cap\'{\i }tulo 2.
-<images/02-Beamforming/antenasorientadas.png, id=363, 1741.73117pt x 611.03197pt>
+<images/02-Beamforming/antenasorientadas.png, id=629, 1741.73117pt x 611.03197pt>
 File: images/02-Beamforming/antenasorientadas.png Graphic file (type png)
 <use images/02-Beamforming/antenasorientadas.png>
 Package pdftex.def Info: images/02-Beamforming/antenasorientadas.png  used on input line 9.
-(pdftex.def)             Requested size: 441.01772pt x 154.71556pt.
-[3 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/antenasorientadas.png>]
-<images/02-Beamforming/estacionterrenacordoba.jpg, id=375, 308.352pt x 231.264pt>
+(pdftex.def)             Requested size: 396.91324pt x 139.23842pt.
+[5 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/antenasorientadas.png>]
+<images/02-Beamforming/estacionterrenacordoba.jpg, id=637, 308.352pt x 231.264pt>
 File: images/02-Beamforming/estacionterrenacordoba.jpg Graphic file (type jpg)
 <use images/02-Beamforming/estacionterrenacordoba.jpg>
 Package pdftex.def Info: images/02-Beamforming/estacionterrenacordoba.jpg  used on input line 18.
-(pdftex.def)             Requested size: 441.01772pt x 330.76852pt.
-LaTeX Info: Redefining \. on input line 31.
-LaTeX Info: Redefining \% on input line 31.
- [4 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/estacionterrenacordoba.jpg>]
-<images/02-Beamforming/lookangles.png, id=387, 335.00407pt x 302.61552pt>
+(pdftex.def)             Requested size: 396.91324pt x 297.68954pt.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
+ [6 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/estacionterrenacordoba.jpg>]
+<images/02-Beamforming/lookangles.png, id=649, 335.00407pt x 302.61552pt>
 File: images/02-Beamforming/lookangles.png Graphic file (type png)
 <use images/02-Beamforming/lookangles.png>
 Package pdftex.def Info: images/02-Beamforming/lookangles.png  used on input line 38.
-(pdftex.def)             Requested size: 308.71104pt x 278.86679pt.
-<images/02-Beamforming/caso1d.png, id=389, 376.33575pt x 177.89539pt>
+(pdftex.def)             Requested size: 264.61331pt x 239.03131pt.
+<images/02-Beamforming/caso1d.png, id=651, 376.33575pt x 177.89539pt>
 File: images/02-Beamforming/caso1d.png Graphic file (type png)
 <use images/02-Beamforming/caso1d.png>
 Package pdftex.def Info: images/02-Beamforming/caso1d.png  used on input line 47.
 (pdftex.def)             Requested size: 352.8155pt x 166.78464pt.
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
- [5 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/lookangles.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/caso1d.png>]
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
- [6]
-<images/02-Beamforming/analogbeamformer.png, id=418, 4151.9115pt x 3786.948pt>
+ [7 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/lookangles.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/caso1d.png>]
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [8]
+<images/02-Beamforming/analogbeamformer.png, id=675, 4151.9115pt x 3786.948pt>
 File: images/02-Beamforming/analogbeamformer.png Graphic file (type png)
 <use images/02-Beamforming/analogbeamformer.png>
-Package pdftex.def Info: images/02-Beamforming/analogbeamformer.png  used on input line 104.
+Package pdftex.def Info: images/02-Beamforming/analogbeamformer.png  used on input line 100.
 (pdftex.def)             Requested size: 308.71104pt x 281.52412pt.
-<images/02-Beamforming/digitalbeamformer.png, id=419, 5281.13025pt x 3786.948pt>
+<images/02-Beamforming/digitalbeamformer.png, id=676, 5281.13025pt x 3786.948pt>
 File: images/02-Beamforming/digitalbeamformer.png Graphic file (type png)
 <use images/02-Beamforming/digitalbeamformer.png>
-Package pdftex.def Info: images/02-Beamforming/digitalbeamformer.png  used on input line 111.
+Package pdftex.def Info: images/02-Beamforming/digitalbeamformer.png  used on input line 107.
 (pdftex.def)             Requested size: 352.8155pt x 252.97879pt.
-LaTeX Info: Redefining \. on input line 121.
-LaTeX Info: Redefining \% on input line 121.
- [7]
-LaTeX Info: Redefining \. on input line 121.
-LaTeX Info: Redefining \% on input line 121.
- [8 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/analogbeamformer.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/digitalbeamformer.png>]
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
  [9]
-<images/02-Beamforming/ula.png, id=449, 392.28833pt x 158.07552pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
+ [10 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/analogbeamformer.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/digitalbeamformer.png>]
+<images/02-Beamforming/ula.png, id=697, 392.28833pt x 158.07552pt>
 File: images/02-Beamforming/ula.png Graphic file (type png)
 <use images/02-Beamforming/ula.png>
-Package pdftex.def Info: images/02-Beamforming/ula.png  used on input line 156.
+Package pdftex.def Info: images/02-Beamforming/ula.png  used on input line 152.
 (pdftex.def)             Requested size: 308.71104pt x 124.39828pt.
-<images/02-Beamforming/uca.png, id=452, 389.14615pt x 443.28822pt>
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
+ [11]
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 194.
+LaTeX Info: Redefining \% on input line 194.
+ [12 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/ula.png>]
+<images/02-Beamforming/uca.png, id=723, 389.14615pt x 443.28822pt>
 File: images/02-Beamforming/uca.png Graphic file (type png)
 <use images/02-Beamforming/uca.png>
-Package pdftex.def Info: images/02-Beamforming/uca.png  used on input line 204.
+Package pdftex.def Info: images/02-Beamforming/uca.png  used on input line 201.
 (pdftex.def)             Requested size: 308.71104pt x 351.67517pt.
-<images/02-Beamforming/uca_3d.png, id=453, 434.58682pt x 274.57765pt>
+<images/02-Beamforming/uca_3d.png, id=724, 434.58682pt x 274.57765pt>
 File: images/02-Beamforming/uca_3d.png Graphic file (type png)
 <use images/02-Beamforming/uca_3d.png>
-Package pdftex.def Info: images/02-Beamforming/uca_3d.png  used on input line 209.
+Package pdftex.def Info: images/02-Beamforming/uca_3d.png  used on input line 206.
 (pdftex.def)             Requested size: 308.71104pt x 195.05623pt.
-LaTeX Info: Redefining \. on input line 219.
-LaTeX Info: Redefining \% on input line 219.
- [10 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/ula.png>]
-LaTeX Info: Redefining \. on input line 219.
-LaTeX Info: Redefining \% on input line 219.
- [11 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/uca.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/uca_3d.png>]
-<images/02-Beamforming/ura.png, id=473, 442.80481pt x 376.57745pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+ [13 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/uca.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/uca_3d.png>]
+<images/02-Beamforming/ura.png, id=735, 442.80481pt x 376.57745pt>
 File: images/02-Beamforming/ura.png Graphic file (type png)
 <use images/02-Beamforming/ura.png>
-Package pdftex.def Info: images/02-Beamforming/ura.png  used on input line 224.
+Package pdftex.def Info: images/02-Beamforming/ura.png  used on input line 221.
 (pdftex.def)             Requested size: 264.61331pt x 225.04607pt.
-<images/02-Beamforming/ura_3d.png, id=474, 399.05609pt x 300.92358pt>
+<images/02-Beamforming/ura_3d.png, id=736, 399.05609pt x 300.92358pt>
 File: images/02-Beamforming/ura_3d.png Graphic file (type png)
 <use images/02-Beamforming/ura_3d.png>
-Package pdftex.def Info: images/02-Beamforming/ura_3d.png  used on input line 229.
+Package pdftex.def Info: images/02-Beamforming/ura_3d.png  used on input line 226.
 (pdftex.def)             Requested size: 308.71104pt x 232.80928pt.
-LaTeX Info: Redefining \. on input line 244.
-LaTeX Info: Redefining \% on input line 244.
- [12 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/ura.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/ura_3d.png>]
-<images/02-Beamforming/problem.png, id=486, 2921.55319pt x 1969.74191pt>
+
+Underfull \vbox (badness 4132) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [14 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/ura.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/ura_3d.png>]
+<images/02-Beamforming/problem.png, id=748, 2950.76872pt x 1989.73149pt>
 File: images/02-Beamforming/problem.png Graphic file (type png)
 <use images/02-Beamforming/problem.png>
-Package pdftex.def Info: images/02-Beamforming/problem.png  used on input line 267.
-(pdftex.def)             Requested size: 441.01772pt x 297.312pt.
+Package pdftex.def Info: images/02-Beamforming/problem.png  used on input line 261.
+(pdftex.def)             Requested size: 396.91324pt x 267.63062pt.
 )
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [13 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/problem.png>]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [14]
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [15 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/02-Beamforming/problem.png>]
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [16]
 \openout2 = `Capitulos/Algoritmos_DOA.aux'.
 
  ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Algoritmos_DOA.tex"
 Cap\'{\i }tulo 3.
-) [15
+[17
 
 
 
 
 ]
-\openout2 = `Capitulos/Sistema.aux'.
+<images/03-DOAEst/arraymanifold.png, id=770, 478.81897pt x 650.6717pt>
+File: images/03-DOAEst/arraymanifold.png Graphic file (type png)
+<use images/03-DOAEst/arraymanifold.png>
+Package pdftex.def Info: images/03-DOAEst/arraymanifold.png  used on input line 63.
+(pdftex.def)             Requested size: 308.71104pt x 419.50629pt.
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+ [18]
+Overfull \hbox (15.22026pt too wide) detected at line 92
+[]
+ []
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Sistema.tex" [16
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+ [19 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/arraymanifold.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+ [20]
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
+ [21]
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
+ [22]
+<images/03-DOAEst/esprit.png, id=834, 538.8933pt x 471.6822pt>
+File: images/03-DOAEst/esprit.png Graphic file (type png)
+<use images/03-DOAEst/esprit.png>
+Package pdftex.def Info: images/03-DOAEst/esprit.png  used on input line 218.
+(pdftex.def)             Requested size: 308.71104pt x 270.21474pt.
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
+ [24 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/esprit.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 322.
+LaTeX Info: Redefining \% on input line 322.
+ [25]
+<images/03-DOAEst/esprit_x.png, id=873, 476.982pt x 516.4896pt>
+File: images/03-DOAEst/esprit_x.png Graphic file (type png)
+<use images/03-DOAEst/esprit_x.png>
+Package pdftex.def Info: images/03-DOAEst/esprit_x.png  used on input line 339.
+(pdftex.def)             Requested size: 216.10109pt x 234.00224pt.
+<images/03-DOAEst/esprit_y.png, id=874, 476.982pt x 516.4896pt>
+File: images/03-DOAEst/esprit_y.png Graphic file (type png)
+<use images/03-DOAEst/esprit_y.png>
+Package pdftex.def Info: images/03-DOAEst/esprit_y.png  used on input line 344.
+(pdftex.def)             Requested size: 216.10109pt x 234.00224pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 354.
+LaTeX Info: Redefining \% on input line 354.
+ [26 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/esprit_x.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/esprit_y.png>]
+LaTeX Info: Redefining \. on input line 388.
+LaTeX Info: Redefining \% on input line 388.
+ [27]
+LaTeX Info: Redefining \. on input line 415.
+LaTeX Info: Redefining \% on input line 415.
+ [28]
+<images/03-DOAEst/error_vs_snr.png, id=935, 622.7265pt x 322.806pt>
+File: images/03-DOAEst/error_vs_snr.png Graphic file (type png)
+<use images/03-DOAEst/error_vs_snr.png>
+Package pdftex.def Info: images/03-DOAEst/error_vs_snr.png  used on input line 445.
+(pdftex.def)             Requested size: 396.91324pt x 205.74792pt.
+<images/03-DOAEst/p_mu_-10.png, id=937, 453.8556pt x 265.2309pt>
+File: images/03-DOAEst/p_mu_-10.png Graphic file (type png)
+<use images/03-DOAEst/p_mu_-10.png>
+Package pdftex.def Info: images/03-DOAEst/p_mu_-10.png  used on input line 457.
+(pdftex.def)             Requested size: 216.10109pt x 126.2895pt.
+<images/03-DOAEst/p_mu_-5.png, id=938, 463.4916pt x 265.2309pt>
+File: images/03-DOAEst/p_mu_-5.png Graphic file (type png)
+<use images/03-DOAEst/p_mu_-5.png>
+Package pdftex.def Info: images/03-DOAEst/p_mu_-5.png  used on input line 463.
+(pdftex.def)             Requested size: 216.10109pt x 123.66295pt.
+<images/03-DOAEst/p_mu_0.png, id=939, 453.8556pt x 265.2309pt>
+File: images/03-DOAEst/p_mu_0.png Graphic file (type png)
+<use images/03-DOAEst/p_mu_0.png>
+Package pdftex.def Info: images/03-DOAEst/p_mu_0.png  used on input line 469.
+(pdftex.def)             Requested size: 216.10109pt x 126.2895pt.
+<images/03-DOAEst/p_mu_10.png, id=940, 453.8556pt x 265.2309pt>
+File: images/03-DOAEst/p_mu_10.png Graphic file (type png)
+<use images/03-DOAEst/p_mu_10.png>
+Package pdftex.def Info: images/03-DOAEst/p_mu_10.png  used on input line 475.
+(pdftex.def)             Requested size: 216.10109pt x 126.2895pt.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 482.
 
 
-]
-Cap\'{\i }tulo 4.
-) [17]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 482.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 482.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 482.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\endgroup' on input line 482.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@over' on input line 482.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 482.
+
+LaTeX Info: Redefining \. on input line 486.
+LaTeX Info: Redefining \% on input line 486.
+[29]
+LaTeX Info: Redefining \. on input line 491.
+LaTeX Info: Redefining \% on input line 491.
+ [30 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/error_vs_snr.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/p_mu_-10.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/p_mu_-5.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/p_mu_0.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/p_mu_10.png>]
+<images/03-DOAEst/error_vs_d_error.png, id=962, 622.7265pt x 327.624pt>
+File: images/03-DOAEst/error_vs_d_error.png Graphic file (type png)
+<use images/03-DOAEst/error_vs_d_error.png>
+Package pdftex.def Info: images/03-DOAEst/error_vs_d_error.png  used on input line 497.
+(pdftex.def)             Requested size: 396.91324pt x 208.81879pt.
+<images/03-DOAEst/error_vs_n.png, id=964, 622.7265pt x 323.0469pt>
+File: images/03-DOAEst/error_vs_n.png Graphic file (type png)
+<use images/03-DOAEst/error_vs_n.png>
+Package pdftex.def Info: images/03-DOAEst/error_vs_n.png  used on input line 516.
+(pdftex.def)             Requested size: 396.91324pt x 205.90147pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 524.
+
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+[31 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/error_vs_d_error.png>]
+<images/03-DOAEst/time_vs_m.png, id=975, 619.3539pt x 322.806pt>
+File: images/03-DOAEst/time_vs_m.png Graphic file (type png)
+<use images/03-DOAEst/time_vs_m.png>
+Package pdftex.def Info: images/03-DOAEst/time_vs_m.png  used on input line 533.
+(pdftex.def)             Requested size: 396.91324pt x 206.87096pt.
+LaTeX Info: Redefining \. on input line 541.
+LaTeX Info: Redefining \% on input line 541.
+ [32 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/error_vs_n.png>]
+<images/03-DOAEst/svd_vs_n_m.png, id=988, 618.1494pt x 350.9913pt>
+File: images/03-DOAEst/svd_vs_n_m.png Graphic file (type png)
+<use images/03-DOAEst/svd_vs_n_m.png>
+Package pdftex.def Info: images/03-DOAEst/svd_vs_n_m.png  used on input line 555.
+(pdftex.def)             Requested size: 396.91324pt x 225.37811pt.
+<images/03-DOAEst/svd_vs_n_16.png, id=990, 618.1494pt x 323.0469pt>
+File: images/03-DOAEst/svd_vs_n_16.png Graphic file (type png)
+<use images/03-DOAEst/svd_vs_n_16.png>
+Package pdftex.def Info: images/03-DOAEst/svd_vs_n_16.png  used on input line 563.
+(pdftex.def)             Requested size: 396.91324pt x 207.43448pt.
+LaTeX Info: Redefining \. on input line 567.
+LaTeX Info: Redefining \% on input line 567.
+ [33 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/time_vs_m.png>])
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+ [34 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/svd_vs_n_m.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/03-DOAEst/svd_vs_n_16.png>]
 \openout2 = `Capitulos/MuestreoAleatorio.aux'.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MuestreoAleatorio.tex" [18
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MuestreoAleatorio.tex"
+Cap\'{\i }tulo 4.
+<images/04-Random Sampling/sa_sb.png, id=1009, 577.9191pt x 323.7696pt>
+File: images/04-Random Sampling/sa_sb.png Graphic file (type png)
+<use images/04-Random Sampling/sa_sb.png>
+Package pdftex.def Info: images/04-Random Sampling/sa_sb.png  used on input line 13.
+(pdftex.def)             Requested size: 396.91324pt x 222.3638pt.
+<images/04-Random Sampling/sa_sb_15.png, id=1010, 577.9191pt x 323.7696pt>
+File: images/04-Random Sampling/sa_sb_15.png Graphic file (type png)
+<use images/04-Random Sampling/sa_sb_15.png>
+Package pdftex.def Info: images/04-Random Sampling/sa_sb_15.png  used on input line 20.
+(pdftex.def)             Requested size: 396.91324pt x 222.3638pt.
+<images/04-Random Sampling/rs_random_sampling_sine.png, id=1015, 577.9191pt x 323.7696pt>
+File: images/04-Random Sampling/rs_random_sampling_sine.png Graphic file (type png)
+<use images/04-Random Sampling/rs_random_sampling_sine.png>
+Package pdftex.def Info: images/04-Random Sampling/rs_random_sampling_sine.png  used on input line 30.
+(pdftex.def)             Requested size: 396.91324pt x 222.3638pt.
+[35
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+ [36 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/04-Random Sampling/sa_sb.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/04-Random Sampling/sa_sb_15.png>]
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 65.
+LaTeX Info: Redefining \% on input line 65.
+ [37 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/04-Random Sampling/rs_random_sampling_sine.png>]
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [38]
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+ [39]
+<images/04-Random Sampling/rs_rxy.png, id=1077, 621.0402pt x 306.1839pt>
+File: images/04-Random Sampling/rs_rxy.png Graphic file (type png)
+<use images/04-Random Sampling/rs_rxy.png>
+Package pdftex.def Info: images/04-Random Sampling/rs_rxy.png  used on input line 161.
+(pdftex.def)             Requested size: 396.91324pt x 195.68604pt.
+
+Underfull \vbox (badness 1924) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+ [40]
+<images/04-Random Sampling/rs_vs_T.png, id=1088, 622.7265pt x 323.0469pt>
+File: images/04-Random Sampling/rs_vs_T.png Graphic file (type png)
+<use images/04-Random Sampling/rs_vs_T.png>
+Package pdftex.def Info: images/04-Random Sampling/rs_vs_T.png  used on input line 170.
+(pdftex.def)             Requested size: 396.91324pt x 205.90147pt.
+)
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+ [41 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/04-Random Sampling/rs_rxy.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/04-Random Sampling/rs_vs_T.png>]
+\openout2 = `Capitulos/MachineLearning.aux'.
+
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MachineLearning.tex" [42
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [19]
-\openout2 = `Capitulos/MachineLearning.aux'.
+<images/05-Machine Learning/ml_aval.png, id=1103, 618.6312pt x 322.806pt>
+File: images/05-Machine Learning/ml_aval.png Graphic file (type png)
+<use images/05-Machine Learning/ml_aval.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_aval.png  used on input line 12.
+(pdftex.def)             Requested size: 396.91324pt x 207.11232pt.
+[43]
+<images/05-Machine Learning/ml_derivada.png, id=1111, 608.9952pt x 322.806pt>
+File: images/05-Machine Learning/ml_derivada.png Graphic file (type png)
+<use images/05-Machine Learning/ml_derivada.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_derivada.png  used on input line 26.
+(pdftex.def)             Requested size: 396.91324pt x 210.3977pt.
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
+ [44 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_aval.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_derivada.png>]
+<images/05-Machine Learning/ml_maxder_imp.png, id=1121, 143.81488pt x 53.41696pt>
+File: images/05-Machine Learning/ml_maxder_imp.png Graphic file (type png)
+<use images/05-Machine Learning/ml_maxder_imp.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_maxder_imp.png  used on input line 47.
+(pdftex.def)             Requested size: 308.71104pt x 114.66568pt.
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+ [45 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_maxder_imp.png>]
+<images/05-Machine Learning/ml_classificator_system.png, id=1128, 594.83769pt x 80.7297pt>
+File: images/05-Machine Learning/ml_classificator_system.png Graphic file (type png)
+<use images/05-Machine Learning/ml_classificator_system.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_classificator_system.png  used on input line 69.
+(pdftex.def)             Requested size: 308.71104pt x 41.89838pt.
+<images/05-Machine Learning/ml_sigmoid.png, id=1131, 618.1494pt x 322.806pt>
+File: images/05-Machine Learning/ml_sigmoid.png Graphic file (type png)
+<use images/05-Machine Learning/ml_sigmoid.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_sigmoid.png  used on input line 84.
+(pdftex.def)             Requested size: 396.91324pt x 207.27979pt.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MachineLearning.tex" [20
+Underfull \vbox (badness 1675) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [46 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_classificator_system.png>]
+<images/05-Machine Learning/ml_dataexample.png, id=1144, 331.1368pt x 180.79585pt>
+File: images/05-Machine Learning/ml_dataexample.png Graphic file (type png)
+<use images/05-Machine Learning/ml_dataexample.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_dataexample.png  used on input line 119.
+(pdftex.def)             Requested size: 352.8155pt x 192.63582pt.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [47 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_sigmoid.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [48 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_dataexample.png>]
+<images/05-Machine Learning/ml_cost1.png, id=1162, 373.395pt x 211.5102pt>
+File: images/05-Machine Learning/ml_cost1.png Graphic file (type png)
+<use images/05-Machine Learning/ml_cost1.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_cost1.png  used on input line 157.
+(pdftex.def)             Requested size: 216.10109pt x 122.41135pt.
+<images/05-Machine Learning/ml_cost0.png, id=1163, 373.395pt x 211.5102pt>
+File: images/05-Machine Learning/ml_cost0.png Graphic file (type png)
+<use images/05-Machine Learning/ml_cost0.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_cost0.png  used on input line 163.
+(pdftex.def)             Requested size: 216.10109pt x 122.41135pt.
+<images/05-Machine Learning/ml_db_svm.png, id=1168, 280.862pt x 199.16548pt>
+File: images/05-Machine Learning/ml_db_svm.png Graphic file (type png)
+<use images/05-Machine Learning/ml_db_svm.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_db_svm.png  used on input line 191.
+(pdftex.def)             Requested size: 352.8155pt x 250.20221pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
+ [49 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_cost1.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_cost0.png>]
+<images/05-Machine Learning/ml_proyeccion_svm.png, id=1184, 272.40231pt x 167.01863pt>
+File: images/05-Machine Learning/ml_proyeccion_svm.png Graphic file (type png)
+<use images/05-Machine Learning/ml_proyeccion_svm.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_proyeccion_svm.png  used on input line 212.
+(pdftex.def)             Requested size: 308.71104pt x 189.29716pt.
+
+Underfull \vbox (badness 4120) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+ [50 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_db_svm.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_proyeccion_svm.png>]
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [51]
+<images/05-Machine Learning/ml_avals_plot.png, id=1221, 618.6312pt x 322.806pt>
+File: images/05-Machine Learning/ml_avals_plot.png Graphic file (type png)
+<use images/05-Machine Learning/ml_avals_plot.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_avals_plot.png  used on input line 299.
+(pdftex.def)             Requested size: 396.91324pt x 207.11232pt.
+LaTeX Info: Redefining \. on input line 303.
+LaTeX Info: Redefining \% on input line 303.
+ [52]
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 330.
+LaTeX Info: Redefining \% on input line 330.
+ [53 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_avals_plot.png>]
+<images/05-Machine Learning/ml_svm_sigmoid.png, id=1244, 590.4459pt x 306.1839pt>
+File: images/05-Machine Learning/ml_svm_sigmoid.png Graphic file (type png)
+<use images/05-Machine Learning/ml_svm_sigmoid.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_svm_sigmoid.png  used on input line 342.
+(pdftex.def)             Requested size: 396.91324pt x 205.82425pt.
+<images/05-Machine Learning/ml_svm_poly.png, id=1246, 590.4459pt x 306.1839pt>
+File: images/05-Machine Learning/ml_svm_poly.png Graphic file (type png)
+<use images/05-Machine Learning/ml_svm_poly.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_svm_poly.png  used on input line 360.
+(pdftex.def)             Requested size: 396.91324pt x 205.82425pt.
+LaTeX Info: Redefining \. on input line 368.
+LaTeX Info: Redefining \% on input line 368.
+ [54 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_svm_sigmoid.png>]
+<images/05-Machine Learning/ml_svm_rbf.png, id=1255, 590.4459pt x 306.1839pt>
+File: images/05-Machine Learning/ml_svm_rbf.png Graphic file (type png)
+<use images/05-Machine Learning/ml_svm_rbf.png>
+Package pdftex.def Info: images/05-Machine Learning/ml_svm_rbf.png  used on input line 377.
+(pdftex.def)             Requested size: 396.91324pt x 205.82425pt.
+LaTeX Info: Redefining \. on input line 387.
+LaTeX Info: Redefining \% on input line 387.
+ [55 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_svm_poly.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/05-Machine Learning/ml_svm_rbf.png>])
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
+ [56]
+\openout2 = `Capitulos/Sistema.aux'.
+
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Sistema.tex"
+Cap\'{\i }tulo 6.
+[57
 
 
 
 
 ]
-Cap\'{\i }tulo 6.
-) [21]
+<images/06-Sistema/sistema_bd.png, id=1282, 1926.1526pt x 796.17853pt>
+File: images/06-Sistema/sistema_bd.png Graphic file (type png)
+<use images/06-Sistema/sistema_bd.png>
+Package pdftex.def Info: images/06-Sistema/sistema_bd.png  used on input line 29.
+(pdftex.def)             Requested size: 396.91324pt x 164.05591pt.
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
+ [58 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_bd.png>]
+<images/06-Sistema/sistema_randomsampler.png, id=1289, 603.5391pt x 193.84796pt>
+File: images/06-Sistema/sistema_randomsampler.png Graphic file (type png)
+<use images/06-Sistema/sistema_randomsampler.png>
+Package pdftex.def Info: images/06-Sistema/sistema_randomsampler.png  used on input line 52.
+(pdftex.def)             Requested size: 264.61331pt x 84.9887pt.
+<images/06-Sistema/sistema_randomsampler_fpga.png, id=1292, 2125.3181pt x 1696.77391pt>
+File: images/06-Sistema/sistema_randomsampler_fpga.png Graphic file (type png)
+<use images/06-Sistema/sistema_randomsampler_fpga.png>
+Package pdftex.def Info: images/06-Sistema/sistema_randomsampler_fpga.png  used on input line 65.
+(pdftex.def)             Requested size: 396.91324pt x 316.87569pt.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+ [59 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_randomsampler.png>]
+<images/06-Sistema/sistema_doaest.png, id=1305, 589.27846pt x 269.26013pt>
+File: images/06-Sistema/sistema_doaest.png Graphic file (type png)
+<use images/06-Sistema/sistema_doaest.png>
+Package pdftex.def Info: images/06-Sistema/sistema_doaest.png  used on input line 87.
+(pdftex.def)             Requested size: 220.50885pt x 100.75865pt.
+<images/06-Sistema/sistema_doaest_2.png, id=1306, 1019.03117pt x 607.8898pt>
+File: images/06-Sistema/sistema_doaest_2.png Graphic file (type png)
+<use images/06-Sistema/sistema_doaest_2.png>
+Package pdftex.def Info: images/06-Sistema/sistema_doaest_2.png  used on input line 94.
+(pdftex.def)             Requested size: 396.91324pt x 236.77924pt.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
+ [60 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_randomsampler_fpga.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [61 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_doaest.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_doaest_2.png>]
+<images/06-Sistema/sistema_beamformer.png, id=1321, 678.70956pt x 341.53014pt>
+File: images/06-Sistema/sistema_beamformer.png Graphic file (type png)
+<use images/06-Sistema/sistema_beamformer.png>
+Package pdftex.def Info: images/06-Sistema/sistema_beamformer.png  used on input line 122.
+(pdftex.def)             Requested size: 220.50885pt x 110.95949pt.
+<images/06-Sistema/sistema_beamformer_fpga.png, id=1323, 1597.19118pt x 868.69023pt>
+File: images/06-Sistema/sistema_beamformer_fpga.png Graphic file (type png)
+<use images/06-Sistema/sistema_beamformer_fpga.png>
+Package pdftex.def Info: images/06-Sistema/sistema_beamformer_fpga.png  used on input line 133.
+(pdftex.def)             Requested size: 396.91324pt x 215.87302pt.
+)
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+ [62 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_beamformer.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/06-Sistema/sistema_beamformer_fpga.png>]
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+ [63]
 \openout2 = `Capitulos/GNURadio.aux'.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/GNURadio.tex" [22
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/GNURadio.tex" [64
 
 
 
 
 ]
 Cap\'{\i }tulo 7.
-) [23]
-\openout2 = `Capitulos/Resultados.aux'.
+<images/07-GNURadio/gr_sdr.png, id=1343, 1641.18161pt x 801.01265pt>
+File: images/07-GNURadio/gr_sdr.png Graphic file (type png)
+<use images/07-GNURadio/gr_sdr.png>
+Package pdftex.def Info: images/07-GNURadio/gr_sdr.png  used on input line 12.
+(pdftex.def)             Requested size: 396.91324pt x 193.71365pt.
+[65]
+<images/07-GNURadio/gr_espectro_fc.png, id=1353, 427.09395pt x 135.35518pt>
+File: images/07-GNURadio/gr_espectro_fc.png Graphic file (type png)
+<use images/07-GNURadio/gr_espectro_fc.png>
+Package pdftex.def Info: images/07-GNURadio/gr_espectro_fc.png  used on input line 27.
+(pdftex.def)             Requested size: 396.91324pt x 125.79845pt.
+<images/07-GNURadio/gr_espectro_bb.png, id=1354, 156.14188pt x 130.76277pt>
+File: images/07-GNURadio/gr_espectro_bb.png Graphic file (type png)
+<use images/07-GNURadio/gr_espectro_bb.png>
+Package pdftex.def Info: images/07-GNURadio/gr_espectro_bb.png  used on input line 34.
+(pdftex.def)             Requested size: 176.40439pt x 147.73227pt.
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+ [66 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_sdr.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Resultados.tex" [24
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+ [67 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_espectro_fc.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_espectro_bb.png>]
+<images/07-GNURadio/gr_rx.png, id=1377, 1424.1299pt x 678.46786pt>
+File: images/07-GNURadio/gr_rx.png Graphic file (type png)
+<use images/07-GNURadio/gr_rx.png>
+Package pdftex.def Info: images/07-GNURadio/gr_rx.png  used on input line 69.
+(pdftex.def)             Requested size: 396.91324pt x 189.08974pt.
+<images/07-GNURadio/gr_datatypes.png, id=1382, 180.675pt x 204.765pt>
+File: images/07-GNURadio/gr_datatypes.png Graphic file (type png)
+<use images/07-GNURadio/gr_datatypes.png>
+Package pdftex.def Info: images/07-GNURadio/gr_datatypes.png  used on input line 83.
+(pdftex.def)             Requested size: 220.50885pt x 249.91289pt.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [68 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_rx.png>]
+<images/07-GNURadio/gr_blockconnection.png, id=1393, 324.46219pt x 222.8325pt>
+File: images/07-GNURadio/gr_blockconnection.png Graphic file (type png)
+<use images/07-GNURadio/gr_blockconnection.png>
+Package pdftex.def Info: images/07-GNURadio/gr_blockconnection.png  used on input line 92.
+(pdftex.def)             Requested size: 264.61331pt x 181.74118pt.
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [69 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_datatypes.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_blockconnection.png>]
+<images/07-GNURadio/gr_phasedarray.png, id=1403, 693.45361pt x 269.26013pt>
+File: images/07-GNURadio/gr_phasedarray.png Graphic file (type png)
+<use images/07-GNURadio/gr_phasedarray.png>
+Package pdftex.def Info: images/07-GNURadio/gr_phasedarray.png  used on input line 112.
+(pdftex.def)             Requested size: 264.61331pt x 102.7472pt.
+LaTeX Info: Redefining \. on input line 123.
+LaTeX Info: Redefining \% on input line 123.
+ [70 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_phasedarray.png>]
+<images/07-GNURadio/gr_sim0_comp.png, id=1416, 1175.89313pt x 304.13625pt>
+File: images/07-GNURadio/gr_sim0_comp.png Graphic file (type png)
+<use images/07-GNURadio/gr_sim0_comp.png>
+Package pdftex.def Info: images/07-GNURadio/gr_sim0_comp.png  used on input line 135.
+(pdftex.def)             Requested size: 632.78175pt x 163.66495pt.
+<images/07-GNURadio/gr_sim0_qt.png, id=1417, 479.54156pt x 415.5525pt>
+File: images/07-GNURadio/gr_sim0_qt.png Graphic file (type png)
+<use images/07-GNURadio/gr_sim0_qt.png>
+Package pdftex.def Info: images/07-GNURadio/gr_sim0_qt.png  used on input line 142.
+(pdftex.def)             Requested size: 281.23395pt x 243.70912pt.
+<images/07-GNURadio/gr_bersim.png, id=1421, 1142.01656pt x 380.17032pt>
+File: images/07-GNURadio/gr_bersim.png Graphic file (type png)
+<use images/07-GNURadio/gr_bersim.png>
+Package pdftex.def Info: images/07-GNURadio/gr_bersim.png  used on input line 156.
+(pdftex.def)             Requested size: 632.78175pt x 210.64896pt.
+<images/07-GNURadio/gr_bersim_resul.png, id=1424, 618.3903pt x 344.9688pt>
+File: images/07-GNURadio/gr_bersim_resul.png Graphic file (type png)
+<use images/07-GNURadio/gr_bersim_resul.png>
+Package pdftex.def Info: images/07-GNURadio/gr_bersim_resul.png  used on input line 167.
+(pdftex.def)             Requested size: 632.78175pt x 353.00049pt.
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
+ [71])
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+ [72]
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+ [73 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_sim0_comp.png> <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_sim0_qt.png>]
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+ [74 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_bersim.png>]
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+ [75 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/07-GNURadio/gr_bersim_resul.png>]
+\openout2 = `Capitulos/Futuro.aux'.
+
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Futuro.tex" [76
 
 
 
 
 ]
 Cap\'{\i }tulo 8.
-) [25]
-\openout2 = `Capitulos/FPGA.aux'.
+<images/08-Futuro/futuro_interfaz.png, id=1463, 1661.96829pt x 1172.51428pt>
+File: images/08-Futuro/futuro_interfaz.png Graphic file (type png)
+<use images/08-Futuro/futuro_interfaz.png>
+Package pdftex.def Info: images/08-Futuro/futuro_interfaz.png  used on input line 11.
+(pdftex.def)             Requested size: 396.91324pt x 280.01367pt.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/FPGA.tex" [26
+Underfull \vbox (badness 1596) has occurred while \output is active []
 
+ [77])
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
+ [78 <d:/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/Tesis/images/08-Futuro/futuro_interfaz.png>]
+\openout2 = `Capitulos/Conclusiones.aux'.
 
-
-
-]
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Conclusiones.tex"
 Cap\'{\i }tulo 9.
-) [27]
-\openout2 = `Capitulos/Futuro.aux'.
-
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Futuro.tex" [28
+[79
 
 
 
 
-]
-Cap\'{\i }tulo 10.
-) [29]
+])
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+ [80]
 \openout2 = `Capitulos/Ap_XX.aux'.
 
- ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Ap_XX.tex" [30
-
-
-
-
-]
+ ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Ap_XX.tex"
 Ap\'{e}ndice A.
-) [31] [32
+) [81
+
+
+
+
+] [82
 
 
 
@@ -739,50 +1350,49 @@ Ap\'{e}ndice A.
 \tf@brf=\write7
 \openout7 = `PI_Grigolato.brf'.
 
-) [33
+ [83
 
-] [34
+]
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
+ [84])
+LaTeX Info: Redefining \. on input line 123.
+LaTeX Info: Redefining \% on input line 123.
+ [85] [86
 
-] [35
+] [87
 
 
 
-] [36
-
-] [37
-
-
-] [38
-
-] ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.aux"
+] [88] ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.aux"
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
  ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Abstract.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Introduccion.aux"
-LaTeX Info: Redefining \. on input line 4.
-LaTeX Info: Redefining \% on input line 4.
-) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/ConformacionDeHaz.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Algoritmos_DOA.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Sistema.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MuestreoAleatorio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MachineLearning.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/GNURadio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Resultados.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/FPGA.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Futuro.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Ap_XX.aux"))
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+) ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/ConformacionDeHaz.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Algoritmos_DOA.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MuestreoAleatorio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/MachineLearning.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Sistema.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/GNURadio.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Futuro.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Conclusiones.aux") ("d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos/Ap_XX.aux"))
 Package rerunfilecheck Info: File `PI_Grigolato.out' has not changed.
-(rerunfilecheck)             Checksum: 269A8C716E5D3F92FC8C9A8599656B0C;3326.
+(rerunfilecheck)             Checksum: 0B5FD775024C47E0C91372FD6291EF3E;4803.
 Package rerunfilecheck Info: File `PI_Grigolato.brf' has not changed.
-(rerunfilecheck)             Checksum: 908F70E5435315B0CBEB7B5879CE750C;614.
+(rerunfilecheck)             Checksum: 1724120895337A066D17283664C9392A;3222.
  ) 
 Here is how much of TeX's memory you used:
- 10228 strings out of 480202
- 168829 string characters out of 2887231
- 496079 words of memory out of 3000000
- 26342 multiletter control sequences out of 15000+200000
- 548015 words of font info for 73 fonts, out of 3000000 for 9000
+ 13700 strings out of 479663
+ 223632 string characters out of 2873806
+ 566021 words of memory out of 3000000
+ 29970 multiletter control sequences out of 15000+200000
+ 421956 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,12n,99p,1734b,802s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 105i,25n,111p,2217b,914s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.\\protect\040ix} has been referenced but does not exist, replaced by a fixed one
 
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.pdf" (54 pages, 1489608 bytes).
+ <C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0700.pk> <C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "d:/Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.pdf" (106 pages, 8620928 bytes).
 PDF statistics:
- 711 PDF objects out of 1000 (max. 8388607)
- 151 named destinations out of 1000 (max. 500000)
- 461 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1813 PDF objects out of 2073 (max. 8388607)
+ 405 named destinations out of 1000 (max. 500000)
+ 883 words of extra memory for PDF output out of 10000 (max. 10000000)
 

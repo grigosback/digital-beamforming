@@ -1,38 +1,103 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Machine Learning aplicado a la clasificación de autovalores}{21}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Estimación del número de señales recibidas}{43}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:machinelearning}{{6}{21}{Machine Learning aplicado a la clasificación de autovalores}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Conceptos generales}{21}{section.6.1}\protected@file@percent }
-\newlabel{subc:intro_congen}{{6.1}{21}{Conceptos generales}{section.6.1}{}}
+\newlabel{ch:machinelearning}{{5}{43}{Estimación del número de señales recibidas}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introducción}{43}{section.5.1}\protected@file@percent }
+\newlabel{subc:intro_congen}{{5.1}{43}{Introducción}{section.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribución de valores singulares del subespacio de muestras ordenados de mayor a menor para el caso de dos señales arribando a un arreglo de 16 elementos. La línea azul indica la separación entre valores singulares correspondientes al subespacio de señal y al subespacio de ruido.\relax }}{44}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:ml_aval}{{5.1}{44}{Distribución de valores singulares del subespacio de muestras ordenados de mayor a menor para el caso de dos señales arribando a un arreglo de 16 elementos. La línea azul indica la separación entre valores singulares correspondientes al subespacio de señal y al subespacio de ruido.\relax }{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Método de la máxima derivada primera}{44}{section.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Derivada de la distribución de valores singulares mostrados en la Figura \ref  {fig:ml_aval} ordenados de menor a mayor.\relax }}{44}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:ml_derivada}{{5.2}{44}{Derivada de la distribución de valores singulares mostrados en la Figura \ref {fig:ml_aval} ordenados de menor a mayor.\relax }{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Resultados obtenidos}{45}{subsection.5.2.1}\protected@file@percent }
+\newlabel{subc:ml_maxder_resul}{{5.2.1}{45}{Resultados obtenidos}{subsection.5.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Esquema del estimador de cantidad de señales recibidas mediante el método de la máxima derivada visto como sistema para el caso de recepción de 4 señales. Se indican con $\lambda _S$ aquellos valores singulares correspondientes al subespacio de señal y con $\lambda _W$ aquellos que corresponden al subespacio de ruido.\relax }}{45}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:ml_maxder_imp}{{5.3}{45}{Esquema del estimador de cantidad de señales recibidas mediante el método de la máxima derivada visto como sistema para el caso de recepción de 4 señales. Se indican con $\lambda _S$ aquellos valores singulares correspondientes al subespacio de señal y con $\lambda _W$ aquellos que corresponden al subespacio de ruido.\relax }{figure.caption.45}{}}
+\citation{bib:machinelearning}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Clasificador binario mediante aprendizaje automático}{46}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema de un clasificador utilizando aprendizaje automático visto como sistema.\relax }}{46}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:ml_classificator_system}{{5.4}{46}{Esquema de un clasificador utilizando aprendizaje automático visto como sistema.\relax }{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Regresión Logística}{46}{subsection.5.3.1}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:machinelearning}{{46}{5.3.1}{subsection.5.3.1}}}
+\citation{bib:machinelearning}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Gráfica de la función sigmoide.\relax }}{47}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:ml_sigmoid}{{5.5}{47}{Gráfica de la función sigmoide.\relax }{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Ejemplo de frontera de decisión para un problema de clasificación binaria.\relax }}{48}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:ml_dataexample}{{5.6}{48}{Ejemplo de frontera de decisión para un problema de clasificación binaria.\relax }{figure.caption.48}{}}
+\@writefile{brf}{\backcite{bib:machinelearning}{{48}{5.3.1}{figure.caption.48}}}
+\newlabel{eq:ml_costfunction}{{5.4}{48}{Regresión Logística}{equation.5.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Máquina de Vectores de Soporte}{49}{subsection.5.3.2}\protected@file@percent }
+\newlabel{subc:ml_svm}{{5.3.2}{49}{Máquina de Vectores de Soporte}{subsection.5.3.2}{}}
+\newlabel{eq:ml_costfunction_svm}{{5.7}{49}{Máquina de Vectores de Soporte}{equation.5.3.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Cambios en la función de costo para SVM.\relax }}{49}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:ml_cost_svm}{{5.7}{49}{Cambios en la función de costo para SVM.\relax }{figure.caption.49}{}}
+\newlabel{eq:ml_hip_svm}{{5.8}{49}{Máquina de Vectores de Soporte}{equation.5.3.8}{}}
+\newlabel{eq:ml_cond_svm}{{5.9}{49}{Máquina de Vectores de Soporte}{equation.5.3.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Frontera de decisión utilizando SVM.\relax }}{50}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:ml_db_svm}{{5.8}{50}{Frontera de decisión utilizando SVM.\relax }{figure.caption.50}{}}
+\newlabel{eq:ml_j_cost0}{{5.10}{50}{Máquina de Vectores de Soporte}{equation.5.3.10}{}}
+\newlabel{eq:ml_proyeccion_svm}{{5.11}{50}{Máquina de Vectores de Soporte}{equation.5.3.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Proyección de un dato $\bar  {x}^{(i)}$ sobre el vector $\bar  {\theta }$ para un clasificador lineal con $\theta _0=0$.\relax }}{50}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:ml_proyeccion_svm}{{5.9}{50}{Proyección de un dato $\bar {x}^{(i)}$ sobre el vector $\bar {\theta }$ para un clasificador lineal con $\theta _0=0$.\relax }{figure.caption.51}{}}
+\citation{bib:sklearn_svm}
+\citation{bib:sklearn_svm}
+\citation{bib:LIBSVM}
+\newlabel{eq:ml_hipkernel_svm}{{5.13}{51}{Máquina de Vectores de Soporte}{equation.5.3.13}{}}
+\newlabel{eq:ml_costfunctionkernel_svm}{{5.14}{51}{Máquina de Vectores de Soporte}{equation.5.3.14}{}}
+\@writefile{brf}{\backcite{bib:sklearn_svm}{{51}{5.3.2}{equation.5.3.14}}}
+\@writefile{brf}{\backcite{bib:sklearn_svm}{{51}{5.3.2}{equation.5.3.14}}}
+\@writefile{brf}{\backcite{bib:LIBSVM}{{51}{5.3.2}{equation.5.3.14}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Resultados obtenidos}{51}{subsection.5.3.3}\protected@file@percent }
+\citation{bib:strang}
+\newlabel{eq:ml_svm_snrhat}{{5.17}{52}{Resultados obtenidos}{equation.5.3.17}{}}
+\@writefile{brf}{\backcite{bib:strang}{{52}{5.3.3}{equation.5.3.17}}}
+\newlabel{eq:ml_svm_snrhatsvd}{{5.19}{52}{Resultados obtenidos}{equation.5.3.19}{}}
+\newlabel{eq:ml_svm_x}{{5.20}{52}{Resultados obtenidos}{equation.5.3.20}{}}
+\citation{bib:machinelearning}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Gráfica de valores singulares de distintas realizaciones de $\mathbf  {X}$ en función de las características definidas para el problema de clasificación mediante aprendizaje automático.\relax }}{53}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:ml_avals_plot}{{5.10}{53}{Gráfica de valores singulares de distintas realizaciones de $\mathbf {X}$ en función de las características definidas para el problema de clasificación mediante aprendizaje automático.\relax }{figure.caption.52}{}}
+\@writefile{brf}{\backcite{bib:machinelearning}{{53}{5.3.3}{figure.caption.52}}}
+\@writefile{toc}{\contentsline {subsubsection}{Kernel Sigmoide}{54}{section*.53}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Frontera de decisión definida por el algoritmo SVM utilizando un kernel sigmoide\relax }}{54}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:ml_svm_sigmoid}{{5.11}{54}{Frontera de decisión definida por el algoritmo SVM utilizando un kernel sigmoide\relax }{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Kernel Polinomial}{54}{section*.55}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Frontera de decisión definida por el algoritmo SVM utilizando un kernel polinomial.\relax }}{55}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:ml_svm_poly}{{5.12}{55}{Frontera de decisión definida por el algoritmo SVM utilizando un kernel polinomial.\relax }{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Kernel Gaussiano}{55}{section*.57}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Frontera de decisión definida por el algoritmo SVM utilizando un kernel gaussiano.\relax }}{55}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:ml_svm_rbf}{{5.13}{55}{Frontera de decisión definida por el algoritmo SVM utilizando un kernel gaussiano.\relax }{figure.caption.58}{}}
 \@setckpt{Capitulos/MachineLearning}{
-\setcounter{page}{22}
-\setcounter{equation}{0}
-\setcounter{enumi}{0}
+\setcounter{page}{57}
+\setcounter{equation}{22}
+\setcounter{enumi}{11}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
 \setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{6}
-\setcounter{section}{1}
-\setcounter{subsection}{0}
+\setcounter{chapter}{5}
+\setcounter{section}{3}
+\setcounter{subsection}{3}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{13}
 \setcounter{table}{0}
 \setcounter{caption@flags}{0}
 \setcounter{continuedfloat}{0}
 \setcounter{parentequation}{0}
 \setcounter{cp@cntr}{0}
-\setcounter{Item}{0}
-\setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{29}
+\setcounter{Item}{17}
+\setcounter{Hfootnote}{2}
+\setcounter{bookmark@seq@number}{40}
 \setcounter{NAT@ctr}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
-\setcounter{section@level}{1}
+\setcounter{lstnumber}{1}
+\setcounter{r@tfl@t}{0}
+\setcounter{section@level}{3}
+\setcounter{lstlisting}{0}
 }

@@ -11,6 +11,8 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibtesis.cls
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibtesis.cls
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibtesis.cls
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibtesis.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls
@@ -33,6 +35,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
@@ -42,6 +45,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
@@ -74,6 +79,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
@@ -92,6 +99,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
@@ -110,6 +119,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\yafoot\fnpos.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\yafoot\fnpos.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\yafoot\fnpos.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\yafoot\fnpos.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\yafoot\fnpos.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
@@ -120,6 +131,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
@@ -138,6 +151,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
@@ -156,6 +171,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty
@@ -174,6 +191,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
@@ -183,6 +201,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
@@ -209,6 +229,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
@@ -222,6 +243,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\changepage\changepage.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\changepage\changepage.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\changepage\changepage.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\changepage\changepage.sty
@@ -240,6 +263,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
@@ -249,6 +273,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
@@ -271,6 +297,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
@@ -289,6 +317,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty
@@ -307,6 +337,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
@@ -325,6 +357,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvsetkeys\kvsetkeys.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvsetkeys\kvsetkeys.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvsetkeys\kvsetkeys.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
@@ -343,6 +377,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdfescape\pdfescape.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdfescape\pdfescape.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdfescape\pdfescape.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hycolor\hycolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hycolor\hycolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hycolor\hycolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hycolor\hycolor.sty
@@ -361,6 +397,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
@@ -370,6 +407,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
@@ -392,6 +431,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\intcalc\intcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\intcalc\intcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\intcalc\intcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\intcalc\intcalc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\intcalc\intcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
@@ -401,6 +441,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
@@ -411,6 +452,9 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
@@ -428,11 +472,12 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atveryend-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
@@ -443,6 +488,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bigintcalc\bigintcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bigintcalc\bigintcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bigintcalc\bigintcalc.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bigintcalc\bigintcalc.sty
@@ -461,6 +508,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bitset\bitset.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bitset\bitset.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bitset\bitset.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\bitset\bitset.sty
@@ -477,6 +526,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atbegshi-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atbegshi-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\atbegshi-ltx.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
@@ -497,6 +547,7 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibextra.sty
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibextra.sty
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibextra.sty
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\ibextra.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
@@ -506,6 +557,17 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xurl\xurl.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
@@ -515,6 +577,144 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdftex.def
@@ -539,27 +739,24 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.aux
@@ -568,24 +765,7 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
@@ -604,6 +784,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
@@ -647,6 +829,20 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib6.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
@@ -664,12 +860,26 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1000.tfm
 OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmss10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm5.tfm
 OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lof
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lot
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.lot
@@ -705,6 +915,26 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Introduccion.tex
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm7.tfm
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ciaa.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx9.tfm
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\01-Introducción\ad.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
@@ -719,8 +949,6 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\ConformacionDeHaz.tex
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\antenasorientadas.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\antenasorientadas.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\antenasorientadas.png
@@ -728,7 +956,6 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\antenasorientadas.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\antenasorientadas.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\antenasorientadas.png
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx9.tfm
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\estacionterrenacordoba.jpg
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\estacionterrenacordoba.jpg
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\estacionterrenacordoba.jpg
@@ -757,7 +984,6 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\analogbeamformer.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\analogbeamformer.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\analogbeamformer.png
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\digitalbeamformer.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\digitalbeamformer.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\digitalbeamformer.png
@@ -821,20 +1047,108 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\arraymanifold.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_x.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\esprit_y.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm0700.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_snr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_-5.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\p_mu_10.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm10.tfm
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_d_error.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcbx1200.tfm
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\error_vs_n.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\time_vs_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_m.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\03-DOAEst\svd_vs_n_16.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
@@ -849,6 +1163,41 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\sa_sb_15.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_random_sampling_sine.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_rxy.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\04-Random Sampling\rs_vs_T.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.tex
@@ -863,6 +1212,168 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_aval.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_derivada.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_maxder_imp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_classificator_system.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_dataexample.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost1.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_cost0.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_db_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_proyeccion_svm.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_avals_plot.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_sigmoid.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_poly.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\05-Machine Learning\ml_svm_rbf.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.tex
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti8.tfm
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_bd.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_randomsampler_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_doaest_2.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\06-Sistema\sistema_beamformer_fpga.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.tex
@@ -877,34 +1388,83 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sdr.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_fc.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_espectro_bb.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_rx.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_datatypes.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_blockconnection.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_phasedarray.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_comp.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_sim0_qt.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\07-GNURadio\gr_bersim_resul.png
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.tex
@@ -919,6 +1479,27 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\08-Futuro\futuro_interfaz.png
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.tex
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.tex
@@ -943,7 +1524,8 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.brf
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.brf
 OUTPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.brf
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt8.tfm
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Abstract.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Abstract.aux
@@ -957,27 +1539,24 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Algoritmos_DOA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MuestreoAleatorio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\MachineLearning.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Sistema.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\GNURadio.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Resultados.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
-INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\FPGA.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Futuro.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
+INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Conclusiones.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.aux
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\Capitulos\Ap_XX.aux
@@ -985,26 +1564,48 @@ INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digi
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.out
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.brf
 INPUT d:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\PI_Grigolato.brf
+INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1200.pk
+INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1200.pk
+INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0700.pk
+INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0700.pk
+INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\grigo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx9.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx9.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
@@ -1017,9 +1618,23 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\euler\eufm10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\euler\eufm10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\latxfont\line10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\latxfont\line10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm7.pfb

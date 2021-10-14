@@ -1,0 +1,11 @@
+# Ignore
+*.ini
+*.aux
+*.log
+*.aux
+.vscode/*
+*.code-workspace
+_*
+
+# Allow
+!.vscode/tasks.json

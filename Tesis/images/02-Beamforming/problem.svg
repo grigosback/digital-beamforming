@@ -16,8 +16,8 @@
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="problem.svg"
    inkscape:export-filename="D:\Users\grigo\Google Drive\Facultad\Balseiro\PI Lucas\git-repository\digital-beamforming\Tesis\images\02-Beamforming\problem.png"
-   inkscape:export-xdpi="46.533539"
-   inkscape:export-ydpi="46.533539">
+   inkscape:export-xdpi="47.011242"
+   inkscape:export-ydpi="47.011242">
   <defs
      id="defs2">
     <marker
@@ -479,7 +479,7 @@
      inkscape:label="ejes"
      style="display:inline">
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4245);marker-end:url(#marker4353)"
+       style="fill:none;stroke:#ff0000;stroke-width:1.32291669;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:;marker-end:url(#marker4353)"
        d="M -114.56795,542.39585 C -183.21045,519.52392 -239.7485,486.46264 -229.1359,396.87501"
        id="path4077"
        sodipodi:nodetypes="cc" />
@@ -604,7 +604,7 @@
        d="m -229.1614,344.08102 66.65616,-13.85422 0,52.79929"
        id="path4083" />
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2901);marker-end:url(#marker2789)"
+       style="fill:none;stroke:#ff0000;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2901);marker-end:"
        d="m -229.1359,0 c -87.43125,67.151558 -104.15858,321.86243 0,396.87501"
        id="path4215"
        sodipodi:nodetypes="cc" />

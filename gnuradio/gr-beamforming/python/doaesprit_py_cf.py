@@ -31,7 +31,7 @@ class doaesprit_py_cf(gr.basic_block):
     """
 
     def __init__(
-        self, mx, my, fc, element_separation, n=1, spd=128, file_name="eigenvalues.csv",
+        self, mx, my, fc, element_separation, n=1, spd=128,
     ):
         gr.basic_block.__init__(
             self, name="doaesprit_py_cf", in_sig=[(np.complex64, mx * my)], out_sig=[],
@@ -45,7 +45,7 @@ class doaesprit_py_cf(gr.basic_block):
         self.d = element_separation  # Separation distance between elements
         self.n = n  # Number of receive signals
         self.spd = spd  # Snapshots per DoA
-        self.file_name = file_name  # File output name
+        # self.file_name = file_name  # File output name
         self.theta = np.pi / 2
         self.phi = 0
         self.u1_x = np.empty(((mx - 1) * my, n), dtype=np.complex64)
@@ -80,24 +80,24 @@ class doaesprit_py_cf(gr.basic_block):
         in0 = input_items[0]
 
         # Singular value decomposition of matrix "X"
-        [u, s, _] = np.linalg.svd(in0.T)
+        [u, _, _] = np.linalg.svd(in0.T)
         us = u[:, 0 : self.n]
 
         # Eigenvalue classification
-        s = abs(s)
-        snr_aval = 10 * np.log10(s[0] / s[-1])
-        data = np.zeros((self.m, 3))
+        #       s = abs(s)
+        #       snr_aval = 10 * np.log10((s[0] - s[-1]) / (self.m * s[-1]))
+        #       data = np.zeros((self.m, 3))
 
-        with open(
-            "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/machine_learning/"
-            + self.file_name,
-            "a",
-        ) as fd:
-            for i in range(self.m):
-                if i < self.n:
-                    fd.write(str(s[i]) + ", " + str(snr_aval) + ", 1\n")
-                else:
-                    fd.write(str(s[i]) + ", " + str(snr_aval) + ", 0\n")
+        #        with open(
+        #            "/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/machine_learning/"
+        #            + self.file_name,
+        #            "a",
+        #        ) as fd:
+        #            for i in range(self.m):
+        #                if i < self.n:
+        #                    fd.write(str(s[i]) + ", " + str(snr_aval) + ", 1\n")
+        #                else:
+        #                    fd.write(str(s[i]) + ", " + str(snr_aval) + ", 0\n")
 
         for i in range(self.n):
             us_aux = us[:, i].reshape(self.mx, self.my)
@@ -136,13 +136,15 @@ class doaesprit_py_cf(gr.basic_block):
             arg = (np.angle(phi_x[i]) ** 2 + np.angle(phi_y[i]) ** 2) / (
                 (self.k * self.d) ** 2
             )
-            if abs(arg) > 1:
-                # print("DoA Esprit: Arg in arccos greater than 1 for i=%.2lf" % i)
-                if i == (self.n - 1):
-                    self.consume(0, self.spd)
-                    return 0
-            else:
-                # DOA estimation
+            # if abs(arg) > 1:
+            # print("DoA Esprit: Arg in arccos greater than 1 for i=%.2lf" % i)
+            # CAMBIAR ESTO Y HACER QUE IF < 1
+            # if i == (self.n - 1):
+            #    self.consume(0, self.spd)
+            #    return 0
+            # else:
+            # DOA estimation
+            if abs(arg) <= 1:
                 self.phi = np.arctan2(np.angle(phi_y[i]), np.angle(phi_x[i]))
                 self.theta = np.arccos(np.sqrt(arg))
                 doa = pmt.make_f32vector(3, 0.0)

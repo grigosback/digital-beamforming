@@ -4,7 +4,7 @@ category: "[Beamforming]"
 
 templates:
   imports: import beamforming
-  make: beamforming.doaesprit_py_cf(${mx}, ${my}, ${fc}, ${element_separation}, ${n}, ${spd}, ${file_name})
+  make: beamforming.doaesprit_py_cf(${mx}, ${my}, ${fc}, ${element_separation}, ${n}, ${spd})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -37,11 +37,11 @@ parameters:
     label: Snapshots per DoA
     dtype: int
     default: 128
-  - id: file_name
-    label: Output File Name
-    dtype: string
-    default: "eigenvalues.csv"
-    optional: 1
+  #- id: file_name
+  #  label: Output File Name
+  #  dtype: string
+  #  default: "eigenvalues.csv"
+  #  optional: 1
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:

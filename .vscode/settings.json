@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\grigo\\anaconda3\\python.exe",
+  "python.pythonPath": "/usr/bin/python3",
   "python.envFile": "${workspaceFolder}/.env",
   "files.associations": {
     "cctype": "cpp",

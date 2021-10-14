@@ -1,0 +1,916 @@
+options:
+  parameters:
+    author: grigosback
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: pi_bersim
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: N_BITS
+  id: variable
+  parameters:
+    comment: ''
+    value: 1e5
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [468, 996]
+    rotation: 0
+    state: true
+- name: RAND_SEED
+  id: variable
+  parameters:
+    comment: ''
+    value: '42'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [728, 994]
+    rotation: 0
+    state: true
+- name: SKIP
+  id: variable
+  parameters:
+    comment: ''
+    value: '1000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [658, 993]
+    rotation: 0
+    state: true
+- name: alpha
+  id: variable
+  parameters:
+    comment: ''
+    value: '0.35'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [906, 994]
+    rotation: 0
+    state: true
+- name: const
+  id: variable_constellation
+  parameters:
+    comment: ''
+    const_points: '[-1-1j, -1+1j, 1+1j, 1-1j]'
+    dims: '1'
+    precision: '8'
+    rot_sym: '4'
+    soft_dec_lut: None
+    sym_map: '[0, 1, 3, 2]'
+    type: bpsk
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [998, 993]
+    rotation: 0
+    state: true
+- name: intdump_decim
+  id: variable
+  parameters:
+    comment: ''
+    value: min(int(N_BITS / 10), 100000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [538, 995]
+    rotation: 0
+    state: true
+- name: noise_voltage
+  id: variable
+  parameters:
+    comment: ''
+    value: 1.0 / math.sqrt(1 / float(sps) * 10 ** (float(EbN0) / 10))
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1239, 992]
+    rotation: 0
+    state: true
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: samp_rate_0
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [182, 997]
+    rotation: 0
+    state: enabled
+- name: sps
+  id: variable
+  parameters:
+    comment: ''
+    value: '5'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 994]
+    rotation: 0
+    state: true
+- name: EbN0
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: ''
+    short_id: ''
+    type: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1154, 993]
+    rotation: 0
+    state: true
+- name: analog_vectornoise_source_0
+  id: analog_vectornoise_source
+  parameters:
+    affinity: ''
+    alias: ''
+    ampl: noise_voltage
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: mx*my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [140, 425]
+    rotation: 0
+    state: true
+- name: beamforming_beamformer_0
+  id: beamforming_beamformer
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    idx: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1422, 357]
+    rotation: 0
+    state: true
+- name: beamforming_doaesprit_py_cf_0
+  id: beamforming_doaesprit_py_cf
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    element_separation: (299792458/(2*fc))
+    fc: fc
+    file_name: eigenvalues.csv
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    n: n
+    spd: '128'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [986, 342]
+    rotation: 0
+    state: true
+- name: beamforming_phasedarray_0
+  id: beamforming_phasedarray
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    element_error: element_error
+    element_separation: (299792458/(2*fc))
+    fc: fc
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mx: mx
+    my: my
+    phi: phi
+    theta: theta
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1454, 149]
+    rotation: 0
+    state: true
+- name: beamforming_randomsampler_0
+  id: beamforming_randomsampler
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decimation: rs_decimation
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: mx*my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [628, 366]
+    rotation: 0
+    state: true
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: mx*my
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [398, 362]
+    rotation: 0
+    state: enabled
+- name: blocks_and_const_xx_0
+  id: blocks_and_const_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 586]
+    rotation: 180
+    state: true
+- name: blocks_head_0
+  id: blocks_head
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: int(N_BITS)
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [301, 197]
+    rotation: 0
+    state: true
+- name: blocks_integrate_xx_0
+  id: blocks_integrate_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: intdump_decim
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [162, 701]
+    rotation: 0
+    state: true
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: 1.0 / intdump_decim
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [416, 701]
+    rotation: 0
+    state: true
+- name: blocks_multiply_const_vxx_1
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1639, 372]
+    rotation: 0
+    state: true
+- name: blocks_not_xx_0
+  id: blocks_not_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [506, 590]
+    rotation: 180
+    state: enabled
+- name: blocks_pack_k_bits_bb_0
+  id: blocks_pack_k_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    k: '8'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 197]
+    rotation: 0
+    state: true
+- name: blocks_skiphead_0
+  id: blocks_skiphead
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: SKIP
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [629, 587]
+    rotation: 180
+    state: true
+- name: blocks_uchar_to_float_0
+  id: blocks_uchar_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [171, 590]
+    rotation: 180
+    state: true
+- name: blocks_vector_sink_x_0
+  id: blocks_vector_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    reserve_items: '1024'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [695, 707]
+    rotation: 0
+    state: true
+- name: blocks_vector_source_x_0
+  id: blocks_vector_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    repeat: 'True'
+    tags: '[]'
+    type: byte
+    vector: '[1]'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [149, 181]
+    rotation: 0
+    state: true
+- name: digital_constellation_modulator_0
+  id: digital_constellation_modulator
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: const
+    differential: 'False'
+    excess_bw: alpha
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_symbol: sps
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [972, 173]
+    rotation: 0
+    state: true
+- name: digital_descrambler_bb_0
+  id: digital_descrambler_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    len: '16'
+    mask: '0x21'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    seed: '0x00'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [830, 571]
+    rotation: 180
+    state: true
+- name: digital_diff_decoder_bb_0
+  id: digital_diff_decoder_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    modulus: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1058, 586]
+    rotation: 180
+    state: true
+- name: digital_diff_encoder_bb_0
+  id: digital_diff_encoder_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    modulus: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [600, 197]
+    rotation: 0
+    state: true
+- name: digital_scrambler_bb_0
+  id: digital_scrambler_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    len: '16'
+    mask: '0x21'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    seed: '0x0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [461, 181]
+    rotation: 0
+    state: true
+- name: element_error
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Element Separation Error [%]
+    short_id: ''
+    type: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [314, 8]
+    rotation: 0
+    state: true
+- name: element_error_0
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Element Separation Error [%]
+    short_id: ''
+    type: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1173, 1055]
+    rotation: 0
+    state: true
+- name: esprit_decimation
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: ESPRIT decimation factor
+    short_id: ''
+    type: intx
+    value: '128'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2368, 997]
+    rotation: 0
+    state: true
+- name: fc
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Carrier frequency
+    short_id: ''
+    type: eng_float
+    value: 436e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1630, 994]
+    rotation: 0
+    state: true
+- name: fir_filter_xxx_0
+  id: fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_delay: '0'
+    taps: (0, 0, (1 + 1j) / numpy.sqrt(2),)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1221, 189]
+    rotation: 0
+    state: enabled
+- name: import_0
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: import math
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [272, 998]
+    rotation: 0
+    state: true
+- name: import_0_0
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: import numpy
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [366, 997]
+    rotation: 0
+    state: true
+- name: import_0_1
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: import pylab
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [363, 1043]
+    rotation: 0
+    state: true
+- name: import_1
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: from scipy.special import erfc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [273, 1042]
+    rotation: 0
+    state: true
+- name: lilacsat1_ber_bpsk_0
+  id: lilacsat1_ber_bpsk
+  parameters:
+    affinity: ''
+    alias: ''
+    bfo: '12000'
+    callsign: '""'
+    comment: ''
+    ip: '"::"'
+    latitude: '0'
+    longitude: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    port: '7355'
+    recstart: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1330, 538]
+    rotation: 180
+    state: true
+- name: mx
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# elements in x'
+    short_id: ''
+    type: intx
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1343, 992]
+    rotation: 0
+    state: true
+- name: my
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# elements in y'
+    short_id: ''
+    type: intx
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1487, 993]
+    rotation: 0
+    state: true
+- name: n
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '# impinging signals'
+    short_id: ''
+    type: intx
+    value: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1775, 995]
+    rotation: 0
+    state: true
+- name: phi
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Azimut angle
+    short_id: ''
+    type: eng_float
+    value: '50'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2073, 995]
+    rotation: 0
+    state: true
+- name: rs_decimation
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Random sampler decimation factor
+    short_id: ''
+    type: intx
+    value: '8'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2197, 995]
+    rotation: 0
+    state: true
+- name: theta
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: Elevation angle
+    short_id: ''
+    type: eng_float
+    value: '30'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1933, 995]
+    rotation: 0
+    state: true
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: channel
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1797, 197]
+    rotation: 0
+    state: true
+- name: virtual_sink_0_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: samples
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [628, 316]
+    rotation: 0
+    state: true
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: channel
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [174, 324]
+    rotation: 0
+    state: true
+- name: virtual_source_0_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: samples
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1191, 288]
+    rotation: 0
+    state: true
+
+connections:
+- [analog_vectornoise_source_0, '0', blocks_add_xx_0, '1']
+- [beamforming_beamformer_0, '0', blocks_multiply_const_vxx_1, '0']
+- [beamforming_doaesprit_py_cf_0, doa_port, beamforming_beamformer_0, doa_port]
+- [beamforming_phasedarray_0, '0', virtual_sink_0, '0']
+- [beamforming_randomsampler_0, '0', beamforming_doaesprit_py_cf_0, '0']
+- [blocks_add_xx_0, '0', beamforming_randomsampler_0, '0']
+- [blocks_add_xx_0, '0', virtual_sink_0_0, '0']
+- [blocks_and_const_xx_0, '0', blocks_uchar_to_float_0, '0']
+- [blocks_head_0, '0', digital_scrambler_bb_0, '0']
+- [blocks_integrate_xx_0, '0', blocks_multiply_const_vxx_0, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_vector_sink_x_0, '0']
+- [blocks_multiply_const_vxx_1, '0', lilacsat1_ber_bpsk_0, '0']
+- [blocks_not_xx_0, '0', blocks_and_const_xx_0, '0']
+- [blocks_pack_k_bits_bb_0, '0', digital_constellation_modulator_0, '0']
+- [blocks_skiphead_0, '0', blocks_not_xx_0, '0']
+- [blocks_uchar_to_float_0, '0', blocks_integrate_xx_0, '0']
+- [blocks_vector_source_x_0, '0', blocks_head_0, '0']
+- [digital_constellation_modulator_0, '0', fir_filter_xxx_0, '0']
+- [digital_descrambler_bb_0, '0', blocks_skiphead_0, '0']
+- [digital_diff_decoder_bb_0, '0', digital_descrambler_bb_0, '0']
+- [digital_diff_encoder_bb_0, '0', blocks_pack_k_bits_bb_0, '0']
+- [digital_scrambler_bb_0, '0', digital_diff_encoder_bb_0, '0']
+- [fir_filter_xxx_0, '0', beamforming_phasedarray_0, '0']
+- [lilacsat1_ber_bpsk_0, '0', digital_diff_decoder_bb_0, '0']
+- [virtual_source_0, '0', blocks_add_xx_0, '0']
+- [virtual_source_0_0, '0', beamforming_beamformer_0, '0']
+
+metadata:
+  file_format: 1

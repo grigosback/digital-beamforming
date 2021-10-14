@@ -1,59 +1,225 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
 \bibitem{bib:estacionterrena_cordoba}
-Kulichevsky, J.
-\newblock {Antenas de la CONAE en la Estacion Terrena del Centro Espacial
-  Teófilo Tabanera}.
+{Wikimedia Commons}.
+\newblock {Archivo: EstacionTerrenaCordoba.JPG --- Wikimedia Commons{,} the
+  free media repository}, 2020.
 \newblock
-  \url{https://es.wikipedia.org/wiki/Estaci\%C3\%B3n_Terrena_C\%C3\%B3rdoba},
-  11 2010.
+  \urlprefix\url{https://commons.wikimedia.org/w/index.php?title=File:EstacionTerrenaCordoba.JPG&oldid=502839059},
+  [Accedido: 17/12/2020].
 
-\bibitem{bib:Balanis_p303}
+\bibitem{bib:techcrunch}
+Shieber, J.
+\newblock {``Amazon joins SpaceX, OneWeb and Facebook in the race to create
+  space-based internet services''}.
+\newblock
+  \url{https://techcrunch.com/2019/04/04/amazon-joins-spacex-oneweb-and-facebook-in-the-race-to-create-space-based-internet-services/},
+  Abril 2019.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:seangudi}
+{Guevara Díaz}, S.~A.
+\newblock {``Estudio e implementación en unidades de procesamiento gráficos
+  GPU's de un formador de imagen SAR usando técnica de Backprojection''}.
+\newblock \emph{Instituto Balseiro}, 2020.
+
+\bibitem{bib:esa_leo}
+Yakovlev, M.
+\newblock {``The IADC Space Debris Mitigation Guidelines and Supporting
+  Documents''}.
+\newblock \textbf{587}, 591, 2005.
+
+\bibitem{bib:Balanis_ch6}
 Balanis, C.~A.
-\newblock N-element linear array: Uniform amplitude and spacing.
-\newblock \underline{En}: {Antenna Theory: Analysis and Design}, p\'ag. 303.
-  John Wiley \& Sons Ltd., 2016.
+\newblock {``Arrays: Linear, Planar, and Circular''}.
+\newblock \underline{En}: \textit{Antenna theory: analysis and design}, p\'ags.
+  285--368. John Wiley \& Sons, 2016.
 
-\bibitem{bib:MaralBousquet_p32}
-Gérard~Maral, M.~B.
-\newblock Motion of the earth about the sun.
-\newblock \underline{En}: Z.~Sun (ed.) {Satellite Communications Systems},
-  p\'ag.~32. John Wiley \& Sons Ltd., 2009.
+\bibitem{bib:MaralBousquet_ch2}
+Maral, G., Bousquet, M.
+\newblock {``Orbits and related issues''}.
+\newblock \underline{En}: \textit{Satellite communications systems: systems,
+  techniques and technology}, p\'ags. 19--97. John Wiley \& Sons, 2009.
 
-\bibitem{bib:2decadesp69}
-Hamid~Krim, M.~V.
-\newblock Two decades of array singal processing research: the parametric
-  approach.
-\newblock \emph{{IEEE Signal Processing Magazine}}, \textbf{13}, 69, 1996.
+\bibitem{bib:2decadesbeamforming}
+{Krim}, H., {Viberg}, M.
+\newblock {``Two decades of array signal processing research: the parametric
+  approach''}.
+\newblock \emph{IEEE Signal Processing Magazine}, \textbf{13}~(4), 67--94,
+  1996.
 
-\bibitem{bib:2decadesp70}
-Hamid~Krim, M.~V.
-\newblock {Two Decades of Array Singal Processing Research: the parametric
-  approach}.
-\newblock \emph{{IEEE Signal Processing Magazine}}, \textbf{13}, 70, 1996.
-
-\bibitem{bib:steiskalp107-108}
+\bibitem{bib:steiskal}
 Steyskal, H.
-\newblock {Digital Beamforming Antennas, an introduction}.
-\newblock \emph{Microwave Journal}, p\'ags. 107--108, 1987.
+\newblock {``Digital Beamforming Antennas, an introduction''}.
+\newblock \emph{Microwave Journal}, p\'ags. 107--124, 1987.
 
-\bibitem{bib:digitalantennasp6}
+\bibitem{bib:digitalantennas}
 Weiß, M.
-\newblock {Digital Antennas}.
-\newblock \emph{{NATO Research and Technology Organisation}}, p\'ag.~6, 2009.
+\newblock {``Digital Antennas''}.
+\newblock \emph{{NATO Research and Technology Organisation}}, 2009.
 
-\bibitem{bib:phahandbook_p1}
+\bibitem{bib:phahandbook_ch1}
 Mailloux, R.~J.
-\newblock {Geometry of GSO Links}.
-\newblock \underline{En}: {Phased Array Antenna Handbook}, p\'ag.~1. Artech
-  House, INC, 2005.
+\newblock {``Phased Arrays in Radar and Communication Systems''}.
+\newblock \underline{En}: \textit{Phased Array Antenna Handbook}, p\'ags.
+  1--61. Artech House, 2005.
 
-\bibitem{Ucasmartantennas_p193}
-Panayiotis~Ioannides, C. A.~B.
-\newblock {Uniform circular arrays for smart antennas}.
-\newblock \emph{{IEEE Antennas and Propagation Magazine}}, \textbf{47}, 193,
-  2005.
+\bibitem{bib:Ucasmartantennas}
+{Ioannides}, P., {Balanis}, C.~A.
+\newblock {``Uniform circular arrays for smart antennas''}.
+\newblock \emph{IEEE Antennas and Propagation Magazine}, \textbf{47}~(4),
+  192--206, 2005.
+
+\bibitem{bib:esprit_roy}
+{Roy}, R., {Kailath}, T.
+\newblock {``ESPRIT-estimation of signal parameters via rotational invariance
+  techniques''}.
+\newblock \emph{IEEE Transactions on Acoustics, Speech, and Signal Processing},
+  \textbf{37}~(7), 984--995, 1989.
+
+\bibitem{bib:music_schmidt}
+Schmidt, R.~O.
+\newblock {``Multiple emitter location and signal parameter estimation''}.
+\newblock \emph{IEEE Transactions on Antennas and Propagation},
+  \textbf{34}~(3), 276--280, 1986.
+
+\bibitem{bib:Manolakis_ch9.6}
+Ingle, V., Kogon, S., Manolakis, D.
+\newblock {``Harmonic Models and Frequency Estimation Techniques''}.
+\newblock \underline{En}: \textit{Statisical and Adaptive Signal Processing},
+  p\'ags. 478--493. Artech, 2005.
+
+\bibitem{bib:gomx-1}
+Estévez, D.
+\newblock {Repositorio de capturas de beacons de satélites}.
+\newblock \url{https://github.com/daniestevez/satellite-recordings}, Septiembre
+  2016.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:numpy}
+{The SciPy community}.
+\newblock {``numpy.linalg.svd''}.
+\newblock
+  \url{https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html}.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:nyquist}
+{Nyquist}, H.
+\newblock {``Certain Topics in Telegraph Transmission Theory''}.
+\newblock \emph{Transactions of the American Institute of Electrical
+  Engineers}, \textbf{47}~(2), 617--644, 1928.
+
+\bibitem{bib:bonetto}
+{Sonnaillon}, M.~O., {Urteaga}, R., {Bonetto}, F.~J.
+\newblock {``High-Frequency Digital Lock-In Amplifier Using Random Sampling''}.
+\newblock \emph{IEEE Transactions on Instrumentation and Measurement},
+  \textbf{57}~(3), 616--621, 2008.
+
+\bibitem{bib:machinelearning}
+Ng, A.
+\newblock {``Machine Learning''}.
+\newblock \url{https://www.coursera.org/learn/machine-learning}, 2011.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:sklearn_svm}
+{scikit-learn developers}.
+\newblock {``Support Vector Machines''}.
+\newblock \url{https://scikit-learn.org/stable/modules/svm.html\#svm-kernels},
+  2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:LIBSVM}
+Chang, C.-C., Lin, C.-J.
+\newblock {``LIBSVM: A Library for Support Vector Machines''}.
+\newblock \url{https://www.csie.ntu.edu.tw/~cjlin/libsvm/}, 2019.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:strang}
+Strang, G.
+\newblock \textit{``Introduction to Linear Algebra, Fifth Edition''}.
+\newblock 2016.
+
+\bibitem{bib:zynq}
+Xilinx.
+\newblock {``Zynq-7000 SoC Data Sheet: Overview''}.
+\newblock
+  \url{https://www.xilinx.com/support/documentation/data_sheets/ds190-Zynq-7000-Overview.pdf},
+  Julio 2018.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:jiqdc}
+{Quinteros del Castillo}, J.~I.
+\newblock {``Sistema para emulación, adquisición y procesamiento de datos de
+  matrices de sensores''}.
+\newblock \emph{Instituto Balseiro}, 2020.
+
+\bibitem{bib:rtl_sdr}
+{RTL-SDR}.
+\newblock {``Roundup of Software Defined Radios''}.
+\newblock \url{https://www.rtl-sdr.com/roundup-software-defined-radios/},
+  Agosto 2014.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:federico_larocca}
+{La Rocca}, F.
+\newblock {``Mini-taller de desarrollo en GNU Radio''}.
+\newblock
+  \url{https://iie.fing.edu.uy/personal/flarroca/teaching/taller-de-desarrollo-en-gnu-radio/},
+  Julio 2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:gr_fm}
+{Vachhani}, K., {Mallari}, R.~A.
+\newblock {``Experimental study on wide band FM receiver using GNU Radio and
+  RTL-SDR''}.
+\newblock p\'ags. 1810--1814, 2015.
+
+\bibitem{bib:haykin}
+Haykin, S., Van~Veen, B.
+\newblock {``Signals and systems''}.
+\newblock John Wiley \& Sons, 2007.
+
+\bibitem{bib:interpretevscompiled}
+{freeCodeCamp}.
+\newblock {``Interpreted vs Compiled Programming Languages: What's the
+  Difference?''}.
+\newblock
+  \url{https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/},
+  Enero 2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:volk}
+{GNU Radio project}.
+\newblock {``Vector-Optimized Library of Kernels''}.
+\newblock \url{https://www.libvolk.org/}, 2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:gr-satellites}
+Estévez, D.
+\newblock {``gr-satellites''}.
+\newblock \url{https://github.com/daniestevez/gr-satellites}, 2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:ber-simulation}
+Estévez, D.
+\newblock {``BER simulation in GNU Radio''}.
+\newblock \url{https://destevez.net/2017/07/ber-simulation-in-gnu-radio/},
+  2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:eigen}
+Jacob, B., Guennebaud, G.
+\newblock {``EIGEN''}.
+\newblock \url{http://eigen.tuxfamily.org/}, 2020.
+\newblock [Accedido: 17/12/2020].
+
+\bibitem{bib:smart_beamforming}
+Fernández, S., Padilla, Y., Guzmán~Obregón, O.~A., Arbella, Y.
+\newblock {``Optimización de la Estimación de DOA en Sistemas de Antenas
+  Inteligentes usando criterios de Redes Neuronales''}.
+\newblock \emph{Ingeniería Electrónica, Automática y Comunicaciones},
+  \textbf{34}, 70--86, 04 2013.
 
 \end{thebibliography}

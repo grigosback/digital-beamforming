@@ -12,25 +12,35 @@
 % Por conveniencia: aqu\'{\i} puede cargar todos los paquetes y definir los comandos 
 % que necesite
 \usepackage{ibextra}
-\usepackage{url}
+\usepackage{xurl}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{amssymb} 
+\usepackage{cancel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\newcommand{\grad}{^{\circ}}
 %\usepackage{hyphen-spanis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Informacion sobre la tesis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Conformación digital de haz para recepción de señales satelitales}
 \author{Lucas Mariano Grigolato}
-\director{Dr. Santiago Hernández}
+\director{Dr. Santiago Hernandez}
 \codirector{Ing. Nicolás Catalano}
 \carrera{Proyecto Integrador de la Carrera de Ingeniería en Telecomunicaciones}
 \grado{Estudiante}
-\laboratorio{Departamento de Ingeniería en Telecomunicaciones\\Centro Atómico Bariloche}
+\laboratorio{Departamento de Ingeniería en Telecomunicaciones\\Comisión Nacional de Energía Atómica\\Centro Atómico Bariloche}
 \jurado{Ing. Roberto Costantini (INVAP - Instituto Balseiro)\\ 
 Dr. Damián Dellavale Clara (CONICET - Instituto Balseiro)}
-\palabrasclave{formato de Tesis, Lineamientos de escritura, Instituto Balseiro}
-\keywords{Thesis format, Templates, Instituto Balseiro}
+\palabrasclave{Instituto Balseiro,Conformación de haz, arreglo de antenas en fase, ESPRIT, MUSIC, Muestreo Aleatorio, Aprendizaje Automático, Máquina de Vectores de Soporte, GNU Radio, FPGA}
+\keywords{Instituto Balseiro, Beamforming, Phased array antenna, ESPRIT, MUSIC, Random Sampling, Machine Learning, Support vector machine, GNU Radio, FPGA}
 % Si queremos poner la fecha manualmente:
-% \date{Diciembre de 2099}
+\date{17 de Diciembre de 2020}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\titlepagefalse % Si no quiere compilar la portada descomente esta linea
@@ -48,22 +58,36 @@ Dr. Damián Dellavale Clara (CONICET - Instituto Balseiro)}
 
     % Escriba su dedicatoria
     \dedicatoria{
-        A Gordon Freeman
+        A mi mamá\\
+        y a mis hermanos Fer y Palito,\\
+        máximos responsables de que haya podido llegar hasta acá.
     }
 
     %%% \'{I}ndices %%%%
 
     \begin{abreviaturas}
         \begin{itemize}
-            \item SNR: Signal to Noise Ratio - Relación Señal a Ruido.
-            \item DBF: Digital Beamforming/Beamformer - Conformación/Conformador Digital de Haz.
-            \item DOA: Direction Of Arrival - Dirección de arribo.
-            \item FPGA: Field-Programmable Gate Array - Arreglo de compuertas programables.
-            \item MUSIC: Multiple Signal Classification.
-            \item ALU: Arreglo Lineal Uniforme.
             \item ACU: Arreglo Circular Uniforme.
+            \item ALU: Arreglo Lineal Uniforme.
             \item ARU: Arreglo Rectangular Uniforme.
+            \item BER: Bit Error Rate.
+            \item DBF: Digital Beamforming/Beamformer - Conformación/Conformador Digital de Haz.
+            \item DOA: Direction of Arrival - Dirección de arribo.
+            \item DSP: Digital Signal Processor.
+            \item FPGA: Field-Programmable Gate Array - Arreglo de compuertas programable.
             \item LEO: Low Earth Orbit - Baja órbita.
+            \item MUSIC: Multiple Signal Classification.
+            \item PL: Programmable Logic.
+            \item PS: Processing System.
+            \item QPSK: Quadrature Phase-Shift Keying.
+            \item RF: RadioFrecuencia.
+            \item RMSE: Root Mean Square Error.
+            \item SDR: Software Defined Radio.
+            \item SNR: Signal-to-Noise Ratio - Relación Señal a Ruido.
+            \item SVD: Singular Value Decomposition.
+            \item SVM: Support Vector Machines.
+            \item TLS: Total Least Squares.
+            \item UDP: User Datagram Protocol.
         \end{itemize}
 
     \end{abreviaturas}
@@ -82,13 +106,13 @@ Dr. Damián Dellavale Clara (CONICET - Instituto Balseiro)}
 \include{Capitulos/Introduccion}
 \include{Capitulos/ConformacionDeHaz}
 \include{Capitulos/Algoritmos_DOA}
-\include{Capitulos/Sistema}
 \include{Capitulos/MuestreoAleatorio}
 \include{Capitulos/MachineLearning}
+\include{Capitulos/Sistema}
 \include{Capitulos/GNURadio}
-\include{Capitulos/Resultados}
-\include{Capitulos/FPGA}
+%\include{Capitulos/FPGA}
 \include{Capitulos/Futuro}
+\include{Capitulos/Conclusiones}
 
 
 \appendix
@@ -101,15 +125,56 @@ Dr. Damián Dellavale Clara (CONICET - Instituto Balseiro)}
 
 \begin{postliminary}
 
-    \begin{seccion}{Publicaciones asociadas}
-        \begin{enumerate}
-            \item Mi primer aviso en la revista \textbf{ABC}, 1996
-            \item Mi segunda publicaci\'{o}n en la revista \textbf{ABC}, 1997
-        \end{enumerate}
-    \end{seccion}
+    %\begin{seccion}{Publicaciones asociadas}
+    %    \begin{enumerate}
+    %        \item Mi primer aviso en la revista \textbf{ABC}, 1996
+    %        \item Mi segunda publicaci\'{o}n en la revista \textbf{ABC}, 1997
+    %    \end{enumerate}
+    %\end{seccion}
 
     \begin{seccion}{Agradecimientos}
-        A todos los que se lo merecen, por merecerlo
+        Este documento lleva incluido una sumatoria de esfuerzos y ayudas de personas que no figuran como autores, pero que sin su aporte muy probablemente hoy no estuviese sentado aquí, escribiendo las últimas palabras que dan cierre a mi carrera universitaria.
+
+        En primer lugar debo agradecer a Santiago y Nicolás, los directores de este proyecto, quienes jamás pusieron traba alguna a la hora de brindarme una ayuda o un consejo sobre cómo encarar el desarrollo del mismo. Sin ustedes esta tesis no sería ni la mitad de lo que es. Espero haber estado a la altura.
+
+        A los jurados, Roberto y Damián, quienes tuvieron la difícil tarea de hacerse un tiempo para leer y corregir las casi 90 páginas de este documento. Ojalá que entre tantas ecuaciones y figuras hayan encontrado algún momento de diversión durante la lectura.
+
+        A Diego, quien fue mi tutor desde el inicio de mi carrera en el instituto, y con quien jamás tuve alguna conversación que no fuera, cuanto menos, interesante. Gracias por haberme dado las palabras de aliento en esos momentos en los que era difícil ponerse a estudiar y por nunca haber dejado de creer en mí.
+
+        A las autoridades del Instituto Balseiro, los miembros de la Comisión de Ingreso que con solo levantarme el pulgar y darme un voto de confianza me dieron la oportunidad que cambió mi vida para siempre. A ambos directores de la carrera de Ingeniería en Telecomunicaciones que cumplieron funciones durante mi paso por el IB, Diego y Juan Pablo, quienes siempre trabajaron para llevar más cerca de la perfección una carrera que ya es excelente de por sí. Al personal del Centro Atómico, quienes colaboraron para que en poco tiempo haya logrado sentirlo como mi casa.
+
+        A Federico La Rocca, quien apareció con su taller de GNU Radio en el momento justo para que pudiese implementarlo en el proyecto y terminar de darle la vuelta de tuerca que faltaba para cerrarlo.
+
+        A Willy Güichal, quien aguantó un semestre entero dándome clases como alumno único en su materia, tanto en modalidad presencial como virtual, y quien, encima, tuvo el grandioso gesto de darme mi primer trabajo como ingeniero. Nunca voy a poder terminar de agradecerte lo suficiente.
+
+        A Norbert, quien fue mi primer contacto con el instituto al ``apadrinarme'' y nunca le faltó algún consejo para hacerme un poco más llevadero mi paso por la carrera.
+
+        A Martín, Agustín y David, Nahuel Y Kevin, mis primeros amigos universitarios que se mantuvieron firmes desde 2009 y con quienes nunca perdimos contacto. Gracias por esas juntadas de estudios, por esos apuntes prestados y por esas risas que nunca faltaron.
+
+        A Joako, el amigo que más paciencia me tuvo y más ayuda me brindó durante toda mi carrera. Todas las noches que te quedaste hasta tarde en mi casa explicándome sobre circuitos de amplificación no fueron en vano.
+
+        A Leo y Kero, mis amistades del pueblo desde la primaria, quienes cada vez que volvía parecía como si nos hubiésemos visto el día anterior. Gracias por haber mantenido la amistad.
+
+        A Silvina, la profe que me acompañó durante y después de la secundaria, forjando mi amor por la física y los números, luego ayudándome laboralmente y finalmente apoyándome en la decisión de entrar al IB.
+
+        Al staff de la Fundación Libertad, principalmente a Gerardo y a Ana, quienes dándome empleo durante 5 años me permitieron seguir estudiando para alcanzar esta meta, además de permitirme formarme como profesional.
+
+        A Lucila, quien fue testigo de la última etapa de todo este proceso y fue capaz de aguantar conmigo todos los estados de ánimo por los que pasé. Siempre te voy a estar agradecido por eso.
+
+        A Emma y a Lulo, mis hermanos de distinta familia desde hace 17 años, quienes no solo me incentivaron cuando les conté una noche de febrero de 2017 sobre mi idea de hacer el ingreso al IB, sino que incluso después de irme mantuvieron un contacto constante conmigo que me hizo sentir como si nunca nos hubiésemos alejado físicamente, lo cual demuestra cuán genuina es nuestra amistad.
+
+        A mi abuela, quien con llamados casi semanales realizaba el seguimiento de mis avances y me alentaba a alcanzar la meta. Me alegra mucho que seas testigo de esto después de tanto tiempo.
+
+        A Edgardo, quien a pesar de haber pasado los momentos más difíciles nunca dejó de acompañarme y ayudarme en lo que podía cada vez que lo necesité.
+
+        Durante el transcurso de la carrera en el IB, si no están dadas ciertas condiciones uno puede pasar por momentos de mucha angustia por cuestiones que van más allá del apoyo y la contención que puede brindar la institución. Si no se tiene a alguien con quien compartir un momento, un pensamiento, una idea, o buscar una charla, una opinión, esta etapa puede volverse muy complicada, y si a mí no me ocurrió eso es gracias a mis compañeros telecos. Ustedes fueron ese apoyo que hizo que, no solo no me cueste vivir en el Centro Atómico, sino que además vivir en el instituto sea un gusto, y que esta etapa que hoy cerramos quede en mi memoria como una de las etapas más lindas de mi vida. Haber compartido estos 3 años y medio con ustedes fue el regalo más lindo de toda esta experiencia y no me imagino habiéndola pasado tan bien con personas distintas a ustedes. Fueron mi familia durante estos 3 años y medio y la van a seguir siendo de aquí en adelante.
+
+        Tengo que agradecerte Laucha por tener el récord de ser la persona que más tiempo convivió conmigo sin tener jamás un problema. Hiciste que mi vida en el Balseiro sea mucho más fácil y agradable de lo que pudiese haber sido. Gracias por todos esos ratos de música que, por suerte, no fueron pocos.
+
+        Ahora se me viene a la mente esa mañana en el trabajo cuando me llegó el correo que dio por iniciado el resto de mi vida, la emoción de mi hermana y el abrazo de mi hermano. La misma emoción y el mismo abrazo que me dieron en el aeropuerto el día que me despedí de ellos por primera vez. Siempre hicieron lo necesario para apoyarme y ayudarme durante mi experiencia en el IB, tanto a la distancia como este último año que tuvimos la oportunidad de volver a convivir juntos otra vez. Este logro es suyo también.
+
+        Por último quiero agradecer a la primer responsable de todo esto, aquella persona que durante la primaria se quedaba hasta altas horas de la noche después de haber trabajado todo el día para enseñarme trucos para aprender más rápido las tablas de multiplicación o que restarle un número a otro era lo mismo que contar cuántos números le faltaban al más chico para alcanzar al más grande, quien se ponía la alarma a las 6 de la mañana para despertarnos para ir a la escuela aunque se había quedado trabajando hasta las 3, aquella persona que quizás no nos dio todo lo que quiso darnos, pero que siempre se esforzó para que nunca nos falte lo que ella creía que era lo más importante: la educación. Espero que este logro sea la prueba que demuestre que todo lo que hiciste fue lo correcto. Gracias mamá.
+
     \end{seccion}
 
 \end{postliminary}

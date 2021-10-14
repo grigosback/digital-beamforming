@@ -10,7 +10,7 @@ options:
     gen_linking: dynamic
     generate_options: qt_gui
     hier_block_src_path: '.:'
-    id: eigenvalues_grabber
+    id: multiplesignal_livetest
     max_nouts: '0'
     output_language: python
     placement: (0,0)
@@ -21,13 +21,13 @@ options:
     run_options: prompt
     sizing_mode: fixed
     thread_safe_setters: ''
-    title: Eigenvalues Grabber
+    title: Live Test
     window_size: ''
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 7]
+    coordinate: [15, 9]
     rotation: 0
     state: enabled
 
@@ -96,8 +96,8 @@ blocks:
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: 2,0,1,1
-    label: Element separation distance [%
+    gui_hint: 5,0,1,2
+    label: Element Separation
     min_len: '200'
     orient: Qt.Horizontal
     rangeType: float
@@ -110,14 +110,14 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [435, 692]
+    coordinate: [833, 835]
     rotation: 0
     state: true
 - name: noise_voltage_1
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: 0,0,1,1
+    gui_hint: 2,0,1,2
     label: Noise Voltage 1
     min_len: '200'
     orient: Qt.Horizontal
@@ -125,20 +125,20 @@ blocks:
     start: '0'
     step: '0.001'
     stop: '10'
-    value: '2'
+    value: '0.05'
     widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [298, 691]
+    coordinate: [287, 835]
     rotation: 0
     state: true
 - name: noise_voltage_2
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: 1,0,1,1
+    gui_hint: 4,0,1,2
     label: Noise Voltage 2
     min_len: '200'
     orient: Qt.Horizontal
@@ -146,21 +146,21 @@ blocks:
     start: '0'
     step: '0.001'
     stop: '10'
-    value: '1'
+    value: '0.05'
     widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [605, 692]
+    coordinate: [690, 838]
     rotation: 0
     state: true
 - name: phi_1
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: 2,0,1,1
-    label: Azimut Angle
+    gui_hint: 1,1,1,1
+    label: Azimut 1
     min_len: '200'
     orient: Qt.Horizontal
     rangeType: float
@@ -173,9 +173,30 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [24, 689]
+    coordinate: [165, 835]
     rotation: 0
-    state: disabled
+    state: true
+- name: phi_2
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: 3,1,1,1
+    label: Azimut 2
+    min_len: '200'
+    orient: Qt.Horizontal
+    rangeType: float
+    start: '-180'
+    step: '1'
+    stop: '180'
+    value: '-25'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [568, 838]
+    rotation: 0
+    state: true
 - name: samp_rate
   id: variable
   parameters:
@@ -192,8 +213,8 @@ blocks:
   id: variable_qtgui_range
   parameters:
     comment: ''
-    gui_hint: 0,0,1,1
-    label: Elevation Angle
+    gui_hint: 1,0,1,1
+    label: Elevation 1
     min_len: '200'
     orient: Qt.Horizontal
     rangeType: float
@@ -206,9 +227,30 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [157, 690]
+    coordinate: [35, 834]
     rotation: 0
-    state: disabled
+    state: true
+- name: theta_2
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: 3,0,1,1
+    label: Elevation 2
+    min_len: '200'
+    orient: Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '90'
+    value: '70'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [438, 838]
+    rotation: 0
+    state: true
 - name: analog_random_source_x_0
   id: analog_random_source_x
   parameters:
@@ -228,7 +270,7 @@ blocks:
     bus_structure: null
     coordinate: [45, 114]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: analog_random_source_x_0_0
   id: analog_random_source_x
   parameters:
@@ -248,7 +290,7 @@ blocks:
     bus_structure: null
     coordinate: [58, 255]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: analog_vectornoise_source_0
   id: analog_vectornoise_source
   parameters:
@@ -327,7 +369,6 @@ blocks:
     comment: ''
     element_separation: (299792458/(2*fc))
     fc: fc
-    file_name: eigenvalues_3.csv
     maxoutbuf: '0'
     minoutbuf: '0'
     mx: mx
@@ -360,7 +401,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1142, 104]
+    coordinate: [1153, 96]
     rotation: 0
     state: true
 - name: beamforming_phasedarray_0_0
@@ -456,99 +497,40 @@ blocks:
     coordinate: [507, 510]
     rotation: 0
     state: true
-- name: blocks_file_sink_0_0
-  id: blocks_file_sink
+- name: blocks_null_sink_0
+  id: blocks_null_sink
   parameters:
     affinity: ''
     alias: ''
-    append: 'False'
+    bus_structure_sink: '[[0,],]'
     comment: ''
-    file: /home/grigosback/Documents/GNURadio/examples/sink1.txt
+    num_inputs: '1'
     type: byte
-    unbuffered: 'False'
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1642, 528]
+    coordinate: [1734, 550]
     rotation: 180
     state: true
-- name: blocks_file_sink_0_0_0
-  id: blocks_file_sink
+- name: blocks_null_sink_1
+  id: blocks_null_sink
   parameters:
     affinity: ''
     alias: ''
-    append: 'False'
+    bus_structure_sink: '[[0,],]'
     comment: ''
-    file: /home/grigosback/Documents/GNURadio/examples/sink2.txt
+    num_inputs: '1'
     type: byte
-    unbuffered: 'False'
     vlen: '1'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1632, 722]
+    coordinate: [1722, 814]
     rotation: 180
     state: true
-- name: blocks_file_source_0_0
-  id: blocks_file_source
-  parameters:
-    affinity: ''
-    alias: ''
-    begin_tag: pmt.PMT_NIL
-    comment: ''
-    file: /home/grigosback/Documents/GNURadio/examples/source1.txt
-    length: '0'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    offset: '0'
-    repeat: 'True'
-    type: byte
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [33, 98]
-    rotation: 0
-    state: true
-- name: blocks_file_source_0_0_0
-  id: blocks_file_source
-  parameters:
-    affinity: ''
-    alias: ''
-    begin_tag: pmt.PMT_NIL
-    comment: ''
-    file: /home/grigosback/Documents/GNURadio/examples/source2.txt
-    length: '0'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    offset: '0'
-    repeat: 'True'
-    type: byte
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [32, 252]
-    rotation: 0
-    state: true
-- name: blocks_message_debug_0
-  id: blocks_message_debug
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1402, 647]
-    rotation: 0
-    state: disabled
 - name: blocks_packed_to_unpacked_xx_0
   id: blocks_packed_to_unpacked_xx
   parameters:
@@ -732,7 +714,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1838, 663]
+    coordinate: [1862, 647]
     rotation: 0
     state: true
 - name: fc
@@ -816,40 +798,6 @@ blocks:
     coordinate: [709, 16]
     rotation: 0
     state: true
-- name: phi_1
-  id: parameter
-  parameters:
-    alias: ''
-    comment: ''
-    hide: none
-    label: Azimut Angle 1
-    short_id: ''
-    type: eng_float
-    value: '70'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1450, 9]
-    rotation: 0
-    state: true
-- name: phi_2
-  id: parameter
-  parameters:
-    alias: ''
-    comment: ''
-    hide: none
-    label: Azimut Angle 2
-    short_id: ''
-    type: eng_float
-    value: '41'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1624, 117]
-    rotation: 0
-    state: true
 - name: qtgui_const_sink_x_0
   id: qtgui_const_sink_x
   parameters:
@@ -879,7 +827,7 @@ blocks:
     color9: '"red"'
     comment: ''
     grid: 'False'
-    gui_hint: 5,0,1,1
+    gui_hint: 6,0,1,1
     label1: ''
     label10: ''
     label2: ''
@@ -971,7 +919,7 @@ blocks:
     color9: '"red"'
     comment: ''
     grid: 'False'
-    gui_hint: 6,0,1,1
+    gui_hint: 6,1,1,1
     label1: ''
     label10: ''
     label2: ''
@@ -1034,40 +982,6 @@ blocks:
     coordinate: [1632, 632]
     rotation: 0
     state: enabled
-- name: theta_1
-  id: parameter
-  parameters:
-    alias: ''
-    comment: ''
-    hide: none
-    label: Elevation Angle 1
-    short_id: ''
-    type: eng_float
-    value: '45'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1586, 10]
-    rotation: 0
-    state: true
-- name: theta_2
-  id: parameter
-  parameters:
-    alias: ''
-    comment: ''
-    hide: none
-    label: Elevation Angle 1
-    short_id: ''
-    type: eng_float
-    value: '75'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1760, 118]
-    rotation: 0
-    state: true
 - name: virtual_sink_0
   id: virtual_sink
   parameters:
@@ -1158,7 +1072,6 @@ connections:
 - [beamforming_beamformer_0_0, '0', qtgui_const_sink_x_0_0, '0']
 - [beamforming_doaesprit_py_cf_0, doa_port, beamforming_beamformer_0, doa_port]
 - [beamforming_doaesprit_py_cf_0, doa_port, beamforming_beamformer_0_0, doa_port]
-- [beamforming_doaesprit_py_cf_0, doa_port, blocks_message_debug_0, print]
 - [beamforming_phasedarray_0, '0', virtual_sink_0, '0']
 - [beamforming_phasedarray_0_0, '0', virtual_sink_0_1, '0']
 - [beamforming_randomsampler_0, '0', beamforming_doaesprit_py_cf_0, '0']
@@ -1166,14 +1079,12 @@ connections:
 - [blocks_add_xx_0_0, '0', blocks_add_xx_1, '1']
 - [blocks_add_xx_1, '0', beamforming_randomsampler_0, '0']
 - [blocks_add_xx_1, '0', virtual_sink_0_0, '0']
-- [blocks_file_source_0_0, '0', blocks_throttle_0, '0']
-- [blocks_file_source_0_0_0, '0', blocks_throttle_0_0, '0']
 - [blocks_packed_to_unpacked_xx_0, '0', digital_chunks_to_symbols_xx_0, '0']
 - [blocks_packed_to_unpacked_xx_0_0, '0', digital_chunks_to_symbols_xx_0_0, '0']
 - [blocks_throttle_0, '0', blocks_packed_to_unpacked_xx_0, '0']
 - [blocks_throttle_0_0, '0', blocks_packed_to_unpacked_xx_0_0, '0']
-- [blocks_unpacked_to_packed_xx_0, '0', blocks_file_sink_0_0, '0']
-- [blocks_unpacked_to_packed_xx_0_0, '0', blocks_file_sink_0_0_0, '0']
+- [blocks_unpacked_to_packed_xx_0, '0', blocks_null_sink_0, '0']
+- [blocks_unpacked_to_packed_xx_0_0, '0', blocks_null_sink_1, '0']
 - [digital_chunks_to_symbols_xx_0, '0', beamforming_phasedarray_0, '0']
 - [digital_chunks_to_symbols_xx_0_0, '0', beamforming_phasedarray_0_0, '0']
 - [digital_constellation_decoder_cb_0, '0', blocks_unpacked_to_packed_xx_0, '0']

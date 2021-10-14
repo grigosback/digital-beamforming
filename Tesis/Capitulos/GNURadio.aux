@@ -1,40 +1,109 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}GNU Radio}{23}{chapter.7}\protected@file@percent }
+\citation{bib:rtl_sdr}
+\citation{bib:federico_larocca}
+\citation{bib:gr_fm}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Integración en GNU Radio}{65}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:gnuradio}{{7}{23}{GNU Radio}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conceptos generales}{23}{section.7.1}\protected@file@percent }
-\newlabel{subc:gr_congen}{{7.1}{23}{Conceptos generales}{section.7.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Implementación de módulos}{23}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}El módulo gr-satellites}{23}{section.7.3}\protected@file@percent }
+\newlabel{ch:gnuradio}{{7}{65}{Integración en GNU Radio}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Introducción}{65}{section.7.1}\protected@file@percent }
+\newlabel{subc:gr_congen}{{7.1}{65}{Introducción}{section.7.1}{}}
+\@writefile{brf}{\backcite{bib:rtl_sdr}{{65}{7.1}{section.7.1}}}
+\@writefile{brf}{\backcite{bib:federico_larocca}{{65}{7.1}{section.7.1}}}
+\@writefile{brf}{\backcite{bib:gr_fm}{{65}{7.1}{section.7.1}}}
+\citation{bib:haykin}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Esquema de un sistema de radio definida por software.\relax }}{66}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:gr_sdr}{{7.1}{66}{Esquema de un sistema de radio definida por software.\relax }{figure.caption.65}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}El modelo equivalente banda base}{66}{section.7.2}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:haykin}{{66}{7.2}{section.7.2}}}
+\citation{bib:federico_larocca}
+\newlabel{fig:gr_espectro_fc}{{7.2a}{67}{Magnitud del espectro de tres señales genéricas montadas sobre una portadora $f_c$.\relax }{figure.caption.66}{}}
+\newlabel{sub@fig:gr_espectro_fc}{{a}{67}{Magnitud del espectro de tres señales genéricas montadas sobre una portadora $f_c$.\relax }{figure.caption.66}{}}
+\newlabel{fig:gr_espectro_bb}{{7.2b}{67}{Magnitud del espectro en banda base de la señal $S(f)$.\relax }{figure.caption.66}{}}
+\newlabel{sub@fig:gr_espectro_bb}{{b}{67}{Magnitud del espectro en banda base de la señal $S(f)$.\relax }{figure.caption.66}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces \relax }}{67}{figure.caption.66}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:federico_larocca}{{67}{7.2}{equation.7.2.1}}}
+\newlabel{eq:gr_sf}{{7.2}{67}{El modelo equivalente banda base}{equation.7.2.2}{}}
+\newlabel{eq:gr_st}{{7.3}{67}{El modelo equivalente banda base}{equation.7.2.3}{}}
+\citation{bib:interpretevscompiled}
+\citation{bib:federico_larocca}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Diagrama de bloques de un receptor de un sistema SDR.\relax }}{68}{figure.caption.67}\protected@file@percent }
+\newlabel{fig:gr_rx}{{7.3}{68}{Diagrama de bloques de un receptor de un sistema SDR.\relax }{figure.caption.67}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Implementación de módulos}{68}{section.7.3}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:interpretevscompiled}{{68}{7.3}{section.7.3}}}
+\@writefile{brf}{\backcite{bib:federico_larocca}{{68}{7.3}{section.7.3}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Tipos de datos en GNU Radio}{69}{subsection.7.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Tipos de datos disponibles en GNU Radio con su correspondiente identificación de color.\relax }}{69}{figure.caption.68}\protected@file@percent }
+\newlabel{fig:gr_datatypes}{{7.4}{69}{Tipos de datos disponibles en GNU Radio con su correspondiente identificación de color.\relax }{figure.caption.68}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Conexiones entre bloques. GNU Radio Companion indica con color rojo aquellas conexiones no permitidas.\relax }}{69}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:gr_blockconnection}{{7.5}{69}{Conexiones entre bloques. GNU Radio Companion indica con color rojo aquellas conexiones no permitidas.\relax }{figure.caption.69}{}}
+\citation{bib:volk}
+\citation{bib:federico_larocca}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Callbacks}{70}{subsection.7.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}La librería VOLK}{70}{subsection.7.3.3}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:volk}{{70}{7.3.3}{subsection.7.3.3}}}
+\@writefile{brf}{\backcite{bib:federico_larocca}{{70}{7.3.3}{subsection.7.3.3}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.4}El emulador de ARU.}{70}{subsection.7.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces Representación como bloque del emulador de ARU para realizar las simulaciones del sistema conformador de haz.\relax }}{70}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:gr_phasedarray}{{7.6}{70}{Representación como bloque del emulador de ARU para realizar las simulaciones del sistema conformador de haz.\relax }{figure.caption.70}{}}
+\citation{bib:gr-satellites}
+\citation{bib:ber-simulation}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Simulaciones}{71}{section.7.4}\protected@file@percent }
+\newlabel{subc:gr_simulaciones}{{7.4}{71}{Simulaciones}{section.7.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}El módulo gr-satellites}{71}{subsection.7.4.1}\protected@file@percent }
+\@writefile{brf}{\backcite{bib:gr-satellites}{{71}{7.4.1}{subsection.7.4.1}}}
+\@writefile{brf}{\backcite{bib:ber-simulation}{{71}{7.4.1}{subsection.7.4.1}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Resultados obtenidos}{71}{subsection.7.4.2}\protected@file@percent }
+\newlabel{subc:gr_bertest}{{7.4.2}{71}{Resultados obtenidos}{subsection.7.4.2}{}}
+\citation{bib:eigen}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.3}Requerimientos de procesamiento}{72}{subsection.7.4.3}\protected@file@percent }
+\newlabel{subc:gr_proc}{{7.4.3}{72}{Requerimientos de procesamiento}{subsection.7.4.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces  Utilización del procesador correspondiente a cada bloque del sistema conformador de haz.\relax }}{72}{table.caption.74}\protected@file@percent }
+\newlabel{tab:gr_cpu}{{7.1}{72}{Utilización del procesador correspondiente a cada bloque del sistema conformador de haz.\relax }{table.caption.74}{}}
+\@writefile{brf}{\backcite{bib:eigen}{{72}{7.4.3}{table.caption.74}}}
+\newlabel{RF1}{73}
+\newlabel{fig:gr_sim0_companion}{{7.7a}{73}{Diagrama de bloques del sistema implementado en GNU Radio. La zona superior del diagrama corresponde a la transmisión y la parte inferior a la recepción.\relax }{figure.caption.71}{}}
+\newlabel{sub@fig:gr_sim0_companion}{{a}{73}{Diagrama de bloques del sistema implementado en GNU Radio. La zona superior del diagrama corresponde a la transmisión y la parte inferior a la recepción.\relax }{figure.caption.71}{}}
+\newlabel{fig:gr_sim0_qt}{{7.7b}{73}{Constelación de la salida del sistema conformador de haz al recibir una señal QPSK con una cierta DOA.\relax }{figure.caption.71}{}}
+\newlabel{sub@fig:gr_sim0_qt}{{b}{73}{Constelación de la salida del sistema conformador de haz al recibir una señal QPSK con una cierta DOA.\relax }{figure.caption.71}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces Simulación de transmisión QPSK.\relax }}{73}{figure.caption.71}\protected@file@percent }
+\newlabel{RF2}{74}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces Diagrama de bloques utilizado para la medición de tasa de error de bit mediante la simulación de un enlace de comunicación con el satélite LilacSat-1.\relax }}{74}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:gr_bersim}{{7.8}{74}{Diagrama de bloques utilizado para la medición de tasa de error de bit mediante la simulación de un enlace de comunicación con el satélite LilacSat-1.\relax }{figure.caption.72}{}}
+\newlabel{RF3}{75}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces Curvas de BER en función de $\frac  {E_b}{N_0}$ para distintos valores de errores en la separación de elementos del ARU comparadas con recepción óptima de una transmisión BPSK.\relax }}{75}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:gr_bersim_resul}{{7.9}{75}{Curvas de BER en función de $\frac {E_b}{N_0}$ para distintos valores de errores en la separación de elementos del ARU comparadas con recepción óptima de una transmisión BPSK.\relax }{figure.caption.73}{}}
 \@setckpt{Capitulos/GNURadio}{
-\setcounter{page}{24}
-\setcounter{equation}{0}
-\setcounter{enumi}{0}
+\setcounter{page}{76}
+\setcounter{equation}{5}
+\setcounter{enumi}{11}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{0}
+\setcounter{footnote}{2}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{7}
-\setcounter{section}{3}
-\setcounter{subsection}{0}
+\setcounter{section}{4}
+\setcounter{subsection}{3}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
-\setcounter{table}{0}
+\setcounter{figure}{9}
+\setcounter{table}{1}
 \setcounter{caption@flags}{0}
 \setcounter{continuedfloat}{0}
 \setcounter{parentequation}{0}
 \setcounter{cp@cntr}{0}
-\setcounter{Item}{0}
-\setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{33}
+\setcounter{Item}{17}
+\setcounter{Hfootnote}{6}
+\setcounter{bookmark@seq@number}{60}
 \setcounter{NAT@ctr}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
-\setcounter{section@level}{1}
+\setcounter{lstnumber}{1}
+\setcounter{r@tfl@t}{3}
+\setcounter{section@level}{2}
+\setcounter{lstlisting}{0}
 }

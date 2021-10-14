@@ -66,7 +66,7 @@ class lilacsat1_ber_simulation(gr.top_block):
         # Variables
         ##################################################
         self.sps = sps = 5
-        self.N_BITS = N_BITS = 1e5
+        self.N_BITS = N_BITS = 1e7
         self.samp_rate = samp_rate = 32000
         self.noise_voltage = noise_voltage = 1.0 / math.sqrt(
             1 / float(sps) * 10 ** (float(EbN0) / 10)
@@ -127,7 +127,7 @@ class lilacsat1_ber_simulation(gr.top_block):
         self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(
             mx, my, fc, (299792458 / (2 * fc)), n, 128
         )
-        self.beamforming_beamformer_0 = beamforming.beamformer(mx, my)
+        self.beamforming_beamformer_0 = beamforming.beamformer(mx, my, 0)
         self.analog_vectornoise_source_0 = analog.vectornoise_source(
             noise_voltage, mx * my
         )
@@ -427,10 +427,10 @@ def simulate_ber(EbN0, element_error):
 
 if __name__ == "__main__":
     EbN0_min = -10
-    EbN0_max = 1
+    EbN0_max = 0
     EbN0_range = range(EbN0_min, EbN0_max + 1)
-    element_error_range = [0, 1, 5, 10, 15, 20]
-    ber_theory = [berawgn(x) for x in EbN0_range]
+    element_error_range = [0, 10, 20, 30]
+    ber_theory = [berawgn(x) for x in (EbN0_range + 10 * numpy.log10(16))]
     print("Simulating uncoded BPSK...")
     ber_simu_bpsk = numpy.empty((len(EbN0_range), len(element_error_range)))
     for i in range(len(element_error_range)):
@@ -438,25 +438,25 @@ if __name__ == "__main__":
             simulate_ber(x, element_error_range[i]) for x in EbN0_range
         ]
 
-    plt.figure(figsize=(16, 9), dpi=100)
+    plt.figure(figsize=(10, 5), dpi=100)
     plt.grid()
+    plt.plot(EbN0_range + 10 * numpy.log10(16), ber_theory)
     for i in range(len(element_error_range)):
-        plt.plot(EbN0_range, ber_simu_bpsk[:, i])
+        plt.plot(EbN0_range + 10 * numpy.log10(16), ber_simu_bpsk[:, i])
     plt.title("BER Simulation")
     plt.xlabel(r"$\frac{E_b}{N_0}$ [dB]")
     plt.ylabel(r"BER")
     plt.legend(
         [
-            r"$\sigma^2_d=0\%$",
-            r"$\sigma^2_d=1\%$",
-            r"$\sigma^2_d=5\%$",
-            r"$\sigma^2_d=10\%$",
-            r"$\sigma^2_d=15\%$",
-            r"$\sigma^2_d=20\%$",
+            r"BPSK recepción óptima",
+            r"$\frac{\sigma_d}{d}=0\%$",
+            r"$\frac{\sigma_d}{d}=10\%$",
+            r"$\frac{\sigma_d}{d}=20\%$",
+            r"$\frac{\sigma_d}{d}=30\%$",
         ]
     )
     plt.yscale("log")
-    plt.savefig("ber_simulation.png", dpi=200, bbox_inches="tight")
+    plt.savefig("pi_ber_elementerror.png", dpi=300, bbox_inches="tight")
     plt.show()
 
     """

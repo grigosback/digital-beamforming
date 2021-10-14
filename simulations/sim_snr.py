@@ -132,7 +132,7 @@ plt.ylabel(r"Azimut [°]")
 plt.ylim(40, 50)
 plt.show()
 # %%
-plt.figure(figsize=(16, 9), dpi=100)
+
 plt.subplot(211)
 plt.grid()
 plt.plot(snr_array, error_el_music ** 0.5 * 100 / np.degrees(txs[0].doa.el))

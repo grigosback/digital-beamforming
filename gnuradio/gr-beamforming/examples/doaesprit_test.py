@@ -289,8 +289,8 @@ class doaesprit_test(gr.top_block, Qt.QWidget):
         self.blocks_add_xx_0 = blocks.add_vcc(mx*my)
         self.beamforming_randomsampler_0 = beamforming.randomsampler(mx*my, 8)
         self.beamforming_phasedarray_0 = beamforming.phasedarray(mx, my, theta, phi, 436e6, (299792458/(2*fc)), element_separation)
-        self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(mx, my, fc, (299792458/(2*fc)), n, 128, 'eigenvalues_1')
-        self.beamforming_beamformer_0 = beamforming.beamformer(mx, my)
+        self.beamforming_doaesprit_py_cf_0 = beamforming.doaesprit_py_cf(mx, my, fc, (299792458/(2*fc)), n, 128)
+        self.beamforming_beamformer_0 = beamforming.beamformer(mx, my, 0)
         self.analog_vectornoise_source_0 = analog.vectornoise_source(noise_voltage, mx*my)
 
 

@@ -40,6 +40,35 @@ def polynomial_parameters(
     return clf
 
 
+def sigmoid_parameters(
+    x_train,
+    y_train,
+    x_val,
+    y_val,
+    degree_array=(np.arange(6) + 2),
+    c_array=np.array([0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 50]),
+):
+    error_min = 1
+    for i in range(c_array.size):
+        for j in range(degree_array.size):
+            clf = svm.SVC(kernel="sigmoid", degree=degree_array[j], C=c_array[i]).fit(
+                x_train, y_train
+            )
+            predictions = clf.predict(x_val)
+            error = np.mean((predictions != y_val).astype(int))
+            print(
+                "C = %.2lf, degree = %.2lf, error = %.6lf"
+                % (c_array[i], degree_array[j], error)
+            )
+            if error < error_min:
+                c = c_array[i]
+                degree = degree_array[j]
+                error_min = error
+    print("Final parameters: C = %.2lf, degree = %.2lf" % (c, degree))
+    clf = svm.SVC(kernel="sigmoid", degree=degree, C=c).fit(x_train, y_train)
+    return clf
+
+
 def rbf_parameters(
     x_train,
     y_train,
@@ -161,3 +190,10 @@ clf = rbf_parameters(x_train, y_train, x_val, y_val)
 model_accuracy(clf, x_train, y_train, x_val, y_val, x_test, y_test, x_full, y_full)
 plot_decision_boundary(x_full, y_full, clf, h=0.01)
 
+
+# %%
+clf = sigmoid_parameters(x_train, y_train, x_val, y_val)
+#%%
+model_accuracy(clf, x_train, y_train, x_val, y_val, x_test, y_test, x_full, y_full)
+plot_decision_boundary(x_full, y_full, clf, h=0.01)
+# %%

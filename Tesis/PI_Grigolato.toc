@@ -1,58 +1,83 @@
 \babel@toc {spanish}{}
-\contentsline {chapter}{\'{I}ndice de s{\'{\i }}mbolos}{\es@scroman {v}}{section*.1}%
+\contentsline {chapter}{\'{I}ndice de siglas y acrónimos}{\es@scroman {v}}{section*.1}%
 \contentsline {chapter}{\'{I}ndice de contenidos}{\es@scroman {vii}}{section*.3}%
 \contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{section*.5}%
-\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {xi}}{section*.7}%
-\contentsline {chapter}{Resumen}{\es@scroman {xiii}}{section*.9}%
-\contentsline {chapter}{Abstract}{\es@scroman {xv}}{section*.11}%
+\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {xiii}}{section*.7}%
+\contentsline {chapter}{Resumen}{\es@scroman {xv}}{section*.9}%
+\contentsline {chapter}{Abstract}{\es@scroman {xvii}}{section*.11}%
 \babel@toc {english}{}
 \babel@toc {spanish}{}
 \babel@toc {english}{}
 \babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
-\contentsline {subsection}{\numberline {1.0.1}Objetivos de proyecto}{1}{subsection.1.0.1}%
-\contentsline {chapter}{\numberline {2}Conformación de haz}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introducción}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Clasificación de conformadores de haz}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Arreglos de antenas en fase}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Tipos de arreglos}{9}{subsection.2.3.1}%
-\contentsline {subsubsection}{Arreglo lineal uniforme}{10}{section*.18}%
-\contentsline {subsubsection}{Arreglo circular uniforme}{10}{section*.20}%
-\contentsline {subsubsection}{Arreglo rectangular uniforme}{12}{section*.22}%
-\contentsline {section}{\numberline {2.4}Problema a resolver}{13}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Algoritmos de estimación de dirección de arribo.}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}El algoritmo MUSIC}{15}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Algoritmo}{15}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}El algoritmo ESPRIT}{15}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Algoritmo}{15}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Comparaciones}{15}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Detalles del sistema}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Esquema de bloques}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Muestreador aleatorio}{17}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Estimador de dirección de arribo}{17}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Conformador de haz}{17}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Muestreo aleatorio}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conceptos generales}{19}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Machine Learning aplicado a la clasificación de autovalores}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conceptos generales}{21}{section.6.1}%
-\contentsline {chapter}{\numberline {7}GNU Radio}{23}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Conceptos generales}{23}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Implementación de módulos}{23}{section.7.2}%
-\contentsline {section}{\numberline {7.3}El módulo gr-satellites}{23}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Resultados obtenidos}{25}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Tasa de error de bit}{25}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Errores en la ubicación de elementos del arreglo}{25}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Requerimientos de procesamiento}{25}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Implementación en FPGA}{27}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Conceptos generales}{27}{section.9.1}%
-\contentsline {chapter}{\numberline {10}Trabajo a futuro}{29}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Innovación en la estimación}{29}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Interfaz con el sistema de adquisición}{29}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Empaquetamiento}{29}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Medición del patrón de radiación del arreglo}{29}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Interferencias destructivas}{29}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Smart Beamforming}{29}{section.10.6}%
-\contentsline {chapter}{\numberline {A}Apéndice I}{31}{appendix.Alph1}%
-\contentsline {chapter}{Bibliograf{\'{\i }}a}{33}{section*.25}%
-\contentsline {chapter}{Publicaciones asociadas}{35}{section*.27}%
-\contentsline {chapter}{Agradecimientos}{37}{section*.29}%
+\contentsline {section}{\numberline {1.1}Motivación}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos de proyecto}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Conformación de haz}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introducción}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Clasificación de conformadores de haz}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Arreglos de antenas en fase}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Tipos de arreglos}{11}{subsection.2.3.1}%
+\contentsline {subsubsection}{Arreglo lineal uniforme}{11}{section*.19}%
+\contentsline {subsubsection}{Arreglo circular uniforme}{12}{section*.21}%
+\contentsline {subsubsection}{Arreglo rectangular uniforme}{14}{section*.23}%
+\contentsline {section}{\numberline {2.4}Definición del problema}{15}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Algoritmos de estimación de dirección de arribo.}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introducción}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Modelo de datos}{18}{subsection.3.1.1}%
+\contentsline {subsubsection}{La matriz de covarianza $\mathbf {R_{XX}}$}{19}{section*.27}%
+\contentsline {subsubsection}{Descomposición en valores singulares (SVD)}{21}{section*.28}%
+\contentsline {section}{\numberline {3.2}El algoritmo MUSIC}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Algoritmo}{23}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}El algoritmo ESPRIT}{23}{section.3.3}%
+\contentsline {subsubsection}{Estimación del operador de rotación de subespacio}{27}{section*.31}%
+\contentsline {subsection}{\numberline {3.3.1}Algoritmo}{27}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Simulaciones}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}RMSE vs. SNR}{29}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}RMSE vs. $\frac {\sigma _d}{d}$}{29}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}RMSE vs. N° de muestras}{31}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Tiempo vs. $M$}{32}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Tiempo de ejecución de la SVD}{33}{subsection.3.4.5}%
+\contentsline {chapter}{\numberline {4}Muestreo aleatorio}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introducción}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Definición del problema}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Muestreo Aleatorio}{39}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Estimación del número de señales recibidas}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introducción}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Método de la máxima derivada primera}{44}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Resultados obtenidos}{45}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Clasificador binario mediante aprendizaje automático}{46}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Regresión Logística}{46}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Máquina de Vectores de Soporte}{49}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Resultados obtenidos}{51}{subsection.5.3.3}%
+\contentsline {subsubsection}{Kernel Sigmoide}{54}{section*.53}%
+\contentsline {subsubsection}{Kernel Polinomial}{54}{section*.55}%
+\contentsline {subsubsection}{Kernel Gaussiano}{55}{section*.57}%
+\contentsline {chapter}{\numberline {6}Diseño del sistema}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introducción}{57}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Diagrama de bloques del sistema}{58}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Muestreador aleatorio}{59}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Implementación en FPGA}{59}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Estimador de dirección de arribo}{60}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Conformador de haz}{61}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Implementación en FPGA}{62}{subsection.6.5.1}%
+\contentsline {chapter}{\numberline {7}Integración en GNU Radio}{65}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introducción}{65}{section.7.1}%
+\contentsline {section}{\numberline {7.2}El modelo equivalente banda base}{66}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Implementación de módulos}{68}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Tipos de datos en GNU Radio}{69}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Callbacks}{70}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}La librería VOLK}{70}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}El emulador de ARU.}{70}{subsection.7.3.4}%
+\contentsline {section}{\numberline {7.4}Simulaciones}{71}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}El módulo gr-satellites}{71}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Resultados obtenidos}{71}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Requerimientos de procesamiento}{72}{subsection.7.4.3}%
+\contentsline {chapter}{\numberline {8}Trabajo a futuro}{77}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Interfaz e integración con el sistema de adquisición}{77}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Carga del patrón de radiación del arreglo}{78}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Interferencias destructivas}{78}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Smart Beamforming}{78}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{79}{chapter.9}%
+\contentsline {chapter}{\numberline {A}Obtención de ángulos de arribo en ESPRIT}{81}{appendix.Alph1}%
+\contentsline {chapter}{Referencias}{83}{section*.76}%
+\contentsline {chapter}{Agradecimientos}{87}{section*.78}%

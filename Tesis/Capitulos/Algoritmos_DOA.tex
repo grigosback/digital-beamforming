@@ -1,11 +1,570 @@
 \chapter{Algoritmos de estimación de dirección de arribo.}\label{ch:doaest}
-%\chapterquote{Hablaban siempre de dinero y planeaban asaltar un banco}{Domingo Cavallo, 2001}
+\chapterquote{Son nuestras elecciones, Harry, las que muestran lo que somos, mucho más que nuestras habilidades.}{Albus Dumbledore}
 
-\section{El algoritmo MUSIC}\label{subc:beamforming_MUSIC}
+\section{Introducción}\label{subc:doaest_intro}
+Al momento de diseñar un conformador de haz adaptativo uno de los pasos más importantes es definir el algoritmo de estimación de dirección de arribo (DOA). Estos algoritmos explotan las propiedades estadísticas de las señales recibidas por los elementos del arreglo de antenas y entregan la dirección de arribo en las dimensiones correspondientes según el tipo de arreglo con el que se trabaje. El estudio de los algoritmos de estimación de DOA data de la Segunda Guerra Mundial con la aparición del conformador de Bartlett \cite{bib:2decadesbeamforming}, el cual consiste en hacer un escaneo de potencia en el dominio de búsqueda identificando la dirección que maximiza la potencia de salida. Este algoritmo pertenece al grupo de algoritmos basados en el análisis espectral, los cuales tienen la desventaja de que su resolución depende fuertemente del ancho del haz sintetizado y que requieren de una búsqueda en una o dos dimensiones para realizar la estimación, lo cual reduce su viabilidad si es que se los quiere utilizar para seguimientos de objetivos en tiempo real. Posteriormente, nuevos métodos fueron propuestos, mejorando así el desempeño en la detección y en la eficiencia, como son los métodos basados en la separación de subespacios de señal y ruido, los cuales se basan en explotar las propiedades geométricas del arreglo de antenas y tienen la ventaja de que su resolución no está limitada a la apertura del mismo. Dentro de este tipo de algoritmos de estimación de DOA, los algoritmos \emph{Multiple Signal Classification} (\emph{MUSIC}) y \emph{Estimation of Signal Parameters via Rotational Invariance Techniques} (\emph{ESPRIT}) son dos de los más importantes, y son, además, los que se estudiarán a lo largo de este capítulo.
 
-\subsection{Algoritmo}
+La disponibilidad en la utilización de un algoritmo dependerá fuertemente del tipo de arreglo con el que se cuente para la implementación, es por esto que a la hora de elegir la manera de disponer los elementos del arreglo para realizar un conformador de haz adaptativo hay que tener en cuenta cuáles distribuciones son aquellas que brindan mejores opciones para la estimación de DOA. Para dar un ejemplo, el algoritmo \emph{Root-MUSIC} tiene un costo computacional relativamente bajo para lograr la estimación, ya que su solución consiste simplemente en encontrar las raíces de un polinomio, pero solo funciona en arreglos lineales uniformes, por ende solo permite estimar la dirección de arribo en una única dimensión.
 
-\section{El algoritmo ESPRIT}\label{subc:beamforming_ESPRIT}
-\subsection{Algoritmo}
+Vale la pena aclarar que las técnicas utilizadas en este capítulo permiten, también, obtener información de otros parámetros de las señales arribantes, como pueden ser la frecuencia de portadora de las mismas o la cantidad de fuentes de señal que está recibiendo el arreglo de antenas, razón por la cual estos algoritmos resultan muy versátiles en el mundo del procesamiento estadístico de señales.
 
-\section{Comparaciones}\label{subc:beamforming_comparaciones}
+Para realizar el análisis de los algoritmos mencionados se deberá primero definir un modelo de datos común que refleje matemáticamente cómo pueden ser representadas las muestras obtenidas por el arreglo de antenas.
+
+\subsection{Modelo de datos}\label{subc:doaest_datamodel}
+
+Antes de especificar el modelo de datos es necesario aclarar que para los próximos análisis se considerará que el medio de transmisión es lineal, y, por ende, vale el principio de superposición. Debido a esto, si consideramos que a un arreglo de M elementos está llegando un número $D$ de señales desde distintas direcciones, la Ecuación \ref{eq:beamforming_singlesignal} puede reescribirse como:
+\begin{equation}
+    \bar{x} (t)  =\sum_{d=0}^{D-1} \bar{a}(\theta_d,\varphi_d)\cdot s_d(t) + \bar{w}(t),
+\end{equation}
+donde $\bar{a}(\theta_d,\varphi_d)$ con $d=0,1,...,D-1$ es el vector de apuntamiento que corresponde a la señal $s_d(t)$ llegando al arreglo con dirección $(\theta_d,\varphi_d)$, la cual es medida en el elemento de referencia. Esta ecuación puede reescribirse en forma matricial haciendo:
+\begin{equation}
+    \bar{x} (t) = \mathbf{A}(\theta,\varphi) \bar{s}(t) + \bar{w}(t),
+\end{equation}
+\begin{equation}
+    \mathbf{A(\theta,\varphi)} = \begin{bmatrix}
+        \bar{a}(\theta_0,\varphi_0) & \bar{a}(\theta_1,\varphi_1) & \cdots & \bar{a}(\theta_{D-1},\varphi_{D-1})
+    \end{bmatrix}_{(M\times D)}
+\end{equation}
+donde $\bar{s}(t)=[s_0(t), s_1(t), \cdots, s_{D-1}(t)]^T$.
+
+Si tomamos una instantánea de las muestras del arreglo vemos que las mismas pueden representarse como un vector de números complejos de la siguiente manera:
+\begin{gather*}
+    \bar{x}=\mathbf{A}(\theta,\varphi)\bar{s}+\bar{w},\\
+    \begin{bmatrix}
+        x_0    \\
+        x_1    \\
+        \vdots \\
+        x_{M-1}
+    \end{bmatrix}_{(M\times 1)} = \begin{bmatrix}
+        \vphantom{\begin{bmatrix}
+                x_0    \\
+                x_1    \\
+                \vdots \\
+                x_{M-1}
+            \end{bmatrix}} \bar{a}(\theta_0,\varphi_0) & \bar{a}(\theta_1,\varphi_1) & \cdots & \bar{a}(\theta_{D-1},\varphi_{D-1})
+    \end{bmatrix}_{(M\times D)}
+    \begin{bmatrix}
+        s_0    \\
+        s_1    \\
+        \vdots \\
+        s_{D-1}
+    \end{bmatrix}_{(D\times 1)} +
+    \begin{bmatrix}
+        w_0    \\
+        w_1    \\
+        \vdots \\
+        w_{M-1}
+    \end{bmatrix}_{(M\times 1)}
+\end{gather*}
+
+A partir de esto podemos ver que el vector de muestras $\bar{x}$ pertenece a $\mathbb{C}^M$. Además, en ausencia de ruido, cada vector de muestras puede expresarse como combinación lineal de los vectores de $\mathbf{A}$, siendo los elementos de $\bar{s}$ los coeficientes de esta combinación. Por ende, si $\bar{w}=\bar{0}$, las muestras estarán confinadas en un subespacio de dimensión $D$ dentro de $\mathbb{C}^M$, generado por las columnas de $\mathbf{A}$, las cuales conforman una base del \emph{subespacio de señal} $\mathcal{S}_S$ \cite{bib:esprit_roy}. Si definimos como $\mathfrak{A}$ al conjunto que contiene a todos los posibles vectores de apuntamiento, para el caso en el que la dirección de arribo es bidimensional, estos vectores definirán una superficie con forma de ``sábana'' en $\mathbb{C}^M$, y en el caso unidimensional definirán una curva cerrada. Identificar cuáles de todos los vectores de $\mathfrak{A}$ conforman la base del subespacio de señal corresponde a encontrar las intersecciones entre la superficie $M$-dimensional formada por $\mathfrak{A}$ y el subespacio de señal \cite{bib:music_schmidt}. En la Figura \ref{fig:doaest_arraymanifold} se muestra una representación para el caso de estimación de DOA unidimensional, con $D=2$ y $M=3$. Si se supone que la función que mapea las posibles direcciones de arribo $(\theta,\varphi)$ a elementos de $\mathfrak{A}$ es inyectiva, encontrar los vectores de $\mathbf{A}$ equivale a encontrar las direcciones de arribo de las $D$ señales recibidas. Esto puede lograrse mediante un diseño apropiado del arreglo de antenas \cite{bib:esprit_roy}. La dificultad radica ahora en definir $\mathcal{S}_S$ a partir de las muestras obtenidas.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/03-DOAEst/arraymanifold.png}
+    \caption{Representación geométrica de la estimación de DOA mediante la intersección del conjunto $\mathfrak{A}$ con el subespacio de señal para el caso de DOA unidimensional, con $D=2$ y $M=3$.}
+    \label{fig:doaest_arraymanifold}
+\end{figure}
+
+\subsubsection{La matriz de covarianza $\mathbf{R_{XX}}$}
+
+Al muestrear digitalmente cada elemento del arreglo tendremos el equivalente a un vector de muestras por cada período de muestreo. Si se quiere representar a todas las muestras tomadas durante $N$ períodos de muestreo se puede escribir:
+\begin{gather}
+    \mathbf{X}_{(M\times N)} = \mathbf{A(\theta,\varphi)}_{(M\times D)}\times \mathbf{S}_{(D\times N)} + \mathbf{W}_{(M\times N)}    \label{eq:doaest_x}\\
+    \mathbf{X}=
+    \begin{bmatrix}
+        x_0^0     & x_0^1  & \cdots & x_0^{N-1}     \\
+        x_1^0     & \ddots &        & \vdots        \\
+        \vdots    &        & \ddots & \vdots        \\
+        x_{M-1}^0 & \cdots & \cdots & x_{M-1}^{N-1}
+    \end{bmatrix},\quad
+    \mathbf{S}=\begin{bmatrix}
+        s_0^0     & s_0^1  & \cdots & s_0^{N-1}     \\
+        s_1^0     & \ddots &        & \vdots        \\
+        \vdots    &        & \ddots & \vdots        \\
+        s_{D-1}^0 & \cdots & \cdots & s_{D-1}^{N-1}
+    \end{bmatrix},\quad
+    \mathbf{W}=\begin{bmatrix}
+        w_0^0     & w_0^1  & \cdots & w_0^{N-1}     \\
+        w_1^0     & \ddots &        & \vdots        \\
+        \vdots    &        & \ddots & \vdots        \\
+        w_{M-1}^0 & \cdots & \cdots & w_{M-1}^{N-1}
+    \end{bmatrix}\nonumber
+\end{gather}
+
+Para simplificar la notación a partir de ahora se indicará a la matriz de vectores de apuntamiento simplemente como $\mathbf{A}$.
+
+A partir de esto podemos encontrar la matriz de covarianza de las muestras haciendo:
+\begin{align}
+    \mathbf{R_{XX}} & =\overline{\mathbf{XX}^H}=\overline{(\mathbf{AS}+\mathbf{W})(\mathbf{AS}+\mathbf{W})^H}=\overline{(\mathbf{AS}+\mathbf{W})(\mathbf{S}^H\mathbf{A}^H+\mathbf{W}^H)}\nonumber      \\
+                    & = \mathbf{A}\overline{\mathbf{SS}^H}\mathbf{A}^H + \cancel{\mathbf{A}\overline{\mathbf{SW}^H}}+\cancel{\overline{\mathbf{WS}^H}\mathbf{A}^H} + \overline{\mathbf{WW}^H}\nonumber \\
+                    & = \mathbf{AR_{SS}A}^H+\mathbf{R_{WW}}=\mathbf{AR_{SS}A}^H+\sigma^2_w\mathbf{I}_M
+    \label{eq:doaest_rxx_teor}
+\end{align}
+donde se supuso que las señales pueden ser modeladas como procesos estocásticos estacionarios y de media cero, y que el ruido es aditivo, blanco y gaussiano, de manera tal que la correlación entre la señal y el ruido es nula. La matriz $\mathbf{R_{WW}}$ es la matriz de autocorrelación del ruido, siendo $\mathbf{I}_M$ la matriz identidad de tamaño $M\times M$ y $\sigma^2_w=\mathbf{E}\{|w[n]|^2\}$ el nivel de potencia de ruido. Es necesario aclarar que la operación $\overline{\mathbf{XX}^H}$ consiste en realizar el promedio entre las matrices obtenidas al multiplicar cada uno de los vectores columna de $\mathbf{X}$ por su transpuesto conjugado, es decir:
+\begin{equation}
+    \mathbf{R_{XX}}= \lim_{N\rightarrow\infty} \frac{1}{N} \sum_{n=0}^{N-1}\bar{x}^n(\bar{x}^n)^H,
+\end{equation}
+siendo $\bar{x}^n$ la columna $n$-ésima de la matriz $\mathbf{X}$. En este análisis se considera la matriz de correlación teórica, la cual requiere de infinitas muestras para poder ser obtenida. En la práctica, la matriz de correlación $\mathbf{R_{XX}}$ debe ser estimada a partir de las muestras obtenidas haciendo \cite{bib:Manolakis_ch9.6}:
+\begin{equation}
+    \mathbf{\hat{R}_{XX}}=\frac{1}{N} \mathbf{XX}^H
+    \label{eq:doaest_rxx_est}
+\end{equation}
+siendo $N$ la cantidad de muestras tomadas en la ventana temporal de medición. En lo que resta del análisis se seguirá considerando la correlación teórica, debiendo el lector tomar las respectivas consideraciones.
+
+Debido a que los vectores de $\mathbf{A}$ definen la base del subespacio de señal, la matriz $\mathbf{AR_{SS}A}^H$ de tamaño $M\times M$ tiene rango $D$, por lo que es de rango incompleto, a diferencia de $\mathbf{R_{WW}}$ que es de rango completo. Si se considera que las señales que conforman la matriz $\mathbf{S}$ no están correlacionadas entre sí, la matriz de autocorrelación de señal $\mathbf{R_{SS}}$ es de la forma:
+\begin{equation}
+    \mathbf{R_{SS}}=
+    \begin{bmatrix}
+        |s_0|^2 & 0       & \cdots & 0           \\
+        0       & |s_1|^2 &        & \vdots      \\
+        \vdots  &         & \ddots & \vdots      \\
+        0       & \cdots  & \cdots & |s_{D-1}|^2
+    \end{bmatrix}
+    \label{eq:doaest_rss}
+\end{equation}
+siendo cada elemento de la diagonal la potencia de cada una de las señales.
+
+Si se aplica la descomposición en autovalores a la matriz $\mathbf{R_{XX}}$, esta puede escribirse como \cite{bib:Manolakis_ch9.6}:
+\begin{gather}
+    \mathbf{R_{XX}}= \mathbf{E\Lambda E}^H,    \label{eq:doaest_eigendesc}\\
+    \mathbf{\Lambda}=    \begin{bmatrix}
+        \lambda_0 & 0         & \cdots & 0             \\
+        0         & \lambda_1 &        & \vdots        \\
+        \vdots    &           & \ddots & \vdots        \\
+        0         & \cdots    & \cdots & \lambda_{M-1}
+    \end{bmatrix},\quad
+    \mathbf{E}=\begin{bmatrix}
+        \bar{e}_0 & \bar{e}_1 & \cdots & \bar{e}_{M-1}
+    \end{bmatrix}\nonumber
+\end{gather}
+donde $\lambda_0\geq \lambda_1 \geq \cdots \geq \lambda_{M-1}$ son los autovalores de $\mathbf{R_{XX}}$ en orden descendente y $\bar{e}_0$, $\bar{e}_1$, ..., $\bar{e}_{M-1}$ sus correspondientes autovectores. Los $D$ autovalores más grandes serán iguales a la suma de los autovalores de $\mathbf{AR_{SS}A}^H$ más los autovalores de $\mathbf{R_{WW}}$, los cuales son todos iguales. Los $M-D$ autovalores más chicos tendrán el mismo valor que los autovalores de $\mathbf{R_{WW}}$, es decir \cite{bib:Manolakis_ch9.6}:
+\begin{equation}
+    \begin{aligned}
+        \lambda_m & = M \cdot |s_m|^2+\sigma_w^2, & 0\leq m\leq D-1 \\
+        \lambda_m & = \sigma_w^2,                 & D\leq m\leq M-1
+    \end{aligned}
+    \label{eq:doaest_aval}
+\end{equation}
+
+Por ende, si separamos los autovalores y autovectores correspondientes a las señales y al ruido podemos realizar la siguiente descomposición:
+\begin{gather}
+    \mathbf{R_{XX}}=\mathbf{E_S \Lambda_S E_S}^H + \sigma^2_w \mathbf{E_W E_W}^H
+    \label{eq:doaest_es_en}\\
+    \mathbf{\Lambda_s}=    \begin{bmatrix}
+        \lambda_0 & 0         & \cdots & 0             \\
+        0         & \lambda_1 &        & \vdots        \\
+        \vdots    &           & \ddots & \vdots        \\
+        0         & \cdots    & \cdots & \lambda_{D-1}
+    \end{bmatrix},\quad
+    \mathbf{E_S}=\begin{bmatrix}
+        \bar{e}_0 & \bar{e}_1 & \cdots & \bar{e}_{D-1}
+    \end{bmatrix},\quad
+    \mathbf{E_W}=\begin{bmatrix}
+        \bar{e}_{D} & \bar{e}_{D+1} & \cdots & \bar{e}_{M-1}
+    \end{bmatrix}\nonumber
+\end{gather}
+donde los vectores de $\mathbf{E_S}$ conforman otra base del subespacio de señal $\mathcal{S}_S$ y los vectores de $\mathbf{E_W}$ conforman una base del \emph{subespacio de ruido} $\mathcal{S}_W$.
+
+Esto demuestra que a partir de una buena estimación de la matriz de covarianza de las muestras se pueden hallar las bases de los subespacios de señal y ruido, siempre y cuando la cantidad de elementos del arreglo de antenas $M$ sea mayor a la cantidad de señales arribantes $D$, ya que, de lo contrario, el subespacio de las muestras sería de dimensión menor al subespacio de señal y no se podría realizar la separación con el subespacio de ruido. Para el caso práctico en el que la matriz de correlación de las muestras debe estimarse ocurrirá que los autovalores $\mathbf{\hat{R}_{WW}}$ no serán iguales a $\sigma^2_w$, y en los casos en los que la relación señal a ruido sea baja puede ser difícil diferenciar la frontera entre autovalores de ruido y autovalores de señal. Para encontrar esta frontera y así poder determinar la cantidad de señales arribantes para realizar la descomposición en subespacios de señal y ruido se puede recurrir a varios enfoques. Algunos de ellos se detallan en el Capítulo \ref{ch:machinelearning}. Debido a que la matriz de autocorrelación $\mathbf{R_{XX}}$ tiene simetría Hermítica, sus autovectores son ortogonales, lo cual implica que el subespacio de ruido y el subespacio de señal son ortogonales entre sí, característica de vital importancia para los algoritmos de estimación de DOA que se tratarán a continuación.
+
+\subsubsection{Descomposición en valores singulares (SVD)}
+Antes de comenzar el análisis de los algoritmos de estimación de dirección arribo es conveniente mencionar otra manera de realizar la descomposición del subespacio muestral en subespacio de señal y ruido sin tener que calcular la descomposición en autovalores de la matriz de covarianza $\mathbf{R_{XX}}$.
+La alternativa propuesta consiste en utilizar todo el conjunto de datos, es decir la matriz completa $\mathbf{X}$, y aplicarle la descomposición en valores singulares (\emph{SVD} por sus siglas en inglés), la cual es una generalización de la descomposición en autovalores para matrices que no son cuadradas. Esta técnica tiene la ventaja por sobre la anterior de que no eleva al cuadrado los elementos de $\mathbf{X}$, como sí ocurre cuando se calcula su matriz de covarianza, por ende es capaz de reducir errores de redondeo debidos a la representación utilizada al operar con matrices mal condicionadas \cite{bib:esprit_roy}.
+
+Si se tiene que la descomposición en valores singulares de $\mathbf{X}/\sqrt{N}$ viene dada por $\mathbf{U\Sigma V}^H$ se puede demostrar que esta descomposición genera el mismo subespacio que la descomposición por autovalores de la matriz de covarianza viendo que:
+\begin{equation}
+    \frac{1}{N} \mathbf{XX}^H= \mathbf{U\Sigma}^2\mathbf{U}^H=\mathbf{\hat{R}_{XX}}
+\end{equation}
+dado que $\mathbf{\Sigma}$ es diagonal y real, y $\mathbf{U}$ y $\mathbf{V}$ son matrices unitarias. Por ende, los vectores singulares de la matriz $\mathbf{U}$ son los autovectores de matriz de covarianza muestral $\mathbf{\hat{R}_{XX}}$, luego generan el mismo espacio.
+
+%matrices mal acondicionadas, lo cual lo vuelve más sensible a errores de redondeo por la representación
+%Explicar por qué estimando el subespacio de señal a partir de la matriz de datos X se obtiene un mejor resultado que estimando la matriz de covarianza espacial R_x
+\section{El algoritmo MUSIC}\label{subc:doaest_MUSIC}
+
+Cuando las muestras obtenidas por el arreglo de antenas están contaminadas con ruido, y para el caso práctico en el que se cuenta con una cantidad $N$ de muestras finita, los subespacios obtenidos mediante el método descripto en la sección anterior son estimaciones del subespacio de ruido y señal, es decir, $\hat{\mathcal{S}}_S$ y $\hat{\mathcal{S}}_W$. Al no ser estos los subespacios teóricos, $\hat{\mathcal{S}}_S$ tiene componentes del subespacio de ruido y viceversa, por ende $\hat{\mathcal{S}}_S$ y $\mathcal{S}_S$ no coinciden en general. Esta cualidad de $\hat{\mathcal{S}}_S$ provoca que el método de encontrar las intersecciones entre $\mathcal{S}_S$ y los elementos de $\mathfrak{A}$ no pueda aplicarse, debido a que $\hat{\mathcal{S}}_S \cap \mathfrak{A}=\bar{0}$, y de la misma manera no existen elementos de $\mathfrak{A}$ que sean ortogonales a $\hat{\mathcal{S}}_W$ \cite{bib:esprit_roy}. Sin embargo, aquellos elementos de $\mathfrak{A}$ que se encuentren más cercanos a $\hat{\mathcal{S}}_S$ pueden ser considerados como los elementos que generan a $\mathcal{S}_S$ y, por ende, los vectores que indican las direcciones de arribo de las $D$ señales arribantes. La cuestión ahora es definir una noción de cercanía.
+%los vectores $\bar{x}_n$ con $n=0, 1, ..., N$ no estarán contenidos en el subespacio de señal, debido a la ortogonalidad que existe entre este y el subespacio de ruido, por ende no se podrán encontrar intersecciones entre
+En \cite{bib:music_schmidt}, Ralph O. Schmidt define una posible medida de distancia de un vector $\bar{v}$ al subespacio de señal estimado $\hat{\mathcal{S}}_S$ como:
+\begin{equation}
+    d^2:= \bar{v}^H\mathbf{\hat{E}_W}\mathbf{\hat{E}_W}^H\bar{v}
+\end{equation}
+
+A partir de esta ecuación se pueden encontrar los elementos de $\mathfrak{A}$ más cercanos al subespacio $\hat{\mathcal{S}}_S$ mediante una búsqueda en todos los elementos de $\mathfrak{A}$. Una forma gráfica de verlo es definiendo el ``pseudoespectro''\footnote{El término ``pseudoespectro'' es utilizado debido a que la magnitud representada por la Ecuación \ref{eq:doaest_pmu} no expresa información sobre la potencia de una señal, sino que alude a una similitud entre su forma gráfica y los espectros de potencia.} $\mathbf{P_{MU}}$ como \cite{bib:music_schmidt}:
+\begin{equation}
+    \mathbf{P_{MU}}(\theta,\varphi)=\frac{1}{d^2}=\frac{1}{\bar{a}(\theta,\varphi)^H\mathbf{\hat{E}_W}\mathbf{\hat{E}_W}^H\bar{a}(\theta,\varphi)}
+    \label{eq:doaest_pmu}
+\end{equation}
+siendo $\bar{a}(\theta,\varphi)$ cualquier elemento de $\mathfrak{A}$.
+Como se dijo, esta distancia será mínima cuando el vector medido sea uno de los elementos de $\mathfrak{A}$ que pertenecen a $\mathcal{S}_S$, por ende si se grafica este pseudoespectro en todo el dominio de direcciones de arribo, es decir, en el dominio bidimensional que contiene a todos los posibles ángulos de elevación y azimut, este pseudoespectro mostrará picos en los puntos donde $\bar{a}(\theta,\varphi)$ se acerca más al subespacio $\hat{\mathcal{S}}_S$.
+El algoritmo \emph{Multiple Signal Classification} propuesto por Schmidt consiste en realizar una estimación de $\mathcal{S}_S$ y $\mathcal{S}_W$ para luego conformar el pseudoespectro $\mathbf{P_{MU}}$ y finalmente encontrar los $D$ picos máximos, los cuales indicarán las correspondientes direcciones de arribo de las $D$ señales arribantes. Como se mostró, este algoritmo no requiere de ninguna disposición particular de los elementos del arreglo, lo cual permite ser utilizado en cualquier caso en el que la forma del arreglo sea conocida. Debido a que este algoritmo requiere de una búsqueda en todo el dominio de DOA, la complejidad computacional puede ser muy alta según la cantidad de dimensiones que tenga la dirección de arribo y la resolución que se desee alcanzar en la detección de los picos. Algunos resultados con respecto a este asunto se muestran en la Sección \ref{subc:doaest_comparaciones}.
+
+\subsection{Algoritmo}\label{subc:doaest_music_alg}
+A continuación se detallan los pasos para implementar el algoritmo MUSIC:
+\begin{enumerate}
+    \item Formar la matriz $\mathbf{X}$ definida en la Ecuación \ref{eq:doaest_x} utilizando varias muestras temporales y armar $\mathbf{\hat{R}_{XX}}$ como se muestra en la Ecuación \ref{eq:doaest_rxx_est} o descomponer la matriz $\mathbf{X}$ usando SVD.
+    \item Hallar las matrices $\mathbf{E}$ y $\mathbf{\Lambda}$ de la descomposición en autovalores de $\mathbf{\hat{R}_{XX}}$ que se muestra en la Ecuación \ref{eq:doaest_eigendesc}.
+    \item Estimar el número $\hat{D}$ de señales recibidas. Las técnicas para lograr esto se mencionan en el Capítulo \ref{ch:machinelearning}.
+    \item Armar la matriz $\mathbf{E_W}$ como se muestra en la Ecuación \ref{eq:doaest_es_en}.
+    \item Evaluar $\mathbf{P_{MU}}(\theta,\varphi)$ en función de $\theta$ y $\varphi$ utilizando la Ecuación \ref{eq:doaest_pmu}.
+    \item Elegir los $\hat{D}$ picos máximos de $\mathbf{P_{MU}}(\theta,\varphi)$ y extraer sus coordenadas $(\theta,\varphi)$ correspondientes a las direcciones de arribo de las $\hat{D}$ señales recibidas.
+\end{enumerate}
+
+\section{El algoritmo ESPRIT}\label{subc:doaest_ESPRIT}
+
+En 1989 Richard Roy y Thomas Kailath se alejan del enfoque de cercanía al subespacio de señal planteado por Schmidt y desarrollan un nuevo algoritmo de estimación de parámetros de señales llamado \emph{Estimation of Signal Parameters via Rotational Invariance Techniques} (\emph{ESPRIT}), el cual explota las invariancias en la geometría del arreglo de antenas.
+
+Supongamos que tenemos un arreglo con una geometría arbitraria pero que está compuesta de elementos agrupados de a pares separados de manera traslacional por un vector $\bar{\Delta}$ como se muestra en la Figura \ref{fig:doaest_esprit_geometry} \cite{bib:esprit_roy}. Los elementos apareados tienen el mismo patrón de radiación, pero entre pares no se requiere que sean iguales.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/03-DOAEst/esprit.png}
+    \caption{Geometría del arreglo de antenas para el análisis del algoritmo ESPRIT. En azul y en rojo se separan los elementos pertenecientes a los subarreglos $Z_x$ y $Z_y$, respectivamente.}
+    \label{fig:doaest_esprit_geometry}
+\end{figure}
+
+Bajo esta geometría, se puede considerar que el arreglo está compuestos por dos subarreglos, identificados en la figura por los elementos azules y los elementos rojos, los cuales conforman los subarreglos $Z_x$ y $Z_y$, respectivamente. Estos subarreglos son idénticos entre sí, con la única diferencia de que uno está trasladado con respecto al otro por el vector $\bar{\Delta}$. Las señales recibidas por cada elemento del par $i$-ésimo pueden ser expresadas como:
+\begin{equation}
+    \begin{split}
+        x_i(t)&=\sum_{d=0}^{D-1} a_i(\theta_d,\varphi_d)\cdot s_d(t) + w_{x,i}(t)\\
+        y_i(t)&=\sum_{d=0}^{D-1} a_i(\theta_d,\varphi_d)\cdot e^{j\bar{k}\cdot\bar{\Delta}}\cdot s_d(t) + w_{y,i}(t),
+    \end{split}
+\end{equation}
+siendo $x_i(t)$ la señal recibida por el elemento perteneciente al subarreglo $Z_x$ y dentro del $i$-ésimo par, $y_i(t)$ la señal recibida por el elemento perteneciente al subarreglo $Z_y$ dentro del $i$-ésimo par y $a_i(\theta_d,\varphi_d)$ el elemento del vector de apuntamiento que corresponde al elemento de referencia dentro del par correspondiente (en este caso el perteneciente a $Z_x$) para una dirección de arribo $(\theta_d,\varphi_d)$. La dirección del vector de traslación $\bar{\Delta}$ indica la dirección con respecto a la cual se podrá estimar el ángulo de arribo. Por ejemplo, si la traslación se realiza sobre el eje $x$, solo se podrán estimar ángulos de arribo con respecto a este eje. Como consecuencia de esto, en el caso de la estimación bidimensional con ángulos de elevación y azimut se deberá contar con dos vectores de traslación, uno en cada dimensión de interés.
+
+Combinando las salidas de todos los elementos de cada subarreglo se pueden expresar a las señales recibidas como:
+\begin{equation}
+    \begin{split}
+        \bar{x}(t)&=\mathbf{A}s(t)+\bar{w}_x(t),\\
+        \bar{y}(t)&=\mathbf{A \Phi} s(t)+ \bar{w}_y(t),
+    \end{split}
+\end{equation}
+donde $\mathbf{A}$ es la matriz de apuntamiento correspondiente al subarreglo $Z_x$ y $\mathbf{\Phi}$ una matriz diagonal de tamaño $D \times D$ cuyos elementos están conformados por los desfasajes producidos entre pares de elementos para los $D$ frentes de ondas recibidos, es decir:
+\begin{equation}
+    \mathbf{\Phi}= \begin{bmatrix}
+        e^{j\bar{k}_0\cdot \bar{\Delta}} & 0                                & \cdots & 0                                    \\
+        0                                & e^{j\bar{k}_1\cdot \bar{\Delta}} &        & \vdots                               \\
+        \vdots                           &                                  & \ddots & \vdots                               \\
+        0                                & \cdots                           & \cdots & e^{j\bar{k}_{D-1}\cdot \bar{\Delta}}
+    \end{bmatrix}=\textrm{diag}\{\phi_0,\phi_1,...,\phi_{D-1}\}
+\end{equation}
+siendo $\phi_d=e^{j\bar{k}_d\cdot \bar{\Delta}}$ con $d=0,1,...,D-1$. La matriz $\mathbf{\Phi}$ recibe el nombre de \emph{operador de rotación de subespacio} \cite{bib:esprit_roy}.
+Si se define al número de pares de elementos como $M$, de manera tal que el número de elementos sea $2M$, y al vector de salida del arreglo entero como $\bar{z}(t)$ podemos escribirlo como:
+\begin{gather}
+    \bar{z}(t)=\begin{bmatrix}
+        \bar{x}(t) \\
+        \bar{y}(t)
+    \end{bmatrix}
+    = \bar{\mathbf{A}} s(t) + \bar{w}(t),\\
+    \bar{\mathbf{A}}=\begin{bmatrix}
+        \mathbf{A} \\
+        \mathbf{A\Phi}
+    \end{bmatrix}_{(2M \times D)},
+    \quad
+    \bar{w}(t)=\begin{bmatrix}
+        \bar{w}_x \\
+        \bar{w}_y
+    \end{bmatrix}_{(2M \times 1)}\nonumber
+\end{gather}
+
+Una consideración a tener en cuenta para el resto del análisis es que $D$ tiene que ser menor a $M$, aunque posteriormente se mostrará que en realidad $D$ puede ser como máximo menor a la cantidad total de elementos en el arreglo.
+
+Los vectores de $\bar{\mathbf{A}}$ generan el subespacio de señal. Si se define la matriz $\mathbf{Z}$ como la matriz conformada por los vectores obtenidos luego de muestrear $N$ veces a todos los elementos del arreglo de antenas podemos expresarla de la siguiente manera:
+\begin{equation}
+    Z=\begin{bmatrix}
+        \bar{z}_0 & \bar{z}_1 & \cdots & \bar{z}_{N-1}
+        \label{eq:doaest_esprit_z}
+    \end{bmatrix}_{(2M\times N)},
+\end{equation}
+donde $\bar{z}_n$ con $n=0,1,...,N-1$ es el vector de muestras tomadas en el instante $n$.
+Si se aplica la descomposición en subespacio de ruido y señal de las muestras contenidas en la matriz $\mathbf{Z}$, como se mostró en la Sección \ref{subc:doaest_datamodel}, puede verse que la matriz $\mathbf{E_S}$ genera el mismo espacio $2M$-dimensional que los vectores de $\bar{\mathbf{A}}$, ya que ambos generan el subespacio de señal. En consecuencia, debe existir una matriz de transformación invertible $\mathbf{T}$ que mapee elementos de $\mathbf{E_S}$ a $\bar{\mathbf{A}}$, es decir, existe $\mathbf{T}$ tal que:
+\begin{equation}
+    \mathbf{E_S}=\bar{\mathbf{A}}\mathbf{T}
+\end{equation}
+
+Debido a esto la matriz $\mathbf{E_S}$ puede descomponerse en dos submatrices $\mathbf{E_X}$ y $\mathbf{E_Y}$ de tamaño $M\times D$ de manera tal que:
+\begin{equation}
+    \mathbf{E_S}=\begin{bmatrix}
+        \mathbf{E_X} \\
+        \mathbf{E_Y}
+    \end{bmatrix}=
+    \begin{bmatrix}
+        \mathbf{AT} \\
+        \mathbf{A\Phi T}
+    \end{bmatrix}
+    \label{eq:doaest_esprit_ex_ey}
+\end{equation}
+de donde puede verse que
+\begin{equation}
+    \textrm{Span}\{\mathbf{E_X}\}=\textrm{Span}\{\mathbf{E_Y}\}=\textrm{Span}\{\mathbf{A}\}
+\end{equation}
+(donde $\textrm{Span}\{\mathbf{V}\}$ es el subespacio generado por $\mathbf{V}$), debido a que la rotación aplicada por $\mathbf{\Phi}$ no modifica el subespacio generado \cite{bib:esprit_roy}.
+Ahora se define la matriz $\mathbf{E_{XY}}$ como:
+\begin{equation}
+    \mathbf{E_{XY}}:= [\mathbf{E_{X}} | \mathbf{E_{Y}}],
+    \label{eq:doaest_e_xy}
+\end{equation}
+la cual tiene rango $D$ debido a que $\mathbf{E_{X}}$ y $\mathbf{E_{Y}}$ tienen el mismo espacio de columnas. Debido a esto, debe existir una matriz $\mathbf{K} \in \mathbb{C}^{(2D\times D)}$ tal que:
+\begin{align}
+    \mathbf{0} & = \mathbf{E_{XY}K} = \mathbf{E_X K_X} + \mathbf{E_Y K_Y} \label{eq:doaest_kx_ky} \\
+               & = \mathbf{ATK_X+A\Phi T K_Y},
+    \label{eq:doaest_kernel}
+\end{align}
+\begin{equation*}
+    \mathbf{K}=\begin{bmatrix}
+        \mathbf{K_X} \\
+        \mathbf{K_Y}
+    \end{bmatrix},
+\end{equation*}
+es decir que $\mathbf{K}$ genera el núcleo de $\mathbf{E_{XY}}$. A partir de la Ecuación \ref{eq:doaest_kx_ky} puede escribirse:
+\begin{align}
+    -\mathbf{E_X K_X}                                  & =\mathbf{E_Y K_Y}\nonumber \\
+    \mathbf{E_X} \left( \mathbf{-K_X K_Y}^{-1} \right) & =\mathbf{E_Y}\nonumber     \\
+    \mathbf{E_X \Psi}                                  & =\mathbf{E_Y}
+    \label{eq:doaest_psi}
+\end{align}
+siendo $\mathbf{\Psi}:=-\mathbf{K_X K_Y}^{-1}$ la matriz de transformación de $\mathbf{E_X}$ a $\mathbf{E_Y}$. A partir de esta definición se puede reescribir la Ecuación \ref{eq:doaest_kernel} de la siguiente manera:
+\begin{equation}
+    \mathbf{AT\Psi} = \mathbf{A\Phi T \rightarrow \mathbf{AT\Psi T}^{-1} = \mathbf{A\Phi}}
+\end{equation}
+
+Suponiendo que $\mathbf{A}$ es de rango completo se puede escribir:
+\begin{equation}
+    \mathbf{T\Psi T}^{-1} = \mathbf{\Phi},
+\end{equation}
+por ende, los autovalores de $\mathbf{\Psi}$ son los elementos de la diagonal de $\mathbf{\Phi}$, y los vectores de $\mathbf{T}$ son los autovectores de $\mathbf{\Phi}$. Debido a esto, obteniendo una estimación de $\mathbf{\Psi}$ se puede obtener una estimación de la matriz $\mathbf{\Phi}$ y a partir de ahí los ángulos de arribo.
+
+Los subarreglos no tienen por qué ser conjuntos disjuntos, la posibilidad de armar subarreglos con elementos en común está permitida en el algoritmo ESPRIT y es una técnica que permite reducir la cantidad de elementos necesaria para poder implementarlo. Si contamos con un arreglo de antenas en fase de geometría ARU se deberá aplicar el algoritmo ESPRIT en dos dimensiones distintas para obtener los ángulos de elevación y azimut de la dirección de arribo. La opción lógica es elegir subarreglos separados en el eje $x$ y en el eje $y$, como se muestra en la Figura \ref{fig:doaest_esprit2d}.
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/03-DOAEst/esprit_x.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/03-DOAEst/esprit_y.png}
+    \end{subfigure}
+    \caption{Una posible elección de subarreglos para la aplicación del algoritmo ESPRIT en dos dimensiones utilizando un ARU.}
+    \label{fig:doaest_esprit2d}
+\end{figure}
+
+Teniendo una geometría como la mostrada, luego de utilizar ESPRIT en las dos dimensiones indicadas se obtendrán dos matrices $\mathbf{\Phi_x}$ y $\mathbf{\Phi_y}$ de tamaño $D\times 1$, los cuales permiten obtener los ángulos de arribo haciendo:
+\begin{gather}
+    \theta_d=\arccos\left( \sqrt{\frac{(\angle{\phi_{x,d}})^2+(\angle{\phi_{y,d}})^2 }{(k\cdot \delta)^2}},\label{eq:doaest_thetaesprit}\right)\\
+    \varphi_d=\arctan2\left(\frac{\angle{\phi_{y,d}}}{\angle{\phi_{x,d}}} \right)\label{eq:doaest_phiesprit}
+\end{gather}
+con $d=0,1,...,D-1$ y siendo $\delta$ la separación entre elementos. La deducción de estas expresiones se muestra en el Apéndice \ref{AP:esprit_angles}.
+
+\subsubsection{Estimación del operador de rotación de subespacio}
+Al igual que como ocurre en MUSIC, al no poder operar en la práctica con infinitas muestras, la matriz $\mathbf{E_S}$ obtenida mediante SVD aplicada a la matriz $\mathbf{Z}$ o por descomposición en autovalores de la estimación de la matriz de covarianza $\mathbf{\hat{R}_{ZZ}}$ no es la teórica, sino una estimación de ella, la cual se denota como $\mathbf{\hat{E}_S}$. Por ende, $\mathbf{\hat{E}_S}$ no genera el subespacio de señal y $\textrm{Span}\{ \mathbf{\hat{E}_S} \}\neq \textrm{Span}\{ \mathbf{\bar{A}} \}$. Además $\textrm{Span}\{ \mathbf{\hat{E}_X} \}\neq \textrm{Span}\{ \mathbf{\hat{E}_Y} \}$, y debido a esto la matriz $\mathbf{\Psi}$ no puede encontrarse de la manera que se mostró en la Ecuación \ref{eq:doaest_psi}. Es por esto que debe elegirse un criterio para obtener una correcta estimación de $\mathbf{\hat{\Psi}}$ para luego estimar $\mathbf{\hat{\Phi}}$, y ese criterio es el de \emph{mínimos cuadrados totales} (\emph{TLS} por sus siglas en inglés). Este criterio consiste en reemplazar la matriz nula en la Ecuación \ref{eq:doaest_kx_ky} por una matriz de errores cuya norma de Frobenius debe minimizarse \cite{bib:esprit_roy}. La solución a este problema primero consiste en calcular la SVD de la matriz $\mathbf{\hat{E}_{XY}}$ definida en la Ecuación \ref{eq:doaest_e_xy}:
+\begin{equation}
+    \mathbf{\hat{E}_{XY}} = \mathbf{U\Sigma V}
+\end{equation}
+
+A partir de esto se trabaja con la matriz $\mathbf{V}\in \mathbb{C}^{2D\times 2D}$, la cual se particiona en 4 matrices de tamaño $D \times D$ de la siguiente manera:
+\begin{equation}
+    \mathbf{V} = \begin{bmatrix}
+        \mathbf{V_{00}} & \mathbf{V_{01}} \\
+        \mathbf{V_{10}} & \mathbf{V_{11}}
+    \end{bmatrix}
+    \label{eq:doaest_v_part}
+\end{equation}
+
+Luego la solución TLS viene dada por:
+\begin{equation}
+    \mathbf{\hat{\Psi}_{TLS}}= -\mathbf{V_{01}}\mathbf{V_{11}}^{-1}
+    \label{eq:doaest_psi_tls}
+\end{equation}
+cuyos autovalores representan a los elementos $\hat{\phi}_d$ con $d=0,1,...,D-1$ de la matriz $\mathbf{\hat{\Phi}}$.
+
+Finalmente, la dirección de arribo estimada $(\hat{\theta_d},\hat{\phi_d})$ se obtiene mediante las Ecuaciones \ref{eq:doaest_thetaesprit} y \ref{eq:doaest_phiesprit}.
+
+\subsection{Algoritmo}\label{subc:doaest_esprit_alg}
+A continuación se detallan los pasos para implementar el algoritmo ESPRIT:
+\begin{enumerate}
+    \item Separar el arreglo de antenas en dos subarreglos iguales pero trasladados por un vector $\bar{\Delta}$ uno del otro.
+    \item Formar la matriz $\mathbf{Z}$ definida en la Ecuación \ref{eq:doaest_esprit_z} utilizando varias muestras temporales.
+    \item Realizar la descomposición en autovalores de la matriz $\mathbf{\hat{R}_{ZZ}}$ obtenida con la Ecuación \ref{eq:doaest_rxx_est} o realizar la SVD sobre la matriz $\mathbf{Z}$ quedándose únicamente con los valores singulares y los vectores singulares izquierdos $\mathbf{U}$.
+    \item Estimar el número $\hat{D}$ de señales recibidas. Las técnicas para lograr esto se mencionan en el Capítulo \ref{ch:machinelearning}.
+    \item Elegir los $\hat{D}$ autovectores de la descomposición de $\mathbf{\hat{R}_{ZZ}}$ correspondientes a los autovalores más grandes, o los vectores singulares de $\mathbf{U}$ correspondientes a los valores singulares más grandes de la SVD de $\mathbf{Z}$ para formar la matriz $\mathbf{\hat{E}_S}$ como se indica en la Ecuación \ref{eq:doaest_es_en}.
+    \item Separar la matriz $\mathbf{\hat{E}_S}$ en $\mathbf{\hat{E}_X}$ y $\mathbf{\hat{E}_Y}$ como se muestra en la Ecuación \ref{eq:doaest_esprit_ex_ey}.
+    \item Armar la matriz $\mathbf{\hat{E}_{XY}}$ como se muestra en la Ecuación \ref{eq:doaest_e_xy} y obtener su SVD quedándose únicamente con los vectores singulares derechos $\mathbf{V}$.
+    \item Particionar la matriz $\mathbf{V}$ en 4 submatrices de tamaño $D\times D$ como se muestra en la Ecuación \ref{eq:doaest_v_part}.
+    \item Obtener $\mathbf{\hat{\Psi}_{TLS}}$ como se indica en la Ecuación \ref{eq:doaest_psi_tls}.
+    \item Obtener los elementos de la matriz $\mathbf{\hat{\Phi}}$ obteniendo los autovalores de $\mathbf{\hat{\Psi}_{TLS}}$.
+    \item Obtener los ángulos de arribo $(\hat{\theta_d},\hat{\phi_d})$ a partir de las Ecuaciones \ref{eq:doaest_thetaesprit} y \ref{eq:doaest_phiesprit}.
+\end{enumerate}
+
+\section{Simulaciones}\label{subc:doaest_comparaciones}
+Utilizando el modelo de muestras que se detalló en la Sección \ref{subc:doaest_datamodel} y los algoritmos descriptos en las Secciones \ref{subc:doaest_music_alg} y \ref{subc:doaest_esprit_alg}, se implementaron ambas técnicas de estimación de dirección de arribo, comparándolas con respecto al error obtenido en la estimación y el tiempo de ejecución de cada una.
+En todas las simulaciones realizadas a continuación se utilizó el método de descomposición en valores singulares para la obtención de los estimadores de subespacios de señal y ruido, y no se realizó la estimación de cantidad de señales arribantes, fijando este número en 1. Además, en ambos algoritmos se utilizó una técnica de muestreo aleatorio para mejorar la eficiencia en las estimaciones, la cual se detalla en el Capítulo \ref{ch:randomsampling}. Finalmente, se consideró que el arreglo de antenas es de tipo ARU de tamaño $M_x \times M_y$ y que la separación entre elementos es de media longitud de onda de la portadora.
+Para generar las muestras simuladas se desarrolló un algoritmo que a partir de una muestra de una señal generaba el vector de muestras correspondientes a cada elemento del arreglo, simulando el comportamiento de la señal llegando al mismo con una determinada DOA según el análisis descripto en la Sección \ref{subc:beamforming_phasedarraystipos} para el caso de un arreglo rectangular uniforme. Como señal de prueba se utilizó la captura de un beacon del satélite GOMX-1 \cite{bib:gomx-1}.
+
+En esta sección se utilizarán los siguientes símbolos para identificar a los parámetros de las simulaciones realizadas:
+\begin{itemize}
+    \item $M_x$: número de elementos del ARU en la dirección $x$.
+    \item $M_y$: número de elementos del ARU en la dirección $y$.
+    \item $M$: número total de elementos en el ARU.
+    \item $\mathfrak{R}_{\textrm{MUSIC}}$: resolución del dominio de búsqueda del algoritmo MUSIC tanto en azimut como en elevación.
+    \item $N$: número de vectores de muestras con los que se alimentó a cada algoritmo.
+    \item $\frac{\sigma_d}{d}$: error relativo en la separación de elementos con respecto a la distancia nominal $d$.
+\end{itemize}
+
+La definición de SNR utilizada para todas las simulaciones es la siguiente:
+\begin{equation}
+    \mathrm{SNR}=\frac{\mathbf{E}\{|s[n]|^2\}}{\mathbf{E}\{|w[n]|^2\}}
+\end{equation}
+
+La plataforma de cómputo donde se realizaron todas las simulaciones es una computadora portátil Alienware 17 R3 con las siguientes especificaciones:
+\begin{itemize}
+    \item Microprocesador: Intel\textsuperscript{\textregistered} Core\textsuperscript{\texttrademark} i7-6700HQ CPU @ 2,60 GHz.
+    \item Memoria RAM: 32 GB.
+    \item Sistema operativo: Windows 10 (64 bits).
+\end{itemize}
+
+Además, los programas de las simulaciones fueron desarrollados utilizando el lenguaje \texttt{Python} en su versión 3.8.5.
+
+\subsection{RMSE vs. SNR}\label{subc:doaest_error_vs_snr}
+
+Para realizar esta simulación se promediaron 10 realizaciones por cada valor de SNR. En cada realización se alteraba aleatoriamente la DOA y las muestras elegidas por el algoritmo de muestreo aleatorio. Para el caso del algoritmo MUSIC, el dominio de búsqueda se generó de manera tal de poder contar con una resolución en la estimación de $\mathfrak{R}_{\textrm{MUSIC}}=0,5\grad$ tanto en elevación como en azimut. La métrica de error utilizada en este análisis es la raíz cuadrada del error cuadrático medio (RMSE), la cual se obtiene de la siguiente manera:
+\begin{equation}
+    \textrm{RMSE}(\hat{\theta},\hat{\varphi})=\sqrt{\frac{1}{N}\sum^{N-1}_{i=0}\left( \left(\hat{\theta_i}-\theta_i \right)^2 + \left(\hat{\varphi_i}-\varphi_i \right)^2\right)}
+\end{equation}
+siendo $N$ el número de realizaciones.
+Los parámetros utilizados en esta simulación son:
+\begin{itemize}
+    \item $M_x = 4$
+    \item $M_y = 4$
+    \item $N = 1500$ vectores de muestras
+    \item $\frac{\sigma_d}{d}=0$
+    \item $\mathfrak{R}_{\textrm{MUSIC}}=0,5\grad$
+\end{itemize}
+
+Los resultados obtenidos se muestran en la Figura \ref{fig:doaest_error_vs_snr}.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/03-DOAEst/error_vs_snr.png}
+    \caption{Gráfico de comparación del RMSE en función de la SNR para los algoritmos MUSIC y ESPRIT.}
+    \label{fig:doaest_error_vs_snr}
+\end{figure}
+
+Como puede apreciarse, ambos algoritmos se desempeñan de manera similar en el rango de SNR evaluado, alcanzando errores menores al grado para valores de SNR a partir de -5 dB. También se puede ver que, para valores de SNR mayores a 0 dB, MUSIC comienza a verse limitado por su resolución (la cual puede mejorarse a costa de un mayor requerimiento de procesamiento), y ESPRIT continúa mejorando la estimación alcanzando errores menores a $0,1\grad$.
+
+Como dato adicional en la Figura \ref{fig:doaest_p_mu} se muestra cómo varía el pseudoespectro de MUSIC para el caso de una señal arribando con una DOA $(\theta = 45\grad, \varphi=30\grad)$ para distintos valores de SNR.
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/03-DOAEst/p_mu_-10.png}
+        \caption{SNR = -10 dB}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/03-DOAEst/p_mu_-5.png}
+        \caption{SNR = -5 dB}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/03-DOAEst/p_mu_0.png}
+        \caption{SNR = 0 dB}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/03-DOAEst/p_mu_10.png}
+        \caption{SNR = 10 dB}
+    \end{subfigure}
+    \caption{Gráfica de $\mathbf{P_{MU}}$ en el caso de una señal llegando al arreglo con dirección $(\theta = 45\grad, \varphi=30)$ para distintos valores de SNR. Puede observarse cómo a medida que aumenta la SNR la ``energía'' del pseudoespectro se concentra cada vez más en la dirección de arribo real.}
+    \label{fig:doaest_p_mu}
+\end{figure}
+
+\subsection{RMSE vs. $\frac{\sigma_d}{d}$}
+
+En este apartado se evalúan ambos algoritmos en función de errores aleatorios en la separación de elementos. Para hacer esto se suman en cada elemento fases aleatorias en ambas dimensiones del arreglo, de manera tal que se simulen errores gaussianos en la ubicación de elementos, ubicando el centro de la gaussiana en el centro de cada uno y tomando como desvío estándar $\sigma_d$ de la distribución distintas fracciones de la distancia entre elementos $d$.
+Los parámetros utilizados en esta simulación son:
+\begin{itemize}
+    \item SNR = 10 dB
+    \item $M_x = 4$
+    \item $M_y = 4$
+    \item $N = 1500$ vectores de muestras
+    \item $\mathfrak{R}_{\textrm{MUSIC}}=0,5\grad$
+\end{itemize}
+
+Los resultados que se muestran en la Figura \ref{fig:doaest_error_vs_d_error} se obtuvieron promediando 10 realizaciones por cada valor de $\frac{\sigma_d}{d}$. Nuevamente, ambos algoritmos evolucionan de manera similar, manteniendo errores en el orden del grado para desviaciones menores al 5\% en la separación entre elementos.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/03-DOAEst/error_vs_d_error.png}
+    \caption{Gráfico de comparación del RMSE en función de los errores en la separación de elementos para los algoritmos MUSIC y ESPRIT.}
+    \label{fig:doaest_error_vs_d_error}
+\end{figure}
+
+\subsection{RMSE vs. N° de muestras} %esto quizás habría que meterlo en random sampling
+
+En esta comparación se analiza la variación del RMSE en función de las muestras utilizadas para realizar la estimación con ambos algoritmos. Para esto se repitieron 10 realizaciones por cada valor de $N$, promediándolas. Los parámetros de esta simulación son:
+\begin{itemize}
+    \item SNR = 10 dB
+    \item $M_x = 4$
+    \item $M_y = 4$
+    \item $\frac{\sigma_d}{d}=0$
+    \item $\mathfrak{R}_{\textrm{MUSIC}}=0,5\grad$
+\end{itemize}
+
+Los resultados obtenidos se muestran en la Figura \ref{fig:doaest_error_vs_n}. Como puede verse, ambos algoritmos mejoran su desempeño cuantas más muestras reciben debido a la mejor estimación que se logra de los subespacios de señal y de ruido, siguiendo una curva similar en ambos casos. Para el caso de gran cantidad de muestras, MUSIC muestra una asíntota horizontal, producto de su limitada resolución. Sin embargo, para esta SNR elegida, se alcanzan errores menores a la décima del grado utilizando una cantidad de muestras del orden de $10^3$, lo cual computacionalmente no conlleva grandes costos como se mostrará posteriormente.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/03-DOAEst/error_vs_n.png}
+    \caption{Gráfica de comparación del RMSE en función de la cantidad de vectores de muestras para los algoritmos MUSIC y ESPRIT.}
+    \label{fig:doaest_error_vs_n}
+\end{figure}
+
+%error vs carrierest?
+%un error en el valor de la portadora implica un error en el vector de propagación k utilizado para realizar la estimación
+
+\subsection{Tiempo vs. $M$}
+En esta sección se comparan los tiempos de ejecución de ambos algoritmos en función de la cantidad de elementos del arreglo. Además, en el caso de MUSIC también se analiza cuánto varían las curvas de tiempo para distintos valores de resoluciones alcanzadas. Para este análisis no se considera el tiempo que se tarda en realizar la SVD debido a que es una tarea común a ambos algoritmos, en cambio este análisis se realiza en la siguiente sección. Por ende, en el caso de MUSIC sólo es evaluado el tiempo que lleva realizar los pasos 5 y 6 del algoritmo desarrollado en la Sección \ref{subc:doaest_music_alg} y en el caso de ESPRIT solo se evalúan los pasos 6 a 11 descriptos en la Sección \ref{subc:doaest_esprit_alg}. Los resultados se muestran en la Figura \ref{fig:tiempo_vs_m}. Los parámetros definidos para esta simulación son:
+\begin{itemize}
+    \item SNR = 10 dB
+    \item $\frac{\sigma_d}{d}=0$
+    \item $N=1500$ vectores de muestras
+\end{itemize}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/03-DOAEst/time_vs_m.png}
+    \caption{Gráfica de comparación del tiempo de ejecución de los algoritmos MUSIC y ESPRIT en función de la cantidad de elementos del ARU.}
+    \label{fig:tiempo_vs_m}
+\end{figure}
+
+Como puede verse, para todos los valores de cantidad de elementos analizados, el algoritmo MUSIC resultó ser mucho menos eficiente que ESPRIT, obteniendo tiempos de al menos dos órdenes de magnitud mayor para $M<100$ y tres órdenes mayor para $M>300$ para una resolución en la estimación de $\mathfrak{R_{\textrm{MUSIC}}}=5\grad$. Además, si se analiza la curva de tiempos de MUSIC para una resolución de $\mathfrak{R_{\textrm{MUSIC}}}=0,5\grad$, la cual brinda un nivel de error semejante a ESPRIT como se mostró en la Sección \ref{subc:doaest_error_vs_snr}, el tiempo de ejecución supera al ESPRIT por más de 5 órdenes de magnitud. Esto provoca que esta implementación del MUSIC sea ineficiente para aplicaciones de tiempo real como la que se desea desarrollar en este proyecto. El motivo del incremento del costo computacional del MUSIC con respecto a $M$ se debe al cálculo de la Ecuación \ref{eq:doaest_pmu}, ya que todas las matrices que entran en la multiplicación tienen $M$ filas, y la matriz $\mathbf{\hat{E}_W}$ tiene mayor cantidad de columnas cuanto mayor sea M, lo que provoca que la cantidad de operaciones a realizar crezca rápidamente a medida que aumenta $M$. En cambio el algoritmo ESPRIT reduce la dimensión del problema separando  $\mathbf{\hat{E}_S}$ en  $\mathbf{\hat{E}_X}$ y  $\mathbf{\hat{E}_Y}$ para armar  $\mathbf{\hat{E}_{XY}}$ la cual como máximo puede tener una cantidad de filas de $M-1$. Esta matriz solo es utilizada cuando se le aplica la descomposición en valores singulares, momento en el cual se comienza a operar con matrices de tamaño $D\times D$, siendo $D<M$. La complejidad de ambos algoritmos aumenta con el aumento en la cantidad de señales a estimar.
+
+Si se analizan las variaciones de tiempo entre distintas resoluciones de la solución brindada por MUSIC el motivo del crecimiento del costo a medida que se aumenta la resolución radica en el dominio de búsqueda en el que se debe calcular la Ecuación \ref{eq:doaest_pmu}, ya que una mayor resolución implica mayores puntos del dominio donde se desea saber el valor de $\mathbf{P_{MU}}(\theta,\varphi)$. El dominio de búsqueda puede reducirse a partir de la utilización de información previa sobre las direcciones de arribo estimadas, sin embargo la gran eficiencia de ESPRIT no motivó la realización de ese estudio para este trabajo.
+
+\subsection{Tiempo de ejecución de la SVD}
+
+En esta sección se analiza el costo computacional del algoritmo SVD implementado dentro de la librería \texttt{NumPy} \cite{bib:numpy} en función de la cantidad de elementos del arreglo $M$ y la cantidad de vectores de muestras con el que se alimenta a algoritmo $N$. Debido a que en la simulación en función de $M$ vamos a estar variando la cantidad de filas de la matriz $\mathbf{X}$ definida en la Ecuación \ref{eq:doaest_x} y en la simulación en función de $N$ vamos a estar variando las columnas se decidió que la variable que quede fija en cada una tenga el mismo valor, lo cual se logró fijando la cantidad de elementos del arreglo en 100 para la simulación en función de $N$ y fijando la cantidad de vectores de muestras en 100 para la simulación en función de $M$. Por ende, los parámetros utilizados en estas simulaciones son los siguientes:
+\begin{itemize}
+    \item SNR = 10 dB
+    \item $M_x = 10$ (solo para el análisis en función de $N$)
+    \item $M_y = 10$ (solo para el análisis en función de $N$)
+    \item $N = 100$ vectores de muestras (solo para el análisis en función de $M$)
+    \item $\frac{\sigma_d}{d}=0$
+\end{itemize}
+obteniendo los resultados que se indican en la Figura \ref{fig:svd_vs_n_m}.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/03-DOAEst/svd_vs_n_m.png}
+    \caption{Gráfica de tiempo de ejecución del algoritmo SVD en función de la cantidad $M$ de elementos del ARU y la cantidad $N$ de vectores de muestras de la entrada.}
+    \label{fig:svd_vs_n_m}
+\end{figure}
+
+Como puede observarse, ambas simulaciones evolucionan de manera similar en todos los rangos, lo cual indica que este algoritmo no muestra preferencias con respecto a las dimensiones de la matriz de entrada. Siendo que para la aplicación de este proyecto se espera una cantidad fija de 16 elementos en el arreglo la gráfica que más interesa en este momento es la del tiempo de cómputo de la SVD en función de $N$, ya que indica a partir de qué cantidad de muestras este algoritmo complica la conformación de un sistema que opere en tiempo real. Es por esto que en la Figura \ref{fig:svd_vs_n_16} se muestra una nueva simulación del tiempo de cómputo de la SVD en función de $N$ pero fijando $M$ en 16 elementos.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/03-DOAEst/svd_vs_n_16.png}
+    \caption{Gráfica de tiempo de ejecución del algoritmo SVD en función de la cantidad $N$ de vectores de muestras de la entrada con $M=16$.}
+    \label{fig:svd_vs_n_16}
+\end{figure}
+
+Aquí puede verse que, para una cantidad de 16 elementos en el arreglo, la SVD puede realizarse en tiempos menores a la décima de segundo para una cantidad de vectores de muestras del orden de $N=10^3$, y tiempos menores a la centésima de segundo con una cantidad de vectores del orden de $N=500$. También puede verse que la complejidad de esta operación es $O(MN^2)$, como sugiere la teoría \cite{bib:esprit_roy}. A partir de esta gráfica y la gráfica de la Figura \ref{fig:doaest_error_vs_n} puede escogerse una tolerancia al error y un tiempo de ejecución para un cierto valor de SNR y así luego escoger la cantidad de muestras con las cuales se va a trabajar en la implementación real.
+
+% pseudoespectro music vs snr

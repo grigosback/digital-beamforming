@@ -45,7 +45,7 @@ namespace gr
                          gr::io_signature::make(1, 1, sizeof(gr_complex) * mx * my)),
           d_mx(mx), d_my(my), d_vlen(mx * my), d_theta(deg2radians(theta)), d_phi(deg2radians(phi)), d_fc(fc), d_element_separation(element_separation), d_element_error(element_error / 100)
     {
-      if (d_element_error >= 1)
+      if (d_element_error > 1)
       {
         d_element_error = 1;
       }
@@ -81,11 +81,11 @@ namespace gr
         {
           d_random_phase_x = d_element_error * d_rng.gasdev();
           d_random_phase_y = d_element_error * d_rng.gasdev();
-          d_a_k.real(cos(-1.f * d_k * cos(d_theta) * (d_element_separation * (i * cos(d_phi) + j * sin(d_phi)) + d_random_phase_x * (cos(d_phi) + sin(d_phi)))));
-          d_a_k.imag(sin(-1.f * d_k * cos(d_theta) * (d_element_separation * (i * cos(d_phi) + j * sin(d_phi)) + d_random_phase_y * (cos(d_phi) + sin(d_phi)))));
+          d_a_k.real(cos(-1.f * d_k * d_element_separation * cos(d_theta) * (cos(d_phi) * (i + d_random_phase_x) + sin(d_phi) * (j + d_random_phase_y))));
+          d_a_k.imag(sin(-1.f * d_k * d_element_separation * cos(d_theta) * (cos(d_phi) * (i + d_random_phase_x) + sin(d_phi) * (j + d_random_phase_y))));
           d_a[i * d_mx + j] = d_a_k;
-          //std::cout << "d_random_phase_x[" << (i * d_mx + j) << "] = " << d_random_phase_x << "\n";
-          //std::cout << "d_random_phase_y[" << (i * d_mx + j) << "] = " << d_random_phase_y << "\n";
+          //std::cout << "d_random_phase_x[" << (i * d_mx + j) << "] = " ///<< d_random_phase_x << "\n";
+          //std::cout << "d_random_phase_y[" << (i * d_mx + j) << "] = " ///<< d_random_phase_y << "\n";
           //std::cout << "a[" << (i * 4 + j) << "] = " << d_a_k.real() << " + j " << d_a_k.imag() << "\n";
           //printf("a[%d] = %lf + j %lf\n", (i * 4 + j), d_a_k.real(), d_a_k.imag());
         }

@@ -10,56 +10,10 @@
 gnuradio/attributes.h
 -
 
-../include/beamforming/beamformer.h
-beamforming/api.h
--
-gnuradio/sync_block.h
--
-
-../include/beamforming/doaesprit.h
-beamforming/api.h
--
-gnuradio/sync_block.h
--
-
 ../include/beamforming/phasedarray.h
 beamforming/api.h
 -
 gnuradio/sync_block.h
--
-
-../include/beamforming/randomsampler.h
-beamforming/api.h
--
-gnuradio/sync_decimator.h
--
-
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.cc
-config.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/config.h
-gnuradio/io_signature.h
--
-beamformer_impl.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.h
-
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/beamformer_impl.h
-beamforming/beamformer.h
--
-volk/volk.h
--
-math.h
--
-
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/doaesprit_impl.cc
-config.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/config.h
-gnuradio/io_signature.h
--
-doaesprit_impl.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/doaesprit_impl.h
-
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/doaesprit_impl.h
-beamforming/doaesprit.h
 -
 
 /mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/phasedarray_impl.cc
@@ -78,27 +32,5 @@ volk/volk.h
 math.h
 -
 gnuradio/random.h
--
-
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/randomsampler_impl.cc
-config.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/config.h
-gnuradio/io_signature.h
--
-randomsampler_impl.h
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/randomsampler_impl.h
-
-/mnt/d/Users/grigo/Google Drive/Facultad/Balseiro/PI Lucas/git-repository/digital-beamforming/gnuradio/gr-beamforming/lib/randomsampler_impl.h
-beamforming/randomsampler.h
--
-iostream
--
-algorithm
--
-array
--
-random
--
-chrono
 -
 

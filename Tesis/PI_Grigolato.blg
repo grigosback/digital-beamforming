@@ -11,62 +11,66 @@ Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: Capitulos/ConformacionDeHaz.aux
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: Capitulos/Algoritmos_DOA.aux
-Reallocating 'name_of_file' (item size: 1) to 22 items.
-A level-1 auxiliary file: Capitulos/Sistema.aux
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: Capitulos/MuestreoAleatorio.aux
 Reallocating 'name_of_file' (item size: 1) to 30 items.
 A level-1 auxiliary file: Capitulos/MachineLearning.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: Capitulos/Sistema.aux
 Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: Capitulos/GNURadio.aux
-Reallocating 'name_of_file' (item size: 1) to 25 items.
-A level-1 auxiliary file: Capitulos/Resultados.aux
-Reallocating 'name_of_file' (item size: 1) to 19 items.
-A level-1 auxiliary file: Capitulos/FPGA.aux
 Reallocating 'name_of_file' (item size: 1) to 21 items.
 A level-1 auxiliary file: Capitulos/Futuro.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: Capitulos/Conclusiones.aux
 Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: Capitulos/Ap_XX.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 Database file #1: mibib.bib
-You've used 9 entries,
+Warning--empty journal in bib:esa_leo
+Warning--empty booktitle in bib:strang
+Warning--missing publisher in bib:strang
+Warning--empty journal in bib:gr_fm
+Warning--empty booktitle in bib:haykin
+You've used 34 entries,
             2634 wiz_defined-function locations,
-            1093 strings with 10774 characters,
-and the built_in function-call counts, 2736 in all, are:
-= -- 179
-> -- 40
-< -- 5
-+ -- 19
-- -- 10
-* -- 109
-:= -- 315
-add.period$ -- 30
-call.type$ -- 9
-change.case$ -- 15
+            1222 strings with 14865 characters,
+and the built_in function-call counts, 9999 in all, are:
+= -- 716
+> -- 196
+< -- 6
++ -- 98
+- -- 49
+* -- 374
+:= -- 1118
+add.period$ -- 120
+call.type$ -- 34
+change.case$ -- 57
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 305
-empty$ -- 314
-format.name$ -- 10
-if$ -- 629
+cite$ -- 39
+duplicate$ -- 1016
+empty$ -- 1116
+format.name$ -- 60
+if$ -- 2286
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 73
-newline$ -- 50
-num.names$ -- 11
-pop$ -- 124
+int.to.str$ -- 34
+missing$ -- 260
+newline$ -- 189
+num.names$ -- 34
+pop$ -- 484
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 83
+skip$ -- 253
 stack$ -- 0
-substring$ -- 63
-swap$ -- 188
-text.length$ -- 5
+substring$ -- 329
+swap$ -- 647
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 19
-width$ -- 10
-write$ -- 102
+warning$ -- 5
+while$ -- 54
+width$ -- 36
+write$ -- 382
+(There were 5 warnings)
